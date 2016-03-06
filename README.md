@@ -2,6 +2,9 @@
 
 A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) with some of [my touch](https://github.com/unional/javascript).
 
+## Other Style Guides
+* TODO: Writing typings ([typings](https://github.com/typings/typings))
+
 ## Design Directions
 * Get the best out of TypeScript
 * Stay close to JavaScript as much as possible
@@ -13,9 +16,6 @@ A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Styl
     * [WebStorm](https://www.jetbrains.com/webstorm/)
   * Linter
     * [tslint](https://github.com/palantir/tslint)
-
-### Other Style Guides
-* TODO: Writing typings ([typings](https://github.com/typings/typings))
 
 ## Table of Contents
 * [Types](book/types.md)
