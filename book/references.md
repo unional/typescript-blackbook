@@ -6,7 +6,7 @@ In TypeScript and ES6, you have three choice for references: `var`, `let`, and `
 
 `var` is function-scoped.
 
-```typecript
+```typescript
 // const and let only exist in the blocks they are defined in.
 {
   let a = 1;
@@ -23,7 +23,7 @@ console.log(c); // 1
 
 > Why? This ensures that you can't reassign your references, which can lead to bugs and difficult to comprehend code.
 
-```typecript
+```typescript
 // bad
 var a = 1;
 var b = 2;
@@ -38,7 +38,7 @@ const b = 2;
 
 > Why? `let` is block-scoped rather than function-scoped like `var`.
 
-```typecript
+```typescript
 // bad
 var count = 1;
 if (true) {
