@@ -4,7 +4,7 @@ A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Styl
 
 ## Design Directions
 * Get the best out of TypeScript
-* Remain close to JavaScript as much as possible
+* Stay close to JavaScript as much as possible
 * Embrace latest JavaScript syntax
 
 ## Table of Contents
@@ -16,6 +16,7 @@ A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Styl
 * [Functions](book/functions.md)
 * [Arrow Functions](book/arrow-functions.md)
 * [Constructors](book/constructors.md)
+* [Interfaces](book/interfaces.md)
 * [Modules](book/modules.md)
 * [Iterators and Generators](book/iterators-and-generators.md)
 * [Properties](book/properties.md)

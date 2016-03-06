@@ -8,6 +8,7 @@
 * [Functions](book/functions.md)
 * [Arrow Functions](book/arrow-functions.md)
 * [Constructors](book/constructors.md)
+* [Interfaces](book/interfaces.md)
 * [Modules](book/modules.md)
 * [Iterators and Generators](book/iterators-and-generators.md)
 * [Properties](book/properties.md)

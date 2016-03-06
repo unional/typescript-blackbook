@@ -138,3 +138,16 @@ class Rey extends Jedi {
   }
 }
 ```
+
+### Class naming
+- Name class in pascal case
+
+tslint: `class-name: true`
+
+```ts
+// bad
+class myClass { }
+
+// good
+class MyClass { }
+```
