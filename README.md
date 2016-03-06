@@ -6,6 +6,16 @@ A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Styl
 * Get the best out of TypeScript
 * Stay close to JavaScript as much as possible
 * Embrace latest JavaScript syntax
+* Works well with toolings
+  * IDE / Editors
+    * [Visual Studio Code](https://github.com/Microsoft/vscode)
+    * [Atom](https://atom.io/)
+    * [WebStorm](https://www.jetbrains.com/webstorm/)
+  * Linter
+    * [tslint](https://github.com/palantir/tslint)
+
+### Other Style Guides
+* TODO: Writing typings ([typings](https://github.com/typings/typings))
 
 ## Table of Contents
 * [Types](book/types.md)
