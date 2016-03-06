@@ -35,7 +35,7 @@ A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Styl
 * [Comparison Operators & Equality](style-guide/default/comparison-operators-and-equality.md)
 * [Blocks](style-guide/default/blocks.md)
 * [Comments](style-guide/default/comments.md)
-* [Whitespace](style-guide/default/whitespace.md)
+* [Whitespaces](style-guide/default/whitespaces.md)
 * [Commas](style-guide/default/commas.md)
 * [Semicolons](style-guide/default/semicolons.md)
 * [Type Casting & Coercion](style-guide/default/type-casting-and-coercion.md)
