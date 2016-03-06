@@ -1,78 +1,90 @@
 ## Commas
 
-  - [19.1](#19.1) <a name='19.1'></a> Leading commas: **Nope.** eslint: [`comma-style`](http://eslint.org/docs/rules/comma-style.html) jscs: [`requireCommaBeforeLineBreak`](http://jscs.info/rule/requireCommaBeforeLineBreak)
+### Leading commas
+- **Nope.**
 
-    ```typescript
-    // bad
-    const story = [
-        once
-      , upon
-      , aTime
-    ];
+```typescript
+// bad
+const story = [
+  once
+, upon
+, aTime
+];
 
-    // good
-    const story = [
-      once,
-      upon,
-      aTime,
-    ];
+// good
+const story = [
+once,
+upon,
+aTime,
+];
 
-    // bad
-    const hero = {
-        firstName: 'Ada'
-      , lastName: 'Lovelace'
-      , birthYear: 1815
-      , superPower: 'computers'
-    };
+// bad
+const hero = {
+  firstName: 'Ada'
+, lastName: 'Lovelace'
+, birthYear: 1815
+, superPower: 'computers'
+};
 
-    // good
-    const hero = {
-      firstName: 'Ada',
-      lastName: 'Lovelace',
-      birthYear: 1815,
-      superPower: 'computers',
-    };
-    ```
+// good
+const hero = {
+firstName: 'Ada',
+lastName: 'Lovelace',
+birthYear: 1815,
+superPower: 'computers',
+};
+```
+### Trailing commas
+- **Yup.**
 
-  - [19.2](#19.2) <a name='19.2'></a> Additional trailing comma: **Yup.** eslint: [`comma-dangle`](http://eslint.org/docs/rules/comma-dangle.html) jscs: [`requireTrailingComma`](http://jscs.info/rule/requireTrailingComma)
+tslint:
+```js
+"trailing-comma": [
+  true,
+  {
+    "singleline": false,
+    "multiline": true
+  }
+]
+```
 
-    > Why? This leads to cleaner git diffs. Also, transpilers like Babel will remove the additional trailing comma in the transpiled code which means you don't have to worry about the [trailing comma problem](es5/README.md#commas) in legacy browsers.
+> Why? This leads to cleaner git diffs. Also, transpilers like Babel will remove the additional trailing comma in the transpiled code which means you don't have to worry about the [trailing comma problem](es5/README.md#commas) in legacy browsers.
 
-    ```typescript
-    // bad - git diff without trailing comma
-    const hero = {
-         firstName: 'Florence',
-    -    lastName: 'Nightingale'
-    +    lastName: 'Nightingale',
-    +    inventorOf: ['coxcomb graph', 'modern nursing']
-    };
+```typescript
+// bad - git diff without trailing comma
+const hero = {
+    firstName: 'Florence',
+-    lastName: 'Nightingale'
++    lastName: 'Nightingale',
++    inventorOf: ['coxcomb graph', 'modern nursing']
+};
 
-    // good - git diff with trailing comma
-    const hero = {
-         firstName: 'Florence',
-         lastName: 'Nightingale',
-    +    inventorOf: ['coxcomb chart', 'modern nursing'],
-    };
+// good - git diff with trailing comma
+const hero = {
+    firstName: 'Florence',
+    lastName: 'Nightingale',
++    inventorOf: ['coxcomb chart', 'modern nursing'],
+};
 
-    // bad
-    const hero = {
-      firstName: 'Dana',
-      lastName: 'Scully'
-    };
+// bad
+const hero = {
+firstName: 'Dana',
+lastName: 'Scully'
+};
 
-    const heroes = [
-      'Batman',
-      'Superman'
-    ];
+const heroes = [
+'Batman',
+'Superman'
+];
 
-    // good
-    const hero = {
-      firstName: 'Dana',
-      lastName: 'Scully',
-    };
+// good
+const hero = {
+firstName: 'Dana',
+lastName: 'Scully',
+};
 
-    const heroes = [
-      'Batman',
-      'Superman',
-    ];
-    ```
+const heroes = [
+'Batman',
+'Superman',
+];
+```

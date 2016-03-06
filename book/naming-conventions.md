@@ -1,130 +1,135 @@
 ## Naming Conventions
 
-  - [22.1](#22.1) <a name='22.1'></a> Avoid single letter names. Be descriptive with your naming.
+### Single letter names
+- Avoid single letter names. Be descriptive with your naming.
 
-    ```typescript
-    // bad
-    function q() {
-      // ...stuff...
-    }
+```typescript
+// bad
+function q() {
+// ...stuff...
+}
 
-    // good
-    function query() {
-      // ..stuff..
-    }
-    ```
+// good
+function query() {
+// ..stuff..
+}
+```
 
-  - [22.2](#22.2) <a name='22.2'></a> Use camelCase when naming objects, functions, and instances. eslint: [`camelcase`](http://eslint.org/docs/rules/camelcase.html) jscs: [`requireCamelCaseOrUpperCaseIdentifiers`](http://jscs.info/rule/requireCamelCaseOrUpperCaseIdentifiers)
+### Name casing
+- Use camelCase when naming objects, functions, and instances. eslint: [`camelcase`](http://eslint.org/docs/rules/camelcase.html) jscs: [`requireCamelCaseOrUpperCaseIdentifiers`](http://jscs.info/rule/requireCamelCaseOrUpperCaseIdentifiers)
 
-    ```typescript
-    // bad
-    const OBJEcttsssss = {};
-    const this_is_my_object = {};
-    function c() {}
+```typescript
+// bad
+const OBJEcttsssss = {};
+const this_is_my_object = {};
+function c() {}
 
-    // good
-    const thisIsMyObject = {};
-    function thisIsMyFunction() {}
-    ```
+// good
+const thisIsMyObject = {};
+function thisIsMyFunction() {}
+```
 
-  - [22.3](#22.3) <a name='22.3'></a> Use PascalCase when naming constructors or classes. eslint: [`new-cap`](http://eslint.org/docs/rules/new-cap.html) jscs: [`requireCapitalizedConstructors`](http://jscs.info/rule/requireCapitalizedConstructors)
+- Use PascalCase when naming constructors or classes. eslint: [`new-cap`](http://eslint.org/docs/rules/new-cap.html) jscs: [`requireCapitalizedConstructors`](http://jscs.info/rule/requireCapitalizedConstructors)
 
-    ```typescript
-    // bad
-    function user(options) {
-      this.name = options.name;
-    }
+```typescript
+// bad
+function user(options) {
+this.name = options.name;
+}
 
-    const bad = new user({
-      name: 'nope',
-    });
+const bad = new user({
+name: 'nope',
+});
 
-    // good
-    class User {
-      constructor(options) {
-        this.name = options.name;
-      }
-    }
+// good
+class User {
+constructor(options) {
+  this.name = options.name;
+}
+}
 
-    const good = new User({
-      name: 'yup',
-    });
-    ```
+const good = new User({
+name: 'yup',
+});
+```
 
-  - [22.4](#22.4) <a name='22.4'></a> Use a leading underscore `_` when naming private properties. eslint: [`no-underscore-dangle`](http://eslint.org/docs/rules/no-underscore-dangle.html) jscs: [`disallowDanglingUnderscores`](http://jscs.info/rule/disallowDanglingUnderscores)
+- Use camelCase when you export-default a function. Your filename should be identical to your function's name.
 
-    ```typescript
-    // bad
-    this.__firstName__ = 'Panda';
-    this.firstName_ = 'Panda';
+```typescript
+function makeStyleGuide() {
+}
 
-    // good
-    this._firstName = 'Panda';
-    ```
+export default makeStyleGuide;
+```
 
-  - [22.5](#22.5) <a name='22.5'></a> Don't save references to `this`. Use arrow functions or Function#bind. jscs: [`disallowNodeTypes`](http://jscs.info/rule/disallowNodeTypes)
+- Use PascalCase when you export a singleton / function library / bare object.
 
-    ```typescript
-    // bad
-    function foo() {
-      const self = this;
-      return function () {
-        console.log(self);
-      };
-    }
+```typescript
+const AirbnbStyleGuide = {
+es6: {
+}
+};
 
-    // bad
-    function foo() {
-      const that = this;
-      return function () {
-        console.log(that);
-      };
-    }
+export default AirbnbStyleGuide;
+```
 
-    // good
-    function foo() {
-      return () => {
-        console.log(this);
-      };
-    }
-    ```
+### Name prefixes
+- Use a leading underscore `_` when naming private properties. eslint: [`no-underscore-dangle`](http://eslint.org/docs/rules/no-underscore-dangle.html) jscs: [`disallowDanglingUnderscores`](http://jscs.info/rule/disallowDanglingUnderscores)
 
-  - [22.6](#22.6) <a name='22.6'></a> If your file exports a single class, your filename should be exactly the name of the class.
+```typescript
+// bad
+this.__firstName__ = 'Panda';
+this.firstName_ = 'Panda';
 
-    ```typescript
-    // file contents
-    class CheckBox {
-      // ...
-    }
-    export default CheckBox;
+// good
+this._firstName = 'Panda';
+```
 
-    // in some other file
-    // bad
-    import CheckBox from './checkBox';
+### `this` reference
+- Don't save references to `this`. Use arrow functions or Function#bind. jscs: [`disallowNodeTypes`](http://jscs.info/rule/disallowNodeTypes)
 
-    // bad
-    import CheckBox from './check_box';
+```typescript
+// bad
+function foo() {
+const self = this;
+return function () {
+  console.log(self);
+};
+}
 
-    // good
-    import CheckBox from './CheckBox';
-    ```
+// bad
+function foo() {
+const that = this;
+return function () {
+  console.log(that);
+};
+}
 
-  - [22.7](#22.7) <a name='22.7'></a> Use camelCase when you export-default a function. Your filename should be identical to your function's name.
+// good
+function foo() {
+return () => {
+  console.log(this);
+};
+}
+```
 
-    ```typescript
-    function makeStyleGuide() {
-    }
+### File naming
+- If your file exports a single class, your filename should be exactly the name of the class.
 
-    export default makeStyleGuide;
-    ```
+```typescript
+// file contents
+class CheckBox {
+// ...
+}
+export default CheckBox;
 
-  - [22.8](#22.8) <a name='22.8'></a> Use PascalCase when you export a singleton / function library / bare object.
+// in some other file
+// bad
+import CheckBox from './checkBox';
 
-    ```typescript
-    const AirbnbStyleGuide = {
-      es6: {
-      }
-    };
+// bad
+import CheckBox from './check_box';
 
-    export default AirbnbStyleGuide;
-    ```
+// good
+import CheckBox from './CheckBox';
+```

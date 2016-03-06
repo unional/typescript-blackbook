@@ -1,7 +1,6 @@
 # Summary
 
 * [Types](book/types.md)
-* [References](book/references.md)
 * [Objects](book/objects.md)
 * [Arrays](book/arrays.md)
 * [Destructuring](book/destructuring.md)
@@ -24,5 +23,5 @@
 * [Naming Conventions](book/naming-conventions.md)
 * [Accessors](book/accessors.md)
 * [Events](book/events.md)
-* [ECMAScript 6 Styles](book/es6.md)
+* [ECMAScript 6 Styles](book/es2015.md)
 * [Testing](book/testing.md)
