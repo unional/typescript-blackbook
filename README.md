@@ -15,7 +15,7 @@ A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Styl
 * [Strings](book/strings.md)
 * [Functions](book/functions.md)
 * [Arrow Functions](book/arrow-functions.md)
-* [Constructors](book/constructors.md)
+* [Classes](book/classes.md)
 * [Interfaces](book/interfaces.md)
 * [Modules](book/modules.md)
 * [Iterators and Generators](book/iterators-and-generators.md)
