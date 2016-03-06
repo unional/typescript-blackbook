@@ -1,0 +1,55 @@
+{
+  "rules": {
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "always",
+        "singleline": "never"
+      }
+    ],
+    "no-conditional-assignment": true,
+    "no-console": [
+      true,
+      "debug",
+      "info",
+      "time",
+      "timeEnd",
+      "trace"
+    ],
+    "no-constant-condition": true,
+    "no-control-regex": true,
+    "no-debugger": true,
+    "no-duplicate-key": true,
+    "no-duplicate-case": true,
+    "no-empty-character-class": true,
+    "no-empty": true,
+    "no-ex-assign": true,
+    "no-extra-boolean-cast": true,
+    "no-extra-parens": false,
+    "no-extra-semi": true,
+    "no-inner-declarations": [
+      true,
+      "functions"
+    ],
+    "no-invalid-regexp": true,
+    "no-irregular-whitespace": true,
+    "no-regex-spaces": true,
+    "no-sparse-arrays": true,
+    "no-unexpected-multiline": true,
+    "no-unreachable": true,
+    "use-isnan": true,
+    "valid-jsdoc": [
+      true,
+      {
+        "prefer": {
+          "return": "returns"
+        },
+        "requireReturn": false,
+        "requireParamDescription": true,
+        "requireReturnDescription": true,
+        "matchDescription": "^[A-Z][A-Za-z0-9\\s]*[.]$"
+      }
+    ],
+    "valid-typeof": true
+  }
+}

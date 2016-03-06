@@ -1,0 +1,18 @@
+{
+  "rules": {
+    "no-any": false,
+    "no-constructor-vars": true,
+    "no-inferrable-types": false,
+    "no-internal-module": true,
+    "no-require-imports": true,
+    "typedef": [
+      true,
+      "call-signature",
+      "parameter",
+      "arrow-parameter",
+      "property-declaration",
+      "variable-declaration",
+      "member-variable-declaration"
+    ]
+  }
+}

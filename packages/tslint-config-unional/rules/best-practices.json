@@ -1,0 +1,21 @@
+{
+  "rules": {
+    "ban": false,
+    "curly": true,
+    "default-case": true,
+    "forin": true,
+    "no-arg": true,
+    "no-construct": true,
+    "no-duplicate-variable": true,
+    "no-eval": true,
+    "no-null-keyword": true,
+    "no-string-literal": true,
+    "no-switch-case-fail-through": true,
+    "no-unused-expression": true,
+    "radix": false,
+    "triple-equals": [
+      true,
+      "allow-null-check"
+    ]
+  }
+}

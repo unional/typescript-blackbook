@@ -1,0 +1,27 @@
+{
+  "name": "tslint-config-unional",
+  "version": "0.0.1",
+  "description": "tslint config that follows uninoal/typescript style guide",
+  "main": "index.json",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unional/typescript"
+  },
+  "keywords": [
+    "tslint",
+    "tslintconfig",
+    "config",
+    "typescript",
+    "styleguide",
+    "style guide"
+  ],
+  "author": "Homa Wong (unional)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unional/typescript/issues"
+  },
+  "homepage": "https://github.com/unional/typescript",
+  "peerDependencies": {
+    "tslint": ">=3.6.0"
+  }
+}

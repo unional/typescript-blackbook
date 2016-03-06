@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "use-strict": [
+      true,
+      "check-module",
+      "check-function"
+    ]
+  }
+}

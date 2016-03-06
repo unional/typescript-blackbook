@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "no-var-keyword": true,
+    "no-var-requires": true
+  }
+}
