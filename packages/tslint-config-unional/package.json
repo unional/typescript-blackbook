@@ -1,6 +1,6 @@
 {
   "name": "tslint-config-unional",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "tslint config that follows uninoal/typescript style guide",
   "main": "index.json",
   "repository": {
@@ -23,5 +23,8 @@
   "homepage": "https://github.com/unional/typescript",
   "peerDependencies": {
     "tslint": ">=3.6.0"
+  },
+  "dependencies": {
+    "tslint-eslint-rules": "^1.0.1"
   }
 }
