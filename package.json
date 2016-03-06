@@ -1,11 +1,12 @@
 {
-  "name": "unional-style-typescript",
+  "name": "typescript-style",
   "version": "0.0.1",
   "description": "A mostly reasonable approach to TypeScript.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish-all": "npm publish && cd ./packages/tslint-config-unional && npm publish"
   },
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/unional/typescript.git"
