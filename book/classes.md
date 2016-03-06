@@ -1,6 +1,6 @@
-## Constructors
+## Classes
 
-### ES6 `class`
+### `class` keyword
 - Always use `class`. Avoid manipulating `prototype` directly.
 
 > Why? `class` syntax is more concise and easier to reason about.
