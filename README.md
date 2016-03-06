@@ -6,3 +6,7 @@ A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Styl
 * Get the best out of TypeScript
 * Remain close to JavaScript as much as possible
 * Embrace latest JavaScript syntax
+
+## Table of Contents
+* [Types](book/types.md)
+* [References](book/references.md)
