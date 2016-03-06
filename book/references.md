@@ -18,7 +18,7 @@ console.log(b); // ReferenceError
 console.log(c); // 1
 ```
 
-##### `const`
+##### Use `const`
 - Use `const` for all of your references; avoid using `var`. eslint: [`prefer-const`](http://eslint.org/docs/rules/prefer-const.html), [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign.html)
 
 > Why? This ensures that you can't reassign your references, which can lead to bugs and difficult to comprehend code.
@@ -33,7 +33,7 @@ const a = 1;
 const b = 2;
 ```
 
-##### `let`
+##### Use `let`
 - If you must reassign references, use `let` instead of `var`. eslint: [`no-var`](http://eslint.org/docs/rules/no-var.html) jscs: [`disallowVar`](http://jscs.info/rule/disallowVar)
 
 > Why? `let` is block-scoped rather than function-scoped like `var`.
@@ -52,3 +52,6 @@ if (true) {
 }
 ```
 
+##### Avoid `var`
+- Before ES2015, `var` is the only reference option. Avoid using `var` in later code because it would lead to unexpected results.
++ Use `var` if your application needs to be very sensitive on memory consumption. But most of the time this is not an issue
