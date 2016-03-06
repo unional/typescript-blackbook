@@ -1,6 +1,6 @@
 ## References
 
-In TypeScript and ES6, you have three choice for references: `var`, `let`, and `const`.
+In TypeScript and ES2015, you have three choice for references: `var`, `let`, and `const`.
 
 `let` and `const` are block-scoped.
 
