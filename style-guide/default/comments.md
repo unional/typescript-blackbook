@@ -72,6 +72,20 @@ function getType() {
 }
 ```
 
+- There should be a space after `//` to improve readability.
+- You can start the comment in upper case or lower case.
+
+tslint: [`comment-format`](tslint.md#comment-format-native)
+
+```ts
+//bad
+// good
+
+// okey
+// Okey too
+```
+
+
 ### Prefixings
 - Prefixing your comments with `FIXME` or `TODO` helps other developers quickly understand if you're pointing out a problem that needs to be revisited, or if you're suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. The actions are `FIXME: -- need to figure this out` or `TODO: -- need to implement`.
 

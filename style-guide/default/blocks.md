@@ -3,6 +3,8 @@
 ### Multi-line blocks
 - Use braces with all multi-line blocks.
 
+tslint: [`curly`](tslint.md#curly-native)
+
 ```typescript
 // bad
 if (test)

@@ -7,9 +7,18 @@ Rules in use:
 `align: [true, "statements"]`
 
 * [functions.md#function-parameters](functions.md#function-parameters)
+* [functions.md#function-arguments](functions.md#function-arguments)
 
 #### ban (native)
 `ban: false`
 
 #### class-name (native)
 `class-name: true`
+
+#### comment-format (native)
+`comment-format: [true, "check-space"]`
+
+* [comments.md#single-line](comments.md#single-line)
+
+### curly (native)
+`curly: true`
