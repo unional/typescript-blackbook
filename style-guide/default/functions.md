@@ -22,7 +22,7 @@ function foo() {
 
 ```typescript
 // immediately-invoked function expression (IIFE)
-(function () {
+;(function () {
 console.log('Welcome to the Internet. Please follow me.');
 }());
 ```
@@ -50,6 +50,11 @@ test = () => {
 ```
 
 ### Function parameters
+- Do not align parameters
+
+tslint: [`align: false`](tslint/align-false)
+
+
 - Never name a parameter `arguments`. This will take precedence over the `arguments` object that is given to every function scope.
 
 ```typescript
@@ -82,6 +87,47 @@ return args.join('');
 }
 ```
 
+- Never mutate parameters. eslint: [`no-param-reassign`](http://eslint.org/docs/rules/no-param-reassign.html)
+
+> Why? Manipulating objects passed in as parameters can cause unwanted variable side effects in the original caller.
+
+```typescript
+// bad
+function f1(obj) {
+obj.key = 1;
+};
+
+// good
+function f2(obj) {
+const key = Object.prototype.hasOwnProperty.call(obj, 'key') ? obj.key : 1;
+};
+```
+
+- Never reassign parameters. eslint: [`no-param-reassign`](http://eslint.org/docs/rules/no-param-reassign.html)
+
+> Why? Reassigning parameters can lead to unexpected behavior, especially when accessing the `arguments` object. It can also cause optimization issues, especially in V8.
+
+```typescript
+// bad
+function f1(a) {
+a = 1;
+}
+
+function f2(a) {
+if (!a) { a = 1; }
+}
+
+// good
+function f3(a) {
+const b = a || 1;
+}
+
+function f4(a = 1) {
+}
+```
+
+
+### Default parameters
 <a name="es6-default-parameters"></a>
 - Use default parameter syntax rather than mutating function arguments.
 
@@ -136,45 +182,6 @@ function handleThings(opts = {}, name) {
 // good
 function handleThings(name, opts = {}) {
 // ...
-}
-```
-
-- Never mutate parameters. eslint: [`no-param-reassign`](http://eslint.org/docs/rules/no-param-reassign.html)
-
-> Why? Manipulating objects passed in as parameters can cause unwanted variable side effects in the original caller.
-
-```typescript
-// bad
-function f1(obj) {
-obj.key = 1;
-};
-
-// good
-function f2(obj) {
-const key = Object.prototype.hasOwnProperty.call(obj, 'key') ? obj.key : 1;
-};
-```
-
-- Never reassign parameters. eslint: [`no-param-reassign`](http://eslint.org/docs/rules/no-param-reassign.html)
-
-> Why? Reassigning parameters can lead to unexpected behavior, especially when accessing the `arguments` object. It can also cause optimization issues, especially in V8.
-
-```typescript
-// bad
-function f1(a) {
-a = 1;
-}
-
-function f2(a) {
-if (!a) { a = 1; }
-}
-
-// good
-function f3(a) {
-const b = a || 1;
-}
-
-function f4(a = 1) {
 }
 ```
 
