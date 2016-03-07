@@ -4,6 +4,12 @@ Rules in use:
 * eslint: https://github.com/buzinas/tslint-eslint-rules#rules-copied-from-eslint-website
 
 #### align (native)
-`align: false`
+`align: [true, "statements"]`
 
-[functions.md#function-parameters](functions.md#function-parameters)
+* [functions.md#function-parameters](functions.md#function-parameters)
+
+#### ban (native)
+`ban: false`
+
+#### class-name (native)
+`class-name: true`

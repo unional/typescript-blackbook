@@ -52,8 +52,23 @@ test = () => {
 ### Function parameters
 - Do not align parameters
 
-tslint: [`align: false`](tslint.md#align)
+tslint: [`align`](tslint.md#align)
 
+> Why? It doesn't work well across IDE yet
+
+```ts
+// bad
+function nope(name: string, // other parameters
+              options: any) {
+  // ...stuff...
+}
+
+// good
+function nope(name: string, // other parameters
+options: any) {
+  // ...stuff...
+}
+```
 
 - Never name a parameter `arguments`. This will take precedence over the `arguments` object that is given to every function scope.
 
@@ -248,4 +263,23 @@ const luke = new Jedi();
 
 luke.jump()
   .setHeight(20);
+```
+
+### Function arguments
+- Do not align arguments
+
+tslint: [`align`](tslint.md#align)
+
+> Why? It doesn't work well across IDE yet
+
+```ts
+// bad
+someFunction(arg1,
+             arg2,
+             arg3,
+             arg4);
+
+// good
+someFunction(arg1, arg2,
+arg3, arg4);
 ```
