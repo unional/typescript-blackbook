@@ -45,3 +45,9 @@ A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Styl
 * [ECMAScript 6 Styles](style-guide/default/es2015.md)
 * [Testing](style-guide/default/testing.md)
 * [tslint.json](style-guide/default/tslint.md)
+
+
+## Contributing
+* 3rd level Sub headings (`###`) for each section
+* Each section heading should be neutral, e.g. "`var` keyword" instead of "avoid `var`"
+  * The heading would be used as link. So if the style guide suggestion changes, keeping the heading neutral would avoid broken links.

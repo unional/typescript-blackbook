@@ -1,5 +1,10 @@
 {
   "rules": {
-    "align": [true, "statements"]
+    "align": [true, "statements"],
+    "class-name": true,
+    "comment-format": [true, "check-space"],
+    "curly": true,
+    "eofline": true,
+    "one-line": [true, "check-open-brace", "check-whitespace"]
   }
 }

@@ -1,5 +1,10 @@
 ## Blocks
 
+### Single-line blocks
+- Avoid single-line for now
+
+> Why? Currently tslint does not support it well (https://github.com/palantir/tslint/issues/822)
+
 ### Multi-line blocks
 - Use braces with all multi-line blocks.
 
@@ -50,6 +55,7 @@ else {
   thing3();
 }
 ```
+
 ### Switch case
 - Use braces to create blocks in `case` and `default` clauses that contain lexical declarations (e.g. `let`, `const`, `function`, and `class`).
 
