@@ -2,4 +2,6 @@
 
 ## rules
 
-### align: false
+### align
+`align: false`
+[functions.md#function-parameters]

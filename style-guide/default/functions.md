@@ -52,7 +52,7 @@ test = () => {
 ### Function parameters
 - Do not align parameters
 
-tslint: [`align: false`](tslint/align-false)
+tslint: [`align: false`](tslint.md#align)
 
 
 - Never name a parameter `arguments`. This will take precedence over the `arguments` object that is given to every function scope.
