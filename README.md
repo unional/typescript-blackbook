@@ -44,3 +44,4 @@ A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Styl
 * [Events](style-guide/default/events.md)
 * [ECMAScript 6 Styles](style-guide/default/es2015.md)
 * [Testing](style-guide/default/testing.md)
+* [tslint.json](style-guide/defult/tslint.md)
