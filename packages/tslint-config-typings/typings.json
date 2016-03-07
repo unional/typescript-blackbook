@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "gulp": "github:typed-typings/npm-gulp#504da08753acdfe9dd2c415ab8fe36151e9645c1"
+  }
+}

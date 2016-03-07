@@ -4,7 +4,7 @@
   "description": "A mostly reasonable approach to TypeScript.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish-all": "npm publish && cd ./packages/tslint-config-unional && npm publish"
+    "publish-all": "npm publish && cd ./packages/tslint-config-unional && npm publish && cd ../tslint-config-typings && npm publish"
   },
   "private": true,
   "repository": {

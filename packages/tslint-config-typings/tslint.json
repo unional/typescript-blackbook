@@ -1,0 +1,8 @@
+{
+  "extends": "unional",
+  "rules": {
+    "no-require-imports": false,
+    "no-string-literal": true,
+    "sort-object-literal-keys": true
+  }
+}
