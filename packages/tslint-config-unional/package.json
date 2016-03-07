@@ -30,6 +30,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-tslint": "^4.3.3",
+    "through2": "^2.0.1",
     "tslint": "^3.5.0",
     "typescript": "^1.8.7"
   }
