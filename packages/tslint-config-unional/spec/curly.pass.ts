@@ -1,6 +1,6 @@
-var x;
-// if (false) x = 2;
+let x = 3;
+// if (x) x = 2;
 
-if (false) {
+if (x) {
   x = 1;
 }

@@ -241,10 +241,8 @@ Not used
 `"typedef": [
   true,
   "call-signature",
-  "parameter",
   "arrow-parameter",
   "property-declaration",
-  "variable-declaration",
   "member-variable-declaration"
 ]`
 * TBD: try to be more explicit, which help completion and type checking in general.
@@ -270,12 +268,8 @@ Not used
 * TBD
 
 #### use-strict (native)
-`"use-strict": [
-  true,
-  "check-module",
-  "check-function"
-]`
-* TBD, unless convinced otherwise
+`"use-strict": [false]`
+* Not a necessity
 
 #### variable-name (native)
 `"variable-name": [
@@ -301,13 +295,17 @@ Not used
 #### valid-typeof (eslint)
 #### use-isnan (eslint)
 #### no-duplicate-case (eslint)
-#### no-sparse-array (eslint)
+#### no-sparse-arrays (eslint)
 #### no-extra-semi (eslint)
 #### no-extra-boolean-cast (eslint)
 #### no-ex-assign (eslint)
+Disabled. Has bugs
 #### no-unexpected-multiline (eslint)
+Disabled.
+
 #### no-invalid-regexp (eslint)
 #### no-inner-declarations (eslint)
+Disabled. Has bugs
 #### no-regex-spaces (eslint)
 #### no-empty-character-class (eslint)
 #### no-control-regex (eslint)

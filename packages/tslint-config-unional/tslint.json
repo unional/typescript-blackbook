@@ -1,4 +1,5 @@
 {
+  "rulesDirectory": "node_modules/tslint-eslint-rules/dist/rules",
   "rules": {
     "align": [
       true,
@@ -93,10 +94,8 @@
     "typedef": [
       true,
       "call-signature",
-      "parameter",
       "arrow-parameter",
       "property-declaration",
-      "variable-declaration",
       "member-variable-declaration"
     ],
     "typedef-whitespace": [
@@ -116,11 +115,7 @@
         "variable-declaration": "space"
       }
     ],
-    "use-strict": [
-      true,
-      "check-module",
-      "check-function"
-    ],
+    "use-strict": [false],
     "variable-name": [
       true,
       "check-format",
@@ -139,13 +134,13 @@
     "valid-typeof": true,
     "use-isnan": true,
     "no-duplicate-case": true,
-    "no-sparse-array": true,
+    "no-sparse-arrays": true,
     "no-extra-semi": true,
     "no-extra-boolean-cast": true,
-    "no-ex-assign": true,
-    "no-unexpected-multiline": true,
+    "no-ex-assign": false,
+    "no-unexpected-multiline": false,
     "no-invalid-regexp": true,
-    "no-inner-declarations": [true, "both"],
+    "no-inner-declarations": [false],
     "no-regex-spaces": true,
     "no-empty-character-class": true,
     "no-control-regex": true,

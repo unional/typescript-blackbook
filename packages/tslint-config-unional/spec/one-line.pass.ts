@@ -1,7 +1,6 @@
-var x;
-// if (false) x = 2;
+let x = 2;
 
-if (false) {
+if (x) {
   x = 1;
 }
 else {
@@ -11,7 +10,7 @@ else {
 try {
   x = 2;
 }
-catch(e) {
+catch (e) {
   x = 1;
 }
 finally {

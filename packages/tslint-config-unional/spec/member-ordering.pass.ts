@@ -1,3 +1,4 @@
+/* tslint:disable:no-empty no-unused-variable */
 class MyClass {
   constructor() { }
 
@@ -6,7 +7,7 @@ class MyClass {
   someProperty: string;
   private somePrivateProperty: string;
 
-  static someStaticMethod() { }
-  someFunction() { }
-  private somePrivateFunction() { }
+  static someStaticMethod(): void { }
+  someFunction(): void { }
+  private somePrivateFunction(): void { }
 }
