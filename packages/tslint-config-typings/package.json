@@ -22,10 +22,10 @@
   },
   "homepage": "https://github.com/unional/typescript",
   "peerDependencies": {
-    "tslint": ">=3.6.0"
+    "tslint": ">=3.5.0"
   },
   "dependencies": {
-    "tslint-config-unional": "0.0.2"
+    "tslint-config-unional": "^0.1.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
