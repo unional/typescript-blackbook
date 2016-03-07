@@ -2,6 +2,7 @@
 
 ### Multi-line
 - Use `/** ... */` for multi-line comments. Include a description, specify types and values for all parameters and return values.
+- Conform to jsdoc. tslint: [`jsdoc-format`](tslint.md#jsdoc-format-native)
 
 ```typescript
 // bad

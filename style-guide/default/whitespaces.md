@@ -1,7 +1,7 @@
 ## Whitespace
 
 ### Soft tabs
-- Use soft tabs set to 2 spaces. eslint: [`indent`](http://eslint.org/docs/rules/indent.html) jscs: [`validateIndentation`](http://jscs.info/rule/validateIndentation)
+- Use soft tabs set to 2 spaces. tslint: [`indent`](tslint.md#indent-native)
 
 ```typescript
 // bad
@@ -293,29 +293,4 @@ const foo = {clark: 'kent'};
 
 // good
 const foo = { clark: 'kent' };
-```
-### Line length
-- Avoid having lines of code that are longer than 100 characters (including whitespace). eslint: [`max-len`](http://eslint.org/docs/rules/max-len.html) jscs: [`maximumLineLength`](http://jscs.info/rule/maximumLineLength)
-
-> Why? This ensures readability and maintainability.
-
-```typescript
-// bad
-const foo = 'Whatever national crop flips the window. The cartoon reverts within the screw. Whatever wizard constrains a helpful ally. The counterpart ascends!';
-
-// bad
-$.ajax({ method: 'POST', url: 'https://airbnb.com/', data: { name: 'John' } }).done(() => console.log('Congratulations!')).fail(() => console.log('You have failed this city.'));
-
-// good
-const foo = 'Whatever national crop flips the window. The cartoon reverts within the screw. ' +
-  'Whatever wizard constrains a helpful ally. The counterpart ascends!';
-
-// good
-$.ajax({
-  method: 'POST',
-  url: 'https://airbnb.com/',
-  data: { name: 'John' },
-})
-  .done(() => console.log('Congratulations!'))
-  .fail(() => console.log('You have failed this city.'));
 ```

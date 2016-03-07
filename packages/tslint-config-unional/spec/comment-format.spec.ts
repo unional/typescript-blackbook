@@ -1,3 +1,0 @@
-// good
-// ok
-// Okey too

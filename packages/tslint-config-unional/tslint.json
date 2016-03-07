@@ -5,6 +5,17 @@
     "comment-format": [true, "check-space"],
     "curly": true,
     "eofline": true,
-    "one-line": [true, "check-open-brace", "check-whitespace"]
+    "one-line": [true, "check-open-brace", "check-whitespace"],
+    "forin": false,
+    "indent": [true, "spaces"],
+    "interface-name": false,
+    "jsdoc-format": true,
+    "label-position": true,
+    "label-undefined": true,
+    "member-access": false,
+    "member-ordering": [true, "public-before-private", "static-before-instance", "variables-before-functions"],
+    "no-any": false,
+    "no-arg": true,
+    "no-bitwise": false
   }
 }

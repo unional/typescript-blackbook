@@ -113,3 +113,11 @@
     }
   }
   ```
+
+### member visibility
+- Do not need to explicitly add `public` to members. tslint: [`member-access`](tslint.md#member-access-native)
+
+### member ordering
+- Put all public members before private members. tslint: [`member-ordering`](tslint.md#member-ordering-native)
+- Put all static members before instance members
+- Put all properties before functions

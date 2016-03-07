@@ -1,8 +1,8 @@
 # Interface
 
-### Interface naming
+### Naming
 - Use pascal case to name interface
-- Do not prefix interface with `I`
+- Do not prefix interface with `I` tslint: [`interface-name`](tslint.md#interface-name-native)
 
 > Why? The concept of an interface in TypeScript is much more broad than in C# or Java, the `IFoo` naming convention is not broadly useful.
 
