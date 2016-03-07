@@ -35,6 +35,8 @@ dragon.setAge(25);
 ### Boolean property
 - If the property is a `boolean`, use `isVal()` or `hasVal()`.
 
+> Why? The property may be set with a value that evaluate as falsy.
+
 ```typescript
 // bad
 if (!dragon.age()) {

@@ -88,9 +88,10 @@ tslint: [`comment-format`](tslint.md#comment-format-native)
 
 
 ### Prefixings
-- Prefixing your comments with `FIXME` or `TODO` helps other developers quickly understand if you're pointing out a problem that needs to be revisited, or if you're suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. The actions are `FIXME: -- need to figure this out` or `TODO: -- need to implement`.
+- Do use prefixing.
+- Prefix in UPPER_CASE
 
-### FIXME prefix
+#### FIXME prefix
 - Use `// FIXME:` to annotate problems.
 
 ```typescript
@@ -104,7 +105,7 @@ class Calculator extends Abacus {
 }
 ```
 
-### TODO prefix
+#### TODO prefix
 - Use `// TODO:` to annotate solutions to problems.
 
 ```typescript
@@ -113,6 +114,20 @@ class Calculator extends Abacus {
     super();
 
     // TODO: total should be configurable by an options param
+    this.total = 0;
+  }
+}
+```
+
+#### FUTURE prefix
+- Use `// FUTURE:` to annotate ideas that will be valuable in the future
+
+```typescript
+class Calculator extends Abacus {
+  constructor() {
+    super();
+
+    // FUTURE: total should be configurable by an options param
     this.total = 0;
   }
 }

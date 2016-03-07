@@ -35,7 +35,7 @@ function bar() {
 ### `else` clause placement
 - If you're using multi-line blocks with `if` and `else`, put `else` on the next line after your `if` block's closing brace.
 
-> Code folding works better in this case.
+> Why? Code folding would collapse all cases into a single line, making it hard to read.
 
 ```typescript
 // bad

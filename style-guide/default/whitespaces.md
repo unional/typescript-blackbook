@@ -3,6 +3,10 @@
 ### Soft tabs
 - Use soft tabs set to 2 spaces. tslint: [`indent`](tslint.md#indent-native)
 
+> Why? Many tools uses 2 spaces nowadays (`npm`, `jspm`, `gulp` etc).
+> Many of them will automatically update the config files.
+> We want to keep them in 2 spaces to avoid unnecessary changes.
+
 ```typescript
 // bad
 function foo() {
@@ -114,7 +118,11 @@ const x = y + 5;
 ```
 
 ### Indentation
-- Use indentation when making long method chains (more than 2 method chains). Use a leading dot, whichemph asizes that the line is a method call, not a new statement. eslint: [`newline-per-chained-call`](http://eslint.org/docs/rules/newline-per-chained-call) [`no-whitespace-before-property`](http://eslint.org/docs/rules/no-whitespace-before-property)
+- Do not indent when making long method chains.
+- Use a leading dot, which emphasizes that the line is a method call, not a new statement.
+- Place beginning of chain on a new line.
+
+> Why? IDE auto-formatting cannot analyze your intent nor ignore your indentation. Keep it simple for the tool.
 
 ```typescript
 // bad
@@ -128,7 +136,7 @@ $('#items').
   find('.open').
     updateCount();
 
-// good
+// bad
 $('#items')
   .find('.selected')
     .highlight()
@@ -144,13 +152,13 @@ const leds = stage.selectAll('.led').data(data).enter().append('svg:svg').classe
 
 // good
 const leds = stage.selectAll('.led')
-    .data(data)
+  .data(data)
   .enter().append('svg:svg')
-    .classed('led', true)
-    .attr('width', (radius + margin) * 2)
+  .classed('led', true)
+  .attr('width', (radius + margin) * 2)
   .append('svg:g')
-    .attr('transform', 'translate(' + (radius + margin) + ',' + (radius + margin) + ')')
-    .call(tron.led);
+  .attr('transform', 'translate(' + (radius + margin) + ',' + (radius + margin) + ')')
+  .call(tron.led);
 
 // good
 const leds = stage.selectAll('.led').data(data);
