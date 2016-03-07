@@ -1,6 +1,7 @@
 {
   "extends": "unional",
   "rules": {
+    "no-empty": false,
     "no-require-imports": false,
     "no-string-literal": true,
     "sort-object-literal-keys": true
