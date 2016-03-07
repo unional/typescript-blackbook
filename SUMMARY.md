@@ -26,6 +26,6 @@
   * [Events](style-guide/default/events.md)
   * [ECMAScript 6 Styles](style-guide/default/es2015.md)
   * [Testing](style-guide/default/testing.md)
-  * [tslint.json](style-guide/defult/tslint.md)
+  * [tslint.json](style-guide/default/tslint.md)
 * Style Guide for typings
   * [Modules](style-guide/typings/modules.md)
