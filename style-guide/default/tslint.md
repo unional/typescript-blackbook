@@ -67,10 +67,38 @@ would be something like: `"interface-name": [true, "never"]` in the future
 
 ### no-any (native)
 `"no-any": false`
+* Too restrictive
 
 ### no-arg (native)
 `"no-arg": true`
+* TBD, should work smoothly without
 
 ## no-bitwise (native)
 `"no-bitwise": false`
+* Should know what I'm doing
 
+## no-conditional-assignment (native)
+`"no-conditional-assignment": true`
+* Avoid clever trick that reduce maintainability
+
+## no-consecutive-blank-lines (native)
+`"no-consecutive-blank-lines": false`
+* Want the ability to have 2 blank lines for better formatting
+
+## no-console (native)
+`"no-console": [
+    true,
+    "assert",
+    "count",
+    "log",
+    "warn",
+    "trace",
+    "error",
+    "debug"
+]`
+* TBD, better be preventive
+
+## no-construct (native)
+`"no-construct": true`
+
+## no-constructor-vars (native)
