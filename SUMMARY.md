@@ -1,5 +1,5 @@
 # Summary
-* General Style Guide
+* [General Style Guide](README.md)
   * [Types](style-guide/default/types.md)
   * [Objects](style-guide/default/objects.md)
   * [Arrays](style-guide/default/arrays.md)
@@ -27,5 +27,6 @@
   * [ECMAScript 6 Styles](style-guide/default/es2015.md)
   * [Testing](style-guide/default/testing.md)
   * [tslint.json](style-guide/default/tslint.md)
-* Style Guide for typings
+* [Style Guide for typings](style-guide/typings/README.md)
   * [Modules](style-guide/typings/modules.md)
+  * [tslint.json](style-guide/typings/tslint.md)

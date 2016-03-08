@@ -3,7 +3,7 @@
 A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) with some of [my touch](https://github.com/unional/javascript).
 
 ## Other Style Guides
-* TODO: Writing typings ([typings](https://github.com/typings/typings))
+* [Writing typings](style-guide/typings/README.md) ([typings](https://github.com/typings/typings))
 
 ## Design Principles
 * Get the best out of TypeScript
