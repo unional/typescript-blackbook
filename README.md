@@ -5,7 +5,7 @@ A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Styl
 ## Other Style Guides
 * TODO: Writing typings ([typings](https://github.com/typings/typings))
 
-## Design Directions
+## Design Principles
 * Get the best out of TypeScript
 * Stay close to JavaScript as much as possible
 * Embrace latest JavaScript syntax
