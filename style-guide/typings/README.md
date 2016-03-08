@@ -1,5 +1,5 @@
 # Typescript Style Guide for writing typings
-([typings](https://github.com/typings/typings)) is the successor of tsd/DefinitelyTyped. Typings provides typed definitions to JavaScript libraries so that they can be used in TypeScript.
+[typings](https://github.com/typings/typings) is the successor of tsd/DefinitelyTyped. Typings provides typed definitions to JavaScript libraries so that they can be used in TypeScript.
 
 ## Design Directions
 * Enable typing author to stay true to the shape of the library as much as possible.
