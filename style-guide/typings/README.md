@@ -1,9 +1,9 @@
-# Typescript Style Guide for writing typings
+# Typescript Style Guide for authoring typings
 [`typings`](https://github.com/typings/typings) is the successor of tsd/DefinitelyTyped. Typings provides typed definitions to JavaScript libraries so that they can be used in TypeScript.
 
 ## Design Principles
 * Enable typing author to stay true to the shape of the library as much as possible.
-* Use latest TypeScript best practices in writing typings
+* Use latest TypeScript best practices in authoring typings
 * Cross-compatible with tools. It's frustrating when your tools does not get along with each other!
   * IDE / Editors
     * [Visual Studio Code](https://github.com/Microsoft/vscode)
