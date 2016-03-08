@@ -1,6 +1,6 @@
 {
   "name": "tslint-config-typings",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "tslint config for writing typings",
   "main": "tslint.json",
   "repository": {
@@ -25,7 +25,7 @@
     "tslint": ">=3.5.0"
   },
   "dependencies": {
-    "tslint-config-unional": "^0.1.0"
+    "tslint-config-unional": "^0.1.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
