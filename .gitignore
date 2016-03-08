@@ -38,8 +38,8 @@ node_modules
 .idea
 
 # typings
-typings
-bundle.d.ts
+/typings/
+
 
 # output folder
-out
+/out/
