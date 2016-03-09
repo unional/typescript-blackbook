@@ -2,6 +2,7 @@
   "extends": "unional",
   "rules": {
     "no-empty": false,
+    "no-internal-module": true,
     "no-require-imports": false,
     "no-string-literal": true,
     "object-literal-sort-keys": true

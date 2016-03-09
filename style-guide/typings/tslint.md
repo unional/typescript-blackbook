@@ -9,6 +9,11 @@ This style follows the [`default style`](../default/tslint.md) if not specified 
 `"no-empty": false`
 * When testing the typings, it is quite common to create empty functions.
 
+#### no-internal-module (native)
+`"no-internal-module": true`
+* There is a lot of typings written with `declare module X {`. Since TypeScript 1.6 `declare namespace X {` is preferred.
+* `declare module X {` could be deprecated in the future.
+
 #### no-require-imports (native)
 `"no-require-imports": false`
 * typings would need to use `import = require()` to get definitions written with `export =` syntax.
