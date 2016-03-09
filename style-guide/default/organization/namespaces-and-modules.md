@@ -16,6 +16,29 @@ When declaring a module (or namespace), there are two options:
 > Top-level declarations in a source file with no top-level import or export declarations belong to the global namespace. Top-level declarations in a source file with one or more top-level import or export declarations belong to the module represented by that source file. ([link](https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md#23-declarations), need to scroll down a bit)
 
 ### Namespace (Internal Module)
+- Avoid namespce
+
+> Why? Use ES2015 module system instead
+
+```ts
+// bad
+declare namespace Chai {
+  export interface A {
+    // stuff...
+  };
+}
+
+// good
+export interface A {
+  // stuff...
+};
+
+// good
+export default interface A {
+  // stuff...
+};
+```
+
 - Use `declare namespace X {` syntax.
 - Avoid `declare module X {` syntax. tslint [`no-internal-module`](tslint.md/no-internal-module-native)
 
