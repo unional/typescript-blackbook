@@ -15,7 +15,7 @@ When declaring a module (or namespace), there are two options:
 
 > Top-level declarations in a source file with no top-level import or export declarations belong to the global namespace. Top-level declarations in a source file with one or more top-level import or export declarations belong to the module represented by that source file. ([link](https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md#23-declarations), need to scroll down a bit)
 
-### Internal Module
+### Namespace (Internal Module)
 - Use `declare namespace X {` syntax.
 - Avoid `declare module X {` syntax. tslint [`no-internal-module`](tslint.md/no-internal-module-native)
 
@@ -33,7 +33,7 @@ declare namespace Chai {
 }
 ```
 
-### External Module
+### Module (External Module)
 - Do not wrap typings in `declare module "X" {`. Expose as **top-level declaration**
 
 > Why? `declare module "X" {` will cause name conflict if consumer use two different version of the same library.
