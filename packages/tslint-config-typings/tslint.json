@@ -5,6 +5,26 @@
     "no-internal-module": true,
     "no-require-imports": false,
     "no-string-literal": true,
-    "object-literal-sort-keys": true
+    "object-literal-sort-keys": true,
+    "no-arg": false,
+    "no-console": [
+      true,
+      "assert",
+      "count",
+      "log",
+      "warn",
+      "trace",
+      "error",
+      "debug"
+    ],
+    "no-inferrable-types": false,
+    "no-unused-expression": false,
+    "typedef": [false],
+    "typedef-whitespace": [
+      false
+    ],
+    "whitespace": [
+      false
+    ]
   }
 }
