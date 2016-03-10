@@ -1,19 +1,11 @@
 # Namespace and Module
-Prior to TypeScript 1.5, there are two types of modules:
-* Internal module (`declare module X {`)
-* External module (`declare module "X" {`)
-
-In TypeScript 1.5, the term and keyword `namespace` is introduced. The nomenclature has changed.
-* Internal module -> namespace
-* External module -> module
-
-The `declare module X {` syntax exists for backward compatibility.
 
 When declaring a module (or namespace), there are two options:
 * declaration wrapped in `declare {namespace,module} <name> {`, or
 * top-level declaration
 
-> Top-level declarations in a source file with no top-level import or export declarations belong to the global namespace. Top-level declarations in a source file with one or more top-level import or export declarations belong to the module represented by that source file. ([link](https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md#23-declarations), need to scroll down a bit)
+> Top-level declarations in a source file with no top-level import or export declarations belong to the global namespace.
+> Top-level declarations in a source file with one or more top-level import or export declarations belong to the module represented by that source file. ([link](https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md#23-declarations), need to scroll down a bit)
 
 ### Namespace (Internal Module)
 - Avoid namespce
@@ -22,7 +14,7 @@ When declaring a module (or namespace), there are two options:
 
 ```ts
 // bad
-declare namespace Chai {
+namespace Chai {
   export interface A {
     // stuff...
   };
@@ -39,21 +31,22 @@ export default interface A {
 };
 ```
 
-- Use `declare namespace X {` syntax.
-- Avoid `declare module X {` syntax. tslint [`no-internal-module`](tslint.md/no-internal-module-native)
+- **Anti-pattern** Only use namespace if:
+  - You are developing an application. It will not be used as an module
+  - You are exposing and using a global namespace/variable
+  - Avoid `declare module X {` and use `declare namespace X {` syntax. tslint [`no-internal-module`](tslint.md/no-internal-module-native)
+  - **But really, avoid it**
 
-> Why? `declare namespace X {` will fixate the namespace to the name `X`, which is what you want.
+> Why? Global pollution, even a tiny bit, is not fun. It seriously hinder the ability to test your code, especially the namespace/variable has states.
 
 ```ts
-// bad
-declare module Chai {
+// really bad
+namespace MyProductGlobal {
   // stuff...
 }
 
-// good
-declare namespace Chai {
-  // stuff...
-}
+// much better
+import myProductGlobal from '../myProductGlobal';
 ```
 
 ### Module (External Module)
@@ -74,3 +67,21 @@ export interface A {
   // stuff...
 };
 ```
+
+
+## Note
+Prior to TypeScript 1.5, there are two types of modules:
+* Internal module (`declare module X {`)
+* External module (`declare module "X" {`)
+
+In TypeScript 1.5, the term and keyword `namespace` is introduced. The nomenclature has changed.
+* Internal module -> namespace
+* External module -> module
+
+The `declare module X {` syntax exists for backward compatibility.
+
+
+## Reference
+* https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Namespaces.md
+* https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Namespaces%20and%20Modules.md
+* https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Modules.md

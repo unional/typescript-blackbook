@@ -17,6 +17,7 @@
 * [tslint.json](tslint.md)
 
 ## Contributing
+* Read the [`markdown style guide`](style-guide/markdown.md) (and hopefully it will make you grin)
 * 3rd level Sub headings (`###`) for each section (except in [tslint.md](tslint.md))
 * Each section heading should be neutral, e.g. "`var` keyword" instead of "avoid `var`"
   * The heading would be used as link. So if the style guide suggestion changes, keeping the heading neutral would avoid broken links.
