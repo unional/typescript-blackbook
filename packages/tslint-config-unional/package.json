@@ -24,9 +24,7 @@
   "peerDependencies": {
     "tslint": ">=3.5.0"
   },
-  "dependencies": {
-    "tslint-eslint-rules": "^1.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-tslint": "^4.3.3",

@@ -291,6 +291,11 @@ Not used
 ]`
 * TBD. Probably fine.
 
+## tslint-eslint-rules disabled
+Currently `tslint-eslint-rules` is not used in `tslint-config-unional`.
+There is an issue with how the `"rulesDirectory"` is used in `tslint`.
+Likely `tslint-eslint-rules` need to be converted to a config package and used through `"entends"`.
+
 #### no-constant-condition (eslint)
 #### valid-typeof (eslint)
 #### use-isnan (eslint)

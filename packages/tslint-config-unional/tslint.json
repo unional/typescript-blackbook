@@ -1,5 +1,4 @@
 {
-  "rulesDirectory": "node_modules/tslint-eslint-rules/dist/rules",
   "rules": {
     "align": [
       true,
@@ -129,22 +128,6 @@
       "check-operator",
       "check-separator",
       "check-type"
-    ],
-    "no-constant-condition": true,
-    "valid-typeof": true,
-    "use-isnan": true,
-    "no-duplicate-case": true,
-    "no-sparse-arrays": true,
-    "no-extra-semi": true,
-    "no-extra-boolean-cast": true,
-    "no-ex-assign": false,
-    "no-unexpected-multiline": false,
-    "no-invalid-regexp": true,
-    "no-inner-declarations": [false],
-    "no-regex-spaces": true,
-    "no-empty-character-class": true,
-    "no-control-regex": true,
-    "no-irregular-whitespace": true,
-    "valid-jsdoc": true
+    ]
   }
 }
