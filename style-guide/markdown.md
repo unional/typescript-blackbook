@@ -13,12 +13,12 @@ https://daringfireball.net/projects/markdown/syntax
 
 ```
 // bad
-This is one sentence. This is another longer sentence. This is yet another super ultra duper extra insanely long, very hard to read, very dense, contains many many information, very likely running, very much like what an attorney will write, and probably will be wrapped by the editor sentence.
+This is one sentence. This is another longer sentence. This is yet another super ultra duper extra insanely long, very hard to read, very dense, contains many many information, very likely a run-on, very much like what an attorney will write, and probably will be wrapped by the editor sentence.
 
 // good
 This is one sentence.
 This is another longer sentence.
-This is yet another super ultra duper extra insanely long, very hard to read, very dense, contains many many information, very likely running, very much like what an attorney will write, and probably will be wrapped by the editor sentence.
+This is yet another super ultra duper extra insanely long, very hard to read, very dense, contains many many information, very likely a run-on, very much like what an attorney will write, and probably will be wrapped by the editor sentence.
 ```
 
 ### Headers

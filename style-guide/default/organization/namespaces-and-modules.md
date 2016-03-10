@@ -1,5 +1,4 @@
 # Namespace and Module
-
 When declaring a module (or namespace), there are two options:
 * declaration wrapped in `declare {namespace,module} <name> {`, or
 * top-level declaration
@@ -37,7 +36,8 @@ export default interface A {
   - Avoid `declare module X {` and use `declare namespace X {` syntax. tslint [`no-internal-module`](tslint.md/no-internal-module-native)
   - **But really, avoid it**
 
-> Why? Global pollution, even a tiny bit, is not fun. It seriously hinder the ability to test your code, especially the namespace/variable has states.
+> Why? Global pollution, even a tiny bit, is not fun.
+> It seriously hinder the ability to test your code, especially the namespace/variable has states.
 
 ```ts
 // really bad
@@ -74,7 +74,8 @@ Prior to TypeScript 1.5, there are two types of modules:
 * Internal module (`declare module X {`)
 * External module (`declare module "X" {`)
 
-In TypeScript 1.5, the term and keyword `namespace` is introduced. The nomenclature has changed.
+In TypeScript 1.5, the term and keyword `namespace` is introduced.
+The nomenclature has changed.
 * Internal module -> namespace
 * External module -> module
 
