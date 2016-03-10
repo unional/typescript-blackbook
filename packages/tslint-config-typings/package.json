@@ -25,7 +25,7 @@
     "tslint": ">=3.5.0"
   },
   "dependencies": {
-    "tslint-config-unional": "^0.1.1"
+    "tslint-config-unional": "^0.1.2"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
