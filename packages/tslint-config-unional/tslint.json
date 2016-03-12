@@ -93,7 +93,6 @@
     "typedef": [
       true,
       "call-signature",
-      "arrow-parameter",
       "property-declaration",
       "member-variable-declaration"
     ],
