@@ -20,6 +20,7 @@ A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Styl
 ## Table of Contents
 * Organization
   * [Namespaces and Modules](style-guide/default/organization/namespaces-and-modules.md)
+  * [Modules](style-guide/default/organization/modules.md)
 * **draft** [Types](style-guide/default/types.md)
 * **draft** [Objects](style-guide/default/objects.md)
 * **draft** [Arrays](style-guide/default/arrays.md)
