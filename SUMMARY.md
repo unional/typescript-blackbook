@@ -1,5 +1,7 @@
 # Summary
 * [General Style Guide](README.md)
+  * Language
+    * [Accessors](style-guide/default/language/accessors.md)
   * Organization
     * [Namespaces and Modules](style-guide/default/organization/namespaces-and-modules.md)
     * [Modules](style-guide/default/organization/modules.md)

@@ -18,6 +18,8 @@ A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Styl
     * [tslint](https://github.com/palantir/tslint)
 
 ## Table of Contents
+* Language
+  * [Accessors](style-guide/default/language/accessors.md)
 * Organization
   * [Namespaces and Modules](style-guide/default/organization/namespaces-and-modules.md)
   * [Modules](style-guide/default/organization/modules.md)
@@ -47,7 +49,6 @@ A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Styl
 * **draft** [Semicolons](style-guide/default/semicolons.md)
 * **draft** [Type Casting & Coercion](style-guide/default/type-casting-and-coercion.md)
 * **draft** [Naming Conventions](style-guide/default/naming-conventions.md)
-* **draft** [Accessors](style-guide/default/accessors.md)
 * **draft** [Events](style-guide/default/events.md)
 * **draft** [ECMAScript 6 Styles](style-guide/default/es2015.md)
 
