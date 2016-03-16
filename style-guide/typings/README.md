@@ -4,7 +4,7 @@
 ## Design Principles
 * Enable typing author to stay true to the shape of the library as much as possible.
 * Use latest TypeScript best practices in authoring typings
-* Cross-compatible with tools. It's frustrating when your tools does not get along with each other!
+* Cross-compatible with tools. It's frustrating when your tools do not get along with each other!
   * IDE / Editors
     * [Visual Studio Code](https://github.com/Microsoft/vscode)
     * [Atom](https://atom.io/)
