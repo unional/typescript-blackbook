@@ -3,6 +3,10 @@
   * Organization
     * [Namespaces and Modules](style-guide/default/organization/namespaces-and-modules.md)
     * [Modules](style-guide/default/organization/modules.md)
+  * Coding Practice
+    * [Testing](style-guide/default/coding-practice/testing.md)
+  * Tooling
+    * [tslint.json](style-guide/default/tooling/tslint.md)
   * **draft** [Types](style-guide/default/types.md)
   * **draft** [Objects](style-guide/default/objects.md)
   * **draft** [Arrays](style-guide/default/arrays.md)
@@ -29,7 +33,6 @@
   * **draft** [Events](style-guide/default/events.md)
   * **draft** [ECMAScript 6 Styles](style-guide/default/es2015.md)
   * **draft** [Testing](style-guide/default/testing.md)
-  * [tslint.json](style-guide/default/tslint.md)
 * [Style Guide for typings](style-guide/typings/README.md)
   * [Namespaces and Modules](style-guide/typings/namespaces-and-modules.md)
   * [tslint.json](style-guide/typings/tslint.md)
