@@ -3,32 +3,32 @@ When declaring a module (or namespace), there are two options:
 * declaration wrapped in `declare {namespace,module} <name> {`, or
 * top-level declaration
 
-> Top-level declarations in a source file with no top-level import or export declarations belong to the global namespace.
-> Top-level declarations in a source file with one or more top-level import or export declarations belong to the module represented by that source file. ([link](https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md#23-declarations), need to scroll down a bit)
+  > Top-level declarations in a source file with no top-level import or export declarations belong to the global namespace.
+  > Top-level declarations in a source file with one or more top-level import or export declarations belong to the module represented by that source file. ([link](https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md#23-declarations), need to scroll down a bit)
 
 ### Namespace (Internal Module)
 - Avoid namespce
 
-> Why? Use ES2015 module system instead
+  > Why? Use ES2015 module system instead
 
-```ts
-// bad
-namespace Chai {
+  ```ts
+  // bad
+  namespace Chai {
+    export interface A {
+      // stuff...
+    };
+  }
+
+  // good
   export interface A {
     // stuff...
   };
-}
 
-// good
-export interface A {
-  // stuff...
-};
-
-// good
-export default interface A {
-  // stuff...
-};
-```
+  // good
+  export default interface A {
+    // stuff...
+  };
+  ```
 
 - **Anti-pattern** Only use namespace if:
   - You are developing an application. It will not be used as an module
@@ -36,37 +36,37 @@ export default interface A {
   - Avoid `declare module X {` and use `declare namespace X {` syntax. tslint [`no-internal-module`](tslint.md/no-internal-module-native)
   - **But really, avoid it**
 
-> Why? Global pollution, even a tiny bit, is not fun.
-> It seriously hinder the ability to test your code, especially the namespace/variable has states.
+  > Why? Global pollution, even a tiny bit, is not fun.
+  > It seriously hinder the ability to test your code, especially the namespace/variable has states.
 
-```ts
-// really bad
-namespace MyProductGlobal {
-  // stuff...
-}
+  ```ts
+  // really bad
+  namespace MyProductGlobal {
+    // stuff...
+  }
 
-// much better
-import myProductGlobal from '../myProductGlobal';
-```
+  // much better
+  import myProductGlobal from '../myProductGlobal';
+  ```
 
 ### Module (External Module)
 - Do not wrap typings in `declare module "X" {`. Expose as **top-level declaration**
 
-> Why? `declare module "X" {` will cause name conflict if consumer use two different version of the same library.
+  > Why? `declare module "X" {` will cause name conflict if consumer use two different version of the same library.
 
-```ts
-// bad
-declare module "X" {
+  ```ts
+  // bad
+  declare module "X" {
+    export interface A {
+      // stuff...
+    };
+  }
+
+  // good
   export interface A {
     // stuff...
   };
-}
-
-// good
-export interface A {
-  // stuff...
-};
-```
+  ```
 
 
 ## Note

@@ -247,23 +247,23 @@ Not used
 
 - Type definition for `arrow-parameter` is not enforced.
 
-> Why? If the arrow function is used as a callback, the callback signature should be defined properly.
-> Enforcing typedef creates noise in this situation.
+  > Why? If the arrow function is used as a callback, the callback signature should be defined properly.
+  > Enforcing typedef creates noise in this situation.
 
-> If the arrow function is defined in isolation, then the type of the parameters can be defined.
-> However, this usage is relatively rare, and even when it happens, it is typically for very simple code.
-> Therefore, still do not need to enforce this rule.
+  > If the arrow function is defined in isolation, then the type of the parameters can be defined.
+  > However, this usage is relatively rare, and even when it happens, it is typically for very simple code.
+  > Therefore, still do not need to enforce this rule.
 
-```ts
-// bad
-new Promise((resolve: Function, reject: Function) => {
-  // do stuff...
-});
+  ```ts
+  // bad
+  new Promise((resolve: Function, reject: Function) => {
+    // do stuff...
+  });
 
-// good
-new Promise((resolve, reject) => {
-});
-```
+  // good
+  new Promise((resolve, reject) => {
+  });
+  ```
 
 
 #### typedef-whitespace (native)
