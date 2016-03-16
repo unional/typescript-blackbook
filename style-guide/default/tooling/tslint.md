@@ -71,7 +71,7 @@ would be something like: `"interface-name": [true, "never"]` in the future
 
 #### no-arg (native)
 `"no-arg": true`
-* TBD, should work smoothly without
+* **Open to discussion**, should work smoothly without
 
 #### no-bitwise (native)
 `"no-bitwise": false`
@@ -96,7 +96,7 @@ would be something like: `"interface-name": [true, "never"]` in the future
     "error",
     "debug"
 ]`
-* TBD, better be preventive
+* **Open to discussion**, better be preventive
 
 #### no-construct (native)
 `"no-construct": true`
@@ -128,7 +128,7 @@ Not used
 
 #### no-inferrable-types (native)
 `"no-inferrable-types": false`
-* TBD
+* **Open to discussion**
 
 #### no-internal-module (native)
 `"no-internal-module": true`
@@ -167,7 +167,7 @@ Not used
 
 #### no-unused-expression (native)
 `"no-unused-expression": true`
-* TBD: make sure exported function are excluded
+* **Open to discussion**: make sure exported function are excluded
 
 #### no-unused-variable (native)
 `"no-unused-variable": true`
@@ -284,7 +284,7 @@ Not used
     "variable-declaration": "space"
   }
 ]`
-* TBD
+* **Open to discussion**
 
 #### use-strict (native)
 `"use-strict": [false]`
@@ -308,12 +308,11 @@ Not used
   "check-separator",
   "check-type"
 ]`
-* TBD. Probably fine.
+* **Open to discussion**. Probably fine.
 
 ## tslint-eslint-rules disabled
-Currently `tslint-eslint-rules` is not used in `tslint-config-unional`.
-There is an issue with how the `"rulesDirectory"` is used in `tslint`.
-Likely `tslint-eslint-rules` need to be converted to a config package and used through `"entends"`.
+Currently the rules in `tslint-eslint-rules` are not used.
+There is [an issue](https://github.com/palantir/tslint/issues/1024) with how the `"rulesDirectory"` is used in [`tslint`](https://github.com/palantir/tslint).
 
 #### no-constant-condition (eslint)
 #### valid-typeof (eslint)
