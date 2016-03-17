@@ -5,10 +5,10 @@
 - 99% of the time you don't need to do this.
 
 ### Getters/Setters
-- Write getters/setters only to enable cross-cutting concerns.
-  - Getters/setters **must be pure**
-  - Getters/setters cannot have any side effect.
-  - Getters/setters cannot access dependencies.
+- Write getters/setters only to enable cross-cutting concerns. They:
+  - **must be pure**
+  - cannot have any side effect.
+  - cannot access dependencies.
 
   > Why? Getters/setters with side effect are hard to test and maintain.
   > It is even worse if it invokes dependencies.
