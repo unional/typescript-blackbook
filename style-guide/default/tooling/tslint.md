@@ -132,16 +132,17 @@ Not used
 
 #### no-internal-module (native)
 `"no-internal-module": true`
-* There is no reason to use it.
-* Keep code compatible with ES2015
+- [namespaces-and-modules#namespace](../organization/namespaces-and-modules.md#namespace)
 
 #### no-null-keyword (native)
 `"no-null-keyword": false`
 * There are valid use case of this
 
 #### no-require-imports (native)
-`"no-require-imports": true`
-* Follow ES2015
+For application: `"no-require-imports": true`
+For package: `"no-require-imports": false`
+
+* [modules#import-keyword](../organization/modules.md#import-keyword)
 
 #### no-shadowed-variable (native)
 `"no-shadowed-variable: true`
@@ -149,9 +150,7 @@ Not used
 
 #### no-string-literal (native)
 `"no-string-literal": false`
-* Use object access via string literals to explicitly say the property is dynamic.
-* May be a code smell
-* May be better to type the object
+* [accessors#bracket-notation](../language/accessors.md#bracket-notation)
 
 #### no-switch-case-fall-through (native)
 `"no-switch-case-fall-through": true`
@@ -183,7 +182,7 @@ Not used
 
 #### no-var-requires (native)
 `"no-var-requires": true`
-* Stick with ES2015
+* [modules#import-keyword](../organization/modules.md#import-keyword)
 
 #### object-literal-sort-keys (native)
 `"object-literal-sort-keys": false`

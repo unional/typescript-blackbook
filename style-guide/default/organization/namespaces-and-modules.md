@@ -6,7 +6,7 @@ When declaring a module (or namespace), there are two options:
   > Top-level declarations in a source file with no top-level import or export declarations belong to the global namespace.
   > Top-level declarations in a source file with one or more top-level import or export declarations belong to the module represented by that source file. ([link](https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md#23-declarations), need to scroll down a bit)
 
-### Namespace (Internal Module)
+### Namespace
 - Avoid namespce
 
   > Why? Use ES2015 module system instead
@@ -33,12 +33,13 @@ When declaring a module (or namespace), there are two options:
 - **Anti-pattern** Only use namespace if:
   - You are developing an application. It will not be used as an module
   - You are exposing and using a global namespace/variable
-  - Avoid `declare module X {` and use `declare namespace X {` syntax. tslint [`no-internal-module`](tslint.md/no-internal-module-native)
+  - Avoid `declare module X {` and use `declare namespace X {` syntax.
   - **But really, avoid it**
 
   > Why? Global pollution, even a tiny bit, is not fun.
   > It seriously hinder the ability to test your code, especially the namespace/variable has states.
 
+  tslint [`no-internal-module`](tslint.md/no-internal-module-native)
   ```ts
   // really bad
   namespace MyProductGlobal {
@@ -49,7 +50,7 @@ When declaring a module (or namespace), there are two options:
   import myProductGlobal from '../myProductGlobal';
   ```
 
-### Module (External Module)
+### Module
 - Do not wrap typings in `declare module "X" {`. Expose as **top-level declaration**
 
   > Why? `declare module "X" {` will cause name conflict if consumer use two different version of the same library.
