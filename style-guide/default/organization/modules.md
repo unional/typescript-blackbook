@@ -27,7 +27,7 @@ Fortunately, if you follow these simple rules, creating module is relatively str
 
 - If you are writing an application, you can rely on default import interop and use only ES2015 syntax.
 
-  tslint: [`no-require-import`](../tooling/tslint.md#no-require-imports)
+  tslint: [`no-require-import`](../tooling/tslint.md#no-require-imports-native)
 
   ```ts
   // ok
@@ -43,7 +43,7 @@ Fortunately, if you follow these simple rules, creating module is relatively str
 
   > Why? This is a very lengthy subject. Will add links in the future.
 
-  tslint: [`no-require-import`](../tooling/tslint.md#no-require-imports)
+  tslint: [`no-require-import`](../tooling/tslint.md#no-require-imports-native)
 
 
   ```ts
