@@ -8,59 +8,89 @@ Fortunately, if you follow these simple rules, creating module is relatively str
 - Use top-level `import` and `export`
 - Do not use the `module` keyword
 
-> Why? Follow these and you won't be sorry...
+  > Why? Follow these and you won't be sorry...
 
 ### import keyword
-There are two import syntax in TypeScript:
-```ts
-// using require()
-import dr = require('domready');
+- Use `import` keyword.
 
-// ES2015
-import dr from 'domready';
-import * as dr from 'domready';
-import { x } from './foo';
-```
+  tslint: [`no-var-requires`](../tooling/tslint.md#no-var-requires-native)
+
+  ```ts
+  // bad
+  var dr = require('domready');
+  let dr = require('domready');
+  const dr = require('domready');
+
+  // good
+  import dr = require('domready');
+  ```
 
 - If you are writing an application, you can rely on default import interop and use only ES2015 syntax.
+
+  tslint: [`no-require-import`](../tooling/tslint.md#no-require-imports)
+
+  ```ts
+  // ok
+  import dr = require('domready');
+
+  // Prefer
+  import dr from 'domready';
+  import * as dr from 'domready';
+  import { x } from './foo';
+  ```
+
 - If you are writing a package, **do not** rely on default import interop.
 
-> Why? This is a very lengthy subject. Will add links in the future.
+  > Why? This is a very lengthy subject. Will add links in the future.
+
+  tslint: [`no-require-import`](../tooling/tslint.md#no-require-imports)
+
+
+  ```ts
+  // bad
+  import dr from 'domready';
+  import * as dr from 'domready';
+
+  // good
+  import dr = require('domready');
+  import { x } from './foo';
+  ```
 
 ### export keyword
-There are two export syntax in TypeScript:
-```ts
-// export =
-export = function x() { ... };
-
-// ES2015
-// default export (import x from './foo')
-export default function x() { ... }
-// named export (import { x } from './foo')
-export function x() { ... }
-```
-
 - Use ES2015 syntax over `export =` syntax.
 
+  ```ts
+  // Avoid
+  // export =
+  export = function x() { ... };
+
+  // Good
+  // ES2015
+  // default export (import x from './foo')
+  export default function x() { ... }
+  // named export (import { x } from './foo')
+  export function x() { ... }
+  ```
 
 ### Module keyword
 - Do not wrap typings in `declare module "X" {`. Expose using **top-level import / export**
 
-> Why? `declare module "X" {` will cause name conflict if consumer use two different version of the same library.
+  > Why? `declare module "X" {` will cause name conflict if consumer use two different versions of the same library.
+  > In TypeScript 1.8, it is used for module augmentation.
 
-```ts
-// bad
-declare module "X" {
+  ```ts
+  // bad
+  declare module "X" {
+    export interface A {
+      // stuff...
+    };
+  }
+
+  // good
   export interface A {
     // stuff...
   };
-}
-
-// good
-export interface A {
-  // stuff...
-};
-```
+  ```
 
 ## Note
 Prior to TypeScript 1.5, there are two types of modules:

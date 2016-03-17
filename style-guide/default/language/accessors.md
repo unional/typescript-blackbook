@@ -4,6 +4,8 @@
 - Only use bracket notation if the object is of type `any` and the property is dynamic.
 - 99% of the time you don't need to do this.
 
+  tslint: [`no-string-literal`](../tooling/tslint.md#no-string-literal-native)
+
 ### Getters/Setters
 - Write getters/setters only to enable cross-cutting concerns. They:
   - **must be pure**
