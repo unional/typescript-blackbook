@@ -43,7 +43,7 @@
 ### Boolean property
 - Boolean property should be named as `isVal` or `hasVal`.
 
-  > Why? Avoid confusion when `Val` itself can be evaluate as falsy.
+  > Why? Avoid confusion when `Val` itself can be evaluated as falsy.
 
   ```typescript
   // bad
