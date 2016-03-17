@@ -11,7 +11,7 @@
   - cannot access dependencies.
 
   > Why? Getters/setters with side effect are hard to test and maintain.
-  > It is even worse if it invokes dependencies.
+  > It is even worse if they invoke dependencies.
 
   ```ts
   // bad
