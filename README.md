@@ -20,6 +20,7 @@ A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Styl
 ## Table of Contents
 * Language
   * [Accessors](style-guide/default/language/accessors.md)
+  * [Arrays](style-guide/default/language/arrays.md)
 * Organization
   * [Namespaces and Modules](style-guide/default/organization/namespaces-and-modules.md)
   * [Modules](style-guide/default/organization/modules.md)
@@ -29,7 +30,6 @@ A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Styl
   * [tslint.json](style-guide/default/tooling/tslint.md)
 * **draft** [Types](style-guide/default/types.md)
 * **draft** [Objects](style-guide/default/objects.md)
-* **draft** [Arrays](style-guide/default/arrays.md)
 * **draft** [Destructuring](style-guide/default/destructuring.md)
 * **draft** [Strings](style-guide/default/strings.md)
 * **draft** [Functions](style-guide/default/functions.md)
