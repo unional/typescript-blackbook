@@ -5,7 +5,7 @@
     "no-internal-module": true,
     "no-require-imports": false,
     "no-string-literal": true,
-    "object-literal-sort-keys": true,
+    "object-literal-sort-keys": false,
     "no-arg": false,
     "no-console": [
       true,

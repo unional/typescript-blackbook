@@ -23,5 +23,5 @@ This style follows the [`default style`](../default/tslint.md) if not specified 
 * Unlike in the default style, there is no need to support the dynamic use case.
 
 #### object-literal-sort-keys (native)
-`"object-literal-sort-keys": true`
-* typings are used mostly by tools, so the contextual ordering does not pay dividend. Sorting object keys alphabetically in typings help making it easier to maintain.
+`"object-literal-sort-keys": false`
+- Allow the typings to follow the order as in the source package documentation.
