@@ -13,6 +13,7 @@
     * [tslint](https://github.com/palantir/tslint)
 
 ## Table of Contents
+* [Events](events.md)
 * [Namespaces and Modules](namespaces-and-modules.md)
 * [tslint.json](tslint.md)
 
