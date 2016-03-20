@@ -6,6 +6,7 @@
     "no-require-imports": false,
     "no-string-literal": true,
     "object-literal-sort-keys": false,
+    "member-ordering": [false],
     "no-arg": false,
     "no-console": [
       true,

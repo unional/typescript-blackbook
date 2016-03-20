@@ -5,6 +5,10 @@ Rules in use:
 
 This style follows the [`default style`](../default/tslint.md) if not specified below.
 
+#### membor-ordering (native)
+`"member-ordering": [false]`
+- Follow order in the source package documentation.
+
 #### no-empty (native)
 `"no-empty": false`
 * When testing the typings, it is quite common to create empty functions.
