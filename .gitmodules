@@ -1,3 +1,6 @@
 [submodule "packages/tslint-config-unional"]
 	path = packages/tslint-config-unional
 	url = https://github.com/unional/tslint-config-unional.git
+[submodule "packages/tslint-config-typings"]
+	path = packages/tslint-config-typings
+	url = https://github.com/typings/tslint-config-typings
