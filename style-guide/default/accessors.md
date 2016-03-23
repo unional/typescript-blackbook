@@ -5,7 +5,7 @@
 - 99% of the time you don't need to do this.
 - If you need it, it may be a code smell.
 
-  tslint: [`no-string-literal`](../tooling/tslint.md#no-string-literal-native)
+  tslint: [`no-string-literal`](tslint.md#no-string-literal-native)
 
 ### Getters/Setters
 - Write getters/setters only to enable cross-cutting concerns. They:

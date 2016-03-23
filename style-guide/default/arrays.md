@@ -51,7 +51,7 @@
 
 ### Array method callbacks
 - Use return statements in array method callbacks.
-- It's ok to omit the return if the function body consists of a single statement following [8.2](#8.2). eslint: [`array-callback-return`](http://eslint.org/docs/rules/array-callback-return)
+- It's ok to omit the return if it is an arrow function and consists of a single expression.
 
   ```typescript
   // good

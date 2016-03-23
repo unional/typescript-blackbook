@@ -283,6 +283,7 @@ For package: `"no-require-imports": false`
     "variable-declaration": "space"
   }
 ]`
+
 - **Open to discussion**
 
 #### use-strict (native)
