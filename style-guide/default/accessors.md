@@ -20,7 +20,7 @@
   // bad
   {
     get age() {
-      ajax('He asked for my age!');
+      ajax('He asked my age!');
       return this.realAge;
     }
 
