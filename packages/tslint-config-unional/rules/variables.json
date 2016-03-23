@@ -1,9 +1,0 @@
-{
-  "rules": {
-    "label-position": true,
-    "label-undefined": true,
-    "no-shadowed-variable": true,
-    "no-unused-variable": true,
-    "no-use-before-define": true
-  }
-}
