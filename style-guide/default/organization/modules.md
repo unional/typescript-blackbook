@@ -56,6 +56,17 @@ Fortunately, if you follow these simple rules, creating module is relatively str
   import { x } from './foo';
   ```
 
+- Organize import statments into three sections: 3rd party modules, company modules, and relative (i.e. local) modules.
+
+  ```ts
+  import _ from 'lodash';
+  import Promise from 'bluebird';
+
+  import Router from 'panda-router';
+
+  import ObjectPage from './ObjectPage/index';
+  ```
+
 ### export keyword
 - Use ES2015 syntax over `export =` syntax.
 
