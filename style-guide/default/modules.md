@@ -1,49 +1,121 @@
-## Modules
+# Module
+Module in TypeScript has the same semantic meaning as in ES2015.
 
-### standard `import`/`export`
-- Always use modules (`import`/`export`) over a non-standard module system. You can always transpile to your preferred module system.
+The actual definition on module is subtle and complex.
+Fortunately, if you follow these simple rules, creating module is relatively straight forward.
 
-> Why? Modules are the future, let's start using the future now.
+### General guideline
+- Use top-level `import` and `export`
+- Do not use the `module` keyword
 
-```typescript
-// bad
-const AirbnbStyleGuide = require('./AirbnbStyleGuide');
-module.exports = AirbnbStyleGuide.es6;
+  > Why? Follow these and you won't be sorry...
 
-// ok
-import AirbnbStyleGuide from './AirbnbStyleGuide';
-export default AirbnbStyleGuide.es6;
+### import keyword
+- Use `import` keyword.
 
-// best
-import { es6 } from './AirbnbStyleGuide';
-export default es6;
-```
+  tslint: [`no-var-requires`](../tooling/tslint.md#no-var-requires-native)
 
-### Wildcard import
-- Do not use wildcard imports.
+  ```ts
+  // bad
+  var dr = require('domready');
+  let dr = require('domready');
+  const dr = require('domready');
 
-> Why? This makes sure you have a single default export.
+  // good
+  import dr = require('domready');
+  ```
 
-```typescript
-// bad
-import * as AirbnbStyleGuide from './AirbnbStyleGuide';
+- If you are writing an application, you can rely on default import interop and use only ES2015 syntax.
 
-// good
-import AirbnbStyleGuide from './AirbnbStyleGuide';
-```
+  tslint: [`no-require-import`](../tooling/tslint.md#no-require-imports-native)
 
-### Exporting
-- And do not export directly from an import.
+  ```ts
+  // ok
+  import dr = require('domready');
 
-> Why? Although the one-liner is concise, having one clear way to import and one clear way to export makes things consistent.
+  // Prefer
+  import dr from 'domready';
+  import * as dr from 'domready';
+  import { x } from './foo';
+  ```
 
-```typescript
-// bad
-// filename es6.js
-export { es6 as default } from './airbnbStyleGuide';
+- If you are writing a package, **do not** rely on default import interop.
 
-// good
-// filename es6.js
-import { es6 } from './AirbnbStyleGuide';
-export default es6;
-```
+  > Why? This is a very lengthy subject. Will add links in the future.
+
+  tslint: [`no-require-import`](../tooling/tslint.md#no-require-imports-native)
+
+
+  ```ts
+  // bad
+  import dr from 'domready';
+  import * as dr from 'domready';
+
+  // good
+  import dr = require('domready');
+  import { x } from './foo';
+  ```
+
+- Organize import statments into three sections: 3rd party modules, company modules, and relative (i.e. local) modules.
+
+  ```ts
+  import _ from 'lodash';
+  import Promise from 'bluebird';
+
+  import Router from 'panda-router';
+
+  import ObjectPage from './ObjectPage/index';
+  ```
+
+### export keyword
+- Use ES2015 syntax over `export =` syntax.
+
+  ```ts
+  // Avoid
+  // export =
+  export = function x() { ... };
+
+  // Good
+  // ES2015
+  // default export (import x from './foo')
+  export default function x() { ... }
+  // named export (import { x } from './foo')
+  export function x() { ... }
+  ```
+
+### Module keyword
+- Do not wrap typings in `declare module "X" {`. Expose using **top-level import / export**
+
+  > Why? `declare module "X" {` will cause name conflict if consumer use two different versions of the same library.
+  > In TypeScript 1.8, it is used for module augmentation.
+
+  ```ts
+  // bad
+  declare module "X" {
+    export interface A {
+      // stuff...
+    };
+  }
+
+  // good
+  export interface A {
+    // stuff...
+  };
+  ```
+
+## Note
+Prior to TypeScript 1.5, there are two types of modules:
+* Internal module (`declare module X {`)
+* External module (`declare module "X" {`)
+
+In TypeScript 1.5, the term and keyword `namespace` is introduced.
+The nomenclature has changed.
+* Internal module -> namespace
+* External module -> module
+
+The `declare module X {` syntax exists for backward compatibility.
+
+## Reference
+* https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Namespaces.md
+* https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Namespaces%20and%20Modules.md
+* https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Modules.md
