@@ -1,0 +1,3 @@
+[submodule "packages/tslint-config-unional"]
+	path = packages/tslint-config-unional
+	url = https://github.com/unional/tslint-config-unional.git
