@@ -1,12 +1,12 @@
 # Testing
 Writing test is always good.
 There are a few questions need to be answered:
-* Which testing frameworks to use?
-* When should I write test?
-* What kind of test should I write?
-* What should I write test against?
-* How extensive should the tests be?
-* When should the test be run?
+- Which testing frameworks to use?
+- When should I write test?
+- What kind of test should I write?
+- What should I write test against?
+- How extensive should the tests be?
+- When should the test be run?
 
 Depends on the team, management, product, and release cycle, the answer to these questions can be different.
 Listed in this section are general guidelines you can consider when you formulate your own testing guidelines.

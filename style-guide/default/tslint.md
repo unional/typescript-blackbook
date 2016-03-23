@@ -1,13 +1,13 @@
 # tslint configuration
 Rules in use:
-* native: https://github.com/palantir/tslint#core-rules
-* eslint: https://github.com/buzinas/tslint-eslint-rules#rules-copied-from-eslint-website
+- native: https://github.com/palantir/tslint#core-rules
+- eslint: https://github.com/buzinas/tslint-eslint-rules#rules-copied-from-eslint-website
 
 #### align (native)
 `"align": [true, "statements"]`
 
-* [functions#function-parameters](functions.md#function-parameters)
-* [functions#function-arguments](functions.md#function-arguments)
+- [functions#function-parameters](functions.md#function-parameters)
+- [functions#function-arguments](functions.md#function-arguments)
 
 #### ban (native)
 `"ban": false`
@@ -18,7 +18,7 @@ Rules in use:
 #### comment-format (native)
 `"comment-format": [true, "check-space"]`
 
-* [comments#single-line](comments.md#single-line)
+- [comments#single-line](comments.md#single-line)
 
 #### curly (native)
 `"curly": true`
@@ -32,18 +32,18 @@ Rules in use:
 #### indent (native)
 `"indent": [true, "spaces"]`
 
-* [whitespaces#soft-tabs](whitespaces.md#soft-tabs)
+- [whitespaces#soft-tabs](whitespaces.md#soft-tabs)
 
 #### interface-name (native)
 `"interface-name": false`
 
 would be something like: `"interface-name": [true, "never"]` in the future
-* https://github.com/palantir/tslint/issues/512
-* [interfaces#naming](interfaces.md#naming)
+- https://github.com/palantir/tslint/issues/512
+- [interfaces#naming](interfaces.md#naming)
 
 #### jsdoc-format (native)
 `"jsdoc-format": true`
-* [comments#multi-line](comments.md#multi-line)
+- [comments#multi-line](comments.md#multi-line)
 
 #### label-position (native)
 `"label-position": true`
@@ -53,37 +53,37 @@ would be something like: `"interface-name": [true, "never"]` in the future
 
 #### max-line-length (native)
 `"max-line-length": false`
-* [file-structures#max-line-length](file-structures.md#max-line-length)
+- [file-structures#max-line-length](file-structures.md#max-line-length)
 
 #### member-access (native)
 `"member-access": false`
 
-* [classes#member-visibility](classes.md#member-visibility)
+- [classes#member-visibility](classes.md#member-visibility)
 
 #### member-ordering (native)
 `"member-ordering": false`
 
-* [classes#member-ordering](classes.md#member-ordering)
+- [classes#member-ordering](classes.md#member-ordering)
 
 #### no-any (native)
 `"no-any": false`
-* Too restrictive
+- Too restrictive
 
 #### no-arg (native)
 `"no-arg": true`
-* **Open to discussion**, should work smoothly without
+- **Open to discussion**, should work smoothly without
 
 #### no-bitwise (native)
 `"no-bitwise": false`
-* Should know what I'm doing
+- Should know what I'm doing
 
 #### no-conditional-assignment (native)
 `"no-conditional-assignment": true`
-* Avoid clever trick that reduce maintainability
+- Avoid clever trick that reduce maintainability
 
 #### no-consecutive-blank-lines (native)
 `"no-consecutive-blank-lines": false`
-* Want the ability to have 2 blank lines for better formatting
+- Want the ability to have 2 blank lines for better formatting
 
 #### no-console (native)
 `"no-console": [
@@ -96,39 +96,39 @@ would be something like: `"interface-name": [true, "never"]` in the future
     "error",
     "debug"
 ]`
-* **Open to discussion**, better be preventive
+- **Open to discussion**, better be preventive
 
 #### no-construct (native)
 `"no-construct": true`
 
 #### no-constructor-vars (native)
 `"no-constructor-vars": false`
-* It is reasonable to mark constructor as `private`
+- It is reasonable to mark constructor as `private`
 
 #### no-debugger (native)
 `"no-debugger": true`
-* Definitely. No checkin code should have `debugger`
+- Definitely. No checkin code should have `debugger`
 
 #### no-duplicate-key (native)
 Not used
-* TypeScript by default prohibit this
+- TypeScript by default prohibit this
 
 #### no-duplicate-variable (native)
 `"no-duplicate-variable": true`
-* Only applies to `var`
-* Likely coding mistake. Use `let` and `const` instead
+- Only applies to `var`
+- Likely coding mistake. Use `let` and `const` instead
 
 #### no-empty (native)
 `"no-empty": true`
-* yup
+- yup
 
 #### no-eval (native)
 `"no-eval": true`
-* Absolutely
+- Absolutely
 
 #### no-inferrable-types (native)
 `"no-inferrable-types": false`
-* **Open to discussion**
+- **Open to discussion**
 
 #### no-internal-module (native)
 `"no-internal-module": true`
@@ -136,57 +136,57 @@ Not used
 
 #### no-null-keyword (native)
 `"no-null-keyword": false`
-* There are valid use case of this
+- There are valid use case of this
 
 #### no-require-imports (native)
 For application: `"no-require-imports": true`
 For package: `"no-require-imports": false`
 
-* [modules#import-keyword](../organization/modules.md#import-keyword)
+- [modules#import-keyword](../organization/modules.md#import-keyword)
 
 #### no-shadowed-variable (native)
 `"no-shadowed-variable: true`
-* yup
+- yup
 
 #### no-string-literal (native)
 `"no-string-literal": false`
-* [accessors#bracket-notation](../language/accessors.md#bracket-notation)
+- [accessors#bracket-notation](../language/accessors.md#bracket-notation)
 
 #### no-switch-case-fall-through (native)
 `"no-switch-case-fall-through": true`
-* yup
+- yup
 
 #### no-trailing-whitespace (native)
 `"no-trailing-whitespace": true`
-* yup
+- yup
 
 #### no-unreachable (native)
 `"no-unreachable": true`
-* of course
+- of course
 
 #### no-unused-expression (native)
 `"no-unused-expression": true`
-* **Open to discussion**: make sure exported function are excluded
+- **Open to discussion**: make sure exported function are excluded
 
 #### no-unused-variable (native)
 `"no-unused-variable": true`
-* yup
+- yup
 
 #### no-use-before-declare (native)
 `"no-use-before-declare": true`
-* For `var` only. YUP!
+- For `var` only. YUP!
 
 #### no-var-keyword (native)
 `"no-var-keyword": true`
-* It is too unlikely that you need to concern about memory. It is just a pointer.
+- It is too unlikely that you need to concern about memory. It is just a pointer.
 
 #### no-var-requires (native)
 `"no-var-requires": true`
-* [modules#import-keyword](../organization/modules.md#import-keyword)
+- [modules#import-keyword](../organization/modules.md#import-keyword)
 
 #### object-literal-sort-keys (native)
 `"object-literal-sort-keys": false`
-* Many times when you pass in option bags, the order has contextual meaning that help reader understand what you try to do.
+- Many times when you pass in option bags, the order has contextual meaning that help reader understand what you try to do.
 
 #### one-line (native)
 `"one-line": [
@@ -194,7 +194,7 @@ For package: `"no-require-imports": false`
   "check-open-brace",
   "check-whitespace"
 }`
-* Do not put `else`, `catch`, `finally` on the same line. Better code folding
+- Do not put `else`, `catch`, `finally` on the same line. Better code folding
 
 #### quotemark (native)
 `"quotemark": [
@@ -202,22 +202,22 @@ For package: `"no-require-imports": false`
   "single",
   "avoid-escape"
 ]`
-* Use single quote to reduce key-stroke. Save your little finger.
+- Use single quote to reduce key-stroke. Save your little finger.
 
 #### radix (native)
 `"radix": false`
-* `parseInt()` in base 10 is common enough to save the extra typing all the time
+- `parseInt()` in base 10 is common enough to save the extra typing all the time
 
 #### semicolon (native)
 `"semicolon": [
   true,
   "always"
 ]`
-* Do not rely on Auto Semicolon Insertion. Your friend might not be as good as you are.
+- Do not rely on Auto Semicolon Insertion. Your friend might not be as good as you are.
 
 #### switch-default (native)
 `"switch-default": true`
-* Just to make sure...
+- Just to make sure...
 
 #### trailing-comma (native)
 `"trailing-comma": [
@@ -227,14 +227,14 @@ For package: `"no-require-imports": false`
     "singleline": "never"
   }
 ]`
-* To avoid extra diff. TypeScript will take it off anyway.
+- To avoid extra diff. TypeScript will take it off anyway.
 
 #### triple-equals (native)
 `"triple-equals": [
   true,
   "allow-null-check"
 ]`
-* YUP
+- YUP
 
 #### typedef (native)
 `"typedef": [
@@ -283,11 +283,11 @@ For package: `"no-require-imports": false`
     "variable-declaration": "space"
   }
 ]`
-* **Open to discussion**
+- **Open to discussion**
 
 #### use-strict (native)
 `"use-strict": [false]`
-* Not a necessity
+- Not a necessity
 
 #### variable-name (native)
 `"variable-name": [
@@ -295,8 +295,8 @@ For package: `"no-require-imports": false`
   "check-format",
   "ban-keywords"
 ]`
-* Only camelCased or UPPER_CASED variable names
-* Do not allow leading or trailing underscore. They are used typically to indicate private variable. TypeScript already support `private` visibility.
+- Only camelCased or UPPER_CASED variable names
+- Do not allow leading or trailing underscore. They are used typically to indicate private variable. TypeScript already support `private` visibility.
 
 #### whitespace (native)
 `"whitespace": [
@@ -307,7 +307,7 @@ For package: `"no-require-imports": false`
   "check-separator",
   "check-type"
 ]`
-* **Open to discussion**. Probably fine.
+- **Open to discussion**. Probably fine.
 
 ## tslint-eslint-rules disabled
 Currently the rules in `tslint-eslint-rules` are not used.

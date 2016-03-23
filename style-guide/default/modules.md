@@ -35,11 +35,11 @@ Fortunately, if you follow these simple rules, creating module is relatively str
 
   // Prefer
   import dr from 'domready';
-  import * as dr from 'domready';
+  import - as dr from 'domready';
   import { x } from './foo';
   ```
 
-- If you are writing a package, **do not** rely on default import interop.
+- If you are writing a package, **do not*- rely on default import interop.
 
   > Why? This is a very lengthy subject. Will add links in the future.
 
@@ -49,7 +49,7 @@ Fortunately, if you follow these simple rules, creating module is relatively str
   ```ts
   // bad
   import dr from 'domready';
-  import * as dr from 'domready';
+  import - as dr from 'domready';
 
   // good
   import dr = require('domready');
@@ -105,17 +105,17 @@ Fortunately, if you follow these simple rules, creating module is relatively str
 
 ## Note
 Prior to TypeScript 1.5, there are two types of modules:
-* Internal module (`declare module X {`)
-* External module (`declare module "X" {`)
+- Internal module (`declare module X {`)
+- External module (`declare module "X" {`)
 
 In TypeScript 1.5, the term and keyword `namespace` is introduced.
 The nomenclature has changed.
-* Internal module -> namespace
-* External module -> module
+- Internal module -> namespace
+- External module -> module
 
 The `declare module X {` syntax exists for backward compatibility.
 
 ## Reference
-* https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Namespaces.md
-* https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Namespaces%20and%20Modules.md
-* https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Modules.md
+- https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Namespaces.md
+- https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Namespaces%20and%20Modules.md
+- https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Modules.md

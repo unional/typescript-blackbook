@@ -4,24 +4,24 @@
 ### Event Handlers
 - Type the event handler, not the callback.
 
-> Why? Provides better code completion.
+  > Why? Provides better code completion.
 
-```ts
-// Bad
-export interface MyEventCallback {
-  (event: { ... }): void;
-}
+  ```ts
+  // Bad
+  export interface MyEventCallback {
+    (event: { ... }): void;
+  }
 
-export interface ABC {
-  onMyEvent(callback: MyEventCallback): Disposable;
-}
+  export interface ABC {
+    onMyEvent(callback: MyEventCallback): Disposable;
+  }
 
-// Good
-export interface MyEventHandler {
-  (callback: (event: { ... }) => void): Disposable;
-}
+  // Good
+  export interface MyEventHandler {
+    (callback: (event: { ... }) => void): Disposable;
+  }
 
-export interface ABC {
-  onMyEvent: MyEventHandler;
-}
-```
+  export interface ABC {
+    onMyEvent: MyEventHandler;
+  }
+  ```
