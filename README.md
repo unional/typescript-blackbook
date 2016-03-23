@@ -21,7 +21,8 @@ A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Styl
 * Language
   * [Accessors](style-guide/default/language/accessors.md)
   * [Arrays](style-guide/default/language/arrays.md)
-  * [Interfaces](style-guide/default/interfaces.md)
+  * [Arrow Functions](style-guide/default/language/arrow-functions.md)
+  * [Interfaces](style-guide/default/language/interfaces.md)
 * Organization
   * [Namespaces and Modules](style-guide/default/organization/namespaces-and-modules.md)
   * [Modules](style-guide/default/organization/modules.md)
@@ -34,7 +35,6 @@ A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Styl
 * **draft** [Destructuring](style-guide/default/destructuring.md)
 * **draft** [Strings](style-guide/default/strings.md)
 * **draft** [Functions](style-guide/default/functions.md)
-* **draft** [Arrow Functions](style-guide/default/arrow-functions.md)
 * **draft** [Classes](style-guide/default/classes.md)
 * **draft** [Modules](style-guide/default/modules.md)
 * **draft** [Iterators and Generators](style-guide/default/iterators-and-generators.md)
