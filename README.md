@@ -1,6 +1,6 @@
 # Typescript Style Guide
 
-A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) with some of [my touch](https://github.com/unional/javascript).
+A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
 
 ## Other Style Guides
 - [Authoring typings](style-guide/typings/README.md) ([typings](https://github.com/typings/typings))
