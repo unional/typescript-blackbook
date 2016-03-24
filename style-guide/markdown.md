@@ -6,11 +6,11 @@ https://help.github.com/articles/github-flavored-markdown/
 Here is a complete reference of most common syntax:
 https://daringfireball.net/projects/markdown/syntax
 
-### General
+### Sentence
 - One sentence per line. Except in list.
 
-  > Why? One sentence per line improves readability when the file is read in raw format.
-  > You need to insert blank lines for paragraph anyway.
+  > Why? One sentence per line improves readability in raw format.
+  > You need to insert blank line for paragraph anyway.
 
   ```
   // bad
