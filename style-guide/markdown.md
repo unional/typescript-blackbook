@@ -1,6 +1,6 @@
 # Markdown style guide
 There are several flavors of `markdown`.
-This style guide is designs for the `github` version of markdown (and alternatives):
+This style guide is designed for the `github` version of markdown (and alternatives):
 https://help.github.com/articles/github-flavored-markdown/
 
 Here is a complete reference of most common syntax:
