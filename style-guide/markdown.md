@@ -54,3 +54,15 @@ https://daringfireball.net/projects/markdown/syntax
     - sub-list-item
   ```
 
+### Fenced code blocks (triple backticks)
+- Use language identifier whenever possible.
+  - shell
+  - javascript
+  - typescript
+  - ruby
+- Prefer shorthand language identifier.
+  - sh
+  - js
+  - ts
+  - rb
+- Intent with 2 spaces
