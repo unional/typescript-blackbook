@@ -43,7 +43,7 @@ https://daringfireball.net/projects/markdown/syntax
   > If you have more than one title, it is likely that you have multiple topics in the same document.
   > Break them into separate files.
 
-- Wordings in header should be neutral, non-opiniated
+- Wordings in header should be neutral, non-opinionated
 
   > Why? The header would be used as link.
   > It is best to keep the header short and unlikely to change.
