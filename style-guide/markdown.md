@@ -45,7 +45,7 @@ https://daringfireball.net/projects/markdown/syntax
 
 - Wordings in header should be neutral, non-opinionated
 
-  > Why? The header would be used as link.
+  > Why? The header could be used as link.
   > It is best to keep the header short and unlikely to change.
 
   ```
