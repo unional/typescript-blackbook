@@ -3,12 +3,30 @@
 ### Array creation
 - Use the literal syntax for array creation.
 
-  ```typescript
+  ```ts
   // bad
-  const items = new Array();
+  const items = new Array<string>();
 
   // good
-  const items = [];
+  const items = string[];
+  const items = ['a', 'b', 'c'];
+  ```
+
+### Type declaration
+- Use the literal syntax for type declaration. Unless the type is complex
+
+  ```ts
+  // bad
+  const items: Array<string>;
+  const items: { people: Person[] }[]
+  
+  // either is fine
+  const items: (string | string[])[]
+  const items: Array<string | string[]>;
+
+  // good
+  const items: string[];
+  const items: Array<{ people; Persion[] }>;
   ```
 
 ### Inserting
