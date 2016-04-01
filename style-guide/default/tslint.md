@@ -1,4 +1,20 @@
 # tslint configuration
+You can use this configuration by installing `tslint-config-unional` (requires `tslint@3.7.0+`):
+
+```sh
+npm install -D tslint tslint-config-unional
+```
+
+```js
+// your tslint.json
+{
+  "extends": "tslint-config-unional",
+  "rules": {
+    // your customization
+  }
+}
+```
+
 Rules in use:
 - native: https://github.com/palantir/tslint#core-rules
 - eslint: https://github.com/buzinas/tslint-eslint-rules#rules-copied-from-eslint-website
