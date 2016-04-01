@@ -15,6 +15,9 @@
 ### Type declaration
 - Use the literal syntax for type declaration. Unless the type is complex
 
+  > Why? The `Array<>` syntax is visually clear that your type is an array.
+  > It also provides better focus on the internal type.
+  
   ```ts
   // bad
   const items: Array<string>;
@@ -52,7 +55,7 @@
   let i;
 
   for (i = 0; i < len; i++) {
-  itemsCopy[i] = items[i];
+    itemsCopy[i] = items[i];
   }
 
   // good
