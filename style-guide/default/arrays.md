@@ -29,7 +29,7 @@
 
   // good
   const items: string[];
-  const items: Array<{ people; Persion[] }>;
+  const items: Array<{ people: Person[] }>;
   ```
 
 ### Inserting
