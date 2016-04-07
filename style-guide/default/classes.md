@@ -1,5 +1,18 @@
 ## Classes
 
+### Naming Convention
+- Name class in pascal case
+
+  tslint: [`class-name`](tslint.md#class-name-native)
+
+  ```ts
+  // bad
+  class myClass { }
+
+  // good
+  class MyClass { }
+  ```
+
 ### `class` keyword
 - Always use `class`. Avoid manipulating `prototype` directly.
 
@@ -27,18 +40,6 @@
       return value;
     }
   }
-  ```
-
-- Name class in pascal case
-
-  tslint: [`class-name`](tslint.md#class-name-native)
-
-  ```ts
-  // bad
-  class myClass { }
-
-  // good
-  class MyClass { }
   ```
 
 ### `extends` keyword
@@ -86,7 +87,8 @@
   ```
 
 ### Empty constructor
-- Classes have a default constructor if one is not specified. An empty constructor function or one that just delegates to a parent class is unnecessary. [`no-useless-constructor`](http://eslint.org/docs/rules/no-useless-constructor)
+- Classes have a default constructor if one is not specified.
+- Empty constructor function or one that just delegates to a parent class is unnecessary.
 
   ```typescript
   // bad
@@ -115,9 +117,22 @@
   ```
 
 ### member visibility
-- Do not need to explicitly add `public` to members. tslint: [`member-access`](tslint.md#member-access-native)
+- Do not need to explicitly add `public` to members.
+
+  tslint: [`member-access`](tslint.md#member-access-native)
 
 ### member ordering
-- Put all public members before private members. tslint: [`member-ordering`](tslint.md#member-ordering-native)
-- Put all static members before instance members
-- Put all properties before functions
+- Place public members before private members.
+- Place static members before instance members.
+- Place properties before methods.
+
+- Do not group properties and methods based on interface
+
+  > Why? Able to find out what the class can do is more important than where those methods come from.
+
+- Place properties and methods of mixins at the end.
+
+  > Why? Currently mixin needs to declare dummy properties for it to work.
+  > It doesn't make sense to spread it around.
+
+  tslint: [`member-ordering`](tslint.md#member-ordering-native)
