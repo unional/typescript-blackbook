@@ -48,8 +48,8 @@ Fortunately, if you follow these simple rules, creating module is relatively str
 - Organize import statments into three sections: 3rd party modules, company modules, and relative (i.e. local) modules.
 
   ```ts
-  import _ from 'lodash';
-  import Promise from 'bluebird';
+  import _ = require('lodash');
+  import Promise = require('bluebird');
 
   import Router from 'panda-router';
 
