@@ -23,7 +23,7 @@ Fortunately, if you follow these simple rules, creating module is relatively str
   import dr = require('domready');
   ```
 
-- Use `import ... = require(...)` syntax for packages exported in CommonJS style. **do not*- rely on default import interop.
+- Use `import x = require('x')` syntax for packages exported in CommonJS style. **do not** rely on import interop.
 
   > Why? The current interop between CommonJS and ES2015 Module is not consistant across configuration.
   > Using interop today could cause a systematic issue.
