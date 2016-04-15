@@ -5,10 +5,8 @@ The actual definition on module is subtle and complex.
 Fortunately, if you follow these simple rules, creating module is relatively straight forward.
 
 ### General guideline
-- Use top-level `import` and `export`
-- Do not use the `module` keyword
-
-  > Why? Follow these and you won't be sorry...
+- Write module file (with top-level `import` or `export`) and not script file (without top-level `import` or `export`)
+- Write module in ES2015 syntax, except `import x = require('x');`.
 
 ### import keyword
 - Use `import` keyword.
@@ -25,35 +23,26 @@ Fortunately, if you follow these simple rules, creating module is relatively str
   import dr = require('domready');
   ```
 
-- If you are writing an application, you can rely on default import interop and use only ES2015 syntax.
+- Use `import ... = require(...)` syntax for packages exported in CommonJS style. **do not*- rely on default import interop.
+
+  > Why? The current interop between CommonJS and ES2015 Module is not consistant across configuration.
+  > Using interop today could cause a systematic issue.
+  > Avoid it at all cost.
+  > Educate your team to learn about the differences and do the right thing.
+  
+  reference issue: https://github.com/Microsoft/TypeScript/issues/7398
 
   tslint: [`no-require-import`](tslint.md#no-require-imports-native)
-
-  ```ts
-  // ok
-  import dr = require('domready');
-
-  // Prefer
-  import dr from 'domready';
-  import - as dr from 'domready';
-  import { x } from './foo';
-  ```
-
-- If you are writing a package, **do not*- rely on default import interop.
-
-  > Why? This is a very lengthy subject. Will add links in the future.
-
-  tslint: [`no-require-import`](tslint.md#no-require-imports-native)
-
 
   ```ts
   // bad
-  import dr from 'domready';
-  import - as dr from 'domready';
+  import * as dr from 'domready';
+  // with "commonjs" + "allowSyntheticDefaultImports" or 
+  // with "system"
+  import dr from 'domready'; 
 
   // good
   import dr = require('domready');
-  import { x } from './foo';
   ```
 
 - Organize import statments into three sections: 3rd party modules, company modules, and relative (i.e. local) modules.
