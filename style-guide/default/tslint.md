@@ -155,8 +155,7 @@ Not used
 - There are valid use case of this
 
 #### no-require-imports (native)
-For application: `"no-require-imports": true`
-For package: `"no-require-imports": false`
+`"no-require-imports": false`
 
 - [modules#import-keyword](../organization/modules.md#import-keyword)
 
