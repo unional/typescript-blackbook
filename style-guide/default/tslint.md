@@ -148,7 +148,7 @@ Not used
 
 #### no-internal-module (native)
 `"no-internal-module": true`
-- [namespaces-and-modules#namespace](../organization/namespaces-and-modules.md#namespace)
+- [namespaces-and-modules#namespace](namespaces-and-modules.md#namespace)
 
 #### no-null-keyword (native)
 `"no-null-keyword": false`
@@ -157,7 +157,7 @@ Not used
 #### no-require-imports (native)
 `"no-require-imports": false`
 
-- [modules#import-keyword](../organization/modules.md#import-keyword)
+- [modules#import-keyword](modules.md#import-keyword)
 
 #### no-shadowed-variable (native)
 `"no-shadowed-variable: true`
@@ -165,7 +165,7 @@ Not used
 
 #### no-string-literal (native)
 `"no-string-literal": false`
-- [accessors#bracket-notation](../language/accessors.md#bracket-notation)
+- [accessors#bracket-notation](accessors.md#bracket-notation)
 
 #### no-switch-case-fall-through (native)
 `"no-switch-case-fall-through": true`
