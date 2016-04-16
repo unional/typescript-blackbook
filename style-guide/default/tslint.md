@@ -51,10 +51,8 @@ Rules in use:
 - [whitespaces#soft-tabs](whitespaces.md#soft-tabs)
 
 #### interface-name (native)
-`"interface-name": false`
+`"interface-name": [true, "no-prefix"]`
 
-would be something like: `"interface-name": [true, "never"]` in the future
-- https://github.com/palantir/tslint/issues/512
 - [interfaces#naming](interfaces.md#naming)
 
 #### jsdoc-format (native)
