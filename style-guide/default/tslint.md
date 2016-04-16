@@ -238,10 +238,10 @@ Not used
 `"trailing-comma": [
   true,
   {
-    "multiline": "always",
     "singleline": "never"
   }
 ]`
+- `"multiline": "always"` should be used, but currently removed due to https://github.com/palantir/tslint/issues/1122
 - To avoid extra diff. TypeScript will take it off anyway.
 
 #### triple-equals (native)
