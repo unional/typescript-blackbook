@@ -51,7 +51,7 @@ Rules in use:
 - [whitespaces#soft-tabs](whitespaces.md#soft-tabs)
 
 #### interface-name (native)
-`"interface-name": [true, "no-prefix"]`
+`"interface-name": [true, "never-prefix"]`
 
 - [interfaces#naming](interfaces.md#naming)
 
