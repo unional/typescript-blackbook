@@ -1,6 +1,7 @@
-## Classes
+# Classes
 
-### Naming Convention
+## Naming Convention
+
 - Name class in pascal case
 
   tslint: [`class-name`](tslint.md#class-name-native)
@@ -13,12 +14,13 @@
   class MyClass { }
   ```
 
-### `class` keyword
+## `class` keyword
+
 - Always use `class`. Avoid manipulating `prototype` directly.
 
   > Why? `class` syntax is more concise and easier to reason about.
 
-  ```typescript
+  ```ts
   // bad
   function Queue(contents = []) {
     this._queue = [...contents];
@@ -67,10 +69,11 @@
   ```
 
 
-### Overriding `toString()`
+## Overriding `toString()`
+
 - It's okay to write a custom toString() method, just make sure it works successfully and causes no side effects.
 
-  ```typescript
+  ```ts
   class Jedi {
     constructor(options = {}) {
       this.name = options.name || 'no name';
@@ -86,7 +89,38 @@
   }
   ```
 
-### Empty constructor
+## Constructor arguments
+
+- If your class can be inherited, do not assume the arguments will not be undefined even if it is not optional. Provide default value or guard throwing.
+
+  > Why? Currently sub-class does not require to create constructor. So your class can be called without any argument.
+  > Should guard against this case and throw meaningful error.
+
+  ```ts
+  // bad
+  class Foo {
+    constructor(options: { paramA: number }) {
+      // Will throw Cannot read property 'paramA' of undefined for Boo.
+      this.something = options.paramA + 1;
+    }
+  }
+  class Boo extends Foo { }
+
+  // good
+  class Foo {
+    constructor(options: { paramA: number }) {
+      if (!options) {
+        throw new Error('Foo requires constructor argument "options"');
+      }
+    }
+  }
+  class Boo extends Foo { }
+  ```
+
+  <https://github.com/Microsoft/TypeScript/issues/9523>
+
+## Empty constructor
+
 - Classes have a default constructor if one is not specified.
 - Empty constructor function or one that just delegates to a parent class is unnecessary.
 
@@ -116,12 +150,14 @@
   }
   ```
 
-### member visibility
+## member visibility
+
 - Do not need to explicitly add `public` to members.
 
   tslint: [`member-access`](tslint.md#member-access-native)
 
 ### member ordering
+
 - Place public members before private members.
 - Place static members before instance members.
 - Place properties before methods.
