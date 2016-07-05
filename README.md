@@ -17,6 +17,9 @@ A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Styl
 
 ## Table of Contents
 
+- [Introduction](pages/introduction/README.md)
+  - [TypeScript](pages/introduction/typescript.md)
+  - [Design Principles](pages/introduction/design-principles.md)
 - Language
   - [Accessors](pages/default/accessors.md)
   - [Arrays](pages/default/arrays.md)
