@@ -1,6 +1,8 @@
 # Handbook vs Guideline
 
-This guideline serves as a complement to the [official handbook](http://www.typescriptlang.org/docs/handbook/basic-types.html). In the handbook, it talks about *what is TypeScript*. In this guideline, I talk about *how to write TypeScript*.
+This guideline serves as a complement to the [official handbook](http://www.typescriptlang.org/docs/handbook/basic-types.html).
+In the handbook, it talks about *what is TypeScript*.
+In this guideline, I talk about *how to write TypeScript*.
 
 ## Design Principles
 
