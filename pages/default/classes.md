@@ -44,12 +44,13 @@
   }
   ```
 
-### `extends` keyword
+## `extends` keyword
+
 - Use `extends` for inheritance.
 
   > Why? It is a built-in way to inherit prototype functionality without breaking `instanceof`.
 
-  ```typescript
+  ```ts
   // bad
   const inherits = require('inherits');
   function PeekableQueue(contents) {
