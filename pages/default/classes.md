@@ -90,11 +90,11 @@
   }
   ```
 
-## Constructor arguments
+## Constructor arguments with Dependency Injection
 
 - If your class can be inherited, do not assume the arguments will not be undefined even if it is not optional. Provide default value or guard throwing.
 
-  > Why? Currently sub-class does not require to create constructor. So your class can be called without any argument.
+  > Why? Currently sub-class does not require to create constructor. It errors at call site but if you use dependency injection there is no call site thus the error won't be seen. Therefore your class can be called without any argument.
   > Should guard against this case and throw meaningful error.
 
   ```ts
