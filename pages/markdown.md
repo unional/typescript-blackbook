@@ -1,18 +1,30 @@
 # Markdown style guide
+
 There are several flavors of `markdown`.
 This style guide is designed for the `github` version of markdown (and alternatives):
-https://help.github.com/articles/github-flavored-markdown/
+<https://help.github.com/articles/github-flavored-markdown/>
 
 Here is a complete reference of most common syntax:
-https://daringfireball.net/projects/markdown/syntax
+<https://daringfireball.net/projects/markdown/syntax>
 
-### Sentence
+## Design Principles
+
+- Compliments linters:
+  - <https://github.com/mivok/markdownlint>
+  - <https://github.com/DavidAnson/markdownlint>
+- Opinionated with the focus to
+  - Simplify usage
+  - Minimize typings
+  - Utilize features for programmers
+
+## Sentence
+
 - One sentence per line. Except in list.
 
   > Why? One sentence per line improves readability in raw format.
   > You need to insert blank line for paragraph anyway.
 
-  ```
+  ```txt
   // bad
   This is one sentence. This is another longer sentence. This is yet another super ultra duper extra insanely long, very hard to read, very dense, contains many many information, very likely a run-on, very much like what an attorney will write, and probably will be wrapped by the editor sentence.
 
@@ -22,13 +34,14 @@ https://daringfireball.net/projects/markdown/syntax
   This is yet another super ultra duper extra insanely long, very hard to read, very dense, contains many many information, very likely a run-on, very much like what an attorney will write, and probably will be wrapped by the editor sentence.
   ```
 
-### Headers
+## Headers
+
 - Prefer `atx-style` headers (using hash characters) over `setext-style` (using underline of equal signs and dashes);
 
   > Why? `setext-style` has a lot more keystrokes and does not scale beyond first two levels.
   > `atx-style` can define `######` with ease.
 
-  ```
+  ```txt
   // bad
   This is a header
   ================
@@ -48,27 +61,39 @@ https://daringfireball.net/projects/markdown/syntax
   > Why? The header could be used as link.
   > It is best to keep the header short and unlikely to change.
 
-  ```
+  ```txt
   // bad
   ### Avoid `var`
-  
+
   // good
   ### `var` keyword
   ```
 
-### List
+## List
+
 - Use `-` over `*` and `+`.
 
   > Why? Save one more pinky (finger)
 
 - Feel free to use indented list.
 
-  ```
+  ```txt
   - list-item
     - sub-list-item
   ```
 
-### Fenced code blocks (triple backticks)
+## Indented code blocks
+
+- Do not use indented code blocks. Use Fenced code blocks instead.
+
+  > Why? Fenced code blocks allow you to specify language.
+
+## Fenced code blocks (triple backticks)
+
+- Use backticks (``` ``) instead of `~`.
+
+  > Why? Again, save another pinky (finger)
+
 - Use language identifier whenever possible.
   - shell
   - javascript
@@ -79,4 +104,6 @@ https://daringfireball.net/projects/markdown/syntax
   - js
   - ts
   - rb
-- Intent with 2 spaces
+- Intent the same way as you normally would (e.g. 2 spaces)
+
+  > Why? This would make copy and paste code to and from markdown much easier.

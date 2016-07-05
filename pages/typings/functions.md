@@ -1,7 +1,7 @@
-# Events
+# Functions
 
+## Event Handlers
 
-### Event Handlers
 - Type the event handler, not the callback.
 
   > Why? Provides better code completion.

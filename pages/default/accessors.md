@@ -1,6 +1,7 @@
 # Accessors
 
-### Bracket notation
+## Bracket notation
+
 - Only use bracket notation if the object is of type `any` and the property is dynamic.
 - 99% of the time you don't need to do this.
 - If you need it, it may be a code smell.
@@ -8,8 +9,9 @@
   tslint: [`no-string-literal`](tslint.md#no-string-literal-native)
 
 ### Getters/Setters
+
 - Write getters/setters only to enable cross-cutting concerns. They:
-  - **must be pure**
+  - must be **pure**
   - cannot have any side effect.
   - cannot access dependencies.
 
@@ -44,6 +46,7 @@
   ```
 
 ### Boolean property
+
 - Boolean property should be named as `isVal` or `hasVal`.
 
   > Why? Avoid confusion when `Val` itself can be evaluated as falsy.
