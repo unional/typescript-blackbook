@@ -1,4 +1,5 @@
 # tslint configuration
+
 You can use this configuration by installing `tslint-config-unional` (requires `tslint@3.7.0+`):
 
 ```sh
@@ -15,112 +16,162 @@ npm install -D tslint tslint-config-unional
 }
 ```
 
-Rules in use:
-- native: https://github.com/palantir/tslint#core-rules
-- eslint: https://github.com/buzinas/tslint-eslint-rules#rules-copied-from-eslint-website
+## Rules
 
-#### align (native)
+- native: <https://github.com/palantir/tslint#core-rules>
+- eslint: <https://github.com/buzinas/tslint-eslint-rules#rules-copied-from-eslint-website>
 
-`"align": [true, "statements"]`
+### align (native)
+
+```json
+"align": [true, "statements"]
+```
 
 - [functions#function-parameters](functions.md#function-parameters)
 - [functions#function-arguments](functions.md#function-arguments)
 
-#### ban (native)
+### ban (native)
 
-`"ban": false`
+```json
+"ban": false
+```
 
-#### class-name (native)
+### class-name (native)
 
-`"class-name": true`
+```json
+"class-name": true
+```
 
-#### comment-format (native)
+### comment-format (native)
 
-`"comment-format": [true, "check-space"]`
+```json
+"comment-format": [true, "check-space"]
+```
 
 - [comments#single-line](comments.md#single-line)
 
-#### curly (native)
+### curly (native)
 
-`"curly": true`
+```json
+"curly": true
+```
 
-#### eofline (native)
+### eofline (native)
 
-`"eofline": true`
+```json
+"eofline": true
+```
 
-#### forin (native)
+### forin (native)
 
-`"forin": false`
+```json
+"forin": false
+```
 
-#### indent (native)
+### indent (native)
 
-`"indent": [true, "spaces"]`
+```json
+"indent": [true, "spaces"]
+```
 
 - [whitespaces#soft-tabs](whitespaces.md#soft-tabs)
 
-#### interface-name (native)
+### interface-name (native)
 
-`"interface-name": [true, "never-prefix"]`
+```json
+"interface-name": [true, "never-prefix"]
+```
 
 - [interfaces#naming](interfaces.md#naming)
 
-#### jsdoc-format (native)
+### jsdoc-format (native)
 
-`"jsdoc-format": true`
+```json
+"jsdoc-format": true
+```
+
 - [comments#multi-line](comments.md#multi-line)
 
-#### label-position (native)
+### label-position (native)
 
-`"label-position": true`
+```json
+"label-position": true
+```
 
-#### label-undefined (native)
+### label-undefined (native)
 
-`"label-undefined": true`
+```json
+"label-undefined": true
+```
 
-#### max-line-length (native)
+### max-line-length (native)
 
-`"max-line-length": false`
+```json
+"max-line-length": false
+```
+
 - [file-structures#max-line-length](file-structures.md#max-line-length)
 
-#### member-access (native)
+### member-access (native)
 
-`"member-access": false`
+```json
+"member-access": false
+```
 
 - [classes#member-visibility](classes.md#member-visibility)
 
-#### member-ordering (native)
+### member-ordering (native)
 
-`"member-ordering": false`
+```json
+"member-ordering": false
+```
 
 - [classes#member-ordering](classes.md#member-ordering)
 
-#### no-any (native)
+### no-any (native)
 
-`"no-any": false`
+```json
+"no-any": false
+```
+
 - Too restrictive
 
-#### no-arg (native)
+### no-arg (native)
 
-`"no-arg": true`
+```json
+"no-arg":false
+```
+
 - **Open to discussion**, should work smoothly without
 
-#### no-bitwise (native)
+### no-bitwise (native)
 
-`"no-bitwise": false`
+```json
+"no-bitwise": false
+```
+
 - Should know what I'm doing
 
-#### no-conditional-assignment (native)
+### no-conditional-assignment (native)
 
-`"no-conditional-assignment": true`
+```json
+"no-conditional-assignment":false
+```
+
 - Avoid clever trick that reduce maintainability
 
-#### no-consecutive-blank-lines (native)
+### no-consecutive-blank-lines (native)
 
-`"no-consecutive-blank-lines": false`
+```json
+"no-consecutive-blank-lines": false
+```
+
 - Want the ability to have 2 blank lines for better formatting
 
-#### no-console (native)
-`"no-console": [
+### no-console (native)
+
+```json
+"no-console": [
     true,
     "assert",
     "count",
@@ -129,208 +180,311 @@ Rules in use:
     "trace",
     "error",
     "debug"
-]`
+]
+```
+
 - **Open to discussion**, better be preventive
 
-#### no-construct (native)
+### no-construct (native)
 
-`"no-construct": true`
+```json
+"no-construct":false
+```
 
-#### no-constructor-vars (native)
+### no-constructor-vars (native)
 
-`"no-constructor-vars": false`
+```json
+"no-constructor-vars": false
+```
+
 - It is reasonable to mark constructor as `private`
 
-#### no-debugger (native)
+### no-debugger (native)
 
-`"no-debugger": true`
+```json
+"no-debugger":false
+```
+
 - Definitely. No checkin code should have `debugger`
 
-#### no-duplicate-key (native)
+### no-duplicate-key (native)
+
 Not used
+
 - TypeScript by default prohibit this
 
-#### no-duplicate-variable (native)
+### no-duplicate-variable (native)
 
-`"no-duplicate-variable": true`
+```json
+"no-duplicate-variable":false
+```
+
 - Only applies to `var`
 - Likely coding mistake. Use `let` and `const` instead
 
-#### no-empty (native)
+### no-empty (native)
 
-`"no-empty": true`
+```json
+"no-empty":false
+```
+
 - yup
 
-#### no-eval (native)
+### no-eval (native)
 
-`"no-eval": true`
+```json
+"no-eval":false
+```
+
 - Absolutely
 
-#### no-inferrable-types (native)
+### no-inferrable-types (native)
 
-`"no-inferrable-types": false`
-- **Open to discussion**
+```json
+"no-inferrable-types": false
+```
 
-#### no-internal-module (native)
+- ...open to discussion
 
-`"no-internal-module": true`
+### no-internal-module (native)
+
+```json
+"no-internal-module":false
+```
+
 - [namespaces-and-modules#namespace](namespaces-and-modules.md#namespace)
 
-#### no-null-keyword (native)
+### no-null-keyword (native)
 
-`"no-null-keyword": false`
+```json
+"no-null-keyword": false
+```
+
 - There are valid use case of this
 
-#### no-require-imports (native)
+### no-require-imports (native)
 
-`"no-require-imports": false`
+```json
+"no-require-imports": false
+```
 
 - [modules#import-keyword](modules.md#import-keyword)
 
-#### no-shadowed-variable (native)
+### no-shadowed-variable (native)
 
-`"no-shadowed-variable: true`
+```json
+"no-shadowed-variable":false
+```
+
 - yup
 
-#### no-string-literal (native)
+### no-string-literal (native)
 
-`"no-string-literal": false`
+```json
+"no-string-literal": false
+```
+
 - [accessors#bracket-notation](accessors.md#bracket-notation)
 
-#### no-switch-case-fall-through (native)
+### no-switch-case-fall-through (native)
 
-`"no-switch-case-fall-through": true`
+```json
+"no-switch-case-fall-through":false
+```
+
 - yup
 
-#### no-trailing-whitespace (native)
+### no-trailing-whitespace (native)
 
-`"no-trailing-whitespace": true`
+```json
+"no-trailing-whitespace":false
+```
+
 - yup
 
-#### no-unreachable (native)
+### no-unreachable (native)
 
-`"no-unreachable": true`
+```json
+"no-unreachable":false
+```
+
 - of course
 
-#### no-unused-expression (native)
+### no-unused-expression (native)
 
-`"no-unused-expression": true`
-- **Open to discussion**: make sure exported function are excluded
+```json
+"no-unused-expression":false
+```
 
-#### no-unused-variable (native)
+- ...open to discussion: make sure exported function are excluded
 
-`"no-unused-variable": true`
+### no-unused-variable (native)
+
+```json
+"no-unused-variable":false
+```
+
 - yup
 
-#### no-use-before-declare (native)
+### no-use-before-declare (native)
 
-`"no-use-before-declare": true`
+```json
+"no-use-before-declare":false
+```
+
 - For `var` only. YUP!
 
-#### no-var-keyword (native)
+### no-var-keyword (native)
 
-`"no-var-keyword": true`
+```json
+"no-var-keyword":false
+```
+
 - It is too unlikely that you need to concern about memory. It is just a pointer.
 
-#### no-var-requires (native)
+### no-var-requires (native)
 
-`"no-var-requires": true`
+```json
+"no-var-requires":false
+```
+
 - [modules#import-keyword](../organization/modules.md#import-keyword)
 
-#### object-literal-sort-keys (native)
+### object-literal-sort-keys (native)
 
-`"object-literal-sort-keys": false`
+```json
+"object-literal-sort-keys": false
+```
+
 - Many times when you pass in option bags, the order has contextual meaning that help reader understand what you try to do.
 
-#### one-line (native)
+### one-line (native)
 
-`"one-line": [
+```json
+"one-line": [
   true,
   "check-open-brace",
   "check-whitespace"
-}`
+]
+```
+
 - Do not put `else`, `catch`, `finally` on the same line. Better code folding
 
-#### quotemark (native)
+### quotemark (native)
 
-`"quotemark": [
+```json
+"quotemark": [
   true,
   "single",
   "avoid-escape"
-]`
+]
+```
+
 - Use single quote to reduce key-stroke. Save your little finger.
 
-#### radix (native)
+### radix (native)
 
-`"radix": false`
+```json
+"radix": false
+```
+
 - `parseInt()` in base 10 is common enough to save the extra typing all the time
 
-#### semicolon (native)
+### semicolon (native)
 
-`"semicolon": [
+```json
+"semicolon": [
   true,
   "always"
-]`
-- Do not rely on Auto Semicolon Insertion. Your friend might not be as good as you are.
+]
+```
 
-#### switch-default (native)
+- Do not rely on Auto Semicolon Insertion. Your friends might not be as good as you are.
 
-`"switch-default": true`
+### switch-default (native)
+
+```json
+"switch-default": true
+````
+
 - Just to make sure...
 
-#### trailing-comma (native)
+### trailing-comma (native)
 
-`"trailing-comma": [
+```json
+"trailing-comma": [
   true,
   {
     "singleline": "never",
     "multiline": "never"
   }
-]`
+]
+```
 
 - Typing less (and working faster) is better than just keeping the history cleaner with one less line of change
 
-#### triple-equals (native)
+### triple-equals (native)
 
-`"triple-equals": [
+```json
+"triple-equals": [
   true,
   "allow-null-check"
-]`
+]
+```
+
 - YUP
 
-#### typedef (native)
+### typedef (native)
 
-`"typedef": [
+```json
+"typedef": [
   true,
-  "call-signature",
   "property-declaration",
-  "member-variable-declaration"
-]`
+]
+```
 
 - Type definition for `arrow-parameter` is not enforced.
 
   > Why? If the arrow function is used as a callback, the callback signature should be defined properly.
   > Enforcing typedef creates noise in this situation.
-
   > If the arrow function is defined in isolation, then the type of the parameters can be defined.
   > However, this usage is relatively rare, and even when it happens, it is typically for very simple code.
   > Therefore, still do not need to enforce this rule.
 
   ```ts
   // bad
-  new Promise((resolve: Function, reject: Function) => {
-    // do stuff...
-  });
+  new Promise((resolve: Function, reject: Function) => { });
 
   // good
-  new Promise((resolve, reject) => {
-  });
+  new Promise((resolve, reject) => { });
   ```
 
+- Type definition for `call-signature` is not enforced.
 
-#### typedef-whitespace (native)
+  > Why? When the code gets complicated, relying on infer type is much easier and cleaner then explicitly typing them.
+  > This is only true if you are using TypeScript@2+ (well, you should).
 
-`"typedef-whitespace": [
+- Type definition for `member-variable-declaration` is not enforced
+
+  > Why? To avoid cluster and redundent types.
+
+  ```ts
+  // bad
+  import { WeakMap } from 'core-js';
+  class Foo {
+    map: WeakMap<string, any> = new WeakMap<string, any>();
+  }
+
+  // good
+  class Foo {
+    map = new WeakMap<string, any>();
+  }
+  ```
+
+### typedef-whitespace (native)
+
+```json
+"typedef-whitespace: [
   true,
   {
     "call-signature": "nospace",
@@ -346,59 +500,86 @@ Not used
     "property-declaration": "space",
     "variable-declaration": "space"
   }
-]`
+]
+```
 
-- **Open to discussion**
+- ...open to discussion
 
-#### use-strict (native)
+### use-strict (native)
 
-`"use-strict": [false]`
+```json
+"use-strict": [false]
+```
+
 - Not a necessity
 
-#### variable-name (native)
+### variable-name (native)
 
-`"variable-name": [
+```json
+"variable-name": [
   true,
   "check-format",
   "ban-keywords"
-]`
+]
+```
+
 - Only camelCased or UPPER_CASED variable names
 - Do not allow leading or trailing underscore. They are used typically to indicate private variable. TypeScript already support `private` visibility.
 
-#### whitespace (native)
+### whitespace (native)
 
-`"whitespace": [
+```json
+"whitespace": [
   true,
   "check-branch",
   "check-decl",
   "check-operator",
   "check-separator",
   "check-type"
-]`
+]
+```
+
 - **Open to discussion**. Probably fine.
 
 ## tslint-eslint-rules disabled
 
 Currently the rules in `tslint-eslint-rules` are not used.
-There is [an issue](https://github.com/palantir/tslint/issues/1024) with how the `"rulesDirectory"` is used in [`tslint`](https://github.com/palantir/tslint).
+There is [an issue](https://github.com/palantir/tslint/issues/1024) with how the `"rulesDirectory"` is used in [`tslint`](https://github.com/palantir/tslint)`
 
-#### no-constant-condition (eslint)
-#### valid-typeof (eslint)
-#### use-isnan (eslint)
-#### no-duplicate-case (eslint)
-#### no-sparse-arrays (eslint)
-#### no-extra-semi (eslint)
-#### no-extra-boolean-cast (eslint)
-#### no-ex-assign (eslint)
+### no-constant-condition (eslint)
+
+### valid-typeof (eslint)
+
+### use-isnan (eslint)
+
+### no-duplicate-case (eslint)
+
+### no-sparse-arrays (eslint)
+
+### no-extra-semi (eslint)
+
+### no-extra-boolean-cast (eslint)
+
+### no-ex-assign (eslint)
+
 Disabled. Has bugs
-#### no-unexpected-multiline (eslint)
+
+### no-unexpected-multiline (eslint)
+
 Disabled.
 
-#### no-invalid-regexp (eslint)
-#### no-inner-declarations (eslint)
+### no-invalid-regexp (eslint)
+
+### no-inner-declarations (eslint)
+
 Disabled. Has bugs
-#### no-regex-spaces (eslint)
-#### no-empty-character-class (eslint)
-#### no-control-regex (eslint)
-#### no-irregular-whitespace (eslint)
-#### valid-jsdoc (eslint)
+
+### no-regex-spaces (eslint)
+
+### no-empty-character-class (eslint)
+
+### no-control-regex (eslint)
+
+### no-irregular-whitespace (eslint)
+
+### valid-jsdoc (eslint)
