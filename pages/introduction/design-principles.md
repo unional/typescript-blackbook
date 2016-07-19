@@ -16,3 +16,10 @@ In this guideline, I talk about *how to write TypeScript*.
     - [WebStorm](https://www.jetbrains.com/webstorm/)
   - Linter
     - [tslint](https://github.com/palantir/tslint)
+
+### How the Book is Organized
+
+I vision this is a reference book instead of a book that you would read from start to end.
+My goal in designing the chapters and pages of this book is that when you have a specific question in mind, you can skim through the table of content and knows right away where to look for answers.
+
+If it fails to do so, open an [issue](https://github.com/unional/typescript/issues) :)
