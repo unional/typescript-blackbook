@@ -20,7 +20,9 @@ A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Styl
 - [Introduction](pages/introduction/README.md)
   - [TypeScript](pages/introduction/typescript.md)
   - [Design Principles](pages/introduction/design-principles.md)
+- Files and Projects
   - [File Types](pages/files-and-projects/file-types.md)
+  - [tsconfig.json](pages/files-and-projects/tsconfig.md)
 - Language
   - [Accessors](pages/default/accessors.md)
   - [Arrays](pages/default/arrays.md)
@@ -62,7 +64,6 @@ A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Styl
 - **draft** [Naming Conventions](pages/default/draft/naming-conventions.md)
 - **draft** [Events](pages/default/draft/events.md)
 - **draft** [ECMAScript 6 Styles](pages/default/draft/es2015.md)
-
 
 ## Contributing
 
