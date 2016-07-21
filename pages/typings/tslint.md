@@ -20,7 +20,7 @@ npm install -D tslint tslint-config-typings
 
 This style follows the [`default style`](../default/tslint.md) if not specified below.
 
-### membor-ordering (native)
+### member-ordering (native)
 
 `"member-ordering": [false]`
 
