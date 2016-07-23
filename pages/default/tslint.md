@@ -541,10 +541,43 @@ Not used
 
 - **Open to discussion**. Probably fine.
 
-## tslint-eslint-rules disabled
+## tslint-eslint-rules
 
-Currently the rules in `tslint-eslint-rules` are not used.
 There is [an issue](https://github.com/palantir/tslint/issues/1024) with how the `"rulesDirectory"` is used in [`tslint`](https://github.com/palantir/tslint)`
+
+If you are using [`tslint-eslint-rules`](https://github.com/buzinas/tslint-eslint-rules),
+you can follow its usage in its README:
+
+```json
+{
+  "rulesDirectory": "node_modules/tslint-eslint-rules/dist/rules"
+  "rules": {
+    // ...
+  }
+}
+```
+
+However, if you are creating a `tslint` config package or you expose your configuration so the consumer can use your configuration through `tslint.json/extends`, then you have to do the following hack:
+
+```js
+// index.js (your package export file, cannot be tslint.json)
+var path = require('path')
+
+module.exports = {
+  rulesDirectory: path.join(path.dirname(require.resolve('tslint-eslint-rules')), 'dist/rules'),
+  rules: {
+    // ...
+  }
+}
+```
+
+### brace-style
+
+```json
+"brace-style": [ true, "stroustrup", { "allowSingleLine": true }]
+```
+
+  > Why? "stroustrup" works better than "1tbs" with folding in many IDEs
 
 ### no-constant-condition (eslint)
 
