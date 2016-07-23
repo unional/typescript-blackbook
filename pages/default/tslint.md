@@ -548,7 +548,7 @@ There is [an issue](https://github.com/palantir/tslint/issues/1024) with how the
 If you are using [`tslint-eslint-rules`](https://github.com/buzinas/tslint-eslint-rules),
 you can follow its usage in its README:
 
-```json
+```js
 {
   "rulesDirectory": "node_modules/tslint-eslint-rules/dist/rules"
   "rules": {
