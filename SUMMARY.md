@@ -20,6 +20,7 @@
   - [Union type](pages/types/union-type.md)
 - [Typings](pages/typings/README.md)
   - [Functions](pages/typings/functions.md)
+  - [Overloading](pages/typings/overloading.md)
   - [Namespaces and Modules](pages/typings/namespaces-and-modules.md)
   - [Shape of typings](pages/typings/shape-of-typings.md)
   - [tslint configuration](pages/typings/tslint.md)
