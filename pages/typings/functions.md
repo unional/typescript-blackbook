@@ -5,7 +5,8 @@
 - Type the event handler, not the callback.
 
   > Why? Provides better code completion.
-
+  > This can be removed when <https://github.com/Microsoft/TypeScript/issues/8134> lands.
+  
   ```ts
   // Bad
   export interface MyEventCallback {
