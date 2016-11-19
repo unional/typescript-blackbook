@@ -16,7 +16,7 @@ You can also specify a different file by `tsc -p <config file path>`.
 
 Add this to your `.vscode/settings.json`:
 
-```json
+```js
 // .vscode/settings.json
 {
   "json.schemas": [
@@ -45,7 +45,7 @@ Add this to your `.vscode/settings.json`:
 
   For example:
 
-  ```json
+  ```js
   // tsconfig.json
   {
     "compilerOptions": {
@@ -59,7 +59,7 @@ Add this to your `.vscode/settings.json`:
   }
   ```
 
-  ```json
+  ```js
   // tsconfig.build.json
   {
     "conpilerOptions": {
