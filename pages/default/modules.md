@@ -28,7 +28,9 @@ Fortunately, if you follow these simple rules, creating module is relatively str
 
 - Use `import x = require('x')` syntax for packages exported in CommonJS style. **do not** rely on import interop.
 
-  Although [TypeScript Spec](https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md#1133-import-require-declarations) says that `import x = require('x')` and `import * as x from 'x'` is equivalent, they are actually not.
+  Although [TypeScript Spec](https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md#1133-import-require-declarations) says that `import x = require('x')` and `import * as x from 'x'` is equivalent.
+  But the next statement say "provided the referenced module contains no export assignment".
+  What it means is that they are not the same if the module export a function.
   `import * as x from 'x'` creates an immutable namespace object and it does not work when the package exports a function (`module.exports = [function]`).
 
   > Why? The current interop between CommonJS and ES2015 Module is not consistant across configuration.
