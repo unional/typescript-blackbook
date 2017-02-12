@@ -24,6 +24,8 @@
   - [Namespaces and Modules](pages/typings/namespaces-and-modules.md)
   - [Shape of typings](pages/typings/shape-of-typings.md)
   - [tslint configuration](pages/typings/tslint.md)
+- Advance types
+  - [Recursive Types](pages/advance-types/recursive-types.md)
 - Tooling
   - [tslint.json](pages/default/tslint.md)
 - **draft** [File structures](pages/default/draft/file-structures.md)
