@@ -73,14 +73,14 @@ Here is a complete reference of most common syntax:
 
 - Use `-` over `*` and `+`.
 
-  > Why? Save one more pinky (finger)
+  > Why? Save a pinky (finger)
 
 - Feel free to use indented list.
 
-  ```txt
-  - list-item
-    - sub-list-item
-  ```
+```txt
+- list-item
+  - sub-list-item
+```
 
 ## Indented code blocks
 
@@ -90,7 +90,7 @@ Here is a complete reference of most common syntax:
 
 ## Fenced code blocks (triple backticks)
 
-- Use backticks (``` ``) instead of `~`.
+- Use backticks (`` ` ``) instead of `~`.
 
   > Why? Again, save another pinky (finger)
 
