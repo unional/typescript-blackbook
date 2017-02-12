@@ -1,6 +1,12 @@
 # Typescript Guidelines
 
-A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
+This is a guideline on how to write effective TypeScript with the least effort.
+It touch on coding style, linting, to recommendation on writing good typings and writing TypeScript code.
+
+Since the beginning of this project, the TypeScript team has added a lot of information its [documentation](http://www.typescriptlang.org/docs/tutorial.html).
+So make sure you have time to check it out.
+
+For writing typings, also check out <https://github.com/types/guidelines>
 
 ## Design Principles
 
@@ -14,6 +20,12 @@ A mostly reasonable approach to TypeScript. Based off of [Airbnb JavaScript Styl
     - [WebStorm](https://www.jetbrains.com/webstorm/)
   - Linter
     - [tslint](https://github.com/palantir/tslint)
+
+## Disclaimer
+
+Recently I do most of my work in VS Code.
+So if you find that some of the guidelines doesn't work well in your IDE,
+let me know and we can see how to get it working on your IDE.
 
 ## Table of Contents
 
