@@ -13,7 +13,7 @@ For writing typings, also check out <https://github.com/types/guidelines>
 - Get the best out of TypeScript
 - Stay close to JavaScript as much as possible
 - Embrace latest JavaScript syntax
-- Cross-compatible with tools. It's frustrating when your tools do not get along with each other!
+- Cross-compatibility with tools. In my company, we embrace diversity and support team member to use their favorite IDEs. However it is really frustrating when the tools do not get along with each other!
   - IDE / Editors
     - [Visual Studio Code](https://github.com/Microsoft/vscode)
     - [Atom](https://atom.io/)
