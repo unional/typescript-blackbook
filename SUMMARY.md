@@ -11,6 +11,7 @@
   - [Arrays](pages/default/arrays.md)
   - [Arrow Functions](pages/default/arrow-functions.md)
   - [Classes](pages/default/classes.md)
+  - [Decorator] (pages/default/decorator.md)
   - [Interfaces](pages/default/interfaces.md)
   - [Namespaces and Modules](pages/default/namespaces-and-modules.md)
   - [Modules](pages/default/modules.md)
