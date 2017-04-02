@@ -81,6 +81,24 @@ Fortunately, if you follow these simple rules, creating module is relatively str
   export function x() { ... }
   ```
 
+- Favor named export over default export
+
+  > Why? default export creates conflict if the consumer decide to re-export your module.
+  > This also applies to internal structure.
+
+  ```ts
+  // bad
+  // src/a/index.ts
+  export default function a() { ... }
+
+  // src/b/index.ts
+  export default function b() { ... }
+
+  // src/index.ts
+  export * from './a'
+  export * from './b' // Error
+  ```
+
 ## Module keyword
 
 - Do not wrap typings in `declare module "X" {`. Expose using **top-level import / export**
