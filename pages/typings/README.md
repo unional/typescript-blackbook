@@ -9,8 +9,8 @@ This chapter focus on guidelines that are specific to writing typings.
 
 ## Topics
 
-- [Functions](pages/typings/functions.md)
-- [Overloading](pages/typings/overloading.md)
-- [Namespaces and Modules](pages/typings/namespaces-and-modules.md)
-- [Shape of typings](pages/typings/shape-of-typings.md)
-- [tslint configuration](pages/typings/tslint.md)
+- [Functions](./functions.md)
+- [Overloading](./overloading.md)
+- [Namespaces and Modules](./namespaces-and-modules.md)
+- [Shape of typings](./shape-of-typings.md)
+- [tslint configuration](./tslint.md)
