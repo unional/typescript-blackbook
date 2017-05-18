@@ -26,7 +26,7 @@ Fortunately, if you follow these simple rules, creating module is relatively str
   import dr = require('domready');
   ```
 
-- Use `import x = require('x')` syntax for packages exported in CommonJS style. **do not** rely on import interop.
+- Use `import x = require('x')` syntax for CommonJS packages. **do not** rely on import interop.
 
   Although [TypeScript Spec](https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md#1133-import-require-declarations) says that `import x = require('x')` and `import * as x from 'x'` is equivalent.
   But the next statement say "provided the referenced module contains no export assignment".
@@ -59,9 +59,9 @@ Fortunately, if you follow these simple rules, creating module is relatively str
   import _ = require('lodash');
   import Promise = require('bluebird');
 
-  import Router from 'panda-router';
+  import { Something } from '@myCompany/somePackage';
 
-  import ObjectPage from './ObjectPage/index';
+  import ObjectPage from './ObjectPage';
   ```
 
 ## export keyword
@@ -81,10 +81,10 @@ Fortunately, if you follow these simple rules, creating module is relatively str
   export function x() { ... }
   ```
 
-- Favor named export over default export
+- Use named export. Avoid default export
 
   > Why? default export creates conflict if the consumer decide to re-export your module.
-  > This also applies to internal structure.
+  > This applies to internal and external structure.
 
   ```ts
   // bad
