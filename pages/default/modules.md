@@ -33,7 +33,7 @@ Fortunately, if you follow these simple rules, creating module is relatively str
   What it means is that they are not the same if the module export a function.
   `import * as x from 'x'` creates an immutable namespace object and it does not work when the package exports a function (`module.exports = [function]`).
 
-  > Why? The current interop between CommonJS and ES2015 Module is not consistant across configuration.
+  > Why? The current interop between CommonJS and ES2015 Module is not consistent across configuration.
   > Using interop today could cause a systematic issue.
   > Avoid it at all cost.
   > Educate your team to learn about the differences and do the right thing.
@@ -53,7 +53,7 @@ Fortunately, if you follow these simple rules, creating module is relatively str
   import dr = require('domready');
   ```
 
-- Organize import statments into three sections: 3rd party modules, company modules, and relative (i.e. local) modules.
+- Organize import statements into three sections: 3rd party modules, company modules, and relative (i.e. local) modules.
 
   ```ts
   import _ = require('lodash');
