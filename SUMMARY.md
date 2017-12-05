@@ -1,8 +1,8 @@
 # Summary
 
-- [Introduction](pages/introduction/README.md)
-  - [TypeScript](pages/introduction/typescript.md)
-  - [Design Principles](pages/introduction/design-principles.md)
+- [Introduction](pages/01-introduction/README.md)
+  - [TypeScript](pages/01-introduction/typescript.md)
+  - [Design Principles](pages/01-introduction/design-principles.md)
 - Files and Projects
   - [File Types](pages/files-and-projects/file-types.md)
   - [tsconfig.json](pages/files-and-projects/tsconfig.md)

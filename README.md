@@ -13,7 +13,7 @@ For writing typings, also check out <https://github.com/types/guidelines>
 - Get the best out of TypeScript
 - Stay close to JavaScript as much as possible
 - Embrace latest JavaScript syntax
-- Cross-compatibility with tools. In my company, we embrace diversity and support team member to use their favorite IDEs. However it is really frustrating when the tools do not get along with each other!
+- Cross-compatibility with tools. In my company, we embrace diversity and support team members to use their favorite IDEs. However it is really frustrating when the tools do not get along with each other!
   - IDE / Editors
     - [Visual Studio Code](https://github.com/Microsoft/vscode)
     - [Atom](https://atom.io/)
@@ -29,9 +29,9 @@ let me know and we can see how to get it working on your IDE.
 
 ## Table of Contents
 
-- [Introduction](pages/introduction/README.md)
-  - [TypeScript](pages/introduction/typescript.md)
-  - [Design Principles](pages/introduction/design-principles.md)
+- [Introduction](pages/01-introduction/README.md)
+  - [TypeScript](pages/01-introduction/typescript.md)
+  - [Design Principles](pages/01-introduction/design-principles.md)
 - Files and Projects
   - [File Types](pages/files-and-projects/file-types.md)
   - [tsconfig.json](pages/files-and-projects/tsconfig.md)
