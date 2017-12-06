@@ -16,11 +16,11 @@ Sometimes I'll go pretty deep on a particular topic, and it would be too deep fo
 If you encounter such case, my best advise is to first check the FAQ section at the end of each topic (if exists).
 If you can't find the answer you are looking for, create an issue at the [github repository](https://github.com/unional/typescript/issues).
 I would find time to answer your questions and add them to the FAQ for the benefit of other people.
-In the mean time (before I get a chance to answer your questions, which might take a while due to my packed schedule), you can move on to other topics and re-visit that topic in the future.
+In the mean time (before I get a chance to answer your questions, which might take a while due to my schedule), you can move on to other topics and re-visit that topic in the future.
 As you gain more experience, my hope is the materials and ideas would make more sense to you down the road.
 
 Of course, sometime I would make mistakes (in fact, many times).
-I may not use the right term due to my limited English, or I made the wrong conclusion, or TypeScript has evolved and my idea does not apply anymore.
+I may not use the right term, or I made the wrong conclusion, or TypeScript has evolved and the idea does not apply anymore.
 In these cases, also feel free in opening issues at the [github repository](https://github.com/unional/typescript/issues).
 I would love to learn, grow, and update this guideline along the way.
 

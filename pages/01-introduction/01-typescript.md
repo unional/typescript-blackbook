@@ -13,7 +13,7 @@ You can understand more about TypeScript directly from the [official website](ht
 - Similar syntax and semantics as JavaScript.
 - Type system
 - Better IDE support
-- Use latest syntax
+- Support latest ESMCScript syntax
 
 ## Alternatives: Other Transpilers
 

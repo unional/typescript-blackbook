@@ -1,16 +1,14 @@
-# File Types
+# Files
 
-On the surface, there are only two types of TypeScript files:
-
-- TypeScript file (with extension `.ts`), and
-- TypeScript declaration file (with extension `.d.ts`) file.
+Out of the box, the TypeScript compiler can understand TypeScript files (`*.ts`) and TypeScript declaration files (aka typings files, `*.d.ts`).
+Optionally, it can understand TypeScript React files (`*.tsx`) and JavaScript files (`*.js`)
 
 But do you know that each of them can also be categorized as either a "script file" or a "module file"?
 
 ## TypeScript file
 
-TypeScript files are what you create when writing TypeScript.
-It can contain any non declaration code.
+Doesn't need much explanation.
+When you name your file with `.ts` extension, your IDE and compiler will treat it as TypeScript file.
 
 ## TypeScript declaration file
 

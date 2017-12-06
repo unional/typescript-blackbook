@@ -1,5 +1,7 @@
 # Namespace and Module
+
 When declaring a module (or namespace), there are two options:
+
 - declaration wrapped in `declare {namespace,module} <name> {`, or
 - top-level declaration
 

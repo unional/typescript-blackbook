@@ -1,11 +1,12 @@
 # Summary
 
 - [Introduction](pages/01-introduction/README.md)
-  - [TypeScript](pages/01-introduction/typescript.md)
-  - [Design Principles](pages/01-introduction/design-principles.md)
-- Files and Projects
-  - [File Types](pages/files-and-projects/file-types.md)
-  - [tsconfig.json](pages/files-and-projects/tsconfig.md)
+  - [TypeScript](pages/01-introduction/01-typescript.md)
+  - [Resources](pages/01-introductin/02-resources.md)
+  - [Design Principles](pages/01-introduction/03-design-principles.md)
+- [Files and Projects](pages/02-files-and-projects/README.md)
+  - [Files](pages/02-files-and-projects/01-files.md)
+  - [tsconfig.json](pages/02-files-and-projects/03-tsconfig.md)
 - Language
   - [Accessors](pages/default/accessors.md)
   - [Arrays](pages/default/arrays.md)
