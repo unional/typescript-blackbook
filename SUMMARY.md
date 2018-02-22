@@ -7,6 +7,8 @@
 - [Files and Projects](pages/02-files-and-projects/README.md)
   - [Files](pages/02-files-and-projects/01-files.md)
   - [tsconfig.json](pages/02-files-and-projects/03-tsconfig.md)
+- JavaScript features
+  - [Default Function Parameters](pages/03-javascript-features/default-function-parameters.md)
 - Language
   - [Accessors](pages/default/accessors.md)
   - [Arrays](pages/default/arrays.md)
