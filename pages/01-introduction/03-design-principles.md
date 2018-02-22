@@ -8,7 +8,7 @@ In this guideline, I focus on *how to write TypeScript* and *how to get the most
 
 - Get the best out of TypeScript
 - Stay close to JavaScript as much as possible
-- Embrace latest JavaScript syntax
+- Embrace latest JavaScript syntax (when it is appropriate)
 - Cross-compatible with tools. It's frustrating when your tools do not get along with each other!
   - IDE / Editors
     - [Visual Studio Code](https://github.com/Microsoft/vscode)
