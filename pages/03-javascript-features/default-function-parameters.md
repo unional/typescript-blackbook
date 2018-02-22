@@ -127,18 +127,6 @@ set('abc', undefined)
 
 In the above example, there is no indication at the call site that calling `set()` without value would clear the value.
 
-> Why? Using default parameters effective means your function is doing two things:
-one with actual parameter and on with default parameters.
-
-```ts
-// bad
-function getFood(food: Food, cook = true): Food | CookedFood { ... }
-
-// good
-function getFood(food: Food): Food { ... }
-function cook(food: Food): CookedFood { ... }
-```
-
 > Why? Using default parameters means you pre-defined a perception on how the code should be used,
 or should be used with certain context.
 For internal code, you should not need to assume, you should already know.
