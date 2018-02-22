@@ -38,6 +38,8 @@ function count(a = b++) { ... }
 function count(a = b) { ... }
 ```
 
+- <https://github.com/airbnb/javascript#functions--default-side-effects>
+
 ## Avoid using variables in default parameters
 
 > Why? Using variables in default parameters effectively means you are using global state relatively to the function.
