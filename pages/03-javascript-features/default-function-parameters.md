@@ -127,9 +127,8 @@ set('abc', undefined)
 
 In the above example, there is no indication at the call site that calling `set()` without value would clear the value.
 
-> Why? Using default parameters means you pre-defined a perception on how the code should be used,
-or should be used with certain context.
-For internal code, you should not need to assume, you should already know.
+> Why? Using default parameters means you provide an assumption on how the code should be used.
+For internal code, you do not need to assume, you should already know.
 
 ```ts
 // bad
