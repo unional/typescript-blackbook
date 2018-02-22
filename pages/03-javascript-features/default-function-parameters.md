@@ -40,7 +40,7 @@ function count(a = b) { ... }
 
 - <https://github.com/airbnb/javascript#functions--default-side-effects>
 
-## Avoid using variables in default parameters
+## Avoid using variables in default parameters (except const)
 
 > Why? Using variables in default parameters effectively means you are using global state relatively to the function.
 Since default parameters are hidden from the consumer, it is hard to reason and make the function not pure.
@@ -139,3 +139,35 @@ cook('chicken')
 function cook(food: Food, doneness: Doneness) { ... }
 cook('chicken', 'well-done')
 ```
+
+## Using default parameters with object destructuring when dealing with complex options
+
+Using default parameters alone with complex options is not that useful.
+To preserve other default values, you will end up doing merge:
+
+```ts
+// not preserving other defaults
+function foo(options = { a: 1, b: { c: 2 } }) {
+  return options
+}
+
+foo({ a: 2 }) // { a: 2 }
+
+// sub-optimal
+const defaultOptions = { a: 1, b: { c: 2 } }
+function foo(options = defaultOptions) {
+  return _.deepMerge({}, defaultOptions, options)
+}
+
+foo({ a: 2 }) // { a: 2, b: { c: 2 } }
+
+// good
+function foo({ a = 1, b = { c: 2 } }) {
+  return { a, b }
+}
+
+foo({ a: 2 }) // { a: 2, b: { c: 2 } }
+```
+
+But as you can see, it still only works on first level.
+If the options is more complex, use the old merge solution.
