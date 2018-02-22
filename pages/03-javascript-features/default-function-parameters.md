@@ -99,7 +99,7 @@ function handleThings(opts = {}) {
 
 - <https://github.com/airbnb/javascript#es6-default-parameters>
 
-## Restrain usage of default parameters only to public API
+## Restrain usage of default parameters to public API only
 
 Public API mostly means the public APIs of a module or package.
 i.e. the API that your consumer will use.
@@ -129,7 +129,26 @@ In the above example, there is no indication at the call site that calling `set(
 
 > Why? Using default parameters effective means your function is doing two things:
 one with actual parameter and on with default parameters.
->
+
+```ts
+// bad
+function getFood(food: Food, cook = true): Food | CookedFood { ... }
+
+// good
+function getFood(food: Food): Food { ... }
+function cook(food: Food): CookedFood { ... }
+```
+
 > Why? Using default parameters means you pre-defined a perception on how the code should be used,
 or should be used with certain context.
 For internal code, you should not need to assume, you should already know.
+
+```ts
+// bad
+function cook(food: Food, doneness = 'medium') { ... }
+cook('chicken')
+
+// good
+function cook(food: Food, doneness: Doneness) { ... }
+cook('chicken', 'well-done')
+```
