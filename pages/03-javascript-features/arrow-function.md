@@ -12,7 +12,7 @@ const increment = x => dispatch => action => dispatch(action(x))
 
 The most significant difference between arrow function and funciton declaration and expression is that the `this` value is lexically binded at the declaration site, instead of at call site.
 
-## anonymous callback
+## Anonymous Callback
 
 - use arrow function for callbacks
 
@@ -36,7 +36,7 @@ The most significant difference between arrow function and funciton declaration 
   });
   ```
 
-## function expression
+## Function Expression
 
 - If you want to define a function, use function declaration instead of function expression or arrow function
 
@@ -56,7 +56,7 @@ The most significant difference between arrow function and funciton declaration 
   function foo() { return 'foo' }
   ```
 
-### Omit braces for single expression
+### Single Expression
 
 - If the function body consists of a single expression, omit the braces and use the implicit return. Otherwise, keep the braces and use a `return` statement.
 
@@ -72,6 +72,6 @@ The most significant difference between arrow function and funciton declaration 
   [1, 2, 3].map(number => `A string containing the ${number}.`);
   ```
 
-## References
+## Other Mentions
 
 - <https://stackoverflow.com/questions/22939130/when-should-i-use-arrow-functions-in-ecmascript-6>
