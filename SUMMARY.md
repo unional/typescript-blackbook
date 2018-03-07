@@ -9,11 +9,11 @@
   - [Code Organization](pages/02-files-and-projects/code-organization.md)
   - [tsconfig.json](pages/02-files-and-projects/03-tsconfig.md)
 - JavaScript features
-  - [Default Function Parameters](pages/03-javascript-features/default-function-parameters.md)
+  - [Default Function Parameter](pages/03-javascript-features/default-function-parameter.md)
+  - [Arrow Function](pages/03-javascript-features/arrow-function.md)
 - Language
   - [Accessors](pages/default/accessors.md)
   - [Arrays](pages/default/arrays.md)
-  - [Arrow Functions](pages/default/arrow-functions.md)
   - [Classes](pages/default/classes.md)
   - [Decorator] (pages/default/decorator.md)
   - [Interfaces](pages/default/interfaces.md)
