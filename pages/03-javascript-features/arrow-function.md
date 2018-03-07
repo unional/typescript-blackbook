@@ -4,13 +4,7 @@ Arrow function (or fat-arrow function) is one of the favorite features introduce
 It provides a compact syntax for writing function.
 Most of the time it makes code easier to read.
 
-However, sometime it could be confusing:
-
-```ts
-const increment = x => dispatch => action => dispatch(action(x))
-```
-
-The most significant difference between arrow function and funciton declaration and expression is that the `this` value is lexically binded at the declaration site, instead of at call site.
+The most significant difference between arrow function and function declaration and expression is that the `this` value is lexically binded at the declaration site, instead of at call site.
 
 ## Anonymous Callback
 
