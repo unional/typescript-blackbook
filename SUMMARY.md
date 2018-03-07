@@ -5,7 +5,8 @@
   - [Resources](pages/01-introductin/02-resources.md)
   - [Design Principles](pages/01-introduction/03-design-principles.md)
 - [Files and Projects](pages/02-files-and-projects/README.md)
-  - [Files](pages/02-files-and-projects/01-files.md)
+  - [Files](pages/02-files-and-projects/01-file-types.md)
+  - [Code Organization](pages/02-files-and-projects/code-organization.md)
   - [tsconfig.json](pages/02-files-and-projects/03-tsconfig.md)
 - JavaScript features
   - [Default Function Parameters](pages/03-javascript-features/default-function-parameters.md)
