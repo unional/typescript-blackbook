@@ -1,11 +1,27 @@
 # Array
 
-[`Array`](<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array>
-) in JavaScript is a high-level, list-like objects.
+[`Array`][array] in JavaScript is a high-level, list-like objects.
 
 ## Array creation
 
-**Should** use literal syntax for array creation.
+You **should** use literal syntax to create array.
+
+❌ bad
+
+![../../examples/variables.ts]
+
+❌ bad
+
+```ts
+const items = new Array<string>()
+```
+
+✔️ good
+
+```ts
+const items: string[] = []
+const items = [] as string[]
+```
 
 ```ts
 // bad
@@ -13,8 +29,14 @@ const items = new Array<string>()
 
 // good
 const items: string[] = []
-const items = ['a', 'b', 'c']
+
+// good
+const items = [] as string[]
 ```
+
+> Why?
+
+The literal syntax is more compact and the most common.
 
 ---
 
@@ -115,3 +137,5 @@ Performance comparison: <https://jsperf.com/spread-vs-concat-vs-push>
 Additional references:
 
 - <https://stackoverflow.com/questions/48865710/spread-operator-vs-array-concat>
+
+[array]: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array>

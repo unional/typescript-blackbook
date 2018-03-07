@@ -1,11 +1,9 @@
 # Arrow Function
 
-> An arrow function expression is a syntactically compact alternative to a regular function expression,
-> although without its own bindings to the `this`, `arguments`, `super`, or `new.target` keywords.
+An [arrow function expression][arrow-function-expression] is a syntactically compact alternative to a regular function expression,
+although without its own bindings to the `this`, `arguments`, `super`, or `new.target` keywords.
 
-<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions>
-
-Arrow function, sometimes also refered as fat-arrow function,
+Arrow function, sometimes also refered to as fat-arrow function,
 is one of the favorite features introduced in ES2015.
 
 It makes the code easier to read most of the time.
@@ -204,3 +202,5 @@ It reads well especially when multiple functions are chained together.
 
 - <https://stackoverflow.com/questions/22939130/when-should-i-use-arrow-functions-in-ecmascript-6>
 - <https://jsperf.com/arrow-function-vs-bind-vs-context-argument/4>
+
+[arrow-function-expression]: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions>

@@ -241,10 +241,10 @@ Where `<>` is required, `[]` is optional.
 
 We follows the [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt) to describe the requirement levels.
 
+These keywords are: `MUST`, `MUST NOT`, `REQUIRED`, `SHALL`, `SHALL NOT`, `SHOULD`, `SHOULD NOT`, `RECOMMENDED`, `MAY`, and `OPTIONAL`.
+
+The keywords will be highlighted in `bold` (e.g. `**must**`).
+
 > Why?
 
 Provide a consistent verbage for the recommendation.
-
-These keywords are: `MUST`, `MUST NOT`, `REQUIRED`, `SHALL`, `SHALL NOT`, `SHOULD`, `SHOULD NOT`, `RECOMMENDED`, `MAY`, and `OPTIONAL`.
-
-The keywords will be highlighted in `bold` (e.g.. `**must**`).

@@ -45,3 +45,4 @@ node_modules
 
 # output folder
 /out/
+pages/._.DS_Store

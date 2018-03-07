@@ -1,14 +1,9 @@
 # Type Declaration
 
-There are two ways to declare types: type annotation and type assertion.
+TypeScript is all about types.
+In this section, we are going to talk about how to declare types.
 
-> Type annotations in TypeScript are lightweight ways to record the intended contract of the function or variable.
-
-- <https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html#type-annotations>
-
-> Type assertions are a way to tell the compiler “trust me, I know what I’m doing.”
-
-- <https://www.typescriptlang.org/docs/handbook/basic-types.html#type-assertions>
+There are two ways to declare types: [type annotation](#type-annotation) and [type assertion](#type-assertion).
 
 ## When To Use
 
@@ -126,6 +121,38 @@ There are a few exceptions to this guideline:
 - Dealing with complex type and want to clarify your intent.
 - Returning value from external library and want to do type narrowing.
 
+## Type Annotation
+
+[Type annotations][type-annotation] in TypeScript are lightweight ways to record the intended contract of the function or variable.
+
+## Type Assertion
+
+[Type assertions][type-assertion] are a way to tell the compiler “trust me, I know what I’m doing.”
+
+There are two ways to do type assertion.
+
+```ts
+let x = 1 as any
+let y = <any>x
+```
+
+---
+
+You **must** use the `as X` syntax for type assertion.
+
+```ts
+// bad
+let x = <Partial<SomeType>>y
+
+// good
+let x = y as Partial<SomeType>
+```
+
+> Why?
+
+The `<Y>` spelling is also used in generic as well as in JSX.
+It is better to use the `as` syntax to avoid confusion.
+
 ## Type Annotation vs Type Assertion
 
 In general, you **may** prefer type annotation over type assertion.
@@ -203,28 +230,5 @@ const result = doSomething()
 
 ---
 
-## Type Assertion
-
-There are two ways to do type assertion.
-
-```ts
-let x = 1 as any
-let y = <any>x
-```
-
----
-
-You **must** use the `as X` syntax for type assertion.
-
-```ts
-// bad
-let x = <Partial<SomeType>>y
-
-// good
-let x = y as Partial<SomeType>
-```
-
-> Why?
-
-The `<Y>` spelling is also used in generic as well as in JSX.
-It is better to use the `as` syntax to avoid confusion.
+[type-annotation]: <https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html#type-annotations>
+[type-assertion]: <https://www.typescriptlang.org/docs/handbook/basic-types.html#type-assertions>
