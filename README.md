@@ -2,6 +2,11 @@
 
 This guideline focus on how to write effective TypeScript with the minimal effort. It touches on coding style, linting, to recommendation on writing good typings and writing TypeScript code.
 
+## Watch this repo
+
+I'll periodically update this repo.
+To get notified, click the watch button.
+
 ## Design Principles
 
 - Get the best out of TypeScript
