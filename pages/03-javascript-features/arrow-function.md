@@ -14,7 +14,7 @@ The most significant difference between arrow function and function declaration 
   >
   > Why not? If the callback has its own concept of `this` (usually this indicates a bad design, e.g. `$.each()`) AND you need to access it, then you don't have other choices.
   >
-  > If your callback is complicated, move it out to its own function declaration. Large callback makes it harder to understand the main flow of the code.
+  > If your callback is complicated, move it out to its own function declaration. Large callback makes the code harder to understand since it obstructs the main flow of the code.
 
   ```ts
   // bad
@@ -34,10 +34,11 @@ The most significant difference between arrow function and function declaration 
 
 - If you want to define a function, use function declaration instead of function expression or arrow function
 
-  > Why? Function declaration can be recognized by the langauge service as callable function, so you will get the right hint from your IDE.
-  >
-  > Arrow function has the same hoisting issue as with function expression.
+  > Why? Arrow function has the same hoisting issue as with function expression.
   > When declaring file scoped function, use function declaration to avoid hoisting suprise.
+  >
+  > Function declaration can be recognized by the langauge service as callable function,
+  > so you will get the right hint from your IDE.
 
   ```ts
   // bad
@@ -50,11 +51,25 @@ The most significant difference between arrow function and function declaration 
   function foo() { return 'foo' }
   ```
 
-### Single Expression
+## Higher-order Functions
 
-- If the function body consists of a single expression, omit the braces and use the implicit return. Otherwise, keep the braces and use a `return` statement.
+- If you are defining a higher-order function, you can use arrow-function due its compact form.
 
-  > Why? Syntactic sugar. It reads well when multiple functions are chained together.
+  > Why? Although this contradicts with the function expression guideline,
+  > higher-order function are typically used as argument or export to be used elsewhere.
+  >
+  > Therefore, you can justify to use array function syntax for this purpose.
+
+  ```ts
+  // ok
+  export const high = store => next => action => next(action)
+  ```
+
+## Single Expression
+
+- If the function body consists of a single expression, omit the brackets.
+
+  > Why? It reads well especially when multiple functions are chained together.
 
   ```ts
   // bad
