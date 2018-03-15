@@ -14,7 +14,7 @@ The most significant difference between arrow function and function declaration 
   >
   > Why not? If the callback has its own concept of `this` (usually this indicates a bad design, e.g. `$.each()`) AND you need to access it, then you don't have other choices.
   >
-  > If your callback is complicated, move it out to its own function declaration. Large callback makes the code harder to understand as it obstruct the main flow of the code.
+  > If your callback is complicated, move it out to its own function declaration. Large callback makes the code harder to understand since it obstructs the main flow of the code.
 
   ```ts
   // bad
