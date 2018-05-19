@@ -270,6 +270,14 @@ Not used
 
 - [modules#import-keyword](modules.md#import-keyword)
 
+### no-return-await
+
+```json
+"no-return-await": true
+```
+
+- [modules#import-keyword](../03-javascript-features/async-await.md#return-await)
+
 ### no-shadowed-variable (native)
 
 ```json
