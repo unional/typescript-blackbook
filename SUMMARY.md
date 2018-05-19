@@ -11,6 +11,7 @@
 - JavaScript features
   - [Default Function Parameter](pages/03-javascript-features/default-function-parameter.md)
   - [Arrow Function](pages/03-javascript-features/arrow-function.md)
+  - [Async Await](pages/03-javascript-features/async-await.md)
 - Language
   - [Accessors](pages/default/accessors.md)
   - [Arrays](pages/default/arrays.md)
