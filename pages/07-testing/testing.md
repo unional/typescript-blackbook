@@ -1,6 +1,8 @@
 # Testing
+
 Writing test is always good.
 There are a few questions need to be answered:
+
 - Which testing frameworks to use?
 - When should I write test?
 - What kind of test should I write?
@@ -11,11 +13,13 @@ There are a few questions need to be answered:
 Depends on the team, management, product, and release cycle, the answer to these questions can be different.
 Listed in this section are general guidelines you can consider when you formulate your own testing guidelines.
 
-### Testing framework
+## Testing framework
+
 - Anything that gives you the least resistant to write test!
 - I personally use [`mocha`](https://www.npmjs.com/package/mocha) and [`tape`](https://www.npmjs.com/package/tape) ([`blue-tape`](https://www.npmjs.com/package/blue-tape) to be exact)
 
-### Writing tests
+## Writing tests
+
 - Feel free to write junk code for prove of concept. No need to write tests at this stage.
 
   > Why? Junk code for prove of concept is a great way to try out your thesis while allow you to work in high speed.
@@ -60,7 +64,8 @@ Listed in this section are general guidelines you can consider when you formulat
 
   > Why? Your code should properly decoupled. If you found yourself to stubs and mocks a section of your dependencies, it's a code smell.
 
-### Running tests
+## Running tests
+
 Rule of thumb: Run test as often as possible, without hindering development speed.
 
 - Run these locally, always:

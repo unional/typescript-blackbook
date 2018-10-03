@@ -18,7 +18,8 @@
 
 - Always use `class`. Avoid manipulating `prototype` directly.
 
-  > Why? `class` syntax is more concise and easier to reason about.
+  > Why?
+  > `class` syntax is more concise and easier to reason about.
 
   ```ts
   // bad
@@ -94,7 +95,10 @@
 
 - If your class can be inherited, do not assume the arguments will not be undefined even if it is not optional. Provide default value or guard throwing.
 
-  > Why? Currently sub-class does not require to create constructor. It errors at call site but if you use dependency injection there is no call site thus the error won't be seen. Therefore your class can be called without any argument.
+  > Why?
+  > Currently sub-class does not require to create constructor.
+  > It errors at call site but if you use dependency injection there is no call site thus the error won't be seen.
+  > Therefore your class can be called without any argument.
   > Should guard against this case and throw meaningful error.
 
   ```ts
@@ -125,7 +129,7 @@
 - Classes have a default constructor if one is not specified.
 - Empty constructor function or one that just delegates to a parent class is unnecessary.
 
-  ```typescript
+  ```ts
   // bad
   class Jedi {
     constructor() {}

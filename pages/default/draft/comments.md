@@ -1,6 +1,7 @@
-## Comments
+# Comments
 
-### Multi-line
+## Multi-line
+
 - Use `/** ... */` for multi-line comments. Include a description, specify types and values for all parameters and return values.
 - Conform to jsdoc. tslint: [`jsdoc-format`](tslint.md#jsdoc-format-native)
 
@@ -34,7 +35,8 @@ function make(tag) {
 }
 ```
 
-### Single-line
+## Single-line
+
 - Use `//` for single line comments. Place single line comments on a newline above the subject of the comment. Put an empty line before the comment unless it's on the first line of a block.
 
 ```typescript
@@ -86,12 +88,13 @@ tslint: [`comment-format`](tslint.md#comment-format-native)
 // Okey too
 ```
 
+## Prefixings
 
-### Prefixings
 - Do use prefixing.
 - Prefix in UPPER_CASE
 
-#### FIXME prefix
+### FIXME prefix
+
 - Use `// FIXME:` to annotate problems.
 
 ```typescript
@@ -105,7 +108,8 @@ class Calculator extends Abacus {
 }
 ```
 
-#### TODO prefix
+### TODO prefix
+
 - Use `// TODO:` to annotate solutions to problems.
 
 ```typescript
@@ -119,7 +123,8 @@ class Calculator extends Abacus {
 }
 ```
 
-#### FUTURE prefix
+### FUTURE prefix
+
 - Use `// FUTURE:` to annotate ideas that will be valuable in the future
 
 ```typescript

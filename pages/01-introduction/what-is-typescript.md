@@ -6,7 +6,7 @@ Coming straightly form the [source](http://www.typescriptlang.org):
 
 It is very active and it is [gaining popularity at exponential speed](https://www.google.com/trends/explore#q=TypeScript&cmpt=q&tz=Etc%2FGMT%2B7)
 
-You can understand more about TypeScript directly from the [official website](http://www.typescriptlang.org) and the [official handbook](http://www.typescriptlang.org/docs/handbook/basic-types.html)
+You can understand more about TypeScript directly from the [official website](http://www.typescriptlang.org) and the [TypeScript handbook](http://www.typescriptlang.org/docs/handbook/basic-types.html)
 
 ## Benefits
 
@@ -27,5 +27,3 @@ However, `TypeScript` has the benefit of type system and the ability to transpil
 ## Alternatives: Type system
 
 [`flow`](https://flowtype.org/) is a static type checker for JavaScript.
-It is great and have great potential.
-But currently it is only supported in Mac OS X and Linux (64-bit) environment and IDE support is not as good as `TypeScript`.

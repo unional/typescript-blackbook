@@ -1,24 +1,28 @@
-# Typescript Guidelines
+# Typescript Guidebook
 
-This guideline focus on how to write effective TypeScript with the minimal effort. It touches on coding style, linting, to recommendation on writing good typings and writing TypeScript code.
+Welcome to the TypeScript Guidebook.
 
-## Watch this repo
+This guidebook suppliments the official [TypeScript Handbook](http://www.typescriptlang.org/docs/handbook/basic-types.html) while focusing on *how to get the most out of TypeScript with minimal effort*.
 
-I'll periodically update this repo.
-To get notified, click the watch button.
+It will cover anything and everything you need when writing TypeScript, from how to use the language, to coding style and any tool that may be useful.
 
-## Design Principles
+## Highlights
 
-- Get the best out of TypeScript
-- Stay close to JavaScript as much as possible
-- Embrace latest JavaScript syntax
-- Cross-compatibility with tools. In my company, we embrace diversity and support team members to use their favorite IDEs. However it is really frustrating when the tools do not get along with each other!
+- Stay true to JavaScript
+- Use TypeScript as a gradual type system on top of JavaScript.
+- Focus on code efficiency
+- Focus on tool compatibility
   - IDE / Editors
     - [Visual Studio Code](https://github.com/Microsoft/vscode)
     - [Atom](https://atom.io/)
     - [WebStorm](https://www.jetbrains.com/webstorm/)
   - Linter
     - [tslint](https://github.com/palantir/tslint)
+
+## Watch this repo
+
+I'll periodically update this repo.
+You can click the watch button if you want to be notified.
 
 ## Disclaimer
 
@@ -28,38 +32,37 @@ let me know and we can see how to get it working on your IDE.
 
 ## Table of Contents
 
-- [Introduction](pages/01-introduction/README.md)
-  - [TypeScript](pages/01-introduction/01-typescript.md)
-  - [Resources](pages/01-introductin/02-resources.md)
-  - [Design Principles](pages/01-introduction/03-design-principles.md)
-- [Files and Projects](pages/02-files-and-projects/README.md)
-  - [Files](pages/02-files-and-projects/01-file-types.md)
-  - [Code Organization](pages/02-files-and-projects/code-organization.md)
-  - [tsconfig.json](pages/02-files-and-projects/03-tsconfig.md)
-- JavaScript features
-  - [Default Function Parameter](pages/03-javascript-features/default-function-parameter.md)
-  - [Arrow Function](pages/03-javascript-features/arrow-function.md)
-  - [Async Await](pages/03-javascript-features/async-await.md)
-- Language
-  - [Accessors](pages/default/accessors.md)
-  - [Arrays](pages/default/arrays.md)
-  - [Classes](pages/default/classes.md)
-  - [Decorator](pages/default/decorator.md)
-  - [Interfaces](pages/default/interfaces.md)
-  - [Namespaces and Modules](pages/default/namespaces-and-modules.md)
-  - [Modules](pages/default/modules.md)
+- [Introduction](/pages/01-introduction/README.md)
+  - [What is TypeScript](/pages/01-introduction/what-is-typescript.md)
+  - [TypeScript Resources](/pages/01-introduction/typescript-resources.md)
+- [TypeScript Syntax](pages/02-javascript-syntax/README.md)
+  - [Variable Declaration](/pages/02-javascript-syntax/variable-declaration.md)
+  - [Variable Assignment](/pages/02-javascript-syntax/variable-assignment.md)
+  - [Arrays](/pages/02-javascript-syntax/arrays.md)
+  - [Default Function Parameter](/pages/02-javascript-syntax/default-function-parameter.md)
+  - [Arrow Function](/pages/02-javascript-syntax/arrow-function.md)
+  - [Object Descructuring](/pages/02-javascript-syntax/object-destructuring.md)
+  - [Async Await](/pages/02-javascript-syntax/async-await.md)
+  - [Interfaces](/pages/02-javascript-syntax/interfaces.md)
+  - [Classes](/pages/02-javascript-syntax/classes.md)
+  - [Union type](/pages/02-javascript-syntax/union-type.md)
+  - [Recursive Types](/pages/02-javascript-syntax/recursive-types.md)
+  - [Accessors](/pages/02-javascript-syntax/accessors.md)
+  - [Decorator](/pages/02-javascript-syntax/decorator.md)
+  - [Namespaces and Modules](/pages/02-javascript-syntax/namespaces-and-modules.md)
+  - [Modules](/pages/02-javascript-syntax/modules.md)
+- [Files and Projects](/pages/04-files-and-projects/README.md)
+  - [Files](/pages/04-files-and-projects/file-types.md)
+  - [Code Organization](/pages/04-files-and-projects/code-organization.md)
+  - [tsconfig.json](/pages/04-files-and-projects/tsconfig.md)
 - Coding Practice
   - [Testing](pages/default/testing.md)
-- Types
-  - [Union type](pages/types/union-type.md)
 - [Typings](pages/typings/README.md)
   - [Functions](pages/typings/functions.md)
   - [Overloading](pages/typings/overloading.md)
   - [Namespaces and Modules](pages/typings/namespaces-and-modules.md)
   - [Shape of typings](pages/typings/shape-of-typings.md)
   - [tslint configuration](pages/typings/tslint.md)
-- Advance types
-  - [Recursive Types](pages/advance-types/recursive-types.md)
 - Tooling
   - [tslint.json](pages/default/tslint.md)
 - **draft** [File structures](pages/default/draft/file-structures.md)

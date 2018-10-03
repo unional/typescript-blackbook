@@ -1,28 +1,30 @@
 # Arrays
 
-### Array creation
+## Array creation
+
 - Use the literal syntax for array creation.
 
   ```ts
   // bad
-  const items = new Array<string>();
+  const items = new Array<string>()
 
   // good
-  const items = string[];
+  const items: string[] = []
   const items = ['a', 'b', 'c'];
   ```
 
-### Type declaration
+## Type declaration
+
 - Use the literal syntax for type declaration. Unless the type is complex
 
   > Why? The `Array<>` syntax is visually clear that your type is an array.
   > It also provides better focus on the internal type.
-  
+
   ```ts
   // bad
   const items: Array<string>;
   const items: { people: Person[] }[]
-  
+
   // either is fine
   const items: (string | string[])[]
   const items: Array<string | string[]>;
@@ -32,7 +34,8 @@
   const items: Array<{ people: Person[] }>;
   ```
 
-### Inserting
+## Inserting
+
 - Use `.push()` instead of direct assignment to add items to an array.
 
   ```typescript
@@ -45,10 +48,11 @@
   someStack.push('abracadabra');
   ```
 
-### Array spreads
+## Array spreads
+
 - Use array spreads `...` to copy arrays.
 
-  ```typescript
+  ```ts
   // bad
   const len = items.length;
   const itemsCopy = [];
@@ -62,19 +66,21 @@
   const itemsCopy = [...items];
   ```
 
-### Converting to array
+## Converting to array
+
 - To convert an array-like object to an array, use `.from()`.
 
-  ```typescript
+  ```ts
   const foo = document.querySelectorAll('.foo');
   const nodes = Array.from(foo);
   ```
 
-### Array method callbacks
+## Array method callbacks
+
 - Use return statements in array method callbacks.
 - It's ok to omit the return if it is an arrow function and consists of a single expression.
 
-  ```typescript
+  ```ts
   // good
   [1, 2, 3].map((x) => {
     const y = x + 1;
