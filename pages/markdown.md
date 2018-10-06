@@ -59,7 +59,7 @@ Here is a complete reference of most common syntax:
 - Wordings in header should be neutral, non-opinionated
 
   > Why? The header could be used as link.
-  > It is best to keep the header short and unlikely to change.
+  > It is best to keep the header short and less likely to change.
 
   ```txt
   // bad

@@ -12,7 +12,7 @@ Fortunately, if you follow these simple rules, creating module is relatively str
 
 ## import keyword
 
-- Use `import` keyword.
+- Use `import` keyword instead of `var`, `let`, or `const` with `require()`.
 
   tslint: [`no-var-requires`](tslint.md#no-var-requires-native)
 

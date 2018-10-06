@@ -3,8 +3,9 @@
 This chapter will focus on JavaScript syntax and keywords.
 This includes keyword that TypeScript uses and extends, such as the `import` keyword.
 
-## Table of Contents
+## Topics
 
+- [Strings](/pages/02-javascript-syntax/strings.md)
 - [Arrays](/pages/02-javascript-syntax/arrays.md)
 - [Arrow Function](/pages/02-javascript-syntax/arrow-function.md)
 - [Async Await](/pages/02-javascript-syntax/async-await.md)
@@ -15,5 +16,5 @@ This includes keyword that TypeScript uses and extends, such as the `import` key
 - [Object Descructuring](/pages/02-javascript-syntax/object-destructuring.md)
 - [Object Literal](/pages/02-javascript-syntax/object-literal.md)
 - [Property Accessors](/pages/02-javascript-syntax/property-accessors.md)
-- [Variable Declaration](/pages/02-javascript-syntax/variable-declaration.md)
 - [Variable Assignment](/pages/02-javascript-syntax/variable-assignment.md)
+- [Variable Declaration](/pages/02-javascript-syntax/variable-declaration.md)

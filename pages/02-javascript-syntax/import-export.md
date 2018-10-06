@@ -8,6 +8,16 @@ it also have a few extended syntax.
 
 ## `import` keyword
 
+- Do not use `import * as x from 'x'` to import CommonJS module
+
+  > Why?
+  > This does not work if the CommonJS module is a function, class, or a primitive value.
+
+- Do not use `import x = require('x')` to import CommonJS module
+
+  > Why?
+  > This does not work if you set your emit target to `es2015` or `esnext`.
+
 - Use `import x from 'x'` syntax to import CommonJS module.
 
 You need to specify the `--esModuleInterop` flag.

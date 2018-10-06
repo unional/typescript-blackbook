@@ -13,6 +13,13 @@
   const items = ['a', 'b', 'c'];
   ```
 
+- Do not need to do `let x: any[] = []`
+
+  > Why?
+  > Originaly `let x = []` will have type `never[]` which is not really useful.
+  > New newer version of TypeScript (at least in 2.9),
+  > it is
+
 ## Type declaration
 
 - Use the literal syntax for type declaration. Unless the type is complex
