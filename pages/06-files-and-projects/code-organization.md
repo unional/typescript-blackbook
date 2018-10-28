@@ -37,7 +37,7 @@ By all means use them if you find them useful, and see if you can customize them
 
 Also, you can still keep a large part of your code from the frameworks, which is always a great thing to do.
 
-## Organize your folder by components
+## Folder organization
 
 - Instead of organizing your folder by the type of code they contain (e.g. `controllers`, `actions`, `views`), organize them as if they are components (e.g. `authentication`, `logging`, `search`, `application`).
 
@@ -45,6 +45,14 @@ Also, you can still keep a large part of your code from the frameworks, which is
   > But as your project matures, other people would like to use part of your code but not others.
   > If you organize your folders by their purpose, it is much more likely that they are less coupled to each other, and is easier to break it into their own project.
   > In essense, your code will be more conforming to the Common Closure Principle and Common Reuse Principle.
+
+## Folder name casing
+
+- You should name your folder in snake-case over camelCase or PascalCase.
+
+  > Why?
+  > As you organize the code as components, they should be treated as components.
+  > The convention for component naming is snake-case.
 
 ## Place your public code at the top
 
