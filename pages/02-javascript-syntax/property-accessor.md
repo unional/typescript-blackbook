@@ -1,6 +1,6 @@
-# Property Accessors
+# Property Accessor
 
-Property accessors is a JavaScript construct providing access to an object's properties.
+Property accessor is a JavaScript construct providing access to an object's properties.
 There are two property accessor notations: dot notation and the bracket notation.
 
 ## Dot notation

@@ -1,4 +1,4 @@
-# Strings
+# String
 
 Strings are values made up of text and can contain letters, numbers, symbols, punctuation, and even emoji.
 

@@ -1,4 +1,4 @@
-# Arrays
+# Array
 
 ## Array creation
 

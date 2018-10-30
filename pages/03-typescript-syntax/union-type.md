@@ -23,3 +23,5 @@ const z = arr2(x)  // (string | string[])[]
 ```
 
 <https://github.com/typed-typings/npm-lodash/pull/18#issuecomment-230015625>
+
+## Discriminative union
