@@ -72,17 +72,17 @@ For example, `const x = []` will have type `any[]` instead of `never[]` when `no
   > Requiring all parameters to be typed contradicts with my design principle of being efficient.
   >
   > For example, at the time of writing, `jest` plugin system does not provide the type of `jestHook` below:
-  >
-  > ```ts
-  > export class WatchSuspendPlugin {
-  >   apply(jestHook) { // error: `jestHook` is implicitly any
-  >     jestHooks.shouldRunTestSuite(() => {
-  >       return !this.suspend
-  >     })
-  >   }
-  > }
-  > ```
-  >
+
+  ```ts
+  export class WatchSuspendPlugin {
+    apply(jestHook) { // error: `jestHook` is implicitly any
+      jestHooks.shouldRunTestSuite(() ={
+        return !this.suspend
+      })
+    }
+  }
+  ```
+
   > To be comply with `noImplicitAny`,
   > I have to either define the type myself which requires work and is more complicated,
   > or I will just silent the error with `jestHook: any`,
@@ -98,6 +98,31 @@ For example, `const x = []` will have type `any[]` instead of `never[]` when `no
 
 ## strict
 
+- Enable this flag
+
   > Help wanted
   > Mostly due to `noImplicitAny`.
   > Other strict check does not seem to be an issue.
+
+## noUnusedParameters
+
+- Perfer to turn off this flag
+
+  > Why?
+  > There are valid cases to have uninterested parameters in the function signature.
+  > For example, callbacks, polymorphic functions.
+  > When you have this flag turned on,
+  > You have to prefix them with `_`,
+  > which could be problematic if you refactor down the road,
+  > and also hinder readability if this is a public function.
+  > I value readability of the code above other factors,
+  > that's why I prefer to leave this flag off.
+  >
+  > Why not?
+  > If you want to avoid accidental mistakes as much as possible,
+  > fell free to turn on this flag,
+  > and prefix uninterested parameters with `_`.
+
+References:
+
+- <https://github.com/Microsoft/TypeScript/issues/9458>
