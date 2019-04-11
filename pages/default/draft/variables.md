@@ -6,7 +6,7 @@ In TypeScript and ES2015, you have three choice for referencing a variable: `var
 
 `var` is function-scoped.
 
-```typescript
+```ts
 // const and let only exist in the blocks they are defined in.
 {
   let a = 1;
@@ -19,8 +19,8 @@ console.log(c); // 1
 ```
 
 ### `const` keyword
+
 - Use `const` for all of your references; avoid using `var`. eslint: [`prefer-const`](http://eslint.org/docs/rules/prefer-const.html), [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign.html)
-- Always use `const` to declare variables. Not doing so will result in global variables. We want to avoid polluting the global namespace. Captain Planet warned us of that.
 
 > Why? This ensures that you can't reassign your references, which can lead to bugs and difficult to comprehend code.
 
