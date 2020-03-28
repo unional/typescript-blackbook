@@ -1,12 +1,20 @@
-# String
+# string
 
-Strings are values made up of text and can contain letters, numbers, symbols, punctuation, and even emoji.
+Don't need much explanation, don't we? 😇.
 
-String literals are contained within a pair of either single quotation marks '' or double quotation marks "".
+## String Constructor
+
+**Do** `String(x)` constructor over `x as string`.
+
+> Why?
+>
+> If you need to convert primitive value to
 
 ```ts
 const stringObject = String(123)
 ```
+
+**Do** `String(x)` over `'' + x`.
 
 ## Reference
 

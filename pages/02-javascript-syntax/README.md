@@ -1,7 +1,7 @@
 # JavaScript Syntax
 
-This chapter will focus on JavaScript syntax and keywords.
-This includes keyword that TypeScript uses and extends, such as the `import` keyword.
+In this chapter,
+we will focus on the syntax and keywords already exist in JavaScript.
 
 ## Topics
 

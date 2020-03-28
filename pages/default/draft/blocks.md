@@ -1,11 +1,13 @@
 ## Blocks
 
 ### Single-line blocks
+
 - Avoid single-line for now
 
 > Why? Currently tslint does not support it well (https://github.com/palantir/tslint/issues/822)
 
 ### Multi-line blocks
+
 - Use braces with all multi-line blocks.
 
 tslint: [`curly`](tslint.md#curly-native)
@@ -57,6 +59,7 @@ else {
 ```
 
 ### Switch case
+
 - Use braces to create blocks in `case` and `default` clauses that contain lexical declarations (e.g. `let`, `const`, `function`, and `class`).
 
 > Why? Lexical declarations are visible in the entire `switch` block but only get initialized when assigned, which only happens when its `case` is reached. This causes problems when multiple `case` clauses attempt to define the same thing.
