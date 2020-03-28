@@ -1,17 +1,15 @@
 # What is TypeScript
 
-Coming straightly form the [source](http://www.typescriptlang.org):
+> TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
 
-  > TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
-
-It is very active and it is [gaining popularity at exponential speed](https://www.google.com/trends/explore#q=TypeScript&cmpt=q&tz=Etc%2FGMT%2B7)
+It is very active and it is [gaining popularity at a rapid rate](https://www.google.com/trends/explore#q=TypeScript&cmpt=q&tz=Etc%2FGMT%2B7)
 
 You can understand more about TypeScript directly from the [official website](http://www.typescriptlang.org) and the [TypeScript handbook](http://www.typescriptlang.org/docs/handbook/basic-types.html)
 
 ## Benefits
 
 - Similar syntax and semantics as JavaScript.
-- Type system
+- Gradual Type system
 - Better IDE support
 - Support latest ESMCScript syntax
 

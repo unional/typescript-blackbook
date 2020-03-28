@@ -1,11 +1,10 @@
 # Markdown style guide
 
 There are several flavors of `markdown`.
-This style guide is designed for the `github` version of markdown (and alternatives):
-<https://help.github.com/articles/github-flavored-markdown/>
 
-Here is a complete reference of most common syntax:
-<https://daringfireball.net/projects/markdown/syntax>
+This style guide is designed for the [github](<https://help.github.com/articles/github-flavored-markdown/>) version of markdown.
+
+Here is a reference of basic [syntax](https://daringfireball.net/projects/markdown/syntax).
 
 ## Design Principles
 

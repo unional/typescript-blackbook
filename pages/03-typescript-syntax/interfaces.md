@@ -1,5 +1,15 @@
 # Interface
 
+## interface vs type alias
+
+- Prefer type alias over interface.
+
+  > Why? Interface is a
+
+### Reference
+
+- <https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c>
+
 ## Naming
 
 - Name interface in PascalCase.
