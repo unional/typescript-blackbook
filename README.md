@@ -96,11 +96,6 @@ let me know and we can see how to get it working on your IDE.
 
 ## Contributing
 
-- Follow the [`markdown style guide`](pages/markdown.md)
-- Each section heading should be neutral, e.g. "`var` keyword" instead of "avoid `var`"
+Interested in helping to make this guideline more useful to everyone? Great 🌷.
 
-> Why?
->
-> The heading would be used as link.
-> If the style guide suggestion changes,
-> keeping the heading neutral would avoid broken links.
+You can check out this [contributing guide](/CONTRIBUTING.md) to get you get familiar with the convention we use here.

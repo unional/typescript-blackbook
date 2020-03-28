@@ -22,6 +22,15 @@
   "license": "MIT",
   "author": "unional",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "ts-node scripts/lint.ts"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "chalk": "^3.0.0",
+    "glob": "^7.1.6",
+    "markdownlint": "^0.19.0",
+    "ts-node": "^8.8.1",
+    "type-plus": "^1.35.1",
+    "typescript": "^3.8.3"
   }
 }
