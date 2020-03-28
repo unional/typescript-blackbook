@@ -41,7 +41,7 @@ let me know and we can see how to get it working on your IDE.
   - [Async Await](/pages/02-javascript-syntax/async-await.md)
   - [Class](/pages/02-javascript-syntax/class.md)
   - [Decorator](/pages/02-javascript-syntax/decorator.md)
-  - [Default Function Parameter](/pages/02-javascript-syntax/default-function-parameter.md)
+  - [Default Parameters](/pages/02-javascript-syntax/default-parameters.md)
   - [Error](/pages/02-javascript-syntax/error.md)
   - [Import Export](/pages/02-javascript-syntax/import-export.md)
   - [Object Descructuring](/pages/02-javascript-syntax/object-destructuring.md)
@@ -99,6 +99,8 @@ let me know and we can see how to get it working on your IDE.
 - Follow the [`markdown style guide`](pages/markdown.md)
 - Each section heading should be neutral, e.g. "`var` keyword" instead of "avoid `var`"
 
-  > Why? The heading would be used as link.
-  > So if the style guide suggestion changes,
-  > keeping the heading neutral would avoid broken links.
+> Why?
+>
+> The heading would be used as link.
+> If the style guide suggestion changes,
+> keeping the heading neutral would avoid broken links.

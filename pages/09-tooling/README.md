@@ -1,4 +1,14 @@
+# Tooling
 
+In this chapter, we will go through various tools that are used in junction with TypeScript.
 
+These tools include:
 
-Including my own libraries because I'm using them.
+- transpilers/compilers
+- editors/IDEs
+- linters
+- formatters
+- test runners
+- bundlers
+- CIs
+- and specific packages/libraries

@@ -11,7 +11,7 @@ This includes keyword that TypeScript uses and extends, such as the `import` key
 - [Async Await](/pages/02-javascript-syntax/async-await.md)
 - [Class](/pages/02-javascript-syntax/class.md)
 - [Decorator](/pages/02-javascript-syntax/decorator.md)
-- [Default Function Parameter](/pages/02-javascript-syntax/default-function-parameter.md)
+- [Default Parameters](/pages/02-javascript-syntax/default-parameters.md)
 - [Error](/pages/02-javascript-syntax/error.md)
 - [Import Export](/pages/02-javascript-syntax/import-export.md)
 - [Object Descructuring](/pages/02-javascript-syntax/object-destructuring.md)
