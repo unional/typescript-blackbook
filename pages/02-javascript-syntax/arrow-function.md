@@ -6,81 +6,94 @@ Most of the time it makes code easier to read.
 
 The most significant difference between arrow function and function declaration and expression is that the `this` value is lexically binded at the declaration site, instead of at call site.
 
+<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions>
+
 ## Anonymous Callback
 
-- use arrow function for callbacks
+**Should** use arrow function for callbacks.
 
-  > Why? It binds to your lexical context, which is usually what you want. It is also easier to read.
-  >
-  > Why not? If the callback has its own concept of `this` (usually this indicates a bad design, e.g. `$.each()`) AND you need to access it, then you don't have other choices.
-  >
-  > If your callback is complicated, move it out to its own function declaration. Large callback makes the code harder to understand since it obstructs the main flow of the code.
+> Why?
 
-  ```ts
-  // bad
-  [1, 2, 3].map(function (x) {
-    const y = x + 1;
-    return x * y;
-  });
+It binds to your lexical context, which is usually what you want.
+It is also easier to read.
 
-  // good
-  [1, 2, 3].map((x) => {
-    const y = x + 1;
-    return x * y;
-  });
-  ```
+> Why not?
+
+If the callback has its own concept of `this` (usually this indicates a bad design, e.g. `$.each()`) AND you need to access it, then you don't have other choices.
+
+If your callback is complicated, move it out to its own function declaration. Large callback makes the code harder to understand since it obstructs the main flow of the code.
+
+```ts
+// bad
+[1, 2, 3].map(function (x) {
+  const y = x + 1;
+  return x * y;
+});
+
+// good
+[1, 2, 3].map((x) => {
+  const y = x + 1;
+  return x * y;
+});
+```
 
 ## Function Expression
 
-- If you want to define a function, use function declaration instead of function expression or arrow function
+**May** use function declaration to declare function, instead of function expression or arrow function.
 
-  > Why? Arrow function has the same hoisting issue as with function expression.
-  > When declaring file scoped function, use function declaration to avoid hoisting suprise.
-  >
-  > Function declaration can be recognized by the langauge service as callable function,
-  > so you will get the right hint from your IDE.
+> Why?
 
-  ```ts
-  // bad
-  const foo = function() { return 'foo' }
+Arrow function has the same hoisting issue as with function expression.
+When declaring file scoped function, use function declaration to avoid hoisting suprise.
 
-  // bad
-  const foo = () => 'foo'
+Function declaration can be recognized by the langauge service as callable function,
+so you will get the right hint from your IDE.
 
-  // good
-  function foo() { return 'foo' }
-  ```
+```ts
+// bad
+const foo = function() { return 'foo' }
+
+// bad
+const foo = () => 'foo'
+
+// good
+function foo() { return 'foo' }
+```
 
 ## Higher-order Functions
 
-- If you are defining a higher-order function, you can use arrow-function due its compact form.
+**Should** use arrow function when defining higher-order function and benefit from its compact form.
 
-  > Why? Although this contradicts with the function expression guideline,
-  > higher-order function are typically used as argument or export to be used elsewhere.
-  >
-  > Therefore, you can justify to use array function syntax for this purpose.
+> Why?
 
-  ```ts
-  // ok
-  export const high = store => next => action => next(action)
-  ```
+Although this contradicts with the function expression guideline,
+higher-order function are typically used as argument or export to be used elsewhere.
+
+Therefore, you can justify to use array function syntax for this purpose.
+
+```ts
+// good
+export const high = store => next => action => next(action)
+```
 
 ## Single Expression
 
-- If the function body consists of a single expression, omit the brackets.
+**Should** use concise body over block body for single expression.
 
-  > Why? It reads well especially when multiple functions are chained together.
+> Why?
 
-  ```ts
-  // bad
-  [1, 2, 3].map(number => {
-    return `A string containing the ${number}.`;
-  });
+It reads well especially when multiple functions are chained together.
 
-  // good
-  [1, 2, 3].map(number => `A string containing the ${number}.`);
-  ```
+```ts
+// bad
+[1, 2, 3].map(number => {
+  return `A string containing the ${number}.`;
+});
 
-## Other Mentions
+// good
+[1, 2, 3].map(number => `A string containing the ${number}.`);
+```
+
+## Other References
 
 - <https://stackoverflow.com/questions/22939130/when-should-i-use-arrow-functions-in-ecmascript-6>

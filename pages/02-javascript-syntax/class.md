@@ -1,178 +1,188 @@
 # Class
 
+> The class declaration creates a new class with a given name using prototype-based inheritance.
+
+<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class>
+
+## When To Use
+
+**Should not** use `class` unless there is a clear reason.
+
+**Should** use function composition when possible.
+
+**Should** utilize closure when possible.
+
+> Why?
+
+More than 95% of the time,
+you do not need inheritance.
+
+Inheritance is a strong coupling between two pieces of code: the parent and child class.
+
+There are many alternative ways to get the same benefits that inheritance can provide, and more 😎.
+There are also disadvantages in using `class` and using `private` and `protected` modifier.
+
+---
+
+**May** prefer `class` over create function in public API.
+
+> Why?
+
+If you need to expose some function for the user to create an object,
+you **may** consider using `class` instead.
+
+This is a exception to the suggestions above.
+If you expect your users to pass the created object around,
+that means they need to reference the type of the created object in their functions.
+
+Using `class` in this case provides a clean interface to the user.
+
+```ts
+// bad
+export type SqlConnection { ... }
+export function createSqlConnection(...) { ... }
+
+// good
+export class SqlConnection { ... }
+```
+
 ## Naming Convention
 
-- Name class in pascal case
+**Must** create class in pascal case.
 
-  tslint: [`class-name`](tslint.md#class-name-native)
+```ts
+// bad
+class myClass { }
 
-  ```ts
-  // bad
-  class myClass { }
-
-  // good
-  class MyClass { }
-  ```
+// good
+class MyClass { }
+```
 
 ## `class` keyword
 
-- Always use `class`. Avoid manipulating `prototype` directly.
+**Should** prefer using `class` keyword over manipulating `prototype` directly.
 
-  > Why?
-  > `class` syntax is more concise and easier to reason about.
+> Why?
 
-  ```ts
-  // bad
-  function Queue(contents = []) {
+The `class` syntax is more concise and easier to reason about.
+
+```ts
+// bad
+function Queue(contents = []) {
+  this._queue = [...contents];
+}
+Queue.prototype.pop = function () {
+  const value = this._queue[0];
+  this._queue.splice(0, 1);
+  return value;
+}
+
+// good
+class Queue {
+  constructor(contents = []) {
     this._queue = [...contents];
   }
-  Queue.prototype.pop = function () {
+  pop() {
     const value = this._queue[0];
     this._queue.splice(0, 1);
     return value;
   }
-
-  // good
-  class Queue {
-    constructor(contents = []) {
-      this._queue = [...contents];
-    }
-    pop() {
-      const value = this._queue[0];
-      this._queue.splice(0, 1);
-      return value;
-    }
-  }
-  ```
-
-## `extends` keyword
-
-- Use `extends` for inheritance.
-
-  > Why? It is a built-in way to inherit prototype functionality without breaking `instanceof`.
-
-  ```ts
-  // bad
-  const inherits = require('inherits');
-  function PeekableQueue(contents) {
-    Queue.apply(this, contents);
-  }
-  inherits(PeekableQueue, Queue);
-  PeekableQueue.prototype.peek = function () {
-    return this._queue[0];
-  }
-
-  // good
-  class PeekableQueue extends Queue {
-    peek() {
-      return this._queue[0];
-    }
-  }
-  ```
-
-## Overriding `toString()`
-
-- It's okay to write a custom toString() method, just make sure it works successfully and causes no side effects.
-
-  ```ts
-  class Jedi {
-    constructor(options = {}) {
-      this.name = options.name || 'no name';
-    }
-
-    getName() {
-      return this.name;
-    }
-
-    toString() {
-      return `Jedi - ${this.getName()}`;
-    }
-  }
-  ```
-
-## Constructor arguments with Dependency Injection
-
-- If your class can be inherited, do not assume the arguments will not be undefined even if it is not optional. Provide default value or guard throwing.
-
-  > Why?
-  > Currently sub-class does not require to create constructor.
-  > It errors at call site but if you use dependency injection there is no call site thus the error won't be seen.
-  > Therefore your class can be called without any argument.
-  > Should guard against this case and throw meaningful error.
-
-  ```ts
-  // bad
-  class Foo {
-    constructor(options: { paramA: number }) {
-      // Will throw Cannot read property 'paramA' of undefined for Boo.
-      this.something = options.paramA + 1;
-    }
-  }
-  class Boo extends Foo { }
-
-  // good
-  class Foo {
-    constructor(options: { paramA: number }) {
-      if (!options) {
-        throw new Error('Foo requires constructor argument "options"');
-      }
-    }
-  }
-  class Boo extends Foo { }
-  ```
-
-  <https://github.com/Microsoft/TypeScript/issues/9523>
+}
+```
 
 ## Empty constructor
 
-- Classes have a default constructor if one is not specified.
-- Empty constructor function or one that just delegates to a parent class is unnecessary.
+**Should** not delcare empty constructor.
 
-  ```ts
-  // bad
-  class Jedi {
-    constructor() {}
+> Why?
 
-    getName() {
-      return this.name;
-    }
+Classes have a default constructor if one is not specified.
+Empty constructor function or constructor that just calling the parent class is unnecessary.
+
+```ts
+// bad
+class Jedi {
+  constructor() {}
+}
+
+// bad
+class Rey extends Jedi {
+  constructor(...args) {
+    super(...args);
   }
+}
 
-  // bad
-  class Rey extends Jedi {
-    constructor(...args) {
-      super(...args);
-    }
+// good
+class Rey extends Jedi {
+  name: string
+  constructor(...args) {
+    super(...args);
+    this.name = 'Rey';
   }
-
-  // good
-  class Rey extends Jedi {
-    constructor(...args) {
-      super(...args);
-      this.name = 'Rey';
-    }
-  }
-  ```
+}
+```
 
 ## member visibility
 
-- Do not need to explicitly add `public` to members.
+**Must not** use the `public` modifier to member.
 
-  tslint: [`member-access`](tslint.md#member-access-native)
+> Why?
 
-### member ordering
+TypeScript borrow this from Java and C# which is completely unnecessary in JavaScript.
 
-- Place public members before private members.
-- Place static members before instance members.
-- Place properties before methods.
+```ts
+// bad
+class Baby {
+  public cry() { ... }
+}
 
-- Do not group properties and methods based on interface
+// good
+class Baby {
+  laugh() { ... }
+}
+```
 
-  > Why? Able to find out what the class can do is more important than where those methods come from.
+---
 
-- Place properties and methods of mixins at the end.
+**Should** prefer JavaScript private field `#prop` over `private` modifier.
 
-  > Why? Currently mixin needs to declare dummy properties for it to work.
-  > It doesn't make sense to spread it around.
+> Why?
 
-  tslint: [`member-ordering`](tslint.md#member-ordering-native)
+The `private` modifier is TypeScript only feature.
+The property is still fully accessible in JavaScript.
+
+---
+
+**Must not** use JavaScript private field if you are targing ES5 or lower.
+
+> Why?
+
+Private field `#prop` cannot be downleveled to ES5 or lower.
+
+### References
+
+- <https://devblogs.microsoft.com/typescript/announcing-typescript-3-8-beta/#ecmascript-private-fields>
+
+## member ordering
+
+Static members **must** be placed before instance members.
+Public members **must** be placed before private members.
+Properties **should** be place before methods.
+
+**Should not** group properties and methods based on interface.
+
+> Why?
+
+Able to find out what the class can do is more important than where those methods come from.
+TypeScript is structural typed,
+unlike C#, there is no interface casting.
+So it does not matter which interface the class is implementing.
+
+Properties and methods of mixins **should** be placed at the end.
+
+> Why?
+
+Currently mixin needs to declare dummy properties for it to work.
+It doesn't make sense to spread it around.
+
+But in general, you should avoid mixins.
