@@ -13,7 +13,7 @@ const items = new Array<string>()
 
 // good
 const items: string[] = []
-const items = ['a', 'b', 'c'];
+const items = ['a', 'b', 'c']
 ```
 
 ---
@@ -27,114 +27,91 @@ TypeScript can do a better control flow analysis and default `x` to be `any[]`.
 
 ## Type declaration
 
-- Use the literal syntax for type declaration. Unless the type is complex
+**Should** use `Array<T>` for complex array type.
+**May** use literal syntax for primitive types and unions.
 
-  > Why? The `Array<>` syntax is visually clear that your type is an array.
-  > It also provides better focus on the internal type.
+> Why?
 
-  ```ts
-  // bad
-  const items: Array<string>;
-  const items: { people: Person[] }[]
+The `Array<>` syntax is visually clear that your type is an array.
+It also provides better focus on the internal type.
 
-  // either is fine
-  const items: (string | string[])[]
-  const items: Array<string | string[]>;
+```ts
+// bad
+const items: Array<string>
+const items: { people: Person[] }[]
 
-  // good
-  const items: string[];
-  const items: Array<{ people: Person[] }>;
-  ```
+// either is fine
+const items: (string | string[])[]
+const items: Array<string | string[]>
+
+// good
+const items: string[]
+const items: Array<{ people: Person[] }>
+```
 
 ## Inserting
 
-- Use `.push()` instead of direct assignment to add items to an array.
+**Must** use `.push()` or `.unshift()` to add items to an array.
 
-  ```typescript
-  const someStack = [];
+> Why?
 
-  // bad
-  someStack[someStack.length] = 'abracadabra';
+Use direct assignment to add items at the end of an array is unconventional.
+It hinders readability.
 
-  // good
-  someStack.push('abracadabra');
-  ```
+```ts
+const someStack = [];
 
-## Array spreads
+// bad
+someStack[someStack.length] = 'abracadabra';
 
-- Use array spreads `...` to copy arrays.
+// good
+someStack.push('abracadabra');
+```
 
-  ```ts
-  // bad
-  const len = items.length;
-  const itemsCopy = [];
-  let i;
+## Array spread
 
-  for (i = 0; i < len; i++) {
-    itemsCopy[i] = items[i];
-  }
+**Should** use array spread to copy arrays.
 
-  // good
-  const itemsCopy = [...items];
-  ```
+> Why?
 
-## Converting to array
+It is easier to read, and there is a performance gain 😎!.
 
-- To convert an array-like object to an array, use `.from()`.
+Performance comparison: <https://jsperf.com/spread-vs-copy>
 
-  ```ts
-  const foo = document.querySelectorAll('.foo');
-  const nodes = Array.from(foo);
-  ```
+```ts
+// bad
+const len = items.length;
+const itemsCopy = [];
+let i;
 
-## Array method callbacks
+for (i = 0; i < len; i++) {
+  itemsCopy[i] = items[i];
+}
 
-- Use return statements in array method callbacks.
-- It's ok to omit the return if it is an arrow function and consists of a single expression.
+// good
+const itemsCopy = [...items];
+```
 
-  ```ts
-  // good
-  [1, 2, 3].map((x) => {
-    const y = x + 1;
-    return x * y;
-  });
+---
 
-  // good
-  [1, 2, 3].map(x => x + 1);
+**Should** use array spread to concat arrays.
 
-  // bad
-  const flat = {};
-  [[0, 1], [2, 3], [4, 5]].reduce((memo, item, index) => {
-    const flatten = memo.concat(item);
-    flat[index] = memo.concat(item);
-  });
+> Why?
 
-  // good
-  const flat = {};
-  [[0, 1], [2, 3], [4, 5]].reduce((memo, item, index) => {
-    const flatten = memo.concat(item);
-    flat[index] = flatten;
-    return flatten;
-  });
+It is easier to read, and there is a performance gain 😎!.
 
-  // bad
-  inbox.filter((msg) => {
-    const { subject, author } = msg;
-    if (subject === 'Mockingbird') {
-      return author === 'Harper Lee';
-    }
-    else {
-      return;
-    }
-  });
+Performance comparison: <https://jsperf.com/spread-vs-concat-vs-push>
 
-  // good
-  inbox.filter((msg) => {
-    const { subject, author } = msg;
-    if (subject === 'Mockingbird') {
-      return author === 'Harper Lee';
-    }
+(use `.push()` if you really need the performance).
 
-    return false;
-  });
-  ```
+```ts
+// bad
+a.concat(b)
+
+// good
+[...a, ...b]
+```
+
+Additional references:
+
+- <https://stackoverflow.com/questions/48865710/spread-operator-vs-array-concat>
