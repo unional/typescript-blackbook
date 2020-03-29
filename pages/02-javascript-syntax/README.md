@@ -6,7 +6,6 @@ and how to work with them in TypeScript environment.
 
 ## Topics
 
-- [String](/pages/02-javascript-syntax/string.md)
 - [Array](/pages/02-javascript-syntax/array.md)
 - [Arrow Function](/pages/02-javascript-syntax/arrow-function.md)
 - [Async Await](/pages/02-javascript-syntax/async-await.md)
@@ -18,5 +17,6 @@ and how to work with them in TypeScript environment.
 - [Object Descructuring](/pages/02-javascript-syntax/object-destructuring.md)
 - [Object Literal](/pages/02-javascript-syntax/object-literal.md)
 - [Property Accessor](/pages/02-javascript-syntax/property-accessor.md)
+- [String](/pages/02-javascript-syntax/string.md)
 - [Variable Assignment](/pages/02-javascript-syntax/variable-assignment.md)
 - [Variable Declaration](/pages/02-javascript-syntax/variable-declaration.md)
