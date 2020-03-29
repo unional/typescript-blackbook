@@ -7,14 +7,11 @@ If the
 The source JavaScript library can be written in several ways:
 
 - CommonJS module (typically nodeJS)
-- Global 
+- Global
 
 When creating typings, the first thing you need to decide is what kind of typings you are writing?
 
-
-
 The answer of this question depends on a few factors:
-
 
 - How does the source being referenced?
 - Does the source being referenced through `require('...')`, `import ... from '...'`, global, or all of the above?

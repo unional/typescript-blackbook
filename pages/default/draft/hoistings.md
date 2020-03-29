@@ -1,6 +1,7 @@
-## Hoisting
+# Hoisting
 
-### `var` declarations
+## `var` declarations
+
 - `var` declarations get hoisted to the top of their scope, their assignment does not. `const` and `let` declarations are blessed with a new concept called [Temporal Dead Zones (TDZ)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let). It's important to know why [typeof is no longer safe](http://es-discourse.com/t/why-typeof-is-no-longer-safe/15).
 
 ```typescript
@@ -36,7 +37,8 @@ function example() {
 }
 ```
 
-### Anonymous function expression
+## Anonymous function expression
+
 - Anonymous function expressions hoist their variable name, but not the function assignment.
 
 ```typescript
@@ -51,7 +53,8 @@ function example() {
 }
 ```
 
-### Named function expression
+## Named function expression
+
 - Named function expressions hoist the variable name, not the function name or the function body.
 
 ```typescript
@@ -80,7 +83,8 @@ function example() {
 }
 ```
 
-### Function declarations
+## Function declarations
+
 - Function declarations hoist their name and the function body.
 
 ```typescript

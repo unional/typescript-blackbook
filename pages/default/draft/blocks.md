@@ -1,12 +1,12 @@
-## Blocks
+# Blocks
 
-### Single-line blocks
+## Single-line blocks
 
 - Avoid single-line for now
 
-> Why? Currently tslint does not support it well (https://github.com/palantir/tslint/issues/822)
+> Why? Currently tslint does not support it well <https://github.com/palantir/tslint/issues/822>
 
-### Multi-line blocks
+## Multi-line blocks
 
 - Use braces with all multi-line blocks.
 
@@ -34,7 +34,8 @@ function bar() {
 }
 ```
 
-### `else` clause placement
+## `else` clause placement
+
 - If you're using multi-line blocks with `if` and `else`, put `else` on the next line after your `if` block's closing brace.
 
 > Why? Code folding would collapse all cases into a single line, making it hard to read.

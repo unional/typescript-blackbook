@@ -13,7 +13,6 @@ When declaring a module (or namespace), there are two options:
 - Use `declare namespace X {` syntax.
 - Avoid `declare module X {` syntax.
 
-
   > Why? `declare namespace X {` will fixate the namespace to the name `X`, which is what you want.
 
   tslint [`no-internal-module`](tslint.md/no-internal-module-native)
@@ -65,10 +64,8 @@ The nomenclature has changed.
 
 The `declare module X {` syntax exists for backward compatibility.
 
-
 ## Reference
 
 <https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Namespaces.md>
 <https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Namespaces%20and%20Modules.md>
 <https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Modules.md>
-

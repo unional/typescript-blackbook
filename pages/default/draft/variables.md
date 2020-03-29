@@ -1,4 +1,4 @@
-## Variables
+# Variables
 
 In TypeScript and ES2015, you have three choice for referencing a variable: `var`, `let`, and `const`.
 
@@ -18,7 +18,7 @@ console.log(b); // ReferenceError
 console.log(c); // 1
 ```
 
-### `const` keyword
+## `const` keyword
 
 - Use `const` for all of your references; avoid using `var`. eslint: [`prefer-const`](http://eslint.org/docs/rules/prefer-const.html), [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign.html)
 
@@ -125,7 +125,8 @@ function checkName(hasName) {
 }
 ```
 
-### `let` keyword
+## `let` keyword
+
 - If you must reassign references, use `let` instead of `var`. eslint: [`no-var`](http://eslint.org/docs/rules/no-var.html) jscs: [`disallowVar`](http://jscs.info/rule/disallowVar)
 
 > Why? `let` is block-scoped rather than function-scoped like `var`.
@@ -144,8 +145,9 @@ if (true) {
 }
 ```
 
-### `var` keyword
+## `var` keyword
+
 Before ES2015, `var` is the only reference option.
 
 - Avoid using `var` in later code because it would lead to unexpected results.
-+ Use `var` if your application needs to be very sensitive on memory consumption. But most of the time this is not an issue
+- Use `var` if your application needs to be very sensitive on memory consumption. But most of the time this is not an issue
