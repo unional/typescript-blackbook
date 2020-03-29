@@ -1,31 +1,49 @@
 # Error
 
+> `Error` objects are thrown when runtime errors occur.
+> The `Error` object can also be used as a base object for user-defined exceptions.
+
 ## Naming convention
 
-- Prefer to name your error as describing an invalid condition, without suffixing `Error` at the end.
+You **should** name your error as describing an invalid condition,
+without adding `Error` suffix at the end.
 
-  > Why?
-  > Having a PascalCased name signifies it is a class.
-  > Making it describes an invalid condition is sufficient to tell that we are dealing with an error.
-  > This is a controversal topic thus this is only a preference.
+> Why?
 
-  ```ts
-  // fine
-  class FileNotFoundError extends Error { ... }
+Having a PascalCased name signifies it is a class.
+Making it describes an invalid condition is sufficient to tell that we are dealing with an error.
 
-  // prefer
-  class FileNotFound extends Error { ... }
-  class PluginDuplicated extends Error { ... }
-  ```
+```ts
+// ok
+class FileNotFoundError extends Error { ... }
 
-- Avoid `InvalidXXX` error.
+// better
+class FileNotFound extends Error { ... }
+class PluginDuplicated extends Error { ... }
+```
 
-  > Why?
-  > The word `invalid` does not provide any information and is the same as `error`.
-  > Provide a more specific name to describe the condition.
+---
 
-- Inherit from `BaseError` from the `make-error` package instead of the default `Error` class.
+You **should not** name your error as `InvalidSomthing`.
 
-  > Why?
-  > I can't remember the exact reason, but there is a reason I do that.
-  > Once I remember why, I'll update this.
+> Why?
+
+The word `invalid` does not provide any information and is the same as `error`.
+Provide a more specific name to describe the condition.
+
+## Base Class
+
+You **should** inherit your error from the one of the error packages:
+
+- [`iso-error`](https://www.npmjs.com/package/iso-error)
+- [`make-error`](https://www.npmjs.com/package/make-error)
+- [`make-error-cause`](https://www.npmjs.com/package/make-error-cause)
+
+> Why?
+
+The standard `Error` class does not work with `instanceof`.
+All of the packages above works correctly.
+
+## References
+
+- <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error>

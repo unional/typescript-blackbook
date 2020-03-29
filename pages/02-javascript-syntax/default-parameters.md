@@ -4,21 +4,21 @@
 
 <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters>
 
-## When Not To Use
+## When To Use
 
-**Avoid** using default parameters in internal functions and methods.
+You **should not** use default parameters in internal functions and methods.
 
 > Why?
->
-> Default parameters introduce an implicit assumption on the value of the parameters.
-> While it seems to make it easier to use,
-> it actually hinders readability at the call site.
->
-> Using default parameters means you provide an assumption on how the code should be used.
-> For internal code, you do not need to assume, you should already know.
->
-> Also, these assumption are often application logics,
-> which internal functions should not be aware of.
+
+Default parameters introduce an implicit assumption on the value of the parameters.
+While it seems to make it easier to use,
+it actually hinders readability at the call site.
+
+Using default parameters means you provide an assumption on how the code should be used.
+For internal code, you do not need to assume, you should already know.
+
+Also, these assumption are often application logics,
+which internal functions should not be aware of.
 
 ```ts
 // bad
@@ -50,15 +50,14 @@ cook('chicken', 'well-done')
 
 ## Default Parameters order
 
-**Do not** put default parameters in the middle, before parameters withou defaults.
+**Must not** put default parameters in the middle, before parameters without defaults.
 
 > Why?
->
-> ECMAScript spec allows parameters without defaults after default parameters.
->
-> This easily creates confusion and TypeScript prohibit such declaration.
->
-> Also, this syntax does not work in Gecko 33 (Firefox 33 / Thunderbird 33 / SeaMonkey 2.30).
+
+While ECMAScript spec allows parameters without defaults after default parameters,
+it easily creates confusion and TypeScript prohibit such declaration.
+
+Also, this syntax does not work in Gecko 33 (Firefox 33 / Thunderbird 33 / SeaMonkey 2.30).
 
 ```js
 // bad
@@ -72,16 +71,16 @@ function foo(y, x = 1) { ... }
 
 - <https://github.com/airbnb/javascript#functions--defaults-last>
 
-## Side effects in Default Parameters
+## Side effects
 
-**Do not** add side effects to default parameters.
+Default parameters **should not** create side effects.
 
 > Why?
->
-> Adding side effects with default parameters creates implicit state changes,
-> making it hard to reason and debug.
->
-> If you want to have side effect during function invocation, use decorator.
+
+Adding side effects with default parameters creates implicit state changes,
+making it hard to reason and debug.
+
+If you want to have side effect during function invocation, use decorator.
 
 ```js
 // bad
@@ -97,17 +96,17 @@ function count(a = b) { ... }
 
 - <https://github.com/airbnb/javascript#functions--default-side-effects>
 
-## Variables in Default Parameters
+## Variables
 
-**Should not** use variables in default parameters (except `const`)
+You **should not** use variables in default parameters (except `const`).
 
 > Why?
->
-> Using variables in default parameters effectively means you are using global state relatively to the function.
-> Since default parameters are hidden from the consumer,
-> it is hard to reason and makes the function not pure.
->
-> If you need such state, it is better to use object, class, or closure to contain such state.
+
+Using variables in default parameters effectively means you are using global state relatively to the function.
+Since default parameters are hidden from the consumer,
+it is hard to reason and makes the function not pure.
+
+If you need such state, it is better to use object, class, or closure to contain such state.
 
 ```js
 // bad
@@ -132,9 +131,11 @@ function count(a = 1) { ... }
 
 ## Complex Default Parameters
 
-**Ok** to use array in default parameters.
+You **may** use array as default parameters.
 
-**Avoid** using object in default parameters.
+---
+
+You **should not** use object as default parameters.
 
 ## Related Topics
 
