@@ -1,6 +1,7 @@
-## Semicolons
+# Semicolons
 
-### Trailing semicolons
+## Trailing semicolons
+
 - **Yup.** eslint: [`semi`](http://eslint.org/docs/rules/semi.html) jscs: [`requireSemicolons`](http://jscs.info/rule/requireSemicolons)
 
 ```typescript
@@ -17,7 +18,8 @@
 }());
 ```
 
-### Leading semicolons
+## Leading semicolons
+
 - **yup** for IIFEs
 
 > Why? guards against the function becoming an argument when two files with IIFEs are concatenated

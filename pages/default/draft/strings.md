@@ -1,6 +1,7 @@
-## Strings
+# Strings
 
-### Quotes
+## Quotes
+
 - Use single quotes `''` for strings. eslint: [`quotes`](http://eslint.org/docs/rules/quotes.html) jscs: [`validateQuoteMarks`](http://jscs.info/rule/validateQuoteMarks)
 
 ```typescript
@@ -11,7 +12,8 @@ const name = "Capt. Janeway";
 const name = 'Capt. Janeway';
 ```
 
-### Long strings
+## Long strings
+
 - Strings that cause the line to go over 100 characters should be written across multiple lines using string concatenation.
 - Note: If overused, long strings with concatenation could impact performance. [jsPerf](http://jsperf.com/ya-string-concat) & [Discussion](https://github.com/airbnb/javascript/issues/40).
 
@@ -31,8 +33,10 @@ const errorMessage = 'This is a super long error that was thrown because ' +
 'with this, you would get nowhere fast.';
 ```
 
-### Template literals
+## Template literals
+
 <a name="es6-template-literals"></a>
+
 - When programmatically building up strings, use template strings instead of concatenation. eslint: [`prefer-template`](http://eslint.org/docs/rules/prefer-template.html) [`template-curly-spacing`](http://eslint.org/docs/rules/template-curly-spacing) jscs: [`requireTemplateStrings`](http://jscs.info/rule/requireTemplateStrings)
 
 > Why? Template strings give you a readable, concise syntax with proper newlines and string interpolation features.
@@ -59,5 +63,6 @@ return `How are you, ${name}?`;
 }
 ```
 
-### Eval()
+## Eval()
+
 - Never use `eval()` on a string, it opens too many vulnerabilities.

@@ -1,6 +1,7 @@
-## Commas
+# Commas
 
-### Leading commas
+## Leading commas
+
 - **Nope.**
 
 ```typescript
@@ -34,10 +35,13 @@ birthYear: 1815,
 superPower: 'computers',
 };
 ```
-### Trailing commas
+
+## Trailing commas
+
 - **Yup.**
 
 tslint:
+
 ```js
 "trailing-comma": [
   true,

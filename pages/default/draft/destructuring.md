@@ -1,7 +1,7 @@
-
-## Destructuring
+# Destructuring
 
 ## Object destructuring
+
 - Use object destructuring when accessing and using multiple properties of an object. jscs: [`requireObjectDestructuring`](http://jscs.info/rule/requireObjectDestructuring)
 
 > Why? Destructuring saves you from creating temporary references for those properties.
@@ -27,7 +27,8 @@ return `${firstName} ${lastName}`;
 }
 ```
 
-### Array destructuring
+## Array destructuring
+
 - Use array destructuring. jscs: [`requireArrayDestructuring`](http://jscs.info/rule/requireArrayDestructuring)
 
 ```typescript
@@ -41,7 +42,8 @@ const second = arr[1];
 const [first, second] = arr;
 ```
 
-### Multiple return values
+## Multiple return values
+
 - Use object destructuring for multiple return values, not array destructuring.
 
 > Why? You can add new properties over time or change the order of things without breaking call sites.

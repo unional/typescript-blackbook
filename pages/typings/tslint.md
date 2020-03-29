@@ -59,5 +59,5 @@ This style follows the [`default style`](../default/tslint.md) if not specified 
 
 ## References
 
-- native: https://github.com/palantir/tslint#core-rules
+- native: <https://github.com/palantir/tslint#core-rules>
 - eslint: <https://github.com/buzinas/tslint-eslint-rules#rules-copied-from-eslint-website>

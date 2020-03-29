@@ -1,4 +1,4 @@
-## Type Casting & Coercion
+# Type Casting & Coercion
 
 - Perform type coercion at the beginning of the statement.
 - Strings:

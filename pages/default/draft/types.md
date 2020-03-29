@@ -1,13 +1,14 @@
-## Types
+# Types
 
-### Primitives
+## Primitives
+
 - When you access a primitive type you work directly on its value.
 
-+ `string`
-+ `number`
-+ `boolean`
-+ `null`
-+ `undefined`
+- `string`
+- `number`
+- `boolean`
+- `null`
+- `undefined`
 
 ```typescript
 const foo = 1;
@@ -18,12 +19,13 @@ bar = 9;
 console.log(foo, bar); // => 1, 9
 ```
 
-### Complex
+## Complex
+
 - When you access a complex type you work on a reference to its value.
 
-+ `object`
-+ `array`
-+ `function`
+- `object`
+- `array`
+- `function`
 
 ```typescript
 const foo = [1, 2];

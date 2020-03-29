@@ -1,6 +1,6 @@
-## Functions
+# Functions
 
-### Function declarations
+## Function declarations
 
 - Use function declarations instead of function expressions. jscs: [`requireFunctionDeclarations`](http://jscs.info/rule/requireFunctionDeclarations)
 
@@ -16,7 +16,7 @@ function foo() {
 }
 ```
 
-### IIFE
+## IIFE
 
 - Immediately invoked function expressions: eslint: [`wrap-iife`](http://eslint.org/docs/rules/wrap-iife.html) jscs: [`requireParenthesesAroundIIFE`](http://jscs.info/rule/requireParenthesesAroundIIFE)
 
@@ -29,7 +29,8 @@ console.log('Welcome to the Internet. Please follow me.');
 }());
 ```
 
-### Function location
+## Function location
+
 - Never declare a function in a non-function block (if, while, etc). Assign the function to a variable instead. Browsers will allow you to do it, but they all interpret it differently, which is bad news bears. eslint: [`no-loop-func`](http://eslint.org/docs/rules/no-loop-func.html)
 
 - **Note:** ECMA-262 defines a `block` as a list of statements. A function declaration is not a statement. [Read ECMA-262's note on this issue](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf#page=97).
@@ -51,7 +52,8 @@ test = () => {
 }
 ```
 
-### Function parameters
+## Function parameters
+
 - Do not align parameters
 
 tslint: [`align`](tslint.md#align)
@@ -87,6 +89,7 @@ function yup(name, options, args) {
 ```
 
 <a name="es6-rest"></a>
+
 - Never use `arguments`, opt to use rest syntax `...` instead. [`prefer-rest-params`](http://eslint.org/docs/rules/prefer-rest-params)
 
 > Why? `...` is explicit about which arguments you want pulled. Plus rest arguments are a real Array and not Array-like like `arguments`.
@@ -143,9 +146,10 @@ function f4(a = 1) {
 }
 ```
 
+## Default parameters
 
-### Default parameters
 <a name="es6-default-parameters"></a>
+
 - Use default parameter syntax rather than mutating function arguments.
 
 ```typescript
@@ -202,7 +206,8 @@ function handleThings(name, opts = {}) {
 }
 ```
 
-### Function constructor
+## Function constructor
+
 - Never use the Function constructor to create a new function.
 
 > Why? Creating a function in this way evaluates a string similarly to eval(), which opens vulnerabilities.
@@ -230,7 +235,8 @@ const x = function () {};
 const y = function a() {};
 ```
 
-### Method chaining
+## Method chaining
+
 - Methods can return `this` to help with method chaining.
 
 ```typescript
@@ -267,7 +273,8 @@ luke.jump()
   .setHeight(20);
 ```
 
-### Function arguments
+## Function arguments
+
 - Do not align arguments
 
 tslint: [`align`](tslint.md#align)

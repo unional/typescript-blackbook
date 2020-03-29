@@ -1,6 +1,7 @@
-## Properties
+# Properties
 
-### Dot notations
+## Dot notations
+
 - Use dot notation when accessing properties. eslint: [`dot-notation`](http://eslint.org/docs/rules/dot-notation.html) jscs: [`requireDotNotation`](http://jscs.info/rule/requireDotNotation)
 
 ```typescript
@@ -16,7 +17,8 @@ const isJedi = luke['jedi'];
 const isJedi = luke.jedi;
 ```
 
-### Subscript notation
+## Subscript notation
+
 - Use subscript notation `[]` when accessing properties with a variable.
 - Use subscript notation when properties is dynamic
 

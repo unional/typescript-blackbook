@@ -31,4 +31,3 @@ let y = <any>x
   // good
   let x = y as Partial<SomeType>
   ```
-

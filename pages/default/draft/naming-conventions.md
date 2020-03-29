@@ -1,6 +1,7 @@
-## Naming Conventions
+# Naming Conventions
 
-### Single letter names
+## Single letter names
+
 - Avoid single letter names. Be descriptive with your naming.
 
 ```typescript
@@ -15,7 +16,8 @@ function query() {
 }
 ```
 
-### Name casing
+## Name casing
+
 - Use camelCase when naming objects, functions, and instances. eslint: [`camelcase`](http://eslint.org/docs/rules/camelcase.html) jscs: [`requireCamelCaseOrUpperCaseIdentifiers`](http://jscs.info/rule/requireCamelCaseOrUpperCaseIdentifiers)
 
 ```typescript
@@ -73,7 +75,8 @@ es6: {
 export default AirbnbStyleGuide;
 ```
 
-### Name prefixes
+## Name prefixes
+
 - Use a leading underscore `_` when naming private properties. eslint: [`no-underscore-dangle`](http://eslint.org/docs/rules/no-underscore-dangle.html) jscs: [`disallowDanglingUnderscores`](http://jscs.info/rule/disallowDanglingUnderscores)
 
 ```typescript
@@ -85,7 +88,8 @@ this.firstName_ = 'Panda';
 this._firstName = 'Panda';
 ```
 
-### `this` reference
+## `this` reference
+
 - Don't save references to `this`. Use arrow functions or Function#bind. jscs: [`disallowNodeTypes`](http://jscs.info/rule/disallowNodeTypes)
 
 ```typescript
@@ -113,7 +117,8 @@ return () => {
 }
 ```
 
-### File naming
+## File naming
+
 - If your file exports a single class, your filename should be exactly the name of the class.
 
 ```typescript
