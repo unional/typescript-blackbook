@@ -36,7 +36,6 @@ let me know and we can see how to get it working on your IDE.
 
 - [Introduction](/pages/01-introduction/README.md)
   - [What is TypeScript](/pages/01-introduction/what-is-typescript.md)
-  - [TypeScript Resources](/pages/01-introduction/typescript-resources.md)
 - [JavaScript Syntax](/pages/02-javascript-syntax/README.md)
   - [Array](/pages/02-javascript-syntax/array.md)
   - [Arrow Function](/pages/02-javascript-syntax/arrow-function.md)
@@ -49,6 +48,7 @@ let me know and we can see how to get it working on your IDE.
   - [Object Descructuring](/pages/02-javascript-syntax/object-destructuring.md)
   - [Object Literal](/pages/02-javascript-syntax/object-literal.md)
   - [Property Accessor](/pages/02-javascript-syntax/property-accessor.md)
+  - [String](/pages/02-javascript-syntax/string.md)
   - [Variable Assignment](/pages/02-javascript-syntax/variable-assignment.md)
   - [Variable Declaration](/pages/02-javascript-syntax/variable-declaration.md)
 - [TypeScript Syntax](/pages/03-typescript-syntax/README.md)
@@ -71,30 +71,24 @@ let me know and we can see how to get it working on your IDE.
   - [Namespaces and Modules](pages/typings/namespaces-and-modules.md)
   - [Shape of typings](pages/typings/shape-of-typings.md)
   - [tslint configuration](pages/typings/tslint.md)
-- Tooling
-  - [tslint.json](pages/default/tslint.md)
-- **draft** [File structures](pages/default/draft/file-structures.md)
-- **draft** [Types](pages/default/draft/types.md)
-- **draft** [Objects](pages/default/draft/objects.md)
-- **draft** [Destructuring](pages/default/draft/destructuring.md)
-- **draft** [Strings](pages/default/draft/strings.md)
-- **draft** [Functions](pages/default/draft/functions.md)
-- **draft** [Control statements](pages/default/draft/control-statements.md)
-- **draft** [Modules](pages/default/draft/modules.md)
-- **draft** [Iterators and Generators](pages/default/draft/iterators-and-generators.md)
-- **draft** [Properties](pages/default/draft/properties.md)
-- **draft** [Variables](pages/default/draft/variables.md)
-- **draft** [Hoisting](pages/default/draft/hoisting.md)
-- **draft** [Comparison Operators & Equality](pages/default/draft/comparison-operators-and-equality.md)
-- **draft** [Blocks](pages/default/draft/blocks.md)
-- **draft** [Comments](pages/default/draft/comments.md)
-- **draft** [Whitespaces](pages/default/draft/whitespaces.md)
-- **draft** [Commas](pages/default/draft/commas.md)
-- **draft** [Semicolons](pages/default/draft/semicolons.md)
-- **draft** [Type Casting & Coercion](pages/default/draft/type-casting-and-coercion.md)
-- **draft** [Naming Conventions](pages/default/draft/naming-conventions.md)
-- **draft** [Events](pages/default/draft/events.md)
-- **draft** [ECMAScript 6 Styles](pages/default/draft/es2015.md)
+
+## Other Resources
+
+With the rapid advancement of JavaScript and TypeScript,
+I may not able to keep this guidebook updated with the latest information.
+
+Here are some additional resources in JavaScript and TypeScript:
+
+- [Official TypeScript Tutorial](http://www.typescriptlang.org/docs/tutorial.html)
+- [Official TypeScript Handbook](http://www.typescriptlang.org/docs/handbook/basic-types.html)
+- [TypeScript Playground](https://www.typescriptlang.org/play/index.html) is a great way if you want to quickly test out TypeScript syntax.
+- [TypeScript Deep Dive](https://basarat.gitbooks.io/typescript/) by [That TypeScript Guy](https://twitter.com/basarat)
+- [StackOverflow](https://stackoverflow.com/questions/tagged/typescript) always a great place to ask questions
+- [TypeScript Gitter Channel](https://gitter.im/Microsoft/TypeScript) the official gitter channel for the TypeScript repository.\
+  You can get help from the TypeScript team directly here.
+- [Airbnb Javascript](https://github.com/airbnb/javascript)
+- [@dzharii Awesome TypeScript](https://github.com/dzharii/awesome-typescript)
+- [@semlinker Awesome TypeScript](https://github.com/semlinker/awesome-typescript)
 
 ## Contributing
 

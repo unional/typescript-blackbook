@@ -2,7 +2,6 @@
 
 - [Introduction](/pages/01-introduction/README.md)
   - [What is TypeScript](/pages/01-introduction/what-is-typescript.md)
-  - [TypeScript Resources](/pages/01-introduction/typescript-resources.md)
 - [JavaScript Syntax](/pages/02-javascript-syntax/README.md)
   - [Array](/pages/02-javascript-syntax/array.md)
   - [Arrow Function](/pages/02-javascript-syntax/arrow-function.md)
@@ -15,6 +14,7 @@
   - [Object Descructuring](/pages/02-javascript-syntax/object-destructuring.md)
   - [Object Literal](/pages/02-javascript-syntax/object-literal.md)
   - [Property Accessor](/pages/02-javascript-syntax/property-accessor.md)
+  - [String](/pages/02-javascript-syntax/string.md)
   - [Variable Assignment](/pages/02-javascript-syntax/variable-assignment.md)
   - [Variable Declaration](/pages/02-javascript-syntax/variable-declaration.md)
 - [TypeScript Syntax](/pages/03-typescript-syntax/README.md)

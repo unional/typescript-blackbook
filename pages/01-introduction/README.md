@@ -10,7 +10,6 @@ From how to use the language, to coding style and any tool that may be useful.
 ## Table of Contents
 
 - [What is TypeScript](/pages/01-introduction/what-is-typescript.md)
-- [TypeScript Resources](/pages/01-introduction/typescript-resources.md)
 
 ## Design Philosophy
 

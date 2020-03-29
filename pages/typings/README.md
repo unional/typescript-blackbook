@@ -14,3 +14,5 @@ This chapter focus on guidelines that are specific to writing typings.
 - [Namespaces and Modules](./namespaces-and-modules.md)
 - [Shape of typings](./shape-of-typings.md)
 - [tslint configuration](./tslint.md)
+
+Also check out [Typings Writing Guidelines](https://github.com/types/_guidelines)
