@@ -1,7 +1,8 @@
 # JavaScript Syntax
 
 In this chapter,
-we will focus on the syntax and keywords already exist in JavaScript.
+I will go over syntax and keywords already exist in JavaScript,
+and how to work with them in TypeScript environment.
 
 ## Topics
 
