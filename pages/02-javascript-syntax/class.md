@@ -70,7 +70,6 @@
   }
   ```
 
-
 ## Overriding `toString()`
 
 - It's okay to write a custom toString() method, just make sure it works successfully and causes no side effects.

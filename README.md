@@ -4,20 +4,22 @@ Welcome to the TypeScript Guidebook.
 
 This guidebook suppliments the official [TypeScript Handbook](http://www.typescriptlang.org/docs/handbook/basic-types.html) while focusing on *how to get the most out of TypeScript with minimal effort*.
 
-It will cover anything and everything you need when writing TypeScript, from how to use the language, to coding style and any tool that may be useful.
+I will cover anything and everything you need when writing TypeScript.
+From how to use the language, to coding style and any tool that may be useful.
 
 ## Highlights
 
 - Stay true to JavaScript
-- Use TypeScript as a gradual type system on top of JavaScript.
 - Focus on code efficiency
 - Focus on tool compatibility
   - IDE / Editors
     - [Visual Studio Code](https://github.com/Microsoft/vscode)
     - [Atom](https://atom.io/)
     - [WebStorm](https://www.jetbrains.com/webstorm/)
+  - Formatter
+    - [prettier](https://prettier.io/)
   - Linter
-    - [tslint](https://github.com/palantir/tslint)
+    - [eslint](https://eslint.org/)
 
 ## Watch this repo
 

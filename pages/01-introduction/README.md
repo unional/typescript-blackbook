@@ -1,10 +1,10 @@
 # Introduction
 
-Welcome to the TypeScript Guidelines.
+Welcome to the TypeScript Guidebook.
 
-These guidelines suppliment the official [TypeScript Handbook](http://www.typescriptlang.org/docs/handbook/basic-types.html) while focusing on *how to get the most out of TypeScript with minimal effort*.
+This guidebook suppliment the official [TypeScript Handbook](http://www.typescriptlang.org/docs/handbook/basic-types.html) while focusing on *how to get the most out of TypeScript with minimal effort*.
 
-They covers anything and everything you need when writing TypeScript.
+I will cover anything and everything you need when writing TypeScript.
 From how to use the language, to coding style and any tool that may be useful.
 
 ## Table of Contents
@@ -38,37 +38,32 @@ or modify them to suite your needs.
 
 ### Stay true to JavaScript
 
-> Why?
->
-> When TypeScript first started,
-> it brings over some syntax from various languages, such as C# and Java.
-> However, since TypeScript transpiles to JavaScript,
-> it cannot get away from the constriant and fundamentals of JavaScript.
-> TypeScript realizes this and have since shifts it focus to provide types on top of JavaScript,
-> and rely of the ECMAScript community to introduce new syntax to JavaScript.
-> This is one of the primary reasons contribute to the success of TypeScript.
-
-We will avoid syntax that is not native to JavaScript,
+**Should** avoid syntax that is not native to JavaScript,
 and practices that hinder the power of JavaScript.
 
-### Focus on Coding Efficiency
+When TypeScript first started,
+it brings over some syntax from various languages, such as C# and Java.
 
-> Why?
->
-> Programming language is a tool to express your intent.
-> We like a tool that is powerful and easy to use at the same time.
+However, since TypeScript transpiles to JavaScript,
+it cannot get away from the constriant and fundamentals of JavaScript.
+TypeScript realizes this and have since shifts it focus to provide types on top of JavaScript,
+and rely of the ECMAScript community to introduce new syntax to JavaScript.
+This is one of the primary reasons contribute to the success of TypeScript.
+
+### Focus on Coding Efficiency
 
 We will attempt to get high coding efficiency by striking a balance:
 
 - We like to write as few lines of code as possible, while it is still perfectly readable.
 - We like to get the benefit of type checks from the compiler and IDE, while we can keep the code dynamic as needed.
 
+Programming language is a tool to express your intent.
+We like a tool that is powerful and easy to use at the same time.
+
 ### Focus on Tool Compatibility
 
-> Why?
->
-> If you are using NotePad to write code,
-> you will probably not getting much benefit from TypeScript.
+If you are using NotePad to write code,
+you will probably not getting much benefit from TypeScript.
 
 In short, TypeScript cannot do much without tools,
 and you will not get much benefit out of TypeScipt without tools.

@@ -1,24 +1,29 @@
 # Array
 
+[`Array`](<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array>
+) in JavaScript is a high-level, list-like objects.
+
 ## Array creation
 
-- Use the literal syntax for array creation.
+**Should** use literal syntax for array creation.
 
-  ```ts
-  // bad
-  const items = new Array<string>()
+```ts
+// bad
+const items = new Array<string>()
 
-  // good
-  const items: string[] = []
-  const items = ['a', 'b', 'c'];
-  ```
+// good
+const items: string[] = []
+const items = ['a', 'b', 'c'];
+```
 
-- Do not need to do `let x: any[] = []`
+---
 
-  > Why?
-  > Originaly `let x = []` will have type `never[]` which is not really useful.
-  > New newer version of TypeScript (at least in 2.9),
-  > it is
+**May** not need to do `let x: any[] = []`.
+
+> Why?
+
+With both `noImplicitAny` and `strictNullChecks` turned on,
+TypeScript can do a better control flow analysis and default `x` to be `any[]`.
 
 ## Type declaration
 
