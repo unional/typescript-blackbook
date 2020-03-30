@@ -28,20 +28,18 @@ console.log(c); // 1
 `var` is the traditional way to declare a variable in JavaScript.
 The variable declared with var is function-scoped and is hoisted to the top of the function.
 
-- avoid using `var` and use `let` or `const` instead.
+You **must not** use `var`. Use `let` or `const` instead.
 
 > Why?
-> Due to its scoping rule and behavior, it is often a common source of error in JavaScript programs.
-> Because of that, ES2015 introduced `let` and `const`, which are block-scoped.
+
+Due to its scoping rule and behavior, it is often a common source of error in JavaScript programs.
+Because of that, ES2015 introduced `let` and `const`, which are block-scoped.
 
 ## `let` declaration
 
 `let` allows you to declare a variable and reassign it later.
 
-- If you must reassign references, use `let` instead of `var`.
-
-> Why?
-> `let` is block-scoped rather than function-scoped like `var`.
+You **may** use `let` if you must reassign refernences.
 
 ```ts
 // bad
@@ -50,43 +48,24 @@ if (true) {
   count += 1;
 }
 
-// good, use the let.
+// good
 let count = 1;
 if (true) {
   count += 1;
 }
 ```
 
-- Prefer `const` over `let` whenever possible.
-
 > Why?
-> Reassignability is mostly unnecessary except for cases like doing a counter.
-> Reassigning a variable introduces temporal coupling and makes your code harder to understand.
 
-```ts
-// bad
-let item = getSomething();
-
-if (someCondition) {
-  item = getSomethingElse();
-}
-
-// what is in `item`?
-```
+`let` is block-scoped rather than function-scoped like `var`.
 
 ## `const` declaration
 
 `const` creates a variable that cannot be reassigned.
 
-- Use `const` for most of your variables (98%+).
+You **should** use `const` for most of your variables (98%+).
 
-> Why?
-> `const` ensures that you can't reassign your references.
-> Reassigning a variable introduces temporal coupling and makes your code harder to understand.
-> It is better to use `const` to create multiple variables and give them better namings.
-> It is also encourage you to break your code to smaller pieces name making it easier to understand.
-
-```typescript
+```ts
 // bad
 var a = 1
 let b = 2
@@ -106,7 +85,7 @@ catch {
   result = someDefaultValue
 }
 
-// better
+// good
 const result = getDataOrDefault()
 
 function getDataOrDefault() {
@@ -119,17 +98,18 @@ function getDataOrDefault() {
 }
 ```
 
-## Declaration Statement
+> Why?
+
+`const` ensures that you can't reassign your references.
+Reassigning a variable introduces temporal coupling and makes your code harder to understand.
+It is better to use `const` to create multiple variables and give them better namings.
+It is also encourage you to break your code to smaller pieces name making it easier to understand.
+
+## Multiple variables
 
 TypeScript and JavaScript allows you to create multiple variables in a single declaration statement.
 
-- Use one declaration per variable.
-
-> Why?
-> It is easier for refactoring and will not introduce punctuation-only diffs.
-> You can also step through each declaration with the debugger,
-> instead of jumping through all of them at once.
-> <https://github.com/airbnb/javascript#variables--one-const>
+You **should not** declare multiple variables in the same statement.
 
 ```js
 // bad
@@ -150,9 +130,33 @@ const goSportsTeam = true;
 const dragonball = 'z';
 ```
 
-- Declare variable close to where it is going to be used.
+> Why?
+
+It is easier for refactoring and will not introduce punctuation-only diffs.
+You can also step through each declaration with the debugger,
+instead of jumping through all of them at once.
+
+---
+
+You **should** declare variable close to where it is going to be used.
+
+```ts
+// bad
+let count = 10
+// 1,000 lines later...
+count++
+
+// good
+// 1,000 lines later...
+let count = 10
+count++
+```
+
+> Why?
+
+Able to read and understand the code is much more important than knowing what variables is created in a scope.
 
 ## Reference
 
 - Handbook: <https://www.typescriptlang.org/docs/handbook/variable-declarations.html>
-- Airbnb Javascript Style Guide: <https://github.com/airbnb/javascript>
+- <https://github.com/airbnb/javascript#variables--one-const>
