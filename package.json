@@ -1,7 +1,6 @@
 {
   "name": "typescript-style",
   "version": "0.0.3",
-  "private": true,
   "description": "A mostly reasonable approach to TypeScript.",
   "keywords": [
     "lint",
