@@ -81,6 +81,19 @@ But mentioning it just for the sports 🏓.
 
 ---
 
+You **should** declare types for your public API.
+
+> Why?
+
+For simple types, you may skip this guideline.
+But for more complex types,
+It is a good practice to define the types explicitly so that:
+
+- Accidental breaking changes can be detected.
+- Consumer can refer to the type you defined.
+
+## Type Annotation vs Type Assertion
+
 In general, you **may** prefer type annotation over type assertion.
 
 ```ts
