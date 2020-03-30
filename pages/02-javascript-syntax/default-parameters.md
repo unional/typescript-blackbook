@@ -8,6 +8,16 @@
 
 You **should not** use default parameters in internal functions and methods.
 
+```ts
+// bad
+function cook(food: Food, doneness = 'medium') { ... }
+cook('chicken')
+
+// good
+function cook(food: Food, doneness: Doneness) { ... }
+cook('chicken', 'well-done')
+```
+
 > Why?
 
 Default parameters introduce an implicit assumption on the value of the parameters.
@@ -38,19 +48,17 @@ set('abc', undefined)
 
 In the above example, there is no indication at the call site that calling `set()` without value would clear the value.
 
-```ts
-// bad
-function cook(food: Food, doneness = 'medium') { ... }
-cook('chicken')
-
-// good
-function cook(food: Food, doneness: Doneness) { ... }
-cook('chicken', 'well-done')
-```
-
 ## Default Parameters order
 
 **Must not** put default parameters in the middle, before parameters without defaults.
+
+```ts
+// bad
+function foo(x = 1, y) { ... }
+
+// good
+function foo(y, x = 1) { ... }
+```
 
 > Why?
 
@@ -59,14 +67,6 @@ it easily creates confusion and TypeScript prohibit such declaration.
 
 Also, this syntax does not work in Gecko 33 (Firefox 33 / Thunderbird 33 / SeaMonkey 2.30).
 
-```js
-// bad
-function foo(x = 1, y) { ... }
-
-// good
-function foo(y, x = 1) { ... }
-```
-
 ### References
 
 - <https://github.com/airbnb/javascript#functions--defaults-last>
@@ -74,13 +74,6 @@ function foo(y, x = 1) { ... }
 ## Side effects
 
 Default parameters **should not** create side effects.
-
-> Why?
-
-Adding side effects with default parameters creates implicit state changes,
-making it hard to reason and debug.
-
-If you want to have side effect during function invocation, use decorator.
 
 ```js
 // bad
@@ -92,6 +85,13 @@ function count(a = b++) { ... }
 function count(a = b) { ... }
 ```
 
+> Why?
+
+Adding side effects with default parameters creates implicit state changes,
+making it hard to reason and debug.
+
+If you want to have side effect during function invocation, use decorator.
+
 ### References
 
 - <https://github.com/airbnb/javascript#functions--default-side-effects>
@@ -99,14 +99,6 @@ function count(a = b) { ... }
 ## Variables
 
 You **should not** use variables in default parameters (except `const`).
-
-> Why?
-
-Using variables in default parameters effectively means you are using global state relatively to the function.
-Since default parameters are hidden from the consumer,
-it is hard to reason and makes the function not pure.
-
-If you need such state, it is better to use object, class, or closure to contain such state.
 
 ```js
 // bad
@@ -128,6 +120,14 @@ function createCounter(obj) {
 // good
 function count(a = 1) { ... }
 ```
+
+> Why?
+
+Using variables in default parameters effectively means you are using global state relatively to the function.
+Since default parameters are hidden from the consumer,
+it is hard to reason and makes the function not pure.
+
+If you need such state, it is better to use object, class, or closure to contain such state.
 
 ## Complex Default Parameters
 

@@ -108,10 +108,6 @@ Just do `import x from 'x'`.
 
 **Should** use default import syntax (`import x from 'x'`) to import CommonJS module.
 
-> Why?
-
-The default import is designed as a replacement for the CommonJS module.
-
 ```ts
 // bad
 const dr = require('domready')
@@ -121,6 +117,10 @@ import * as dr from 'domready' // does not work
 // good
 import dr from 'domready'
 ```
+
+> Why?
+
+The default import is designed as a replacement for the CommonJS module.
 
 ---
 
@@ -152,13 +152,6 @@ But out of caution, I put this out there so thay you would not be suprised if yo
 
 You **must not** use `export =` syntax.
 
-> Why?
-
-This is TypeScript specific syntax.
-Using it means you are creating a CommonJS module.
-You should always write in ESM syntax,
-and if needed, transpile it CommonJS with the `mode: "commonjs"` option.
-
 ```ts
 // bad
 export = function x() { ... };
@@ -170,10 +163,25 @@ export default function x() { ... }
 export function x() { ... }
 ```
 
+> Why?
+
+This is TypeScript specific syntax.
+Using it means you are creating a CommonJS module.
+You should always write in ESM syntax,
+and if needed, transpile it CommonJS with the `mode: "commonjs"` option.
+
 ---
 
 You **should** use named export most of the time.
 You **should not** use default export.
+
+```ts
+// avoid
+export default function foo() {}
+
+// good
+export function foo() {}
+```
 
 > Why?
 

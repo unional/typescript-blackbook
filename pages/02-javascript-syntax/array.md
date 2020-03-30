@@ -30,11 +30,6 @@ TypeScript can do a better control flow analysis and default `x` to be `any[]`.
 **Should** use `Array<T>` for complex array type.
 **May** use literal syntax for primitive types and unions.
 
-> Why?
-
-The `Array<>` syntax is visually clear that your type is an array.
-It also provides better focus on the internal type.
-
 ```ts
 // bad
 const items: Array<string>
@@ -49,14 +44,14 @@ const items: string[]
 const items: Array<{ people: Person[] }>
 ```
 
+> Why?
+
+The `Array<>` syntax is visually clear that your type is an array.
+It also provides better focus on the internal type.
+
 ## Inserting
 
 **Must** use `.push()` or `.unshift()` to add items to an array.
-
-> Why?
-
-Use direct assignment to add items at the end of an array is unconventional.
-It hinders readability.
 
 ```ts
 const someStack = [];
@@ -68,15 +63,14 @@ someStack[someStack.length] = 'abracadabra';
 someStack.push('abracadabra');
 ```
 
+> Why?
+
+Use direct assignment to add items at the end of an array is unconventional.
+It hinders readability.
+
 ## Array spread
 
 **Should** use array spread to copy arrays.
-
-> Why?
-
-It is easier to read, and there is a performance gain 😎!.
-
-Performance comparison: <https://jsperf.com/spread-vs-copy>
 
 ```ts
 // bad
@@ -92,17 +86,15 @@ for (i = 0; i < len; i++) {
 const itemsCopy = [...items];
 ```
 
----
-
-**Should** use array spread to concat arrays.
-
 > Why?
 
 It is easier to read, and there is a performance gain 😎!.
 
-Performance comparison: <https://jsperf.com/spread-vs-concat-vs-push>
+Performance comparison: <https://jsperf.com/spread-vs-copy>
 
-(use `.push()` if you really need the performance).
+---
+
+**Should** use array spread to concat arrays.
 
 ```ts
 // bad
@@ -111,6 +103,14 @@ a.concat(b)
 // good
 [...a, ...b]
 ```
+
+> Why?
+
+It is easier to read, and there is a performance gain 😎!.
+
+Performance comparison: <https://jsperf.com/spread-vs-concat-vs-push>
+
+(use `.push()` if you really need the performance).
 
 Additional references:
 
