@@ -12,7 +12,7 @@ There are two ways to declare types: type annotation and type assertion.
 
 ## When To Use
 
-TypeScript is designed to focus of tooling support.
+TypeScript is designed to focus on tooling support.
 It can do type inference through its control-flow analysis in many situations.
 
 So when to do type declaration is not a simple question to answer.
