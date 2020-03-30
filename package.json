@@ -1,6 +1,6 @@
 {
-  "name": "typescript-guidelines",
-  "version": "0.0.2",
+  "name": "typescript-style",
+  "version": "0.0.3",
   "private": true,
   "description": "A mostly reasonable approach to TypeScript.",
   "keywords": [
@@ -11,13 +11,13 @@
     "typescript",
     "unional"
   ],
-  "homepage": "https://github.com/unional/typescript-guidelines",
+  "homepage": "https://github.com/unional/typescript-guidebook",
   "bugs": {
-    "url": "https://github.com/unional/typescript-guidelines/issues"
+    "url": "https://github.com/unional/typescript-guidebook/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/unional/typescript-guidelines.git"
+    "url": "https://github.com/unional/typescript-guidebook.git"
   },
   "license": "MIT",
   "author": "unional",
