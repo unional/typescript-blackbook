@@ -1,31 +1,99 @@
 # Basic Types
 
-Basic types in TypeScript are `number`, `boolean`, `string`, `object`, `symbol`, `null`, `undefined`, `Array`, `Tuple`, `enum`, `any`, `void`, `never`, and `unknown`.
-
 ## any
 
-`any` describes the type of variables that we do not know when we are writing an application.
+You **should** avoid asserting type as `any`.
 
-- Avoid `as any`.
+> Why?
 
-  > Why?
-  > `as any` is a very powerful statement telling the compiler to turn off type checking for that specific variable.
-  >
-  > Why not?
-  > There are tiems that the compiler cannot infer the type correctly,
-  > or the type is incorrect,
-  > or the type is too complicate to create and does not worth the effort to fix.
-  > For these cases, it is okey to use `as any`.
-  > Make sure you make this decision consciously.
+`as any` is a very powerful statement telling the compiler to turn off type checking for that specific variable.
 
-- Avoid `: any` in method parameters and callbacks.
+> Why not?
 
-  > Why?
-  > `: any` in function parameters and callbacks has similar effect to `as any`.
-  > The compiler might able to infer the type for you through inheritence or function type declaration.
-  >
-  > Marking the parameter with `: any` overrides that and you loose all benefits of using TypeScript.
-  > This is a major reason why I turn off the compiler option `noImplicitAny`.
+There are times that the compiler cannot infer the type correctly,
+or the type is incorrect,
+or the type is too complicate to create and does not worth the effort to fix.
+For these cases, it is okey to use `as any`.
+Make sure you make this decision consciously.
+
+---
+
+You **should** avoid annotating method parameters and callbacks as `any`.
+
+> Why?
+
+Annotating function parameters and callbacks as `any` has similar effect as asserting them as `any`.
+
+The compiler might able to infer the type for you through inheritence or function type declaration.
+Annotating parameter as `any` overrides that and you loose all benefits of using TypeScript.
+
+---
+
+You **may** use `as unknown`.
+
+### References
+
+- <https://github.com/Microsoft/TypeScript/pull/24439>
+- <https://mariusschulz.com/blog/the-unknown-type-in-typescript>
+
+## enum
+
+> Enums allow us to define a set of named constants.
+
+- <https://www.typescriptlang.org/docs/handbook/enums.html>
+- <https://www.typescriptlang.org/docs/handbook/basic-types.html#enum>
+
+There are a few special rules about `enum` type:
+
+- values can be either `string` or `number`
+
+```ts
+enum map { a = 1, b = 'b' }
+}
+```
+
+- it is nominal typed
+
+```ts
+enum JapanVocaloid { miku, luka }
+
+enum ChinaVocaloid { miku, LuoTianyi, XingChen }
+
+let myFavoriteVocaloid = ChinaVocaloid.miku
+
+// error
+myFavoriteVocaloid = JapanVocaloid.miku
+```
+
+---
+
+You **may not** use `enum`. You **may** use `const` instead.
+
+```ts
+// bad
+enum Color { Red, Green, Blue }
+
+// good
+const COLOR = {
+  Red: 0,
+  Green: 1,
+  Blue: 2
+} as const
+
+// good
+const COLOR_RED = 0
+const COLOR_GREEN = 1
+const COLOR_BLUE = 2
+```
+
+> Why?
+
+While `enum` is more compact,
+it is a TypeScript syntax.
+It goes against our design principles.
+
+The transpiled code can be different depends on the config options,
+and it can get confusing as it may get erased (`const enum`).
 
 ## References
 
