@@ -63,12 +63,7 @@ and works well of markdown extension such as [VSCode Markdown All in One](https:
 
 Each line **should** break at comma or period, unless both lines are short.
 
-> Why?
-
-One sentence per line improves readability in raw format.
-You need to insert blank line for paragraph anyway.
-
-```txt
+```md
 // bad
 This is one sentence. This is another longer sentence. This is yet another super ultra duper extra insanely long, very hard to read, very dense, contains many many information, very likely a run-on, very much like what an attorney will write, and probably will be wrapped by the editor sentence.
 
@@ -81,17 +76,16 @@ very likely a run-on, very much like what an attorney will write,
 and probably will be wrapped by the editor sentence.
 ```
 
+> Why?
+
+One sentence per line improves readability in raw format.
+You need to insert blank line for paragraph anyway.
+
 ---
 
 Headers **must** use `atx-style`.
 
-> Why?
-
-`setext-style` (using underline of equal signs and dashes) has a lot more keystrokes and does not scale beyond the first two levels.
-
-`atx-style` can define `######` with ease.
-
-```txt
+```md
 // bad
 This is a header
 ================
@@ -100,34 +94,11 @@ This is a header
 # This is a header
 ```
 
-Each document **must** have only one first level header (`#`), at the top of the document.
-
 > Why?
 
-Denote first level header as the title of the document (as it should be).
+`setext-style` (using underline of equal signs and dashes) has a lot more keystrokes and does not scale beyond the first two levels.
 
-If you have more than one title,
-it is likely that you have multiple topics in the same document.
-Break them into separate files.
-
----
-
-Wordings in the header **shall** be neutral, non-opinionated.
-
-> Why?
-
-The heading would be used as link.
-
-If the style guide suggestion changes,
-keeping the heading neutral would avoid broken links.
-
-```txt
-// bad
-### Avoid `var`
-
-// good
-### `var` keyword
-```
+`atx-style` can define `######` with ease.
 
 ---
 
@@ -141,12 +112,7 @@ Save a pinky (finger) 😎.
 
 List **must** use `\` for line breaks.
 
-> Why?
-
-`.editorconfig` and extensions will likely remove trailing spaces,
-so using "two spaces" for line breaks does not work.
-
-```txt
+```md
 // bad
 - This is one sentence.  // two spaces
   This is another longer sentence.  // two spaces
@@ -172,6 +138,11 @@ This will give you:
   very hard to read, very dense, contains many many information,\
   very likely a run-on, very much like what an attorney will write,\
   and probably will be wrapped by the editor sentence.
+
+> Why?
+
+`.editorconfig` and extensions will likely remove trailing spaces,
+so using "two spaces" for line breaks does not work.
 
 ---
 
@@ -218,6 +189,53 @@ Save some typings.
 > Why?
 
 For consistency.
+
+---
+
+Each document **must** have only one first level header (`#`), at the top of the document.
+
+> Why?
+
+Denote first level header as the title of the document (as it should be).
+
+If you have more than one title,
+it is likely that you have multiple topics in the same document.
+Break them into separate files.
+
+---
+
+Wordings in the header **shall** be neutral, non-opinionated.
+
+```md
+// bad
+### Avoid `var`
+
+// good
+### `var` keyword
+```
+
+> Why?
+
+The heading would be used as link.
+
+If the style guide suggestion changes,
+keeping the heading neutral would avoid broken links.
+
+---
+
+Each guideline **must** follow the following structure.
+
+```md
+<guideline>
+
+[example]
+
+[> Why?]
+
+[explanation and additional information]
+```
+
+Where `<>` is required, `[]` is optional.
 
 ## Requirement Level Keywords
 

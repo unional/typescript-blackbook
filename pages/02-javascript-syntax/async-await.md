@@ -21,11 +21,6 @@ If it is, then the code will be blocked and wait for the promise to resolve.
 
 Using `async/await` **may** negatively impact your code performance.
 
-> Why?
-
-`await` will block the call until the `Promise` is resolved,
-it may slow down your code.
-
 ```ts
 // bad, this function will not return until `p1` and `p2` are resolved
 async function doMultipleThings() {
@@ -42,19 +37,14 @@ function doMultipleThings() {
 }
 ```
 
+> Why?
+
+`await` will block the call until the `Promise` is resolved,
+it may slow down your code.
+
 ## Return await
 
 **Should** void `return await`.
-
-> Why?
-
-`return await` will cause your code to wait for the promise instead of propagating the promise to the caller.
-This is a common mistake made by novice and most likely is a mistake.
-
-> Why Not?
-
-Sometimes you do want to wait for the promise.
-For example, you want to `try-catch` the rejected promise.
 
 ```ts
 // bad
@@ -77,3 +67,13 @@ async function tryDo() {
   }
 }
 ```
+
+> Why?
+
+`return await` will cause your code to wait for the promise instead of propagating the promise to the caller.
+This is a common mistake made by novice and most likely is a mistake.
+
+> Why Not?
+
+Sometimes you do want to wait for the promise.
+For example, you want to `try-catch` the rejected promise.

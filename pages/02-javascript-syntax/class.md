@@ -26,6 +26,15 @@ There are also disadvantages in using `class` and using `private` and `protected
 
 **May** prefer `class` over create function in public API.
 
+```ts
+// bad
+export type SqlConnection { ... }
+export function createSqlConnection(...) { ... }
+
+// good
+export class SqlConnection { ... }
+```
+
 > Why?
 
 If you need to expose some function for the user to create an object,
@@ -36,15 +45,6 @@ If you expect your users to pass the created object around,
 that means they need to reference the type of the created object in their functions.
 
 Using `class` in this case provides a clean interface to the user.
-
-```ts
-// bad
-export type SqlConnection { ... }
-export function createSqlConnection(...) { ... }
-
-// good
-export class SqlConnection { ... }
-```
 
 ## Naming Convention
 
@@ -61,10 +61,6 @@ class MyClass { }
 ## `class` keyword
 
 **Should** prefer using `class` keyword over manipulating `prototype` directly.
-
-> Why?
-
-The `class` syntax is more concise and easier to reason about.
 
 ```ts
 // bad
@@ -90,14 +86,13 @@ class Queue {
 }
 ```
 
+> Why?
+
+The `class` syntax is more concise and easier to reason about.
+
 ## Empty constructor
 
 **Should** not delcare empty constructor.
-
-> Why?
-
-Classes have a default constructor if one is not specified.
-Empty constructor function or constructor that just calling the parent class is unnecessary.
 
 ```ts
 // bad
@@ -122,13 +117,14 @@ class Rey extends Jedi {
 }
 ```
 
+> Why?
+
+Classes have a default constructor if one is not specified.
+Empty constructor function or constructor that just calling the parent class is unnecessary.
+
 ## member visibility
 
 **Must not** use the `public` modifier to member.
-
-> Why?
-
-TypeScript borrow this from Java and C# which is completely unnecessary in JavaScript.
 
 ```ts
 // bad
@@ -141,6 +137,10 @@ class Baby {
   laugh() { ... }
 }
 ```
+
+> Why?
+
+TypeScript borrow this from Java and C# which is completely unnecessary in JavaScript.
 
 ---
 

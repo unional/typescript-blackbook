@@ -8,11 +8,6 @@
 You **should** name your error as describing an invalid condition,
 without adding `Error` suffix at the end.
 
-> Why?
-
-Having a PascalCased name signifies it is a class.
-Making it describes an invalid condition is sufficient to tell that we are dealing with an error.
-
 ```ts
 // ok
 class FileNotFoundError extends Error { ... }
@@ -21,6 +16,11 @@ class FileNotFoundError extends Error { ... }
 class FileNotFound extends Error { ... }
 class PluginDuplicated extends Error { ... }
 ```
+
+> Why?
+
+Having a PascalCased name signifies it is a class.
+Making it describes an invalid condition is sufficient to tell that we are dealing with an error.
 
 ---
 

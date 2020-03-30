@@ -44,6 +44,7 @@ let me know and we can see how to get it working on your IDE.
   - [Decorator](/pages/02-javascript-syntax/decorator.md)
   - [Default Parameters](/pages/02-javascript-syntax/default-parameters.md)
   - [Error](/pages/02-javascript-syntax/error.md)
+  - [Function](/pages/02-javascript-syntax/function.md)
   - [Module](/pages/02-javascript-syntax/module.md)
   - [Object Descructuring](/pages/02-javascript-syntax/object-destructuring.md)
   - [Object Literal](/pages/02-javascript-syntax/object-literal.md)
