@@ -63,7 +63,7 @@ If this flag is enabled, the control flow analysis will able to perform addition
 
 For example, `const x = []` will have type `any[]` instead of `never[]` when `noImplicitAny` is enabled.
 
-- Prefer to disable this flag
+You **must** enable this flag.
 
   > Why?
   > While enabling this flag has its benefit,

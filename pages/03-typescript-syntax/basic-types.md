@@ -1,6 +1,6 @@
 # Basic Types
 
-Basic types in TypeScript are `number`, `boolean`, `string`, `object`, `symbol`, `null`, `undefined`, Array, Tuple, `enum`, `any`, `void`, `never`, and `unknown`.
+Basic types in TypeScript are `number`, `boolean`, `string`, `object`, `symbol`, `null`, `undefined`, `Array`, `Tuple`, `enum`, `any`, `void`, `never`, and `unknown`.
 
 ## any
 
@@ -26,3 +26,7 @@ Basic types in TypeScript are `number`, `boolean`, `string`, `object`, `symbol`,
   >
   > Marking the parameter with `: any` overrides that and you loose all benefits of using TypeScript.
   > This is a major reason why I turn off the compiler option `noImplicitAny`.
+
+## References
+
+- <https://www.typescriptlang.org/docs/handbook/basic-types.html>
