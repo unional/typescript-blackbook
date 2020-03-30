@@ -92,6 +92,28 @@ It is a good practice to define the types explicitly so that:
 - Accidental breaking changes can be detected.
 - Consumer can refer to the type you defined.
 
+---
+
+You **should not** declare return type unless there is a need to.
+
+> Why?
+
+If the return type can be inferred, it is probably fine.
+Let TypeScript do its job.
+
+As you are writing tests and add more use cases,
+TypeScript will notify you when things stop working.
+
+That's a good time to add types.
+
+> Why not?
+
+There are a few exceptions to this guideline:
+
+- When you are writing a public API, by all means add the types in from the beginning.
+- Dealing with complex type and want to clarify your intent.
+- Returning value from external library and want to do type narrowing.
+
 ## Type Annotation vs Type Assertion
 
 In general, you **may** prefer type annotation over type assertion.
