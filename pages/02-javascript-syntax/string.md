@@ -117,4 +117,3 @@ the value does not change in runtime.
 - <https://www.javascript.com/learn/strings>
 - <https://developer.mozilla.org/en-US/docs/Glossary/String>
 - <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String>
-- <https://www.tutorialspoint.com/javascript/javascript_strings_object.htm>
