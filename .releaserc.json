@@ -5,7 +5,7 @@
     "@semantic-release/changelog",
     "@semantic-release/npm",
     ["@semantic-release/exec", {
-      "generateNotes": "yarn standard-version"
+      "generateNotesCmd": "yarn standard-version"
     }],
     "@semantic-release/github"
   ]

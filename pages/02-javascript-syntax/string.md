@@ -31,20 +31,21 @@ So you just don't need to do it yourself.
 
 ## Type Conversion
 
-You **may not** use `String` (as a function) to convert value to a string.
+You **may** use `String` (as a function) to convert value to a string.
 
 ```ts
-// so so
+// good
 const str = String(123)
 
-// good
+// also good
 const str = '' + 123
 ```
 
 > Why?
 
-While `const str = String(123)` is easier to read,
-`const str = '' + 123` is much more efficient.
+`const str = String(123)` is easier to read,
+`const str = '' + 123` is more efficient.
+It is up to you to choose which one to use 😉.
 
 <https://jsperf.com/string-vs-implicit>
 
