@@ -1,5 +1,7 @@
 # Typescript Guidebook
 
+[![NPM version][npm-image]][npm-url]
+
 Welcome to the TypeScript Guidebook.
 
 This guidebook suppliments the official [TypeScript Handbook](http://www.typescriptlang.org/docs/handbook/basic-types.html) while focusing on *how to get the most out of TypeScript with minimal effort*.
@@ -97,3 +99,6 @@ Here are some additional resources in JavaScript and TypeScript:
 Interested in helping to make this guideline more useful to everyone? Great 🌷.
 
 You can check out this [contributing guide](/CONTRIBUTING.md) to get you get familiar with the convention we use here.
+
+[npm-image]: https://img.shields.io/npm/v/typescript-style.svg?style=flat
+[npm-url]: https://npmjs.org/package/typescript-style
