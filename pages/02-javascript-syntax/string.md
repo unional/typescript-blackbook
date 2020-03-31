@@ -31,23 +31,43 @@ So you just don't need to do it yourself.
 
 ## Type Conversion
 
-You **may** use `String` (as a function) to convert value to a string.
+You **should not** use `String` (as a function) to convert value to a string.
+You **should** use `'' + value` for primitive values.
+You **should** use `.toString()` for object types.
 
 ```ts
-// good
-const str = String(123)
+const primitive = 12345
+const obj = { a: 1 }
 
-// also good
-const str = '' + 123
+// bad
+const primString = String(primitive)
+const objectString = String(obj)
+
+// good
+const primString = '' + value
+const objectString = obj.toString()
 ```
 
 > Why?
 
-`const str = String(123)` is easier to read,
-`const str = '' + 123` is more efficient.
-It is up to you to choose which one to use 😉.
+For primitive values,
+`const str = String(value)` is easier to read,
+`const str = '' + value` is more efficient.
 
-<https://jsperf.com/string-vs-implicit>
+For object types,
+`.toString()` is much more concise and more efficient than the other two.
+
+In JavaScript,
+using `'' + x` over `x.toString()` has the benefit that it will work with primitive types such as `number`, `null`, or `undefined`.
+
+But in TypeScript,
+the type of the variable should be clear in the first place.
+
+Using `x.toString()` is more clear,
+and has the benefit of catching the error boldly,
+instead of letting it slip through as in JavaScript.
+
+<https://jsperf.com/string-vs-implicit-vs-tostring>
 
 ---
 
@@ -85,24 +105,6 @@ const str = '' + 123
 It does not work that way.
 Type assertion `x as string` only changes the type at build time,
 the value does not change in runtime.
-
----
-
-You **should** use `toString()` instead of `'' + value` when the `value` has `toString()`.
-
-> Why?
-
-In JavaScript,
-using `'' + x` over `x.toString()` has the benefit that it will work with primitive types such as `number`, `null`, or `undefined`.
-
-But in TypeScript,
-the type of the variable should be clear in the first place.
-
-Using `x.toString()` is more clear,
-and has the benefit of catching the error boldly,
-instead of letting it slip through as in JavaScript.
-
----
 
 ## String Literal
 
