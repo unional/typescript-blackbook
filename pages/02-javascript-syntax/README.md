@@ -10,6 +10,7 @@ and how to work with them in TypeScript environment.
 - [Arrow Function](/pages/02-javascript-syntax/arrow-function.md)
 - [Assignment](/pages/02-javascript-syntax/assignment.md)
 - [Async Await](/pages/02-javascript-syntax/async-await.md)
+- [Boolean](/pages/02-javascript-syntax/boolean.md)
 - [Class](/pages/02-javascript-syntax/class.md)
 - [Declaration Statements](/pages/02-javascript-syntax/declaration-statements.md)
 - [Decorator](/pages/02-javascript-syntax/decorator.md)
