@@ -29,6 +29,64 @@ const str = new String('abc')
 JavaScript automatically converts primitive strings to String objects.
 So you just don't need to do it yourself.
 
+## String Literal
+
+You **should** prefer to use single quotes `''` for strings.
+
+```ts
+// ok
+const name = "Hatsune Miku"
+
+// ok
+const name = `Kagamine Rin`
+
+// prefer
+const name = 'Megurine Luka'
+```
+
+> Why?
+
+Between double quotes `"` and single quotes `'`,
+single quotes save a pinky 🤞.
+
+---
+
+You **should not** use linting rule to enforce quotes.
+
+Turn off `eslint: quotes`.
+
+> Why?
+
+Don't fuzz over this.
+Double quote or single quote and even template literals have their own benefits and use cases.
+
+Use linting rule to enforce it just call for trouble and frustration.
+
+- Single quotes are the easiest to use.
+- Double quotes work well with JSON, especially you copy and paste from `.json` file.
+- Template literal is useful when the content contains both single and double quotes.
+
+Unless you have code formatter such as `prettier` or auto fix for `eslint` turned on,
+the time you need to spend to adhere to the style just doesn't worth it 😉.
+
+By the way, there are no measurable performance difference when using template literal:
+
+- <https://jsperf.com/string-quotes>
+
+---
+
+You **should** enforce linting rule for specific situations.
+
+> Why?
+
+For example, if your code need to deal with Xml or Html strings.
+Enforcing linting rule would be useful in this case.
+
+```ts
+// bad...example, but I think you get my point
+const xml = '<div class="abc">' + "<br/>" + "<div class='xy" + '"></div></div>'
+```
+
 ## Type Conversion
 
 You **should not** use `String` (as a function) to convert value to a string.
@@ -105,8 +163,6 @@ const str = '' + 123
 It does not work that way.
 Type assertion `x as string` only changes the type at build time,
 the value does not change in runtime.
-
-## String Literal
 
 ## Template Literals
 
