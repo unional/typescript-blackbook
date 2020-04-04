@@ -1,4 +1,4 @@
-# Union type
+# Union Type
 
 ```ts
 const x: string | string[] = []

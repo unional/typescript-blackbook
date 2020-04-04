@@ -48,13 +48,16 @@ Also, you can still keep a large part of your code from the frameworks, which is
 
 ## Folder name casing
 
-- You should name your folder in snake-case over camelCase or PascalCase.
+You **should** name your folder in param-case over camelCase or PascalCase.
 
-  > Why?
-  > As you organize the code as components, they should be treated as components.
-  > The convention for component naming is snake-case.
+> Why?
 
-## Place your public code at the top
+As you organize the code as components, they should be treated as components.
+The convention for component naming is param-case.
+
+---
+
+You **should** place your public code at the top of the file.
 
 In JavaScript, it was very common to place your private function at the top of the files, after imports, for example:
 

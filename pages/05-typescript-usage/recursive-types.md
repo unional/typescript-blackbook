@@ -2,15 +2,15 @@
 
 To define a recursive type, use this trick:
 
-  ```ts
-  type JSONValue = string | number | boolean | JSONObject | JSONArray;
+```ts
+type JSONValue = string | number | boolean | JSONObject | JSONArray;
 
-  interface JSONObject {
-      [x: string]: JSONValue;
-  }
+interface JSONObject {
+    [x: string]: JSONValue;
+}
 
-  interface JSONArray extends Array<JSONValue> { }
-  ```
+interface JSONArray extends Array<JSONValue> { }
+```
 
 The trick is to make the recursive back references within interface types.
 This works because resolution of interface base types and interface members is deferred,

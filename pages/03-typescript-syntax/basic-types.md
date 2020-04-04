@@ -6,13 +6,14 @@ You **should** avoid asserting type as `any`.
 
 > Why?
 
-`as any` is a very powerful statement telling the compiler to turn off type checking for that specific variable.
+`as any` is a very powerful statement telling the compiler to turn off type checking.
 
 > Why not?
 
 There are times that the compiler cannot infer the type correctly,
-or the type is incorrect,
+or the type is specified by other libraries and is incorrect,
 or the type is too complicate to create and does not worth the effort to fix.
+
 For these cases, it is okey to use `as any`.
 Make sure you make this decision consciously.
 
@@ -67,7 +68,7 @@ myFavoriteVocaloid = JapanVocaloid.miku
 
 ---
 
-You **may not** use `enum`. You **may** use `const` instead.
+You **should avoid** using `enum`. You **should** use `const` instead.
 
 ```ts
 // bad
@@ -89,6 +90,7 @@ const COLOR_BLUE = 2
 > Why?
 
 While `enum` is more compact,
+and provide additional nominal protection,
 it is a TypeScript syntax.
 It goes against our design principles.
 

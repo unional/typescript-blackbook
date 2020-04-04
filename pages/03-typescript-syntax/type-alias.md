@@ -1,4 +1,4 @@
-# `type` keyword
+# type alias
 
 - Use `type` instead of `interface` to combine types.
 

@@ -3,7 +3,6 @@
 One of the main benefit of TypeScript over vanilla JavaScript is its type system.
 Does it mean you should type your argument, variables, and return value as much as possible?
 
-While the TypeScript compiler option has flags such as `noImplicitAny` to encourage you to add more types,
 I would suggest you to keep your explicit typings to a minimal.
 
 We all know that there are pros and cons between statically typed language and dynamically typed language.
