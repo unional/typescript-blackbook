@@ -166,10 +166,37 @@ the value does not change in runtime.
 
 ## Template Literals
 
-## Tagged Tamplates
+> Template literals are string literals allowing embedded expressions.
+
+<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals>
+
+---
+
+You **must** use template literals to build strings.
+
+```ts
+const name = 'miku'
+
+// bad
+const greeting = 'こんにちわ ' + name + ' です'
+
+// good
+const greeting = `こんにちわ ${name} です`
+```
+
+> Why?
+
+That's what it is designed for.
+It flows better and easier to read.
+
+## Tagged Templates
+
+> A more advanced form of template literals are tagged templates.
+>
+> Tags allow you to parse template literals with a function. The first argument of a tag function contains an array of string values. The remaining arguments are related to the expressions.
+
+<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals>
 
 ## Reference
 
 - <https://www.javascript.com/learn/strings>
-- <https://developer.mozilla.org/en-US/docs/Glossary/String>
-- <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String>
