@@ -46,6 +46,9 @@ function fool(name: string) {
 Well, TypeScript will spank you if you don't.
 That's why 😆.
 
+Declaring function parameter types is required most of the time with `noImplicitAny`.
+It is a small price to pay compare to the benefits you get from better control-flow analysis.
+
 Note that if the function expression type is already defined,
 you do not need to declare types for the parameters.
 They are inferred.
@@ -83,6 +86,15 @@ But mentioning it just for the sports 🏓.
 
 You **should** declare types for your public API.
 
+```ts
+// bad
+export function config(options: { level: string }) { ... }
+
+// good
+export type Options = { level: string }
+export function config(options: Options) { ... }
+```
+
 > Why?
 
 For simple types, you may skip this guideline.
@@ -110,7 +122,7 @@ That's a good time to add types.
 
 There are a few exceptions to this guideline:
 
-- When you are writing a public API, by all means add the types in from the beginning.
+- When you are writing a public API, by all means add the types.
 - Dealing with complex type and want to clarify your intent.
 - Returning value from external library and want to do type narrowing.
 
