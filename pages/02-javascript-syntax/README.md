@@ -22,3 +22,4 @@ and how to work with them in TypeScript environment.
 - [Object Literal](/pages/02-javascript-syntax/object-literal.md)
 - [Property Accessor](/pages/02-javascript-syntax/property-accessor.md)
 - [String](/pages/02-javascript-syntax/string.md)
+- [this](/pages/02-javascript-syntax/this.md)
