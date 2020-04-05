@@ -124,7 +124,8 @@ If your callback is complicated, move it out to its own function declaration. La
 
 ---
 
-You **should** use function declaration to declare function, instead of function expression or arrow function.
+You **should** use function declaration to declare function,
+instead of function expression or arrow function.
 
 ```ts
 // bad
@@ -140,7 +141,8 @@ function foo() { return 'foo' }
 > Why?
 
 Arrow function is a function expression.
-It subject ot the same hoisting problem inherited from function expression.
+The formal name is `arrow function expression`.
+It subjects to the same hoisting problem inherited from function expression.
 
 When declaring file scoped function, use function declaration to avoid hoisting suprise.
 
@@ -189,6 +191,9 @@ you **should** use concise body over block body.
 
 // good
 [1, 2, 3].map(number => `A string containing the ${number}.`);
+
+// good
+const objectify = (value: string) => ({ value })
 ```
 
 > Why?
