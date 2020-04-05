@@ -55,6 +55,7 @@ let me know and we can see how to get it working on your IDE.
   - [Object Literal](/pages/02-javascript-syntax/object-literal.md)
   - [Property Accessor](/pages/02-javascript-syntax/property-accessor.md)
   - [String](/pages/02-javascript-syntax/string.md)
+  - [this](/pages/02-javascript-syntax/this.md)
 - [TypeScript Syntax](/pages/03-typescript-syntax/README.md)
   - [Type Declaration](/pages/03-typescript-syntax/type-declaration.md)
   - [Basic Types](/pages/03-typescript-syntx/basic-types.md)
