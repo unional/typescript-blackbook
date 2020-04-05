@@ -37,7 +37,7 @@ function createGamer() {
 
 > Why?
 
-Except arrow function, which do not have its worn `this`,
+Except arrow function, which do not have its own `this`,
 the value of `this` is determined by how a function is called (runtime binding).
 
 This mean everytime you use `this`,
@@ -47,8 +47,6 @@ This assumption is communicated to the user is very implicit ways:
 
 - should this function be used as a mixin? (first function)
 - is this object a coherent instance? (second object)
-
-That is why you **should not** use mixin and should not use `this` altogether.
 
 For class, since it is a build in syntax,
 it provides a sufficient clue to the user that you should not pick out the function and use it separately.
@@ -62,3 +60,24 @@ fn()
 
 And since `this` is the only way in a class to access its own property,
 it is ok to use it.
+
+Note that the first example does not work when you have `noImplicitThis` turned on.
+
+With `noImplicitThis`, you need to define the `this` type:
+
+```ts
+// good
+function play(this: Gamer) { this.energy-- }
+```
+
+With that information, now it is safe to use the function as mixins.
+
+```ts
+
+let deadMeat = { play }
+
+// error, `deadMeat` does not have `energy`.
+deadMeat.play()
+```
+
+## Alternatives

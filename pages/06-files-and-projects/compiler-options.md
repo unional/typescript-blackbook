@@ -24,6 +24,10 @@ The only place that make sense to use this flag is at the application level.
 But even that, you can just use `esModuleInterop` instead.
 You can learn more about this in <https://github.com/Microsoft/TypeScript/issues/7398>
 
+## emitDecoratorMetadata
+
+You **must** enable this option if you are using decorators.
+
 ## esModuleInterop
 
 Enable TypeScript emitted code to work with code emitted by the Babel ecosystem.
@@ -39,6 +43,41 @@ ECMAScript stated the namespace record is a plain object (<https://github.com/Mi
 That is why this flag is introduced.
 
 You **must** enable this flag.
+
+## experimentalDecorators
+
+You **must** enable this option if you are using decorators.
+
+## forceConsistentCasingInFileNames
+
+You **should** enable this option.
+
+## importHelpers
+
+You **should** enable this option if your project is...
+
+## isolatedModules
+
+Makes sure your code can be transpiled with `babel`.
+
+You **may** enable this option if you are also using `babel`.
+
+Or you can keep it off and let `babel` reports the error.
+
+To investigate: will it flag `namespace` usage?
+
+- <https://devblogs.microsoft.com/typescript/typescript-and-babel-7/>
+
+## keyofStringsOnly
+
+You **should not** enable this flag.
+
+## useDefineForClassFields
+
+You **should** enable this flag.
+But you need to test your code to catch any breaking changes.
+
+- <https://devblogs.microsoft.com/typescript/announcing-typescript-3-7/#the-usedefineforclassfields-flag-and-the-declare-property-modifier>
 
 ## noErrorTruncation
 
@@ -67,8 +106,23 @@ If this flag is enabled, the control-flow analysis will able to perform addition
 For example, `const x = []` will have type `any[]` instead of `never[]` when `noImplicitAny` is enabled.
 
 You **must** enable this flag.
+This is enabled by default with `strict` option.
 
 > Why?
+
+## noImplicitReturns
+
+## noImplicitThis
+
+## noStrictGenericChecks
+
+## noUnusedLocals
+
+## noUnusedParameters
+
+## resolveJsonModule
+
+## skipLibCheck
 
 ## strictNullCheck
 
@@ -102,6 +156,14 @@ that's why I prefer to leave this flag off.
 If you want to avoid accidental mistakes as much as possible,
 fell free to turn on this flag,
 and prefix uninterested parameters with `_`.
+
+## types
+
+You **should not** set this most of the time.
+
+## typeRoots
+
+You **should not** set this most of the time.
 
 ## References
 
