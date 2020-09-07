@@ -105,5 +105,5 @@ You can check out this [contributing guide](/CONTRIBUTING.md) to get you get fam
 
 [npm-image]: https://img.shields.io/npm/v/typescript-style.svg?style=flat
 [npm-url]: https://npmjs.org/package/typescript-style
-[github-nodejs]: https://github.com/unional/typescript-guidebook/workflows/nodejs/badge.svg
+[github-nodejs]: https://github.com/unional/typescript-guidebook/workflows/ci/badge.svg
 [github-action-url]: https://github.com/unional/typescript-guidebook/actions
