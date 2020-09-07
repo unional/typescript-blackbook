@@ -73,12 +73,13 @@ We will go through them in detail in [`chapter 9`](/pages/09-tooling/README.md).
 
 ## Stay Connected
 
-If you have question, opinion, spot any error or outdated material, feel free to open [an issue](https://github.com/unional/typescript-guidelines/issues).
+If you have question, opinion, spot any error or outdated material, feel free to open [an issue](https://github.com/unional/typescript-guidebook/issues).
 
 We will try to address them whenever possible.
 
 ## Other Chapters
 
 - [JavaScript Syntax](/pages/02-javascript-syntax/README.md)
-- [TypeScript Syntax](/pages/03-typescript-syntax/README.md)
-- [TypeScript Features](/pages/04-typescript-features/README.md)
+- [JavaScript Features](/pages/03-javascript-features/README.md)
+- [TypeScript Syntax](/pages/04-typescript-syntax/README.md)
+- [TypeScript Features](/pages/05-typescript-features/README.md)
