@@ -13,7 +13,7 @@ From how to use the language, to coding style and any tool that may be useful.
 
 ## Design Philosophy
 
-Adapting code to a specific style or guidelines is about balancing tradeoffs.
+Adapting to a specific style or guidelines is about balancing tradeoffs.
 These tradeoffs include:
 
 - Coding efficiency
@@ -37,14 +37,14 @@ or modify them to suite your needs.
 
 ### Stay true to JavaScript
 
-**Should** avoid syntax that is not native to JavaScript,
+You **should** avoid syntax that is not native to JavaScript,
 and practices that hinder the power of JavaScript.
 
 When TypeScript first started,
-it brings over some syntax from various languages, such as C# and Java.
+it brings over some syntaxes from various languages such as C# and Java.
 
 However, since TypeScript transpiles to JavaScript,
-it cannot get away from the constriant and fundamentals of JavaScript.
+it cannot get away from the constriants and fundamentals of JavaScript.
 TypeScript realizes this and have since shifts it focus to provide types on top of JavaScript,
 and rely of the ECMAScript community to introduce new syntax to JavaScript.
 This is one of the primary reasons contribute to the success of TypeScript.

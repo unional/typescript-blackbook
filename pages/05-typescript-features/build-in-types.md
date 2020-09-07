@@ -6,13 +6,13 @@
 
 ## ReturnType<T>
 
-## Record<T,U>
+## Record&lt;T,U>
 
 ## Readonly<T>
 
-## Exclude<T, U>
+## Exclude&lt;T, U>
 
-## Extract<T, U>
+## Extract&lt;T, U>
 
 ## NonNullable<T>
 

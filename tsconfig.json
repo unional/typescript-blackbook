@@ -5,7 +5,13 @@
   "files": [],
   "references": [
     {
-      "path": "examples/standard"
+      "path": "examples/array/standard"
+    },
+    {
+      "path": "examples/property-accessor/standard"
+    },
+    {
+      "path": "examples/tuple/standard"
     }
   ]
 }
