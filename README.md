@@ -37,6 +37,7 @@ let me know and we can see how to get it working on your IDE.
 
 ## Table of Contents
 
+- [What's new](/pages/00-updates/README.md)
 - [Introduction](/pages/01-introduction/README.md)
   - [What is TypeScript](/pages/01-introduction/what-is-typescript.md)
 - [JavaScript Syntax](/pages/02-javascript-syntax/README.md)
@@ -104,6 +105,9 @@ Interested in helping to make this guideline more useful to everyone? Great 🌷
 You can check out this [contributing guide](/CONTRIBUTING.md) to get you get familiar with the convention we use here.
 
 [npm-image]: https://img.shields.io/npm/v/typescript-style.svg?style=flat
+
 [npm-url]: https://npmjs.org/package/typescript-style
+
 [github-nodejs]: https://github.com/unional/typescript-guidebook/workflows/ci/badge.svg
+
 [github-action-url]: https://github.com/unional/typescript-guidebook/actions

@@ -4,8 +4,8 @@
 
 TypeScript 4.0 has landed on Augest 20th, 2020.
 
-- [Variadic Tuple Types](/pages/03-typescript-syntax/tuple-type.md#variadic-tuple-types)
-- Labeled Tuple
+- [Variadic Tuple Types](/pages/04-typescript-syntax/tuple-type.md#variadic-tuple-types)
+- [Labeled Tuple](/pages/04-typescript-syntax/tuple-type.md#labeled-tuple-elements)
 - Class Property Inference from Constructors
 - Short-Circuting Assignement Operators
 - unknown on catch clauses
