@@ -8,13 +8,13 @@ You **should** use literal syntax to create array.
 
 ❌ bad
 
-```ts file=../../examples/standard/array/declare-style.bad.ts
+```ts file=../../examples/array/standard/declare-style.bad.ts
 const arrayGeneric = new Array<string>()
 ```
 
 ✔️ good
 
-```ts file=../../examples/standard/array/declare-style.good.ts
+```ts file=../../examples/array/standard/declare-style.good.ts
 const arrayLiteral: string[] = []
 const arrayCast = [] as string[]
 ```
@@ -27,7 +27,9 @@ The literal syntax is more compact and the most common.
 
 You **must** declare array type for empty array with `noImplicitAny` and `strictNullChecks`.
 
-```ts file=../../examples/standard/array/empty-must-declare.ts
+✔️ must
+
+```ts file=../../examples/array/standard/empty-must-declare.ts
 export const x: string[] = []
 x.push('abc')
 ```
@@ -47,7 +49,7 @@ This is a small price to pay for getting much better control-flow analysis.
 
 ❌ bad
 
-```ts file=../../examples/standard/array/declare-generic.bad.ts
+```ts file=../../examples/array/standard/declare-generic.bad.ts
 let simpleGeneric: Array<string>
 
 type Person = {}
@@ -56,14 +58,14 @@ let complexGeneric: { people: Person[] }[]
 
 👌 either is fine
 
-```ts file=../../examples/standard/array/declare-generic.ok.ts
+```ts file=../../examples/array/standard/declare-generic.ok.ts
 let declareSimpleUnionArray: (string | string[])[]
 let declareUnionArrayGeneric: Array<string | string[]>
 ```
 
 ✔️ good
 
-```ts file=../../examples/standard/array/declare-generic.good.ts
+```ts file=../../examples/array/standard/declare-generic.good.ts
 let declareSimpleArray: string[]
 
 type Car = {}

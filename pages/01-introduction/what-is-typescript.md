@@ -8,7 +8,7 @@ You can understand more about TypeScript directly from the [official website](ht
 
 ## Benefits
 
-- Similar syntax and semantics as JavaScript.
+- Compatible syntax and semantics as JavaScript.
 - Gradual Type system
 - Better IDE support
 - Support latest ESMCScript syntax

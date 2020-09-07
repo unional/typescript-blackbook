@@ -6,17 +6,6 @@ Thanks for your interest in help making this guideline more useful to everyone �
 
 The easiest way to add your changes is just copy, paste, and modify 😆.
 
-Here are some key points that will help you when you are doing that:
-
-<!-- no toc -->
-
-- [Contributing](#contributing)
-  - [Design Principles](#design-principles)
-  - [Markdown Flavor](#markdown-flavor)
-  - [Requirement Level Keywords](#requirement-level-keywords)
-
-For those who want to fully understand the style of this guideline, read on 🥃
-
 - [Contributing](#contributing)
   - [Design Principles](#design-principles)
   - [Markdown Flavor](#markdown-flavor)
@@ -58,11 +47,11 @@ Because this guideline is saved in github and can be viewed there.
 
 ---
 
-Each guideline under the same heading **must** use `* * *` as the horizontal rule style to separate from each other.
+Each guideline under the same heading **must** use `---` as the horizontal rule style to separate from each other.
 
 > Why?
 
-That is the default horizontal rule style of `remark`.
+Save a few pinky (finger) 😎.
 
 ---
 

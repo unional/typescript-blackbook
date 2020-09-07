@@ -24,7 +24,7 @@ You **should not** create pass-through getter and setter.
 
 ❌ bad
 
-```ts file=../../examples/standard/property-accessor/no-passthrough.bad.ts
+```ts file=../../examples/property-accessor/standard/no-passthrough.bad.ts
 const meaninglessPassthrough = {
   _age: 10,
   get age1() { return this._age },
@@ -32,7 +32,9 @@ const meaninglessPassthrough = {
 }
 ```
 
-```ts file=../../examples/standard/property-accessor/no-passthrough.good.ts
+✔️ good
+
+```ts file=../../examples/property-accessor/standard/no-passthrough.good.ts
 const justProperty = {
   age: 10
 }
