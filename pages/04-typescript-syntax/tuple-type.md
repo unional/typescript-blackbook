@@ -111,6 +111,10 @@ and for simple types as mentioned above.
 The array type should not be used as a replacement of object type.
 For one, array functions in tuple type such as `push()` make no sense to the tuple type.
 
+---
+
+- [ ] compare tuple vs function signagure overloads
+
 ## Declare from Constant
 
 Introduced in: [TypeScript 3.4](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-4.html#const-assertions)
