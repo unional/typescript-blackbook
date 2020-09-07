@@ -6,7 +6,7 @@ on:
   pull_request:
     types: [opened, synchronize]
 jobs:
-  lint:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -29,13 +29,13 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-node-modules-${{ hashFiles('**/yarn.lock') }}
       - run: yarn
-      - run: yarn lint
+      - run: yarn verify
   release:
     name: release
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     needs:
-      - lint
+      - verify
     steps:
       - uses: actions/checkout@v2
       - name: setup yarn-cache

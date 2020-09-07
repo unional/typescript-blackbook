@@ -21,7 +21,8 @@
   "author": "unional",
   "scripts": {
     "build": "remark . -o",
-    "lint": "ts-node scripts/lint.ts"
+    "lint": "ts-node scripts/lint.ts",
+    "verify": "tsc -b && remark . && yarn lint"
   },
   "husky": {
     "hooks": {
