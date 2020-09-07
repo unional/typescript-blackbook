@@ -1,4 +1,5 @@
 <!-- omit in toc -->
+
 # Contributing
 
 Thanks for your interest in help making this guideline more useful to everyone 🌷.
@@ -8,13 +9,18 @@ The easiest way to add your changes is just copy, paste, and modify 😆.
 Here are some key points that will help you when you are doing that:
 
 <!-- no toc -->
-- [requirement level keywords](#requirement-level-keywords)
+
+- [Contributing](#contributing)
+  - [Design Principles](#design-principles)
+  - [Markdown Flavor](#markdown-flavor)
+  - [Requirement Level Keywords](#requirement-level-keywords)
 
 For those who want to fully understand the style of this guideline, read on 🥃
 
-- [Design Principles](#design-principles)
-- [Markdown Flavor](#markdown-flavor)
-- [Requirement Level Keywords](#requirement-level-keywords)
+- [Contributing](#contributing)
+  - [Design Principles](#design-principles)
+  - [Markdown Flavor](#markdown-flavor)
+  - [Requirement Level Keywords](#requirement-level-keywords)
 
 ## Design Principles
 
@@ -52,22 +58,25 @@ Because this guideline is saved in github and can be viewed there.
 
 ---
 
-Each guideline under the same heading **must** use `---` as the horizontal rule style to separate from each other.
+Each guideline under the same heading **must** use `* * *` as the horizontal rule style to separate from each other.
 
 > Why?
 
-It is simple to type,
-and works well of markdown extension such as [VSCode Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one).
+That is the default horizontal rule style of `remark`.
 
 ---
 
 Each line **should** break at comma or period, unless both lines are short.
 
-```md
-// bad
-This is one sentence. This is another longer sentence. This is yet another super ultra duper extra insanely long, very hard to read, very dense, contains many many information, very likely a run-on, very much like what an attorney will write, and probably will be wrapped by the editor sentence.
+❌ bad
 
-// good
+```md
+This is one sentence. This is another longer sentence. This is yet another super ultra duper extra insanely long, very hard to read, very dense, contains many many information, very likely a run-on, very much like what an attorney will write, and probably will be wrapped by the editor sentence.
+```
+
+✔️ good
+
+```md
 This is one sentence.
 This is another longer sentence.
 This is yet another super ultra duper extra insanely long,
@@ -85,12 +94,16 @@ You need to insert blank line for paragraph anyway.
 
 Headers **must** use `atx-style`.
 
+❌ bad
+
 ```md
-// bad
 This is a header
 ================
+```
 
-// good
+✔️ good
+
+```md
 # This is a header
 ```
 
@@ -112,16 +125,20 @@ Save a pinky (finger) 😎.
 
 List **must** use `\` for line breaks.
 
+❌ bad
+
 ```md
-// bad
 - This is one sentence.  // two spaces
   This is another longer sentence.  // two spaces
   This is yet another super ultra duper extra insanely long,  // two spaces
   very hard to read, very dense, contains many many information,  // two spaces
   very likely a run-on, very much like what an attorney will write,  // two spaces
   and probably will be wrapped by the editor sentence.
+```
 
-// good
+✔️ good
+
+```md
 - This is one sentence.\
   This is another longer sentence.\
   This is yet another super ultra duper extra insanely long,\
@@ -132,11 +149,11 @@ List **must** use `\` for line breaks.
 
 This will give you:
 
-- This is one sentence.\
-  This is another longer sentence.\
-  This is yet another super ultra duper extra insanely long,\
-  very hard to read, very dense, contains many many information,\
-  very likely a run-on, very much like what an attorney will write,\
+- This is one sentence.\\
+  This is another longer sentence.\\
+  This is yet another super ultra duper extra insanely long,\\
+  very hard to read, very dense, contains many many information,\\
+  very likely a run-on, very much like what an attorney will write,\\
   and probably will be wrapped by the editor sentence.
 
 > Why?
@@ -172,15 +189,15 @@ Better rendering 😉.
 
 **Should** use shorthand language identifier whenever possible.
 
-> Why?
-
-Save some typings.
-
 - `sh` over `shell`
 - `md` over `markdown`
 - `js` over `javascript`
 - `ts` over `typescript`
 - `rb` over `ruby`
+
+> Why?
+
+Save some typings.
 
 ---
 

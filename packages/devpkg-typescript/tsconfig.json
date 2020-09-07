@@ -1,0 +1,7 @@
+{
+  "extends": "./templates/tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "declarationMap": true
+  }
+}

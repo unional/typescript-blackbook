@@ -413,7 +413,7 @@ Not used
 
 ```json
 "switch-default": true
-````
+```
 
 - Just to make sure...
 
@@ -551,7 +551,7 @@ Not used
 
 ## tslint-eslint-rules
 
-There is [an issue](https://github.com/palantir/tslint/issues/1024) with how the `"rulesDirectory"` is used in [`tslint`](https://github.com/palantir/tslint)`
+There is [an issue](https://github.com/palantir/tslint/issues/1024) with how the `"rulesDirectory"` is used in [`tslint`](https://github.com/palantir/tslint)\`
 
 If you are using [`tslint-eslint-rules`](https://github.com/buzinas/tslint-eslint-rules),
 you can follow its usage in its README:
@@ -585,7 +585,7 @@ module.exports = {
 "brace-style": [ true, "stroustrup", { "allowSingleLine": true }]
 ```
 
-  > Why? "stroustrup" works better than "1tbs" with folding in many IDEs
+> Why? "stroustrup" works better than "1tbs" with folding in many IDEs
 
 ### no-constant-condition (eslint)
 

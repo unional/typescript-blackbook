@@ -2,7 +2,7 @@
 
 Welcome to the TypeScript Guidebook.
 
-This guidebook suppliment the official [TypeScript Handbook](http://www.typescriptlang.org/docs/handbook/basic-types.html) while focusing on *how to get the most out of TypeScript with minimal effort*.
+This guidebook suppliment the official [TypeScript Handbook](http://www.typescriptlang.org/docs/handbook/basic-types.html) while focusing on _how to get the most out of TypeScript with minimal effort_.
 
 I will cover anything and everything you need when writing TypeScript.
 From how to use the language, to coding style and any tool that may be useful.

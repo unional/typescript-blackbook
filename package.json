@@ -7,8 +7,7 @@
     "style guide",
     "ts",
     "eslint",
-    "typescript",
-    "unional"
+    "typescript"
   ],
   "homepage": "https://github.com/unional/typescript-guidebook",
   "bugs": {
@@ -21,6 +20,7 @@
   "license": "MIT",
   "author": "unional",
   "scripts": {
+    "build": "remark . -o",
     "lint": "ts-node scripts/lint.ts"
   },
   "husky": {
@@ -38,10 +38,23 @@
     "glob": "^7.1.6",
     "husky": "^4.2.3",
     "markdownlint": "^0.19.0",
+    "remark": "^12.0.1",
+    "remark-cli": "^8.0.1",
+    "remark-code-import": "^0.2.0",
     "semantic-release": "^17.0.4",
     "standard-version": "^7.1.0",
     "ts-node": "^8.8.1",
     "type-plus": "^1.35.1",
     "typescript": "^3.8.3"
+  },
+  "remarkConfig": {
+    "settings": {
+      "listItemIndent": "1",
+      "rule": "-",
+      "ruleSpaces": false
+    },
+    "plugins": [
+      "code-import"
+    ]
   }
 }

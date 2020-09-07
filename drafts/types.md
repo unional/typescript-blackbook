@@ -5,9 +5,13 @@
 - When you access a primitive type you work directly on its value.
 
 - `string`
+
 - `number`
+
 - `boolean`
+
 - `null`
+
 - `undefined`
 
 ```typescript
@@ -24,7 +28,9 @@ console.log(foo, bar); // => 1, 9
 - When you access a complex type you work on a reference to its value.
 
 - `object`
+
 - `array`
+
 - `function`
 
 ```typescript

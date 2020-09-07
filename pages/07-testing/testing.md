@@ -45,7 +45,7 @@ Listed in this section are general guidelines you can consider when you formulat
 - Write functional tests only if you need to.
 
   > Why? While it sounds great, unfortunately functional requirements of a product changes all the time, so your test code can easily be wasted.
-  > If your team has QA, then yes. QA will/should write **automatable* functional tests.
+  > If your team has QA, then yes. QA will/should write \*_automatable_ functional tests.
 
 - Have at least 30% code coverage. Strive for 85%. 100% is a fantasy.
 
@@ -71,6 +71,7 @@ Rule of thumb: Run test as often as possible, without hindering development spee
 - Run these locally, always:
   - Unit tests
   - Visual Regression tests
+
 - Organize code in small packages, so only a small set of unit test need to be run at a time.
 
 - Run these locally, before check in / commit:

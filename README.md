@@ -4,7 +4,7 @@
 
 Welcome to the TypeScript Guidebook.
 
-This guidebook suppliments the official [TypeScript Handbook](http://www.typescriptlang.org/docs/handbook/basic-types.html) while focusing on *how to get the most out of TypeScript with minimal effort*.
+This guidebook suppliments the official [TypeScript Handbook](http://www.typescriptlang.org/docs/handbook/basic-types.html) while focusing on _how to get the most out of TypeScript with minimal effort_.
 
 I will cover anything and everything you need when writing TypeScript.
 From how to use the language, to coding style and any tool that may be useful.
@@ -89,7 +89,7 @@ Here are some additional resources in JavaScript and TypeScript:
 - [TypeScript Playground](https://www.typescriptlang.org/play/index.html) is a great way if you want to quickly test out TypeScript syntax.
 - [TypeScript Deep Dive](https://basarat.gitbooks.io/typescript/) by [That TypeScript Guy](https://twitter.com/basarat)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/typescript) always a great place to ask questions
-- [TypeScript Gitter Channel](https://gitter.im/Microsoft/TypeScript) the official gitter channel for the TypeScript repository.\
+- [TypeScript Gitter Channel](https://gitter.im/Microsoft/TypeScript) the official gitter channel for the TypeScript repository.\\
   You can get help from the TypeScript team directly here.
 - [Airbnb Javascript](https://github.com/airbnb/javascript)
 - [@dzharii Awesome TypeScript](https://github.com/dzharii/awesome-typescript)
@@ -102,4 +102,5 @@ Interested in helping to make this guideline more useful to everyone? Great 🌷
 You can check out this [contributing guide](/CONTRIBUTING.md) to get you get familiar with the convention we use here.
 
 [npm-image]: https://img.shields.io/npm/v/typescript-style.svg?style=flat
+
 [npm-url]: https://npmjs.org/package/typescript-style

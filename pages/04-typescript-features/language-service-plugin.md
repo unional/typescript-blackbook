@@ -3,7 +3,7 @@
 Starting from TypeScript 2.2,
 TypeScript laugange serice provides plugin support.
 
-It is for changing the *editing experience* only.
+It is for changing the _editing experience_ only.
 
 ## References
 
