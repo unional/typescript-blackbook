@@ -1,6 +1,7 @@
 # Typescript Guidebook
 
 [![NPM version][npm-image]][npm-url]
+[![Github NodeJS][github-nodejs]][github-action-url]
 
 Welcome to the TypeScript Guidebook.
 
@@ -103,5 +104,6 @@ Interested in helping to make this guideline more useful to everyone? Great 🌷
 You can check out this [contributing guide](/CONTRIBUTING.md) to get you get familiar with the convention we use here.
 
 [npm-image]: https://img.shields.io/npm/v/typescript-style.svg?style=flat
-
 [npm-url]: https://npmjs.org/package/typescript-style
+[github-nodejs]: https://github.com/unional/typescript-guidebook/workflows/nodejs/badge.svg
+[github-action-url]: https://github.com/unional/typescript-guidebook/actions
