@@ -20,19 +20,19 @@ You can also specify a different file by `tsc -p <config file path>`.
 
 Add this to your `.vscode/settings.json`:
 
-  ```js
-  // .vscode/settings.json
-  {
-    "json.schemas": [
-      {
-        "fileMatch": [
-          "tsconfig.*.json"
-        ],
-        "url": "http://json.schemastore.org/tsconfig"
-      }
-    ]
-  }
-  ```
+```js
+// .vscode/settings.json
+{
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "tsconfig.*.json"
+      ],
+      "url": "http://json.schemastore.org/tsconfig"
+    }
+  ]
+}
+```
 
 ## Guidelines
 

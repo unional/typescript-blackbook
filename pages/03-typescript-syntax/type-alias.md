@@ -11,3 +11,4 @@
 
   // good
   type FizzBuzz = Fizz | Buzz
+  ```

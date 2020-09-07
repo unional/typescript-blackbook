@@ -10,7 +10,7 @@ When declaring a module (or namespace), there are two options:
 
 ## Module
 
-- Do not wrap typings in `declare module "X" {`.\
+- Do not wrap typings in `declare module "X" {`.\\
   Expose as **top-level declaration**
 
 > Why?

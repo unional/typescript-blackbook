@@ -2,9 +2,9 @@
 
 ## File line endings
 
-- Keep line ending in `LF` if your team work on both windows and *nix.
+- Keep line ending in `LF` if your team work on both windows and \*nix.
 
-  > Why? `CRLF` would cause grief on *nix system (double blank lines)
+  > Why? `CRLF` would cause grief on \*nix system (double blank lines)
 
 ## File EOF (End of line)
 

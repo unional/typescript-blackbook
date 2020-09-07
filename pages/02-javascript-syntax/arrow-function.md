@@ -203,4 +203,4 @@ It reads well especially when multiple functions are chained together.
 - <https://stackoverflow.com/questions/22939130/when-should-i-use-arrow-functions-in-ecmascript-6>
 - <https://jsperf.com/arrow-function-vs-bind-vs-context-argument/4>
 
-[arrow-function-expression]: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions>
+[arrow-function-expression]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions

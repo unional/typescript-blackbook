@@ -8,30 +8,15 @@ You **should** use literal syntax to create array.
 
 ❌ bad
 
-![../../examples/variables.ts]
-
-❌ bad
-
-```ts
-const items = new Array<string>()
+```ts file=../../examples/standard/array/declare-style.bad.ts
+const arrayGeneric = new Array<string>()
 ```
 
 ✔️ good
 
-```ts
-const items: string[] = []
-const items = [] as string[]
-```
-
-```ts
-// bad
-const items = new Array<string>()
-
-// good
-const items: string[] = []
-
-// good
-const items = [] as string[]
+```ts file=../../examples/standard/array/declare-style.good.ts
+const arrayLiteral: string[] = []
+const arrayCast = [] as string[]
 ```
 
 > Why?
@@ -40,30 +25,49 @@ The literal syntax is more compact and the most common.
 
 ---
 
-**May** not need to do `let x: any[] = []`.
+You **must** declare array type for empty array with `noImplicitAny` and `strictNullChecks`.
+
+```ts file=../../examples/standard/array/empty-must-declare.ts
+export const x: string[] = []
+x.push('abc')
+```
 
 > Why?
 
-With both `noImplicitAny` and `strictNullChecks` turned on,
-TypeScript can do a better control flow analysis and default `x` to be `any[]`.
+When both `noImplicitAny` and `strictNullChecks` are turned on,
+empty array literals will have type `never[]` and not widen.
+This is a small price to pay for getting much better control-flow analysis.
+
+- <https://github.com/microsoft/TypeScript/pull/8944>
 
 ## Type declaration
 
 **Should** use `Array<T>` for complex array type.
 **May** use literal syntax for primitive types and unions.
 
-```ts
-// bad
-const items: Array<string>
-const items: { people: Person[] }[]
+❌ bad
 
-// either is fine
-const items: (string | string[])[]
-const items: Array<string | string[]>
+```ts file=../../examples/standard/array/declare-generic.bad.ts
+let simpleGeneric: Array<string>
 
-// good
-const items: string[]
-const items: Array<{ people: Person[] }>
+type Person = {}
+let complexGeneric: { people: Person[] }[]
+```
+
+👌 either is fine
+
+```ts file=../../examples/standard/array/declare-generic.ok.ts
+let declareSimpleUnionArray: (string | string[])[]
+let declareUnionArrayGeneric: Array<string | string[]>
+```
+
+✔️ good
+
+```ts file=../../examples/standard/array/declare-generic.good.ts
+let declareSimpleArray: string[]
+
+type Car = {}
+let declareComplexArray: Array<{ cars: Car[] }>
 ```
 
 > Why?
@@ -138,4 +142,4 @@ Additional references:
 
 - <https://stackoverflow.com/questions/48865710/spread-operator-vs-array-concat>
 
-[array]: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array>
+[array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array

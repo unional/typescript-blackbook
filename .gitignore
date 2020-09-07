@@ -42,7 +42,8 @@ node_modules
 # typings
 /typings/
 
-
 # output folder
-/out/
-pages/._.DS_Store
+out/
+lib/
+._.DS_Store
+tsconfig.tsbuildinfo

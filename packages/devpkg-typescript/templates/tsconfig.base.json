@@ -1,0 +1,16 @@
+{
+  "extends": "./templates/tsconfig.base.json",
+  "compilerOptions": {
+    "downlevelIteration": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "useDefineForClassFields": true,
+    "target": "ES2017"
+  }
+}

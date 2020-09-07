@@ -230,5 +230,6 @@ const result = doSomething()
 
 ---
 
-[type-annotation]: <https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html#type-annotations>
-[type-assertion]: <https://www.typescriptlang.org/docs/handbook/basic-types.html#type-assertions>
+[type-annotation]: https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html#type-annotations
+
+[type-assertion]: https://www.typescriptlang.org/docs/handbook/basic-types.html#type-assertions

@@ -20,18 +20,20 @@ Bracket notation is also used when the identifier is computed in runtime.
 
 Getters and setters allows you to add additional logic when a property value is retrieved or assigned.
 
-You **may** use getter and setting only when you need to.
+You **should not** create pass-through getter and setter.
 
-```ts
-// bad
-export const x = {
+❌ bad
+
+```ts file=../../examples/standard/property-accessor/no-passthrough.bad.ts
+const meaninglessPassthrough = {
   _age: 10,
-  get age() { return this._age },
-  set age(newAge: number) { this._age = newAge }
+  get age1() { return this._age },
+  set age2(newAge: number) { this._age = newAge }
 }
+```
 
-// good
-export const y = {
+```ts file=../../examples/standard/property-accessor/no-passthrough.good.ts
+const justProperty = {
   age: 10
 }
 ```
@@ -39,8 +41,8 @@ export const y = {
 > Why?
 
 Unlike statically typed language,
-The consumer do not need to change when you convert your property to a getter and setter.
-This mean no meaningless pass-through getters and setters.
+The consumer do not need to recompile when you convert a property to a getter and setter.
+So don't clutter your code unnecessary.
 
 ---
 

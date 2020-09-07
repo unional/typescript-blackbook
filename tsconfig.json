@@ -1,13 +1,11 @@
 {
   "compilerOptions": {
-    "downlevelIteration": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "strict": true,
-    "useDefineForClassFields": true,
-    "target": "ES2017"
-  }
+    "esModuleInterop": true
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "examples/standard"
+    }
+  ]
 }
