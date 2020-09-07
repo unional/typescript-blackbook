@@ -4,11 +4,17 @@ Introduced in: TypeScript 1.3
 
 [Tuple Type](https://www.typescriptlang.org/docs/handbook/basic-types.html#tuple) allows you to express an array with different types for different elements.
 
+Note that this describe is slightly different then the description in the handbook.
+With variadic tuple type support in TypeScript 4.0,
+we can now descrie tuple types with variable length.
+
 ## Variadic Tuple Types
 
 Introduced in: [TypeScript 4.0](https://devblogs.microsoft.com/typescript/announcing-typescript-4-0/#variadic-tuple-types)
 
 Variadic tuple types refers to typing tuple types with variable length.
+
+✔️ good
 
 ```ts file=../../examples/tuple/standard/variadic.ts
 function tail<T extends any[]>(arr: readonly [any, ...T]): T {
@@ -29,6 +35,8 @@ Introduced in: [TypeScript 3.4](https://www.typescriptlang.org/docs/handbook/rel
 
 If the tuple can be initialized at declaration,
 you **should** use `as const` to declare the type.
+
+✔️ good
 
 ```ts file=../../examples/tuple/standard/as-const.ts
 const obj = { a: 1 }
