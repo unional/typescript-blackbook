@@ -8,7 +8,7 @@ TypeScript 4.0 has landed on Augest 20th, 2020.
 - [Labeled Tuple](/pages/04-typescript-syntax/tuple-type.md#labeled-tuple-elements)
 - Class Property Inference from Constructors
 - Short-Circuting Assignement Operators
-- unknown on catch clauses
+- [`unknown` on `catch` clauses](/pages/04-typescript-syntax/unknown.md#unknown-on-catch-clauses)
 - Custom JSX Factories
 
 ## TypeScript 3.9
