@@ -60,7 +60,7 @@ let me know and we can see how to get it working on your IDE.
   - [this](/pages/02-javascript-syntax/this.md)
 - [TypeScript Syntax](/pages/04-typescript-syntax/README.md)
   - [Type Declaration](/pages/04-typescript-syntax/type-declaration.md)
-  - [Basic Types](/pages/04-typescript-syntx/basic-types.md)
+  - [Basic Types](/pages/04-typescript-syntax/basic-types.md)
   - [Interfaces](/pages/04-typescript-syntax/interfaces.md)
   - [Modules](/pages/04-typescript-syntax/modules.md)
   - [Tuple Type](/pages/04-typescript-syntax/tuple-type.md)
