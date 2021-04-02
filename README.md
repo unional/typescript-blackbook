@@ -72,7 +72,7 @@ let me know and we can see how to get it working on your IDE.
   - [package.json](/pages/07-files-and-projects/package.json.md)
   - [Converting from JavaScript](/pages/07-files-and-projects/converting-from-javascript.md)
 - Coding Practice
-  - [Testing](pages/default/testing.md)
+  - [Testing](pages/08-testing/testing.md)
 - [Typings](pages/typings/README.md)
   - [Functions](pages/typings/functions.md)
   - [Overloading](pages/typings/overloading.md)
