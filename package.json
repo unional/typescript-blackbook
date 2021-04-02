@@ -9,6 +9,7 @@
     "eslint",
     "typescript"
   ],
+  "workspaces": ["packages/*"],
   "homepage": "https://github.com/unional/typescript-guidebook",
   "bugs": {
     "url": "https://github.com/unional/typescript-guidebook/issues"

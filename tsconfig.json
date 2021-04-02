@@ -16,6 +16,9 @@
     },
     {
       "path": "examples/tuple/standard"
+    },
+    {
+      "path": "packages/mfmt"
     }
   ]
 }
