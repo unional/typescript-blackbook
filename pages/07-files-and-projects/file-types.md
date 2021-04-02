@@ -15,7 +15,7 @@ When you name your file with `.ts` extension, your IDE and compiler will treat i
 TypeScript declaration files are used to describe the "typings" of some JavaScript libraries.
 They are the files created in [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/) or Repositories referenced in [`typings` registry](https://github.com/typings/registry).
 
-They are "amibent" in nature, meaning it does not contain any actual implementation code.
+They are "ambient" in nature, meaning it does not contain any actual implementation code.
 
 The formal term for these files is "file with ambient module declaration".
 You will see why in a moment.
@@ -32,14 +32,14 @@ namespace Foo {
 };
 ```
 
-Thus TypeScript files or declaration files written in this form could be described as "script file" or "script file wtih ambient module declaration"
+Thus TypeScript files or declaration files written in this form could be described as "script file" or "script file with ambient module declaration"
 
 ## Module file
 
 Module files are files that has one or more top level `import`/`export` declaration.
 Being a module file means its content is not global, and it is align with what a `module` means in ECMAScript.
 
-Thus TypeScript files or declaration files written in this form could be described as "module file" or "module file wtih ambient module declaration"
+Thus TypeScript files or declaration files written in this form could be described as "module file" or "module file with ambient module declaration"
 
 ## References
 

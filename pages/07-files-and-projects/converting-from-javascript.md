@@ -9,7 +9,7 @@ It is not an all or nothing deal.
 ## Converting a single JavaScript file
 
 It is pretty rare that your program only have one single JavaScript file.
-If you do, then most likely it is some quick scripts, testing code, or you are not doing your code justise!
+If you do, then most likely it is some quick scripts, testing code, or you are not doing your code justice!
 
 But converting a single JavaScript file serves as a good entry point so we will start here.
 
@@ -48,7 +48,7 @@ Besides the array case above, you may also see some `'x' is not assignable to 'y
 
 It is also cause by TypeScript trying to infer the type of the variables.
 
-For these errors, it is best to go over them in detail before casting the variable to `any` to supress the error. There is a chance that they TypeScript compiler actually find some edge cases in your code that you didn't handle.
+For these errors, it is best to go over them in detail before casting the variable to `any` to suppress the error. There is a chance that they TypeScript compiler actually find some edge cases in your code that you didn't handle.
 
 For example:
 
