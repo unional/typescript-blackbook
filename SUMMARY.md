@@ -11,7 +11,7 @@
   - [Default Function Parameter](/pages/02-javascript-syntax/default-function-parameter.md)
   - [Error](/pages/02-javascript-syntax/error.md)
   - [Import Export](/pages/02-javascript-syntax/import-export.md)
-  - [Object Descructuring](/pages/02-javascript-syntax/object-destructuring.md)
+  - [Object Destructuring](/pages/02-javascript-syntax/object-destructuring.md)
   - [Object Literal](/pages/02-javascript-syntax/object-literal.md)
   - [Property Accessor](/pages/02-javascript-syntax/property-accessor.md)
   - [String](/pages/02-javascript-syntax/string.md)
@@ -30,7 +30,7 @@
   - [package.json](/pages/06-files-and-projects/package.json.md)
   - [Converting from JavaScript](/pages/06-files-and-projects/converting-from-javascript.md)
 - Coding Practice
-  - [Testing](pages/default/testing.md)
+  - [Testing](pages/08-testing/testing.md)
 - [Typings](pages/typings/README.md)
   - [Functions](pages/typings/functions.md)
   - [Overloading](pages/typings/overloading.md)
