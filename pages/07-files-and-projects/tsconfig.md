@@ -67,7 +67,7 @@ For example:
 ```js
 // tsconfig.build.json
 {
-  "conpilerOptions": {
+  "compilerOptions": {
     // ...
   },
   "files": [

@@ -8,7 +8,7 @@ For a full list of compiler options, please go to <https://www.typescriptlang.or
 
 ## allowSyntheticDefaultImports
 
-Allow default imports from modules with no default export. This does not affect code emit, just typechecking.
+Allow default imports from modules with no default export. This does not affect code emit, just type checking.
 
 This flag allows you to use the `import x from 'x'` syntax when importing commonjs modules.
 This is introduced before the `esModuleInterop` flag.
@@ -18,7 +18,7 @@ Use `esModuleInterop` instead.
 
 > Why?
 
-Since this flag does not affect code emit, it creates a discrepency between the typings and the actual emitted code.
+Since this flag does not affect code emit, it creates a discrepancy between the typings and the actual emitted code.
 This causes a systematic issue at consumption rendering your package is not usable in certain ecosystem.
 The only place that make sense to use this flag is at the application level.
 But even that, you can just use `esModuleInterop` instead.
@@ -138,7 +138,7 @@ This is enabled by default with `strict` option.
 
 ## noUnusedParameters
 
-- Perfer to turn off this flag
+- Prefer to turn off this flag
 
 > Why?
 

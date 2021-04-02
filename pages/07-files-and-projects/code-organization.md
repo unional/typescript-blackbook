@@ -21,7 +21,7 @@ And finding the code means several things:
 
 - searchable by folder names, file names, class names, method names, variable names.
 - locatable from the file and folder structure.
-- referenceable from usage to declaration, and vice versa.
+- can be referenced from usage to declaration, and vice versa.
 
 Many projects I have seen follows the organization of the framework they use by copying the sample projects from those framework.
 
@@ -44,7 +44,7 @@ Also, you can still keep a large part of your code from the frameworks, which is
   > Why? When you create a new project, it is common that you need to do multiple things and it was fine to have them all placed together.
   > But as your project matures, other people would like to use part of your code but not others.
   > If you organize your folders by their purpose, it is much more likely that they are less coupled to each other, and is easier to break it into their own project.
-  > In essense, your code will be more conforming to the Common Closure Principle and Common Reuse Principle.
+  > In essence, your code will be more conforming to the Common Closure Principle and Common Reuse Principle.
 
 ## Folder name casing
 
