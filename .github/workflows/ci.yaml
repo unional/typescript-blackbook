@@ -9,7 +9,7 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 1
       - name: setup yarn-cache
@@ -37,7 +37,7 @@ jobs:
     needs:
       - verify
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: setup yarn-cache
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
