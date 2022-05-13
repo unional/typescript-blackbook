@@ -607,6 +607,11 @@ argparse@^1.0.7:
   dependencies:
     sprintf-js "~1.0.2"
 
+argparse@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/argparse/-/argparse-2.0.1.tgz#246f50f3ca78a3240f6c997e8a9bd1eac49e4b38"
+  integrity sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==
+
 argv-formatter@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/argv-formatter/-/argv-formatter-1.0.0.tgz#a0ca0cbc29a5b73e836eebe1cbf6c5e0e4eb82f9"
@@ -1702,10 +1707,10 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0:
   dependencies:
     once "^1.4.0"
 
-entities@~2.0.0:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/entities/-/entities-2.0.3.tgz#5c487e5742ab93c15abb5da22759b8590ec03b7f"
-  integrity sha512-MyoZ0jgnLvB2X3Lg5HqpFmn1kybDiIfEQmKzTb5apr51Rb+T3KdmMiqa70T+bhGnyv7bQ6WMj2QMHpGMmlrUYQ==
+entities@~2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/entities/-/entities-2.1.0.tgz#992d3129cf7df6870b96c57858c249a120f8b8b5"
+  integrity sha512-hCx1oky9PFrJ611mf0ifBLBRW8lUUVRlFolb5gWRfIELabBlbp9xZvrqZLZAs+NxFnbfQoeGd8wDkygjg7U85w==
 
 env-ci@^5.0.0:
   version "5.0.2"
@@ -3072,10 +3077,10 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
-linkify-it@^2.0.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/linkify-it/-/linkify-it-2.2.0.tgz#e3b54697e78bf915c70a38acd78fd09e0058b1cf"
-  integrity sha512-GnAl/knGn+i1U/wjBz3akz2stz+HrHLsxMwHQGofCDfPvlf+gDKN58UtfmUquTY4/MXeE2x7k19KQmeoZi94Iw==
+linkify-it@^3.0.1:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/linkify-it/-/linkify-it-3.0.3.tgz#a98baf44ce45a550efb4d49c769d07524cc2fa2e"
+  integrity sha512-ynTsyrFSdE5oZ/O9GEf00kPngmOfVwazR5GKDq6EYfhlpFug3J2zybX56a2PRRpc9P+FuSoGNAwjlbDs9jJBPQ==
   dependencies:
     uc.micro "^1.0.1"
 
@@ -3354,14 +3359,14 @@ markdown-extensions@^1.1.0:
   resolved "https://registry.yarnpkg.com/markdown-extensions/-/markdown-extensions-1.1.1.tgz#fea03b539faeaee9b4ef02a3769b455b189f7fc3"
   integrity sha512-WWC0ZuMzCyDHYCasEGs4IPvLyTGftYwh6wIEOULOF0HXcqZlhwRzrK0w2VUlxWA98xnvb/jszw4ZSkJ6ADpM6Q==
 
-markdown-it@10.0.0:
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-10.0.0.tgz#abfc64f141b1722d663402044e43927f1f50a8dc"
-  integrity sha512-YWOP1j7UbDNz+TumYP1kpwnP0aEa711cJjrAQrzd0UXlbJfc5aAq0F/PZHjiioqDC1NKgvIMX+o+9Bk7yuM2dg==
+markdown-it@12.3.2:
+  version "12.3.2"
+  resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-12.3.2.tgz#bf92ac92283fe983fe4de8ff8abfb5ad72cd0c90"
+  integrity sha512-TchMembfxfNVpHkbtriWltGWc+m3xszaRD0CZup7GFFhzIgQqxIfn3eGj1yZpfuflzPvfkt611B2Q/Bsk1YnGg==
   dependencies:
-    argparse "^1.0.7"
-    entities "~2.0.0"
-    linkify-it "^2.0.0"
+    argparse "^2.0.1"
+    entities "~2.1.0"
+    linkify-it "^3.0.1"
     mdurl "^1.0.1"
     uc.micro "^1.0.5"
 
@@ -3372,12 +3377,12 @@ markdown-table@^2.0.0:
   dependencies:
     repeat-string "^1.0.0"
 
-markdownlint@^0.19.0:
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/markdownlint/-/markdownlint-0.19.0.tgz#a692c7b5c077874d4ee8b74e188d6c464ccce81e"
-  integrity sha512-+MsWOnYVUH4klcKM7iRx5cno9FQMDAb6FC6mWlZkeXPwIaK6Z5Vd9VkXkykPidRqmLHU2wI+MNyfUMnUCBw3pQ==
+markdownlint@0.25.1:
+  version "0.25.1"
+  resolved "https://registry.yarnpkg.com/markdownlint/-/markdownlint-0.25.1.tgz#df04536607ebeeda5ccd5e4f38138823ed623788"
+  integrity sha512-AG7UkLzNa1fxiOv5B+owPsPhtM4D6DoODhsJgiaNg1xowXovrYgOnLqAgOOFQpWOlHFVQUzjMY5ypNNTeov92g==
   dependencies:
-    markdown-it "10.0.0"
+    markdown-it "12.3.2"
 
 marked-terminal@^4.0.0:
   version "4.1.0"
