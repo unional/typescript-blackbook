@@ -18,11 +18,35 @@ Listed in this section are general guidelines you can consider when you formulat
 - Anything that gives you the least resistant to write test!
 - I personally use [`mocha`](https://www.npmjs.com/package/mocha) and [`tape`](https://www.npmjs.com/package/tape) ([`blue-tape`](https://www.npmjs.com/package/blue-tape) to be exact)
 
+## Test naming convention
+
+✔️ You **should** define a convention for organizing your tests.
+Here is one example:
+
+- `spec`: specification tests
+- `unit`: unit tests
+- `accept`: acceptance tests
+- `perf`: performance tests
+- `stress`: stress tests
+
+Depends on the test framework, there are different ways to categorize tests.
+But most of them support categorizing them by file name, for example:
+`foo.spec.ts`, `foo.accept.ts`, etc.
+
+> Why?
+
+Tests are live documentation.
+However, different kinds of tests requires different level of knowledge of the code.
+For example, unit tests might have mocks that requires the knowledge of how the code is written,
+and there are unit tests that test edge cases etc.
+
+Having a good convention helps organize the tests and make them more useful as live documentation.
+
 ## Writing tests
 
-- Feel free to write junk code for prove of concept. No need to write tests at this stage.
+- Feel free to write junk code for proof of concept. No need to write tests at this stage.
 
-  > Why? Junk code for prove of concept is a great way to try out your thesis while allow you to work in high speed.
+  > Why? Junk code for proof of concept is a great way to try out your thesis while allow you to work in high speed.
   > Just make sure you don't use your junk code directly in production.
   > They are meant to be thrown away.
 
