@@ -1,0 +1,8 @@
+name: pull-request
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  code:
+    uses: justland/.github/.github/workflows/yarn2-library-verify-linux.yml@main
