@@ -1,0 +1,28 @@
+{
+  "name": "docs",
+  "private": true,
+  "author": {
+    "name": "Homa Wong (unional)",
+    "email": "homawong@gmail.com",
+    "url": "https://github.com/unional"
+  },
+  "workspaces": [
+    "github-page"
+  ],
+  "scripts": {
+    "build": "remark . -o",
+    "lint": "ts-node ./scripts/lint.ts",
+    "verify": "tsc -b && remark . && yarn lint"
+  },
+  "remarkConfig": {
+    "plugins": [
+      "code-import"
+    ],
+    "settings": {
+      "bullet": "-",
+      "listItemIndent": "1",
+      "rule": "-",
+      "ruleSpaces": false
+    }
+  }
+}

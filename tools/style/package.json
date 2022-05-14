@@ -1,0 +1,22 @@
+{
+  "name": "typescript-style",
+  "version": "0.8.1",
+  "description": "Some kind of styling tool for TypeScript.",
+  "homepage": "https://github.com/unional/typescript-guidebook",
+  "keywords": [
+    "lint",
+    "style guide",
+    "ts",
+    "eslint",
+    "typescript"
+  ],
+  "bugs": {
+    "url": "https://github.com/unional/typescript-guidebook/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unional/typescript-guidebook.git"
+  },
+  "license": "MIT",
+  "author": "unional"
+}
