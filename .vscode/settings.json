@@ -1,3 +1,22 @@
 {
-  "typescript.tsdk": "node_modules\\typescript\\lib"
+  "search.exclude": {
+    "**/.yarn": true
+  },
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "cSpell.words": [
+    "apos",
+    "clsx",
+    "dzharii",
+    "horiz",
+    "stroustrup"
+  ],
+  "markdownlint.ignore": [
+    "LICENSE"
+  ],
+  "markdownlint.config": {
+    "default": true,
+    "MD013": false,
+    "MD024": false,
+    "MD033": false
+  }
 }

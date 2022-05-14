@@ -1,11 +1,11 @@
 # Typescript Guidebook
 
 [![NPM version][npm-image]][npm-url]
-[![Github NodeJS][github-nodejs]][github-action-url]
+[![GitHub NodeJS][github-nodejs]][github-action-url]
 
 Welcome to the TypeScript Guidebook.
 
-This guidebook suppliments the official [TypeScript Handbook](http://www.typescriptlang.org/docs/handbook/basic-types.html) while focusing on _how to get the most out of TypeScript with minimal effort_.
+This guidebook supplements the official [TypeScript Handbook] while focusing on *how to get the most out of TypeScript with minimal effort*.
 
 I will cover anything and everything you need when writing TypeScript.
 From how to use the language, to coding style and any tool that may be useful.
@@ -22,7 +22,7 @@ From how to use the language, to coding style and any tool that may be useful.
   - Formatter
     - [prettier](https://prettier.io/)
   - Linter
-    - [eslint](https://eslint.org/)
+    - [ESLint](https://eslint.org/)
 
 ## Watch this repo
 
@@ -32,53 +32,53 @@ You can click the watch button if you want to be notified.
 ## Disclaimer
 
 Recently I do most of my work in VS Code.
-So if you find that some of the guidelines doesn't work well in your IDE,
-let me know and we can see how to get it working on your IDE.
+So if you find that some guidelines doesn't work well in your IDE,
+let me know, and we can see how to get it working on your IDE.
 
 ## Table of Contents
 
-- [What's new](/pages/00-updates/README.md)
-- [Introduction](/pages/01-introduction/README.md)
-  - [What is TypeScript](/pages/01-introduction/what-is-typescript.md)
-- [JavaScript Syntax](/pages/02-javascript-syntax/README.md)
-  - [Array](/pages/02-javascript-syntax/array.md)
-  - [Arrow Function](/pages/02-javascript-syntax/arrow-function.md)
-  - [Assignment](/pages/02-javascript-syntax/assignment.md)
-  - [Async Await](/pages/02-javascript-syntax/async-await.md)
-  - [Boolean](/pages/02-javascript-syntax/boolean.md)
-  - [Class](/pages/02-javascript-syntax/class.md)
-  - [Declaration Statements](/pages/02-javascript-syntax/declaration-statements.md)
-  - [Decorator](/pages/02-javascript-syntax/decorator.md)
-  - [Default Parameters](/pages/02-javascript-syntax/default-parameters.md)
-  - [Error](/pages/02-javascript-syntax/error.md)
-  - [Function](/pages/02-javascript-syntax/function.md)
-  - [Module](/pages/02-javascript-syntax/module.md)
-  - [Object Descructuring](/pages/02-javascript-syntax/object-destructuring.md)
-  - [Object Literal](/pages/02-javascript-syntax/object-literal.md)
-  - [Property Accessor](/pages/02-javascript-syntax/property-accessor.md)
-  - [String](/pages/02-javascript-syntax/string.md)
-  - [this](/pages/02-javascript-syntax/this.md)
-- [TypeScript Syntax](/pages/04-typescript-syntax/README.md)
-  - [Type Declaration](/pages/04-typescript-syntax/type-declaration.md)
-  - [Basic Types](/pages/04-typescript-syntax/basic-types.md)
-  - [Interfaces](/pages/04-typescript-syntax/interfaces.md)
-  - [Modules](/pages/04-typescript-syntax/modules.md)
-  - [Tuple Type](/pages/04-typescript-syntax/tuple-type.md)
-- [Files and Projects](/pages/07-files-and-projects/README.md)
-  - [Compiler Options](/pages/07-files-and-projects/compiler-options.md)
-  - [Files](/pages/07-files-and-projects/file-types.md)
-  - [Code Organization](/pages/07-files-and-projects/code-organization.md)
-  - [tsconfig.json](/pages/07-files-and-projects/tsconfig.md)
-  - [package.json](/pages/07-files-and-projects/package.json.md)
-  - [Converting from JavaScript](/pages/07-files-and-projects/converting-from-javascript.md)
+- [What's new](/docs/pages/00-updates/README.md)
+- [Introduction](/docs/pages/01-introduction/README.md)
+  - [What is TypeScript](/docs/pages/01-introduction/what-is-typescript.md)
+- [JavaScript Syntax](/docs/pages/02-javascript-syntax/README.md)
+  - [Array](/docs/pages/02-javascript-syntax/array.md)
+  - [Arrow Function](/docs/pages/02-javascript-syntax/arrow-function.md)
+  - [Assignment](/docs/pages/02-javascript-syntax/assignment.md)
+  - [Async Await](/docs/pages/02-javascript-syntax/async-await.md)
+  - [Boolean](/docs/pages/02-javascript-syntax/boolean.md)
+  - [Class](/docs/pages/02-javascript-syntax/class.md)
+  - [Declaration Statements](/docs/pages/02-javascript-syntax/declaration-statements.md)
+  - [Decorator](/docs/pages/02-javascript-syntax/decorator.md)
+  - [Default Parameters](/docs/pages/02-javascript-syntax/default-parameters.md)
+  - [Error](/docs/pages/02-javascript-syntax/error.md)
+  - [Function](/docs/pages/02-javascript-syntax/function.md)
+  - [Module](/docs/pages/02-javascript-syntax/module.md)
+  - [Object Destructuring](/docs/pages/02-javascript-syntax/object-destructuring.md)
+  - [Object Literal](/docs/pages/02-javascript-syntax/object-literal.md)
+  - [Property Accessor](/docs/pages/02-javascript-syntax/property-accessor.md)
+  - [String](/docs/pages/02-javascript-syntax/string.md)
+  - [this](/docs/pages/02-javascript-syntax/this.md)
+- [TypeScript Syntax](/docs/pages/04-typescript-syntax/README.md)
+  - [Type Declaration](/docs/pages/04-typescript-syntax/type-declaration.md)
+  - [Basic Types](/docs/pages/04-typescript-syntax/basic-types.md)
+  - [Interfaces](/docs/pages/04-typescript-syntax/interfaces.md)
+  - [Modules](/docs/pages/04-typescript-syntax/modules.md)
+  - [Tuple Type](/docs/pages/04-typescript-syntax/tuple-type.md)
+- [Files and Projects](/docs/pages/07-files-and-projects/README.md)
+  - [Compiler Options](/docs/pages/07-files-and-projects/compiler-options.md)
+  - [Files](/docs/pages/07-files-and-projects/file-types.md)
+  - [Code Organization](/docs/pages/07-files-and-projects/code-organization.md)
+  - [tsconfig.json](/docs/pages/07-files-and-projects/tsconfig.md)
+  - [package.json](/docs/pages/07-files-and-projects/package.json.md)
+  - [Converting from JavaScript](/docs/pages/07-files-and-projects/converting-from-javascript.md)
 - Coding Practice
-  - [Testing](pages/08-testing/testing.md)
-- [Typings](pages/typings/README.md)
-  - [Functions](pages/typings/functions.md)
-  - [Overloading](pages/typings/overloading.md)
-  - [Namespaces and Modules](pages/typings/namespaces-and-modules.md)
-  - [Shape of typings](pages/typings/shape-of-typings.md)
-  - [tslint configuration](pages/typings/tslint.md)
+  - [Testing](/docs/pages/08-testing/testing.md)
+- [Typings](/docs/pages/typings/README.md)
+  - [Functions](/docs/pages/typings/functions.md)
+  - [Overloading](/docs/pages/typings/overloading.md)
+  - [Namespaces and Modules](/docs/pages/typings/namespaces-and-modules.md)
+  - [Shape of typings](/docs/pages/typings/shape-of-typings.md)
+  - [TSLint configuration](/docs/pages/typings/tslint.md)
 
 ## Other Resources
 
@@ -92,9 +92,9 @@ Here are some additional resources in JavaScript and TypeScript:
 - [TypeScript Playground](https://www.typescriptlang.org/play/index.html) is a great way if you want to quickly test out TypeScript syntax.
 - [TypeScript Deep Dive](https://basarat.gitbooks.io/typescript/) by [That TypeScript Guy](https://twitter.com/basarat)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/typescript) always a great place to ask questions
-- [TypeScript Gitter Channel](https://gitter.im/Microsoft/TypeScript) the official gitter channel for the TypeScript repository.\\
+- [TypeScript Gitter Channel](https://gitter.im/Microsoft/TypeScript) the official Gitter channel for the TypeScript repository.\\
   You can get help from the TypeScript team directly here.
-- [Airbnb Javascript](https://github.com/airbnb/javascript)
+- [Airbnb JavaScript](https://github.com/airbnb/javascript)
 - [@dzharii Awesome TypeScript](https://github.com/dzharii/awesome-typescript)
 - [@semlinker Awesome TypeScript](https://github.com/semlinker/awesome-typescript)
 
@@ -105,9 +105,7 @@ Interested in helping to make this guideline more useful to everyone? Great 🌷
 You can check out this [contributing guide](/CONTRIBUTING.md) to get you get familiar with the convention we use here.
 
 [npm-image]: https://img.shields.io/npm/v/typescript-style.svg?style=flat
-
 [npm-url]: https://npmjs.org/package/typescript-style
-
 [github-nodejs]: https://github.com/unional/typescript-guidebook/workflows/ci/badge.svg
-
 [github-action-url]: https://github.com/unional/typescript-guidebook/actions
+[TypeScript Handbook]: http://www.typescriptlang.org/docs/handbook/basic-types.html
