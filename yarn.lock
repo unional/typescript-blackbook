@@ -8238,7 +8238,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"min-indent@npm:^1.0.0":
+"min-indent@npm:^1.0.0, min-indent@npm:^1.0.1":
   version: 1.0.1
   resolution: "min-indent@npm:1.0.1"
   checksum: bfc6dd03c5eaf623a4963ebd94d087f6f4bbbfd8c41329a7f09706b0cb66969c4ddd336abeb587bc44bc6f08e13bf90f0b374f9d71f9f01e04adc2cd6f083ef1
@@ -10139,13 +10139,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remark-code-import@npm:^0.4.0":
-  version: 0.4.0
-  resolution: "remark-code-import@npm:0.4.0"
+"remark-code-import@npm:^1.0.0":
+  version: 1.1.0
+  resolution: "remark-code-import@npm:1.1.0"
   dependencies:
+    strip-indent: ^4.0.0
     to-gatsby-remark-plugin: ^0.1.0
-    unist-util-visit: ^2.0.1
-  checksum: 0c49879dcb7d4f4dae41f11aaf45aac4acafd91ce52219537374ed0449928579f95f3cf32572e217e4d89745a30f0f12f382a110f6e73d79481cdd909d1bd312
+    unist-util-visit: ^4.1.0
+  checksum: c8ee29c1830ee8b5e7c439c871c2fd729f32df66eaa6d78c4efcd7c5c7b17bb0290d8f176896190d9bd62f97832dfa0a1d0b12deffacfd5978ba05905f55ee8c
   languageName: node
   linkType: hard
 
@@ -11129,6 +11130,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"strip-indent@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "strip-indent@npm:4.0.0"
+  dependencies:
+    min-indent: ^1.0.1
+  checksum: 06cbcd93da721c46bc13caeb1c00af93a9b18146a1c95927672d2decab6a25ad83662772417cea9317a2507fb143253ecc23c4415b64f5828cef9b638a744598
+  languageName: node
+  linkType: hard
+
 "strip-json-comments@npm:^3.1.1":
   version: 3.1.1
   resolution: "strip-json-comments@npm:3.1.1"
@@ -11742,7 +11752,7 @@ __metadata:
     markdownlint: ^0.25.1
     remark: ^14.0.2
     remark-cli: ^10.0.1
-    remark-code-import: ^0.4.0
+    remark-code-import: ^1.0.0
     ts-node: ^10.7.0
     turbo: ^1.2.9
     type-plus: ^4.9.1
@@ -12053,7 +12063,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unist-util-visit@npm:^4.0.0":
+"unist-util-visit@npm:^4.0.0, unist-util-visit@npm:^4.1.0":
   version: 4.1.0
   resolution: "unist-util-visit@npm:4.1.0"
   dependencies:
