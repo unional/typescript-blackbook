@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://unional.github.io/blog</id>
+    <title>TypeScript Guidelines Blog</title>
+    <updated>2022-05-14T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="http://unional.github.io/blog"/>
+    <subtitle>TypeScript Guidelines Blog</subtitle>
+    <icon>http://unional.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[TypeScript is ... an abstraction]]></title>
+        <id>2022-typescript-is-abstraction</id>
+        <link href="http://unional.github.io/blog/2022-typescript-is-abstraction"/>
+        <updated>2022-05-14T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[[TypeScript 4.7] is just around the corner.]]></summary>
+        <content type="html"><![CDATA[<p><a href="https://devblogs.microsoft.com/typescript/announcing-typescript-4-7-rc/" target="_blank" rel="noopener noreferrer">TypeScript 4.7</a> is just around the corner.</p><p>I feel like it is a good time for me to update this TypeScript guidelines
+with what I have learn over the years and how am I using it nowadays.</p><p>As you can see,
+I've reorganzied the repository and added this GitHub page
+to make it easier to share the knowledge.</p><p>In these blog posts,
+I'm going to share the bits and tips that I learned every day.
+Eventually this information will be incorporated into the guidelines.</p><p>To kick things off, I'm going to talk about what TypeScript is in 2022?</p><p>No no, not about the history of TypeScript.</p><p>It's about how I look at TypeScript and how I use it.</p><p>It's about when I follow the rules and when I break them.</p><blockquote><p>I know all the rules, and then I know how to break 'em</p></blockquote><h2 class="anchor anchorWithStickyNavbar_YDjN" id="typescript-is-an-abstraction">TypeScript is an abstraction<a class="hash-link" href="#typescript-is-an-abstraction" title="Direct link to heading">​</a></h2><p>Programming language is an abstraction.</p><p>The abstraction I'm talking about is not the abstraction of defining an interface or class or inheritance.</p><p>It's about the code you wrote, the text you typed in the <code>.ts</code> or <code>.tsx</code> file.</p><p>It is an abstraction over the actual binary code executed by the JavaScript engine.</p><p>A good abstraction emphasizes the important but sometimes has a cost of skipping over some details.</p><p>For example, the digital zeros and ones are an abstraction over the analog electrical currents.</p><p>Most of the time, at least in the sense of modern computing,
+missing the details on the different levels of electrical currents is a good thing.
+And we as a programmer don't ever need to think about it.</p><p>But to the eye of hardware engineer,
+it is not something they can ignore because there are physical rules they have to follow,
+and there are actual consequences when putting two wires too close to each other.</p><p>The abstraction of programming language is the same.
+It is good for most cases, but at some point it will start to breakdown.</p><p><a href="https://www.rust-lang.org/" target="_blank" rel="noopener noreferrer">rust</a> is a good example of this.
+Its ownership model guarantee memory-safety and thread-safety.
+But there are rare cases you need to break the rules thus there is a <code>unsafe</code> keyword for it.</p><p>For <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer">TypeScript</a>, it is not designed to be a 100% sounded language.
+That means you will run into those "rare" cases a lot more often.</p><p>You can learn more about soundness <a href="https://www.typescriptlang.org/docs/handbook/type-compatibility.html#a-note-on-soundness" target="_blank" rel="noopener noreferrer">here</a> and <a href="https://www.typescriptlang.org/play?strictFunctionTypes=false#example/soundness" target="_blank" rel="noopener noreferrer">here</a>.</p><h2 class="anchor anchorWithStickyNavbar_YDjN" id="conclusion">Conclusion<a class="hash-link" href="#conclusion" title="Direct link to heading">​</a></h2><p>So what should you do? Embrace it.</p><p>The <code>unsafe</code> keyword in <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer">TypeScript</a> is <code>any</code>.
+While you should avoid using <code>any</code> in most cases,
+it is often enough that your tool chain should not prevent or punish you from using it.</p><p>You might think,</p><blockquote><p>"hey, I'm working in a team and I don't want my team members who are less familiar with TypeScript to abuse the usage of <code>any</code>."</p></blockquote><p>Yes, that is a legit concern,
+and you can make your own judgement for your circumstances.</p><p>My personal experience is that the number of times I have to break the rules are common enough that making exceptions for the tools (e.g. adding <code>// eslint ignore</code> comments) clutter the code and make the code harder to read.</p><p>My approach is to rely on unit tests and code reviews to make sure the usage of <code>any</code> are in check.</p><p>Also, defining the correct type is not always easy and can take significant amount of time.
+If you are working under a schedule, you might not have time to do that.</p><p>Another point to make is that since <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer">TypeScript</a> is constantly improving,
+if you build some complex types, it might work in one version and break in another version.</p><p>ASK ME HOW I KNOW IT.</p><p>Of course, I'm not saying allowing your code litters with <code>any</code> and call it a day.
+You should keep track on those usages and clean it up when you get a chance to.</p><p>Converting <code>any</code> back to a proper type improves efficiency.
+As that is why we use <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer">TypeScript</a>.</p><p>And you may discover some bugs along the way.</p>]]></content>
+        <author>
+            <name>Homa Wong (unional)</name>
+            <uri>https://github.com/unional</uri>
+        </author>
+        <category label="typescript" term="typescript"/>
+    </entry>
+</feed>
