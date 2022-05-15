@@ -2,19 +2,19 @@
 
 Welcome to the TypeScript Guidebook.
 
-This guidebook suppliment the official [TypeScript Handbook](http://www.typescriptlang.org/docs/handbook/basic-types.html) while focusing on *how to get the most out of TypeScript with minimal effort*.
+This guidebook supplements the official [TypeScript Handbook](http://www.typescriptlang.org/docs/handbook/basic-types.html) while focusing on *how to get the most out of TypeScript with minimal effort*.
 
 I will cover anything and everything you need when writing TypeScript.
 From how to use the language, to coding style and any tool that may be useful.
 
 ## Table of Contents
 
-- [What is TypeScript](/pages/01-introduction/what-is-typescript.md)
+- [What is TypeScript](what-is-typescript.md)
 
 ## Design Philosophy
 
-Adapting to a specific style or guidelines is about balancing tradeoffs.
-These tradeoffs include:
+Adapting to a specific style or guidelines is about balancing trade offs.
+These trade offs include:
 
 - Coding efficiency
 - Readability
@@ -44,9 +44,9 @@ When TypeScript first started,
 it brings over some syntaxes from various languages such as C# and Java.
 
 However, since TypeScript transpiles to JavaScript,
-it cannot get away from the constriants and fundamentals of JavaScript.
+it cannot get away from the constraints and fundamentals of JavaScript.
 TypeScript realizes this and have since shifts it focus to provide types on top of JavaScript,
-and rely of the ECMAScript community to introduce new syntax to JavaScript.
+and rely on the ECMAScript community to introduce new syntax to JavaScript.
 This is one of the primary reasons contribute to the success of TypeScript.
 
 ### Focus on Coding Efficiency
@@ -61,11 +61,11 @@ We like a tool that is powerful and easy to use at the same time.
 
 ### Focus on Tool Compatibility
 
-If you are using NotePad to write code,
-you will probably not getting much benefit from TypeScript.
+If you are using Notepad to write code,
+you will probably not get much benefit from TypeScript.
 
 In short, TypeScript cannot do much without tools,
-and you will not get much benefit out of TypeScipt without tools.
+and you will not get much benefit out of TypeScript without tools.
 
 These tools include: transpilers, editors and IDEs, linters, formatters, test runners, bundlers, etc.
 

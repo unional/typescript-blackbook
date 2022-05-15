@@ -2,7 +2,7 @@
 
 ## TypeScript 4.0
 
-TypeScript 4.0 has landed on Augest 20th, 2020.
+TypeScript 4.0 has landed on August 20th, 2020.
 
 - [Variadic Tuple Types](/pages/04-typescript-syntax/tuple-type.md#variadic-tuple-types)
 - [Labeled Tuple](/pages/04-typescript-syntax/tuple-type.md#labeled-tuple-elements)
