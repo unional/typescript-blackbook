@@ -1,0 +1,46 @@
+---
+slug: 2022-eslint-plugin-peer-deps
+title: "@typescript-eslint/eslint-plugin should be a peer dependency"
+authors: [unional]
+tags: [typescript, eslint, "@typescript-eslint"]
+---
+
+# The Problem
+
+Recently I run into this problem:
+
+```sh
+ESLint couldn't determine the plugin "@typescript-eslint" uniquely.
+
+- ...\node_modules\@typescript-eslint\eslint-plugin\dist\index.js (loaded in ".eslintrc.json")
+- ...\node_modules\eslint-config-react-app\node_modules\@typescript-eslint\eslint-plugin\dist\index.js (loaded in ".eslintrc.json » eslint-config-react-app#overrides[0]")
+```
+
+It is caused by [eslint-config-react-app] using [@typescript-eslint/eslint-plugin] as a `dependency` instead of a `peer dependency`.
+
+Here is the [GitHub issue] for [eslint-config-react-app].
+
+## Plugin and dependency
+
+The problem is when one plugin uses another plugin,
+it should always declare the dependency as a `peer dependency`.
+
+The reason is simple.
+
+The host application (ESLint in this case) controls and loads its plugins.
+If the host application is not designed to support loading multiple versions of the same plugin at the same time,
+which most of them don't, then the result is an undefined behavior.
+
+That's why ESLint plainly detects and disallows it.
+
+Yes, that means the consuming repository needs to add the dependency themselves.
+Any version incompatibility in the dependency graph would lead to the [doppelgängers] problem.
+
+That is an inherited problem of NodeJS resolution algorithm, and is a topic for another day.
+
+Happy coding, 🧑‍💻
+
+[@typescript-eslint/eslint-plugin]: https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin
+[eslint-config-react-app]: https://github.com/facebook/create-react-app/tree/main/packages/eslint-config-react-app
+[GitHub issue]: https://github.com/facebook/create-react-app/issues/12400
+[doppelgängers]: https://rushjs.io/pages/advanced/npm_doppelgangers/

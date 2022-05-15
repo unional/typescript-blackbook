@@ -3286,7 +3286,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/experimental-utils@npm:^5.0.0, @typescript-eslint/experimental-utils@npm:^5.23.0":
+"@typescript-eslint/experimental-utils@npm:^5.0.0":
   version: 5.23.0
   resolution: "@typescript-eslint/experimental-utils@npm:5.23.0"
   dependencies:
@@ -3442,9 +3442,7 @@ __metadata:
   dependencies:
     "@typescript-eslint/eslint-plugin": 5.4
     eslint: ^8.15.0
-    eslint-config-prettier: ^8.5.0
     eslint-config-react-app: ^7.0.1
-    eslint-plugin-harmony: ^7.0.1
   languageName: unknown
   linkType: soft
 
@@ -6030,17 +6028,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^8.5.0":
-  version: 8.5.0
-  resolution: "eslint-config-prettier@npm:8.5.0"
-  peerDependencies:
-    eslint: ">=7.0.0"
-  bin:
-    eslint-config-prettier: bin/cli.js
-  checksum: 0d0f5c32e7a0ad91249467ce71ca92394ccd343178277d318baf32063b79ea90216f4c81d1065d60f96366fdc60f151d4d68ae7811a58bd37228b84c2083f893
-  languageName: node
-  linkType: hard
-
 "eslint-config-react-app@npm:^7.0.1":
   version: 7.0.1
   resolution: "eslint-config-react-app@npm:7.0.1"
@@ -6096,20 +6083,6 @@ __metadata:
     "@babel/plugin-transform-react-jsx": ^7.14.9
     eslint: ^8.1.0
   checksum: 30e63c5357b0b5571f39afed51e59c140084f4aa53c106b1fd04f26da42b268908466daa6020b92943e71409bdaee1c67202515ed9012404d027cc92cb03cefa
-  languageName: node
-  linkType: hard
-
-"eslint-plugin-harmony@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "eslint-plugin-harmony@npm:7.0.1"
-  dependencies:
-    "@typescript-eslint/experimental-utils": ^5.23.0
-  peerDependencies:
-    "@typescript-eslint/eslint-plugin": ^5.0.0
-    "@typescript-eslint/parser": ^5.0.0
-    eslint: ">=8.4.0"
-    eslint-config-prettier: ^8.0.0
-  checksum: 2131f12e75f37aa7b3cd9f4ec85a0fa681ac522941fc3064200b5586c352665f2f4be4cdaf9f5a8b009a7d7f5c22e223714dd6a0be647c2d9acb163841c42772
   languageName: node
   linkType: hard
 

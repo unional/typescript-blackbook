@@ -1,2 +1,4 @@
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q[NPM version]npm-url [GitHub NodeJS]github-action-url\\E$"}
 {"rule":"HOW_TO_HYPHEN","sentence":"^\\QI would recommend having a quick read through of the How to TypeScript section, and then check out the Supporting Tools section to find out how to set up your project, and use the rest of the book for reference as you need them.\\E$"}
+
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q- ...\\node_modules\\@typescript-eslint\\eslint-plugin\\dist\\index.js (loaded in \".eslintrc.json\")\n- ...\\node_modules\\eslint-config-react-app\\node_modules\\@typescript-eslint\\eslint-plugin\\dist\\index.js (loaded in \".eslintrc.json » eslint-config-react-app#overrides[0]\")\n```\\E$"}
