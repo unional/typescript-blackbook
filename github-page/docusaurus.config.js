@@ -9,7 +9,7 @@ const config = {
   title: 'TypeScript Guidelines',
   tagline: 'How to use TypeScript most efficiently',
   url: 'http://unional.github.io',
-  baseUrl: '/',
+  baseUrl: '/typescript-guidelines/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
