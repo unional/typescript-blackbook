@@ -20,3 +20,8 @@ transpilers
 transpiles
 tsx
 eslint
+
+@typescript-eslint
+eslint-plugin
+eslint-config-react-app
+eslintrc
