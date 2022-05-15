@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>TypeScript Guidelines Blog</title>
-        <link>http://unional.github.io/blog</link>
+        <link>http://unional.github.io/typescript-guidelines/blog</link>
         <description>TypeScript Guidelines Blog</description>
         <lastBuildDate>Sat, 14 May 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,7 +10,7 @@
         <language>en</language>
         <item>
             <title><![CDATA[TypeScript is ... an abstraction]]></title>
-            <link>http://unional.github.io/blog/2022-typescript-is-abstraction</link>
+            <link>http://unional.github.io/typescript-guidelines/blog/2022-typescript-is-abstraction</link>
             <guid>2022-typescript-is-abstraction</guid>
             <pubDate>Sat, 14 May 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[[TypeScript 4.7] is just around the corner.]]></description>

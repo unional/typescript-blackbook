@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://unional.github.io/blog</id>
+    <id>http://unional.github.io/typescript-guidelines/blog</id>
     <title>TypeScript Guidelines Blog</title>
     <updated>2022-05-14T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://unional.github.io/blog"/>
+    <link rel="alternate" href="http://unional.github.io/typescript-guidelines/blog"/>
     <subtitle>TypeScript Guidelines Blog</subtitle>
-    <icon>http://unional.github.io/img/favicon.ico</icon>
+    <icon>http://unional.github.io/typescript-guidelines/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[TypeScript is ... an abstraction]]></title>
         <id>2022-typescript-is-abstraction</id>
-        <link href="http://unional.github.io/blog/2022-typescript-is-abstraction"/>
+        <link href="http://unional.github.io/typescript-guidelines/blog/2022-typescript-is-abstraction"/>
         <updated>2022-05-14T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[[TypeScript 4.7] is just around the corner.]]></summary>
         <content type="html"><![CDATA[<p><a href="https://devblogs.microsoft.com/typescript/announcing-typescript-4-7-rc/" target="_blank" rel="noopener noreferrer">TypeScript 4.7</a> is just around the corner.</p><p>I feel like it is a good time for me to update this TypeScript guidelines

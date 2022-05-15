@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgithub_page=self.webpackChunkgithub_page||[]).push([[535],{5641:function(t){t.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"TypeScript is ... an abstraction","permalink":"/typescript-guidelines/blog/2022-typescript-is-abstraction"}]}')}}]);
