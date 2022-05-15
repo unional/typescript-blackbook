@@ -56,15 +56,15 @@ const config = {
     ({
       navbar: {
         title: 'TypeScript Guidelines',
-        // logo: {
-        //   alt: 'TypeScript Guidelines Logo',
-        //   src: 'img/logo.svg',
-        // },
+        logo: {
+          alt: 'TypeScript Guidelines Logo',
+          src: 'img/logo.svg',
+        },
         items: [
           { to: '/blog', label: 'Blog', position: 'left' },
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'README',
             position: 'left',
             label: 'Guidelines',
           },
@@ -83,7 +83,7 @@ const config = {
             items: [
               {
                 label: 'Guidelines',
-                to: '/docs/intro',
+                to: '/docs/',
               },
             ],
           },
@@ -114,7 +114,7 @@ const config = {
             ],
           },
         ],
-      //  copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+       copyright: `Copyright © ${new Date().getFullYear()} by unional`,
       },
       prism: {
         theme: lightCodeTheme,

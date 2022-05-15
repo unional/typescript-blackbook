@@ -1,8 +1,4 @@
 {
-  "search.exclude": {
-    "**/.yarn": true
-  },
-  "typescript.tsdk": "node_modules\\typescript\\lib",
   "cSpell.words": [
     "apos",
     "clsx",
@@ -10,13 +6,29 @@
     "horiz",
     "stroustrup"
   ],
+  "ltex.enabled": [
+    "bibtex",
+    "context",
+    "context.tex",
+    "html",
+    "latex",
+    "markdown",
+    "mdx",
+    "org",
+    "restructuredtext",
+    "rsweave"
+  ],
+  "markdownlint.config": {
+    "MD013": false,
+    "MD024": false,
+    "MD033": false,
+    "default": true
+  },
   "markdownlint.ignore": [
     "LICENSE"
   ],
-  "markdownlint.config": {
-    "default": true,
-    "MD013": false,
-    "MD024": false,
-    "MD033": false
-  }
+  "search.exclude": {
+    "**/.yarn": true
+  },
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }
