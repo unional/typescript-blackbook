@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'TypeScript Guidelines',
-  tagline: 'How to use TypeScript most efficiently',
+  tagline: 'How to use TypeScript efficiently',
   url: 'http://unional.github.io',
   baseUrl: '/typescript-guidelines/',
   onBrokenLinks: 'throw',
