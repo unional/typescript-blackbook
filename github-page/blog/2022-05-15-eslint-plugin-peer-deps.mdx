@@ -18,7 +18,7 @@ ESLint couldn't determine the plugin "@typescript-eslint" uniquely.
 
 It is caused by [eslint-config-react-app] using [@typescript-eslint/eslint-plugin] as a `dependency` instead of a `peer dependency`.
 
-Here is the [GitHub issue] for [eslint-config-react-app].
+Here is the [GitHub issue] in [eslint-config-react-app] (also [here][#11828]).
 
 ## Plugin and dependency
 
@@ -33,6 +33,8 @@ which most of them don't, then the result is an undefined behavior.
 
 That's why ESLint plainly detects and disallows it.
 
+It also mentioned it in [its doc].
+
 Yes, that means the consuming repository needs to add the dependency themselves.
 Any version incompatibility in the dependency graph would lead to the [doppelgängers] problem.
 
@@ -41,6 +43,8 @@ That is an inherited problem of NodeJS resolution algorithm, and is a topic for 
 Happy coding, 🧑‍💻
 
 [@typescript-eslint/eslint-plugin]: https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin
+[#11828]: https://github.com/facebook/create-react-app/issues/11828
+[doppelgängers]: https://rushjs.io/pages/advanced/npm_doppelgangers/
 [eslint-config-react-app]: https://github.com/facebook/create-react-app/tree/main/packages/eslint-config-react-app
 [GitHub issue]: https://github.com/facebook/create-react-app/issues/12400
-[doppelgängers]: https://rushjs.io/pages/advanced/npm_doppelgangers/
+[its doc]: https://eslint.org/docs/developer-guide/shareable-configs#publishing-a-shareable-config
