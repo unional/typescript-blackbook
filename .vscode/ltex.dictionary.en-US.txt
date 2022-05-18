@@ -25,3 +25,5 @@ eslint
 eslint-plugin
 eslint-config-react-app
 eslintrc
+
+npm
