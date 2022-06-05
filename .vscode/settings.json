@@ -31,6 +31,16 @@
   "search.exclude": {
     "**/.yarn": true
   },
+  "emojisense.languages": {
+    "markdown": true,
+    "mdx": true,
+    "plaintext": {
+      "markupCompletionsEnabled": false,
+      "emojiDecoratorsEnabled": false
+    },
+    "scminput": true,
+    "git-commit": true
+  },
   "typescript.tsdk": "node_modules\\typescript\\lib",
   "cSpell.enableFiletypes": [
     "mdx"
