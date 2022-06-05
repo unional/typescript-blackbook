@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgithub_page=self.webpackChunkgithub_page||[]).push([[748],{6268:function(e){e.exports=JSON.parse('{"label":"typescript","permalink":"/typescript-guidelines/blog/tags/typescript","allTagsPath":"/typescript-guidelines/blog/tags","count":4}')}}]);
