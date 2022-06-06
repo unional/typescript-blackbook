@@ -42,7 +42,7 @@ const config = {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/unional/typescript-guidelines/tree/main/github-page/blog',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
