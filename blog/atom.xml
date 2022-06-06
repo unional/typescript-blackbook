@@ -13,7 +13,7 @@
         <link href="http://unional.github.io/typescript-guidelines/blog/2022-tsc-esm-fix"/>
         <updated>2022-06-05T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[TypeScript 4.7 is released 🎉!]]></summary>
-        <content type="html"><![CDATA[<p>TypeScript 4.7 is released 🎉!</p><p>Finally the wait is over.
+        <content type="html"><![CDATA[<p>TypeScript 4.7 is released 🎉!</p><p>The wait is finally over.
 You are excited to start your migration.</p><p>So you update your <code>package.json</code>,
 update your <code>tsconfig.json</code>,
 and volia, you are greeted with a boat load of errors.</p><p>What you need to do is to update your <code>import</code> statements:</p><ul><li>add <code>.js</code> extension for files, or</li><li>add <code>/index.js</code> for folders.</li></ul><p>You can do that manually,
