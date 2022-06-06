@@ -1,4 +1,7 @@
 {
+  "cSpell.enableFiletypes": [
+    "mdx"
+  ],
   "cSpell.words": [
     "apos",
     "clsx",
@@ -7,6 +10,16 @@
     "horiz",
     "stroustrup"
   ],
+  "emojisense.languages": {
+    "git-commit": true,
+    "markdown": true,
+    "mdx": true,
+    "plaintext": {
+      "emojiDecoratorsEnabled": false,
+      "markupCompletionsEnabled": false
+    },
+    "scminput": true
+  },
   "ltex.enabled": [
     "bibtex",
     "context",
@@ -31,18 +44,5 @@
   "search.exclude": {
     "**/.yarn": true
   },
-  "emojisense.languages": {
-    "markdown": true,
-    "mdx": true,
-    "plaintext": {
-      "markupCompletionsEnabled": false,
-      "emojiDecoratorsEnabled": false
-    },
-    "scminput": true,
-    "git-commit": true
-  },
-  "typescript.tsdk": "node_modules\\typescript\\lib",
-  "cSpell.enableFiletypes": [
-    "mdx"
-  ]
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }
