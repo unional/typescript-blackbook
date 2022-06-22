@@ -23,7 +23,7 @@
     "chalk": "^5.0.0",
     "glob": "^8.0.3",
     "husky": "^8.0.1",
-    "markdownlint": "^0.25.1",
+    "markdownlint": "^0.26.0",
     "remark": "^14.0.2",
     "remark-cli": "^10.0.1",
     "remark-code-import": "^1.0.0",

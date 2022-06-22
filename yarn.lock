@@ -6890,7 +6890,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"entities@npm:^3.0.1":
+"entities@npm:^3.0.1, entities@npm:~3.0.1":
   version: 3.0.1
   resolution: "entities@npm:3.0.1"
   checksum: aaf7f12033f0939be91f5161593f853f2da55866db55ccbf72f45430b8977e2b79dbd58c53d0fdd2d00bd7d313b75b0968d09f038df88e308aa97e39f9456572
@@ -6901,13 +6901,6 @@ __metadata:
   version: 4.3.0
   resolution: "entities@npm:4.3.0"
   checksum: f6abacfe1f4ee06a98aae713ed0b97d4dbd1fcd4c90840d16c6c7535a4e34df1445614c987b7b359ab8362823f050158b8fd435652f0ac18c45683174cbec6ce
-  languageName: node
-  linkType: hard
-
-"entities@npm:~2.1.0":
-  version: 2.1.0
-  resolution: "entities@npm:2.1.0"
-  checksum: a10a877e489586a3f6a691fe49bf3fc4e58f06c8e80522f08214a5150ba457e7017b447d4913a3fa041bda06ee4c92517baa4d8d75373eaa79369e9639225ffd
   languageName: node
   linkType: hard
 
@@ -9527,12 +9520,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"linkify-it@npm:^3.0.1":
-  version: 3.0.3
-  resolution: "linkify-it@npm:3.0.3"
+"linkify-it@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "linkify-it@npm:4.0.1"
   dependencies:
     uc.micro: ^1.0.1
-  checksum: 31367a4bb70c5bbc9703246236b504b0a8e049bcd4e0de4291fa50f0ebdebf235b5eb54db6493cb0b1319357c6eeafc4324c9f4aa34b0b943d9f2e11a1268fbc
+  checksum: 3e0a29921269c14eb7ac6f5db2da68d4854ea9acca6e9014a323f75f2dd39b197ffab57c1fbd6a906ceb021aad3ee6d7ba7d0181236dd9630ffc452b392f7f71
   languageName: node
   linkType: hard
 
@@ -9860,27 +9853,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"markdown-it@npm:12.3.2":
-  version: 12.3.2
-  resolution: "markdown-it@npm:12.3.2"
+"markdown-it@npm:13.0.1":
+  version: 13.0.1
+  resolution: "markdown-it@npm:13.0.1"
   dependencies:
     argparse: ^2.0.1
-    entities: ~2.1.0
-    linkify-it: ^3.0.1
+    entities: ~3.0.1
+    linkify-it: ^4.0.1
     mdurl: ^1.0.1
     uc.micro: ^1.0.5
   bin:
     markdown-it: bin/markdown-it.js
-  checksum: 890555711c1c00fa03b936ca2b213001a3b9b37dea140d8445ae4130ce16628392aad24b12e2a0a9935336ca5951f2957a38f4e5309a2e38eab44e25ff32a41e
+  checksum: faf5891d389dc433bcf21d3fbff2009beb044b42b117c92f4848899780ca1a2282a209e3ff4672db4afed726a7248304ec473e6e242a7d6498af7113d31974e7
   languageName: node
   linkType: hard
 
-"markdownlint@npm:^0.25.1":
-  version: 0.25.1
-  resolution: "markdownlint@npm:0.25.1"
+"markdownlint@npm:^0.26.0":
+  version: 0.26.0
+  resolution: "markdownlint@npm:0.26.0"
   dependencies:
-    markdown-it: 12.3.2
-  checksum: 3daf6aae6ad96754960611353658ef8daeeec17b44ebe8dec6c67a863ed39f33417d32f120264f0e4146be25a40ca82943da5c65ef8401008a03c0022c07890f
+    markdown-it: 13.0.1
+  checksum: 0df2f7d66cb0030828dfc41bbdf882aa26fc9ffcc1d6d40d60759db2ea59c56ded8a89fbec12d2ac228509724eda7e908dfd1b843d795f2fe04ff7ba587226b8
   languageName: node
   linkType: hard
 
@@ -14110,7 +14103,7 @@ __metadata:
     chalk: ^5.0.0
     glob: ^8.0.3
     husky: ^8.0.1
-    markdownlint: ^0.25.1
+    markdownlint: ^0.26.0
     remark: ^14.0.2
     remark-cli: ^10.0.1
     remark-code-import: ^1.0.0
