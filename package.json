@@ -25,7 +25,7 @@
     "husky": "^8.0.1",
     "markdownlint": "^0.26.0",
     "remark": "^14.0.2",
-    "remark-cli": "^10.0.1",
+    "remark-cli": "^11.0.0",
     "remark-code-import": "^1.0.0",
     "ts-node": "^10.7.0",
     "turbo": "^1.2.9",
