@@ -32,7 +32,7 @@ You **must** declare types for function parameters in function declaration.
 
 ```ts
 function fool(name: string) {
-  reutnr `Hi ${name} fool`
+  return `Hi ${name} fool`
 }
 ```
 
