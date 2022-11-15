@@ -6,31 +6,15 @@
     "email": "homawong@gmail.com",
     "url": "https://github.com/unional"
   },
-  "workspaces": [
-    "examples/*",
-    "github-page"
-  ],
   "scripts": {
     "build": "turbo run build",
+    "build:doc": "turbo run build && pnpm page build",
     "lint": "turbo run lint",
     "page": "pnpm --filter github-page",
     "verify": "turbo run verify"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.0.0",
-    "@commitlint/config-conventional": "^17.0.0",
-    "@types/glob": "^8.0.0",
-    "chalk": "^5.0.0",
-    "glob": "^8.0.3",
-    "husky": "^8.0.1",
-    "markdownlint": "^0.26.0",
-    "remark": "^14.0.2",
-    "remark-cli": "^11.0.0",
-    "remark-code-import": "^1.0.0",
-    "ts-node": "^10.7.0",
-    "turbo": "^1.2.9",
-    "type-plus": "^4.9.1",
-    "typescript": "^4.6.4"
+    "turbo": "^1.6.3"
   },
   "packageManager": "pnpm@7.16.0"
 }
