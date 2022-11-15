@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgithub_page=self.webpackChunkgithub_page||[]).push([[859],{1454:function(e){e.exports=JSON.parse('{"label":"ESM","permalink":"/typescript-guidelines/blog/tags/esm","allTagsPath":"/typescript-guidelines/blog/tags","count":2}')}}]);
