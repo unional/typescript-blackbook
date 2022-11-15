@@ -5,4 +5,7 @@ on:
 
 jobs:
   code:
-    uses: justland/.github/.github/workflows/yarn2-library-verify-linux.yml@main
+    uses: unional/.github/.github/workflows/pnpm-verify.yml@main
+    secrets: inherit
+    with:
+      node-version: "[18]"
