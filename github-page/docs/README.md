@@ -4,9 +4,9 @@ sidebar_position: 1
 
 # Welcome
 
-Welcome to the TypeScript Guidebook.
+Welcome to TypeScript Guidelines
 
-This guidebook focus on *how to get the most out of TypeScript with minimal effort*.
+This guideline focus on *how to get the most out of TypeScript with minimal effort*.
 
 To achieve that goal,
 following some coding styles is a good place to start.
