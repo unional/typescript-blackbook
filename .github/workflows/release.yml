@@ -1,0 +1,19 @@
+name: release
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  code:
+    uses: unional/.github/.github/workflows/pnpm-verify.yml@main
+    secrets: inherit
+    with:
+      node-version: "[18]"
+
+  docs:
+    uses: unional/.github/.github/workflows/pnpm-docs.yml@main
+    needs: code
+    secrets: inherit
+    with:
+      publish_dir: ./github-page/build
