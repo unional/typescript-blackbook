@@ -1,5 +1,4 @@
 {
-  "name": "typescript-guidelines",
   "private": true,
   "author": {
     "name": "Homa Wong (unional)",
@@ -8,10 +7,10 @@
   },
   "scripts": {
     "build": "turbo run build",
-    "build:doc": "turbo run build && pnpm page build",
+    "build:doc": "turbo run build:doc",
     "lint": "turbo run lint",
     "page": "pnpm --filter github-page",
-    "verify": "turbo run verify"
+    "verify": "turbo run lint build build:doc depcheck coverage size"
   },
   "devDependencies": {
     "turbo": "^1.6.3"

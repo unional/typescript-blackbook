@@ -20,6 +20,11 @@
     },
     "scminput": true
   },
+  "files.associations": {
+    "*.excalidraw": "json",
+    "*.excalidrawlib": "json",
+    "*.mdx": "markdown"
+  },
   "ltex.enabled": [
     "bibtex",
     "context",

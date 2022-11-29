@@ -14,6 +14,11 @@
         "lib/**"
       ]
     },
+    "build:doc": {
+      "dependsOn": [
+        "^build"
+      ]
+    },
     "clean": {
       "cache": false
     },
@@ -36,15 +41,6 @@
       ]
     },
     "test": {
-      "dependsOn": [
-        "^build"
-      ],
-      "inputs": [
-        "ts/**/*.tsx?"
-      ]
-    },
-    "verify": {},
-    "watch": {
       "dependsOn": [
         "^build"
       ],
