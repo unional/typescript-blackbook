@@ -44,7 +44,8 @@
     "default": true
   },
   "markdownlint.ignore": [
-    "LICENSE"
+    "LICENSE",
+    "slides/*.slides.md"
   ],
   "search.exclude": {
     "**/.yarn": true
