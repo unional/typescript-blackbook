@@ -10,7 +10,7 @@ export function Header() {
         <nav className="flex gap-1 p-2 items-center">
           <div className="flex pr-4">
             <a aria-label="home" href="/" className="hover:outline rounded-sm py-1 px-2 outline-sky-700">
-              <div className="flex">
+              <div className="flex font-chalk">
                 <div className="pr-1">
                   <img src="/svgs/ts-guidelines.svg" className="w-6" alt="icon" />
                 </div>
