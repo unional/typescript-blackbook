@@ -44,12 +44,12 @@ importers:
   page:
     specifiers:
       '@astrojs/mdx': ^0.15.0
-      '@astrojs/solid-js': ^1.2.3
+      '@astrojs/solid-js': ^2.0.0
       astro: ^1.6.11
       solid-js: ^1.4.3
     dependencies:
       '@astrojs/mdx': 0.15.0_astro@1.6.11
-      '@astrojs/solid-js': 1.2.3_solid-js@1.6.2
+      '@astrojs/solid-js': 2.0.0_solid-js@1.6.2
       astro: 1.6.11
       solid-js: 1.6.2
 
@@ -307,9 +307,9 @@ packages:
       prismjs: 1.29.0
     dev: false
 
-  /@astrojs/solid-js/1.2.3_solid-js@1.6.2:
-    resolution: {integrity: sha512-YyWQVcIeUMGKTnK3myXmBrG6dfYL5qiQNn8fv50jV0nPgahLeSUTIVxtt5WtqmbFr5kGTwDyk63TZoUvCUWJXA==}
-    engines: {node: ^14.18.0 || >=16.12.0}
+  /@astrojs/solid-js/2.0.0_solid-js@1.6.2:
+    resolution: {integrity: sha512-Q2gsLhDqhKkWyEVslQ9V8yokbvkBEyp4m+rp+dccaky726dbgqTT9gZoyqKwi5YTdsIpQytqHJP0fy40YoM7Iw==}
+    engines: {node: '>=16.12.0'}
     peerDependencies:
       solid-js: ^1.4.3
     dependencies:
