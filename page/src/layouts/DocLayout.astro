@@ -1,0 +1,41 @@
+---
+export interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/svgs/ts-guidelines.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot name="header" />
+    <div class="flex min-h-screen bg-yellow-400">
+      <nav class="bg-slate-500">
+        <slot name="docList">
+          <div class="">docList</div>
+        </slot>
+      </nav>
+      <main class="bg-red-300 w-full">
+        <slot name="content">content</slot>
+      </main>
+    </div>
+  </body>
+</html>
+<style is:global>
+  html {
+    font-family: system-ui, sans-serif;
+    background-color: #f6f6f6;
+  }
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+      Courier New, monospace;
+  }
+</style>

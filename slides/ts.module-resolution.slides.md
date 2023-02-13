@@ -75,3 +75,5 @@ autoPlayMedia: true
 - Case by case {.fragment .fade-left}
   - Can you switch?
 - Eventually `Node16` {.fragment .fade-left}
+- with `module: ES*`, need dynamic import
+
