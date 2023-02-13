@@ -14,9 +14,9 @@
     "verify": "turbo run lint build build:doc depcheck coverage size"
   },
   "devDependencies": {
-    "prettier": "^2.8.1",
-    "prettier-plugin-astro": "^0.7.0",
-    "turbo": "^1.6.3"
+    "prettier": "^2.8.4",
+    "prettier-plugin-astro": "^0.7.2",
+    "turbo": "^1.7.4"
   },
   "packageManager": "pnpm@7.27.0"
 }

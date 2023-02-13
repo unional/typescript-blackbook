@@ -1,0 +1,5 @@
+.changeset/*.md
+**/CHANGELOG.md
+**/LICENSE
+**/docs
+slides/*.slides.md

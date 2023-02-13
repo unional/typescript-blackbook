@@ -1,54 +1,45 @@
 {
-  "cSpell.enableFiletypes": [
-    "mdx"
-  ],
-  "cSpell.words": [
-    "apos",
-    "clsx",
-    "codeql",
-    "dzharii",
-    "horiz",
-    "stroustrup"
-  ],
-  "emojisense.languages": {
-    "git-commit": true,
-    "markdown": true,
-    "mdx": true,
-    "plaintext": {
-      "emojiDecoratorsEnabled": false,
-      "markupCompletionsEnabled": false
-    },
-    "scminput": true
-  },
-  "files.associations": {
-    "*.excalidraw": "json",
-    "*.excalidrawlib": "json",
-    "*.mdx": "markdown"
-  },
-  "ltex.enabled": [
-    "bibtex",
-    "context",
-    "context.tex",
-    "html",
-    "latex",
-    "markdown",
-    "mdx",
-    "org",
-    "restructuredtext",
-    "rsweave"
-  ],
-  "markdownlint.config": {
-    "MD013": false,
-    "MD024": false,
-    "MD033": false,
-    "default": true
-  },
-  "markdownlint.ignore": [
-    "LICENSE",
-    "slides/*.slides.md"
-  ],
-  "search.exclude": {
-    "**/.yarn": true
-  },
-  "typescript.tsdk": "node_modules\\typescript\\lib"
+	"cSpell.enableFiletypes": [
+		"mdx"
+	],
+	"cSpell.words": [
+		"apos",
+		"clsx",
+		"codeql",
+		"dzharii",
+		"horiz",
+		"stroustrup"
+	],
+	"emojisense.languages": {
+		"git-commit": true,
+		"markdown": true,
+		"mdx": true,
+		"plaintext": {
+			"emojiDecoratorsEnabled": false,
+			"markupCompletionsEnabled": false
+		},
+		"scminput": true
+	},
+	"files.associations": {
+		"*.excalidraw": "json",
+		"*.excalidrawlib": "json",
+		"*.mdx": "markdown"
+	},
+	"ltex.enabled": [
+		"bibtex",
+		"context",
+		"context.tex",
+		"html",
+		"latex",
+		"markdown",
+		"mdx",
+		"org",
+		"restructuredtext",
+		"rsweave"
+	],
+	"markdownlint.ignore": ".markdownlintignore",
+	"search.exclude": {
+		"**/.yarn": true
+	},
+	"typescript.tsdk": "node_modules\\typescript\\lib"
 }
