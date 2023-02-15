@@ -4,9 +4,9 @@ sidebar_position: 1
 
 # Welcome
 
-Welcome to TypeScript Guidelines
+Welcome to TypeScript Blackbook
 
-This guideline focus on *how to get the most out of TypeScript with minimal effort*.
+This book focus on *how to get the most out of TypeScript with minimal effort*.
 
 To achieve that goal,
 following some coding styles is a good place to start.
@@ -17,9 +17,9 @@ You need to know *why* should you write code in certain way,
 as well as the design and the limitations of the language itself,
 so that you have the right *mindset* and *approach* the problem and come to a solution effectively.
 
-Therefore, this book is not just a style guide or just about best practices.
+Therefore, this book covers more than just style guide and best practices.
 
-I will cover everything related to TypeScript in order to achieve that goal.
+It needs to cover everything related to TypeScript in order to achieve that goal.
 
 This book is organized into a few sections:
 

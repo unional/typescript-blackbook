@@ -139,4 +139,4 @@ You **should not** use object as default parameters.
 
 ## Related Topics
 
-- [optional parameters](/pages/03-typescript-syntax/optional-parameters.md)
+- [optional parameters](/docs/pages/03-typescript-syntax/optional-parameters.md)

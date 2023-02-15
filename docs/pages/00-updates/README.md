@@ -4,11 +4,11 @@
 
 TypeScript 4.0 has landed on August 20th, 2020.
 
-- [Variadic Tuple Types](/pages/04-typescript-syntax/tuple-type.md#variadic-tuple-types)
-- [Labeled Tuple](/pages/04-typescript-syntax/tuple-type.md#labeled-tuple-elements)
+- [Variadic Tuple Types](/docs/pages/04-typescript-syntax/tuple-type.md#variadic-tuple-types)
+- [Labeled Tuple](/docs/pages/04-typescript-syntax/tuple-type.md#labeled-tuple-elements)
 - Class Property Inference from Constructors
 - Short-Circuting Assignement Operators
-- [`unknown` on `catch` clauses](/pages/04-typescript-syntax/unknown.md#unknown-on-catch-clauses)
+- [`unknown` on `catch` clauses](/docs/pages/04-typescript-syntax/unknown.md#unknown-on-catch-clauses)
 - Custom JSX Factories
 
 ## TypeScript 3.9

@@ -6,10 +6,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'TypeScript Guidelines',
+  title: 'TypeScript Blackbook',
   tagline: 'How to use TypeScript efficiently',
   url: 'http://unional.github.io',
-  baseUrl: '/typescript-guidelines/',
+  baseUrl: '/typescript-blackbook/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -17,7 +17,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'unional', // Usually your GitHub org/user name.
-  projectName: 'typescript-guidelines', // Usually your repo name.
+  projectName: 'typescript-blackbook', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -55,9 +55,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'TypeScript Guidelines',
+        title: 'TypeScript Blackbook',
         logo: {
-          alt: 'TypeScript Guidelines Logo',
+          alt: 'TypeScript Blackbook Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -66,10 +66,10 @@ const config = {
             type: 'doc',
             docId: 'README',
             position: 'left',
-            label: 'Guidelines',
+            label: 'Blackbook',
           },
           {
-            href: 'https://github.com/unional/typescript-guidelines',
+            href: 'https://github.com/unional/typescript-blackbook',
             label: 'GitHub',
             position: 'right',
           },
@@ -82,7 +82,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Guidelines',
+                label: 'Blackbook',
                 to: '/docs/',
               },
             ],
@@ -109,7 +109,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/unional/typescript-guidelines',
+                href: 'https://github.com/unional/typescript-blackbook',
               },
             ],
           },

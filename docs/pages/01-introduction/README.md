@@ -69,7 +69,7 @@ and you will not get much benefit out of TypeScript without tools.
 
 These tools include: transpilers, editors and IDEs, linters, formatters, test runners, bundlers, etc.
 
-We will go through them in detail in [`chapter 9`](/pages/09-tooling/README.md).
+We will go through them in detail in [`chapter 9`](/docs/pages/09-tooling/README.md).
 
 ## Stay Connected
 
@@ -79,7 +79,7 @@ We will try to address them whenever possible.
 
 ## Other Chapters
 
-- [JavaScript Syntax](/pages/02-javascript-syntax/README.md)
-- [JavaScript Features](/pages/03-javascript-features/README.md)
-- [TypeScript Syntax](/pages/04-typescript-syntax/README.md)
-- [TypeScript Features](/pages/05-typescript-features/README.md)
+- [JavaScript Syntax](/docs/pages/02-javascript-syntax/README.md)
+- [JavaScript Features](/docs/pages/03-javascript-features/README.md)
+- [TypeScript Syntax](/docs/pages/04-typescript-syntax/README.md)
+- [TypeScript Features](/docs/pages/05-typescript-features/README.md)
