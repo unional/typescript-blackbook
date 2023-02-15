@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgithub_page=self.webpackChunkgithub_page||[]).push([[121],{8070:t=>{t.exports=JSON.parse('[{"label":"typescript","permalink":"/typescript-blackbook/docs/tags/typescript","count":1},{"label":"tsconfig","permalink":"/typescript-blackbook/docs/tags/tsconfig","count":1}]')}}]);
