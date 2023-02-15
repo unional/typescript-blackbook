@@ -1,0 +1,38 @@
+---
+slug: naming-convention
+title: "Naming Convention"
+authors: [unional]
+tags: [file, folder, project, naming]
+---
+
+# Naming Convention
+
+You **should** name your file and folder in `snake_case` instead of `camelCase` or `PascalCase`.
+
+> Why?
+
+Some file systems are case insensitive (yes, I'm tooking at you, Windows).
+That means `ApiSpec == apispec == APISpec`.
+
+To avoid confusion, `camelCase` and `PascalCase` should be avoided.
+That leave us with `snake_case` or `kebab-case`.
+
+The benefits of `snake_case` over `kebab-case` is that,
+in most cases, operating system treats `snake_case` as a single word,
+and treats `kebab-case` as a composed word.
+
+For example, when you double click on a `kebab-case` string,
+a single word will be selected (i.e. either `kebab` or `case` will be selected).
+
+On the other hand, double click on a `snake_case` string will select the whole string.
+
+The same goes to renaming.
+
+That is why I'm now recommend `snake_case` over `kebab-case`,
+eventhough `_` takes an additional pinky press to type.
+
+## References
+
+Another interesting take from [Straw Hat's ADRs][straw_hat_adr_file_convention].
+
+[straw_hat_adr_file_convention]: https://straw-hat-team.github.io/adr/3122196229/README.html
