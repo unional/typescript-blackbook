@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>TypeScript Guidelines Blog</title>
-        <link>http://unional.github.io/typescript-guidelines/blog</link>
-        <description>TypeScript Guidelines Blog</description>
+        <title>TypeScript Blackbook Blog</title>
+        <link>http://unional.github.io/typescript-blackbook/blog</link>
+        <description>TypeScript Blackbook Blog</description>
         <lastBuildDate>Sun, 05 Jun 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
             <title><![CDATA[Fixing TypeScript code for ESM with `tsc-esm-fix`]]></title>
-            <link>http://unional.github.io/typescript-guidelines/blog/2022-tsc-esm-fix</link>
-            <guid>http://unional.github.io/typescript-guidelines/blog/2022-tsc-esm-fix</guid>
+            <link>http://unional.github.io/typescript-blackbook/blog/2022-tsc-esm-fix</link>
+            <guid>http://unional.github.io/typescript-blackbook/blog/2022-tsc-esm-fix</guid>
             <pubDate>Sun, 05 Jun 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[TypeScript 4.7 is released 🎉!]]></description>
             <content:encoded><![CDATA[<p>TypeScript 4.7 is released 🎉!</p><p>The wait is finally over.
@@ -36,8 +36,8 @@ then the command is:</p><div class="language-sh codeBlockContainer_hFIz theme-co
         </item>
         <item>
             <title><![CDATA[Migrating to ESM]]></title>
-            <link>http://unional.github.io/typescript-guidelines/blog/2022-migrate-to-esm</link>
-            <guid>http://unional.github.io/typescript-guidelines/blog/2022-migrate-to-esm</guid>
+            <link>http://unional.github.io/typescript-blackbook/blog/2022-migrate-to-esm</link>
+            <guid>http://unional.github.io/typescript-blackbook/blog/2022-migrate-to-esm</guid>
             <pubDate>Tue, 17 May 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[ESM, or ECMAScript Module, was original part of the ES6/ES2015 specification.]]></description>
             <content:encoded><![CDATA[<p>ESM, or ECMAScript Module, was original part of the ES6/ES2015 specification.
@@ -59,8 +59,8 @@ You have to disable them for now.</p><p>To me, I found that <a href="https://git
         </item>
         <item>
             <title><![CDATA[@typescript-eslint/eslint-plugin should be a peer dependency]]></title>
-            <link>http://unional.github.io/typescript-guidelines/blog/2022-eslint-plugin-peer-deps</link>
-            <guid>http://unional.github.io/typescript-guidelines/blog/2022-eslint-plugin-peer-deps</guid>
+            <link>http://unional.github.io/typescript-blackbook/blog/2022-eslint-plugin-peer-deps</link>
+            <guid>http://unional.github.io/typescript-blackbook/blog/2022-eslint-plugin-peer-deps</guid>
             <pubDate>Sun, 15 May 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Recently I run into this problem:]]></description>
             <content:encoded><![CDATA[<p>Recently I run into this problem:</p><div class="language-sh codeBlockContainer_hFIz theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_7E7X"><pre tabindex="0" class="prism-code language-sh codeBlock_NNUx thin-scrollbar"><code class="codeBlockLines_l3yN"><span class="token-line" style="color:#393A34"><span class="token plain">ESLint couldn't determine the plugin "@typescript-eslint" uniquely.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- ...\node_modules\@typescript-eslint\eslint-plugin\dist\index.js (loaded in ".eslintrc.json")</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- ...\node_modules\eslint-config-react-app\node_modules\@typescript-eslint\eslint-plugin\dist\index.js (loaded in ".eslintrc.json » eslint-config-react-app#overrides[0]")</span><br></span></code></pre><div class="buttonGroup_h_Jm"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_jXte" aria-hidden="true"><svg class="copyButtonIcon_KHEb" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_Z7fL" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><p>It is caused by <a href="https://github.com/facebook/create-react-app/tree/main/packages/eslint-config-react-app" target="_blank" rel="noopener noreferrer">eslint-config-react-app</a> using <a href="https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin" target="_blank" rel="noopener noreferrer">@typescript-eslint/eslint-plugin</a> as a <code>dependency</code> instead of a <code>peer dependency</code>.</p><p>Here is the <a href="https://github.com/facebook/create-react-app/issues/12400" target="_blank" rel="noopener noreferrer">GitHub issue</a> in <a href="https://github.com/facebook/create-react-app/tree/main/packages/eslint-config-react-app" target="_blank" rel="noopener noreferrer">eslint-config-react-app</a> (also <a href="https://github.com/facebook/create-react-app/issues/11828" target="_blank" rel="noopener noreferrer">here</a>).</p><h2 class="anchor anchorWithStickyNavbar_kg0U" id="plugin-and-dependency">Plugin and dependency<a href="#plugin-and-dependency" class="hash-link" aria-label="Direct link to Plugin and dependency" title="Direct link to Plugin and dependency">​</a></h2><p>The problem is when one plugin uses another plugin,
@@ -74,8 +74,8 @@ Any version incompatibility in the dependency graph would lead to the <a href="h
         </item>
         <item>
             <title><![CDATA[TypeScript is ... an abstraction]]></title>
-            <link>http://unional.github.io/typescript-guidelines/blog/2022-typescript-is-abstraction</link>
-            <guid>http://unional.github.io/typescript-guidelines/blog/2022-typescript-is-abstraction</guid>
+            <link>http://unional.github.io/typescript-blackbook/blog/2022-typescript-is-abstraction</link>
+            <guid>http://unional.github.io/typescript-blackbook/blog/2022-typescript-is-abstraction</guid>
             <pubDate>Sat, 14 May 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[[TypeScript 4.7] is just around the corner.]]></description>
             <content:encoded><![CDATA[<p><a href="https://devblogs.microsoft.com/typescript/announcing-typescript-4-7-rc/" target="_blank" rel="noopener noreferrer">TypeScript 4.7</a> is just around the corner.</p><p>I feel like it is a good time for me to update this TypeScript guidelines
