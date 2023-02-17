@@ -47,7 +47,7 @@ importers:
 
   page:
     specifiers:
-      '@astrojs/mdx': ^0.16.0
+      '@astrojs/mdx': ^0.17.0
       '@astrojs/react': ^2.0.2
       '@astrojs/solid-js': ^2.0.2
       '@astrojs/tailwind': ^3.0.1
@@ -60,7 +60,7 @@ importers:
       solid-js: ^1.6.10
       tailwindcss: ^3.2.6
     dependencies:
-      '@astrojs/mdx': 0.16.0_astro@2.0.10
+      '@astrojs/mdx': 0.17.0_astro@2.0.10
       '@astrojs/react': 2.0.2_ffd5foczrxyy7gyjqbwgwcqlbq
       '@astrojs/solid-js': 2.0.2_solid-js@1.6.10
       '@astrojs/tailwind': 3.0.1_jukmciyu6aodegbctarme2zo2y
@@ -244,14 +244,14 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/mdx/0.16.0_astro@2.0.10:
-    resolution: {integrity: sha512-HNk0FhNNthI7+pLmheJyPVU36dXE5l+9UwmmnrMV6COHNZIO2t+pnWnsushEDYZjpkYITDwnXKnQAtD8Mqj4xw==}
+  /@astrojs/mdx/0.17.0_astro@2.0.10:
+    resolution: {integrity: sha512-vy4m/mwzdfDK4jC9wraFLMVwx13eXBPC8r7nkO5s8YlcFX6IDcl2LKPurP3+/ibpTei9IPQLIZOufXRDO96SYg==}
     engines: {node: '>=16.12.0'}
     dependencies:
       '@astrojs/markdown-remark': 2.0.1_astro@2.0.10
       '@astrojs/prism': 2.0.0
-      '@mdx-js/mdx': 2.1.5
-      '@mdx-js/rollup': 2.1.5
+      '@mdx-js/mdx': 2.3.0
+      '@mdx-js/rollup': 2.3.0
       acorn: 8.8.1
       es-module-lexer: 0.10.5
       estree-util-visit: 1.2.0
@@ -3399,8 +3399,8 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@mdx-js/mdx/2.1.5:
-    resolution: {integrity: sha512-zEG0lt+Bl/r5U6e0TOS7qDbsXICtemfAPquxWFsMbdzrvlWaqMGemLl+sjVpqlyaaiCiGVQBSGdCk0t1qXjkQg==}
+  /@mdx-js/mdx/2.3.0:
+    resolution: {integrity: sha512-jLuwRlz8DQfQNiUCJR50Y09CGPq3fLtmtUQfVrj79E0JWu3dvsVcxVIcfhR5h0iXu+/z++zDrYeiJqifRynJkA==}
     dependencies:
       '@types/estree-jsx': 1.0.0
       '@types/mdx': 2.0.3
@@ -3430,13 +3430,13 @@ packages:
     dependencies:
       react: 18.2.0
 
-  /@mdx-js/rollup/2.1.5:
-    resolution: {integrity: sha512-l90rSiwnEf6PnjH8uRXjZ1W0rR8p1fp1YIiDuA3uF7SOfxMQ98uymaIwI6BsX+8BC2dcWij7Racwp++JkvdOLQ==}
+  /@mdx-js/rollup/2.3.0:
+    resolution: {integrity: sha512-wLvRfJS/M4UmdqTd+WoaySEE7q4BIejYf1xAHXYvtT1du/1Tl/z2450Gg2+Hu7fh05KwRRiehiTP9Yc/Dtn0fA==}
     peerDependencies:
       rollup: '>=2'
     dependencies:
-      '@mdx-js/mdx': 2.1.5
-      '@rollup/pluginutils': 4.2.1
+      '@mdx-js/mdx': 2.3.0
+      '@rollup/pluginutils': 5.0.2
       source-map: 0.7.4
       vfile: 5.3.6
     transitivePeerDependencies:
@@ -3485,10 +3485,16 @@ packages:
       escalade: 3.1.1
     dev: false
 
-  /@rollup/pluginutils/4.2.1:
-    resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}
-    engines: {node: '>= 8.0.0'}
+  /@rollup/pluginutils/5.0.2:
+    resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
     dependencies:
+      '@types/estree': 1.0.0
       estree-walker: 2.0.2
       picomatch: 2.3.1
     dev: false
