@@ -63,8 +63,8 @@ importers:
   page:
     dependencies:
       '@astrojs/mdx':
-        specifier: ^0.17.0
-        version: 0.17.0(astro@2.0.10)(rollup@3.10.1)
+        specifier: ^0.18.0
+        version: 0.18.0(astro@2.0.10)(rollup@3.10.1)
       '@astrojs/react':
         specifier: ^2.0.2
         version: 2.0.2(@types/react-dom@18.0.10)(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)
@@ -253,7 +253,7 @@ packages:
     peerDependencies:
       astro: ^2.0.2
     dependencies:
-      '@astrojs/prism': 2.0.0
+      '@astrojs/prism': 2.1.1
       astro: 2.0.10
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.0
@@ -271,16 +271,39 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/mdx@0.17.0(astro@2.0.10)(rollup@3.10.1):
-    resolution: {integrity: sha512-vy4m/mwzdfDK4jC9wraFLMVwx13eXBPC8r7nkO5s8YlcFX6IDcl2LKPurP3+/ibpTei9IPQLIZOufXRDO96SYg==}
+  /@astrojs/markdown-remark@2.1.2(astro@2.0.10):
+    resolution: {integrity: sha512-rYkmFEv2w7oEk6ZPgxHkhWzwcxSUGc1vJU0cbCu5sHF8iFNnc1cmMsjXWa5DrU5sCEf8VVYE1iFlbbnFzvHQJw==}
+    peerDependencies:
+      astro: ^2.1.5
+    dependencies:
+      '@astrojs/prism': 2.1.1
+      astro: 2.0.10
+      github-slugger: 1.5.0
+      import-meta-resolve: 2.2.0
+      rehype-raw: 6.1.1
+      rehype-stringify: 9.0.3
+      remark-gfm: 3.0.1
+      remark-parse: 10.0.1
+      remark-rehype: 10.1.0
+      remark-smartypants: 2.0.0
+      shiki: 0.11.1
+      unified: 10.1.2
+      unist-util-visit: 4.1.1
+      vfile: 5.3.6
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@astrojs/mdx@0.18.0(astro@2.0.10)(rollup@3.10.1):
+    resolution: {integrity: sha512-mgICosefMpl67O7ER6Yi6ylT9Hk8ZAO6GhTlx4pYXIMOWFMQlP0NXQ9teZwPhOWzBcHWnsHEF+AzVZWbiC2EBg==}
     engines: {node: '>=16.12.0'}
     dependencies:
-      '@astrojs/markdown-remark': 2.0.1(astro@2.0.10)
-      '@astrojs/prism': 2.0.0
+      '@astrojs/markdown-remark': 2.1.2(astro@2.0.10)
+      '@astrojs/prism': 2.1.1
       '@mdx-js/mdx': 2.3.0
       '@mdx-js/rollup': 2.3.0(rollup@3.10.1)
       acorn: 8.8.1
-      es-module-lexer: 0.10.5
+      es-module-lexer: 1.2.1
       estree-util-visit: 1.2.0
       github-slugger: 1.5.0
       gray-matter: 4.0.3
@@ -298,8 +321,8 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/prism@2.0.0:
-    resolution: {integrity: sha512-YgeoeEPqsxaEpg0rwe/bUq3653LqSQnMjrLlpYwrbQQMQQqz6Y5yXN+RX3SfLJ6ppNb4+Fu2+Z49EXjk48Ihjw==}
+  /@astrojs/prism@2.1.1:
+    resolution: {integrity: sha512-Gnwnlb1lGJzCQEg89r4/WqgfCGPNFC7Kuh2D/k289Cbdi/2PD7Lrdstz86y1itDvcb2ijiRqjqWnJ5rsfu/QOA==}
     engines: {node: '>=16.12.0'}
     dependencies:
       prismjs: 1.29.0
@@ -5520,15 +5543,15 @@ packages:
     dependencies:
       is-arrayish: 0.2.1
 
-  /es-module-lexer@0.10.5:
-    resolution: {integrity: sha512-+7IwY/kiGAacQfY+YBhKMvEmyAJnw5grTUgjG85Pe7vcUI/6b7pZjZG8nQ7+48YhzEAEqrEgD2dCz/JIK+AYvw==}
-    dev: false
-
   /es-module-lexer@0.9.3:
     resolution: {integrity: sha512-1HQ2M2sPtxwnvOvT1ZClHyQDiggdNjURWpY2we6aMKCQiUVxTmVs2UYPLIrD84sS+kMdUwfBSylbJPwNnBrnHQ==}
 
   /es-module-lexer@1.1.0:
     resolution: {integrity: sha512-fJg+1tiyEeS8figV+fPcPpm8WqJEflG3yPU0NOm5xMvrNkuiy7HzX/Ljng4Y0hAoiw4/3hQTCFYw+ub8+a2pRA==}
+    dev: false
+
+  /es-module-lexer@1.2.1:
+    resolution: {integrity: sha512-9978wrXM50Y4rTMmW5kXIC09ZdXQZqkE4mxhwkd8VbzsGkXGPgV4zWuqQJgCEzYngdo2dYDa0l8xhX4fkSwJSg==}
     dev: false
 
   /esbuild@0.16.17:
