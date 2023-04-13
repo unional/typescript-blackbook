@@ -63,8 +63,8 @@ importers:
   page:
     dependencies:
       '@astrojs/mdx':
-        specifier: ^0.18.0
-        version: 0.18.0(astro@2.0.10)(rollup@3.10.1)
+        specifier: ^0.19.0
+        version: 0.19.0(astro@2.0.10)(rollup@3.10.1)
       '@astrojs/react':
         specifier: ^2.0.2
         version: 2.0.2(@types/react-dom@18.0.10)(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)
@@ -271,10 +271,10 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/markdown-remark@2.1.2(astro@2.0.10):
-    resolution: {integrity: sha512-rYkmFEv2w7oEk6ZPgxHkhWzwcxSUGc1vJU0cbCu5sHF8iFNnc1cmMsjXWa5DrU5sCEf8VVYE1iFlbbnFzvHQJw==}
+  /@astrojs/markdown-remark@2.1.4(astro@2.0.10):
+    resolution: {integrity: sha512-z5diCcFo2xkBAJ11KySAIKpZZkULZmzUvWsZ2VWIOrR6QrEgEfVl5jTpgPSedx4m+xUPuemlUviOotGB7ItNsQ==}
     peerDependencies:
-      astro: ^2.1.5
+      astro: ^2.3.0
     dependencies:
       '@astrojs/prism': 2.1.1
       astro: 2.0.10
@@ -294,11 +294,11 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/mdx@0.18.0(astro@2.0.10)(rollup@3.10.1):
-    resolution: {integrity: sha512-mgICosefMpl67O7ER6Yi6ylT9Hk8ZAO6GhTlx4pYXIMOWFMQlP0NXQ9teZwPhOWzBcHWnsHEF+AzVZWbiC2EBg==}
+  /@astrojs/mdx@0.19.0(astro@2.0.10)(rollup@3.10.1):
+    resolution: {integrity: sha512-McFpMV+npinIEKnY5t9hsdzLd76g78GgIRUPxem2OeXPNB8xr2pNS28GeU0+6Pn5STnB+sgcyyeqXLgzauOlMQ==}
     engines: {node: '>=16.12.0'}
     dependencies:
-      '@astrojs/markdown-remark': 2.1.2(astro@2.0.10)
+      '@astrojs/markdown-remark': 2.1.4(astro@2.0.10)
       '@astrojs/prism': 2.1.1
       '@mdx-js/mdx': 2.3.0
       '@mdx-js/rollup': 2.3.0(rollup@3.10.1)
@@ -313,6 +313,7 @@ packages:
       remark-gfm: 3.0.1
       remark-smartypants: 2.0.0
       shiki: 0.11.1
+      source-map: 0.7.4
       unist-util-visit: 4.1.1
       vfile: 5.3.6
     transitivePeerDependencies:
