@@ -3,10 +3,10 @@ import { GitHubBadge } from './GitHubBadge'
 
 const queryClient = new QueryClient()
 
-export function Header({ active }: { active?: 'blog' | 'guidelines' }) {
+export function Header({ active }: { active?: 'blog' | 'blackbook' }) {
   return (
     <QueryClientProvider client={queryClient}>
-      <header className="bg-green-300">
+      <header className="bg-violet-300">
         <nav className="flex gap-1 p-2 items-center">
           <div className="flex pr-4">
             <a aria-label="home" href="/" className="hover:outline rounded-sm py-1 px-2 outline-sky-700">
@@ -14,7 +14,7 @@ export function Header({ active }: { active?: 'blog' | 'guidelines' }) {
                 <div className="pr-1">
                   <img src="/svgs/ts-guidelines.svg" className="w-6" alt="icon" />
                 </div>
-                Guidelines
+                Blackbook
               </div>
             </a>
           </div>
@@ -22,15 +22,15 @@ export function Header({ active }: { active?: 'blog' | 'guidelines' }) {
             className={`rounded-sm hover:bg-slate-300 py-1 px-2 ${active === 'blog' ? 'underline' : ''}`}
             href="/blogs"
           >
-            Blog
+            Blogs
           </a>
           <a
             className={`rounded-sm hover:bg-slate-300 py-1 px-2 ${
-              active === 'guidelines' ? 'underline' : ''
+              active === 'blackbook' ? 'underline' : ''
             }`}
-            href="/guidelines"
+            href="/blackbook"
           >
-            Guidelines
+            Blackbook
           </a>
           <div className="flex py-1 flex-grow justify-end">
             <GitHubBadge />

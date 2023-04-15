@@ -1,0 +1,55 @@
+---
+slug: package-json
+title: "package.json"
+authors: [unional]
+tags: [project, typescript, tsconfig]
+---
+
+## The `files` field
+
+The `files` field is used to specify which files and folders to be included in the publish package.
+
+You **should** always specify the `files` field.
+
+> Why?
+
+By default, files not excluded by `.gitignore` (or `.npmignore`) are included, which is not what you want.
+Also, files that are excluded by `.gitignore` are not included, which is likely also not what you want.
+
+So it is always better to be explicit and control them yourself.
+
+For example, if the `files` field is removed from [type-plus],
+
+files like `.changeset/*`, `.github/*`, `.vscode/*` are included,
+while `cjs/*` and `esm/*` are not.
+
+---
+
+You **should** use `files` field to exclude test files.
+
+For example, add this to your `files` field:
+
+```json5
+{
+  "files": [
+    // your package files
+    "cjs",
+    "esm",
+    "testing",
+    "ts",
+    // exclude test files
+    "!**/*.{spec,test,unit,accept,integrate,system}.*"
+  ]
+}
+```
+
+> Why?
+
+Doing this allows you to keep your tsconfig setup simple.
+You will always compile all files, including your test files.
+
+This ensures that your test files does not contain any syntax error.
+
+- <https://docs.npmjs.com/cli/v9/configuring-npm/package-json#files>
+
+[type-plus]: https://github.com/unional/type-plus

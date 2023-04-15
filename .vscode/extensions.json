@@ -8,6 +8,6 @@
 		"editorconfig.editorconfig",
 		"unifiedjs.vscode-mdx",
 		"yzhang.markdown-all-in-one",
-		"streetsidesoftware.code-spell-checker"
+		"bradlc.vscode-tailwindcss"
 	]
 }
