@@ -14,7 +14,7 @@ You are excited to start your migration.
 
 So you update your `package.json`,
 update your `tsconfig.json`,
-and volia, you are greeted with a boat load of errors.
+and voila, you are greeted with a boat load of errors.
 
 What you need to do is to update your `import` statements:
 
@@ -36,9 +36,9 @@ There are four issues that I'm aware of related to `type: module`.
 
 The first one is a debate around the `.js` extension.
 
-The take aways are:
+The takeaways are:
 
-- `.js` is artifical, pointing to a non-existing file
+- `.js` is artificial, pointing to a non-existing file
 - TypeScript team do not want to rewrite JS code
 - NodeJS needs extra tricks to detect the source type
 
@@ -62,7 +62,7 @@ The third one is that currently [`ts-loader`] does not support ESM module out of
 
 You have to do two things.
 
-1. use the `NormalModuleReplacmentPlugin`:
+1. use the `NormalModuleReplacementPlugin`:
 
 ```js
 {
@@ -80,7 +80,7 @@ You have to do two things.
 If I have time, I might dig in to help [`ts-loader`] about this,
 but not sure when I'll be able to do that.
 
-You can read about the detail heere: <https://github.com/TypeStrong/ts-loader/issues/1463>
+You can read about the detail here: <https://github.com/TypeStrong/ts-loader/issues/1463>
 
 ## jest ESM workaround
 
