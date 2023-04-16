@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgithub_page=self.webpackChunkgithub_page||[]).push([[3904],{2792:e=>{e.exports=JSON.parse('{"permalink":"/typescript-blackbook/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":5,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
