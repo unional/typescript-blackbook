@@ -6,13 +6,20 @@ You **should** prefer type alias over interface.
 
 > Why?
 
-Interface syntax is carried over from other Object Oriented langauages such as Java and C#.
+Interface syntax is carried over from other Object Oriented languages such as Java and C#.
 
 The difference between `type` and `interface` is become very small.
 `type` can do most of `interface` can do except merging definitions.
 
 On the other hand, `type` can do quite a lot more compare to `interface`,
 and the syntax is more concise and straight forward.
+
+> Why not?
+
+While `type` is more expressive and generally more powerful,
+`interface` is more performant.
+
+So if your type is simple, you can use `interface` instead.
 
 ### Reference
 
