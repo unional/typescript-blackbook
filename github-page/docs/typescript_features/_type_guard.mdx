@@ -1,0 +1,66 @@
+---
+title: "Type guard"
+authors: [unional]
+tags: [typescript]
+---
+
+[User-defined type guard functions][type_guard] is a function which its return type is specified as `x as T`.
+
+It is introduced in TypeScript 1.6.
+
+For example:
+
+```ts
+function isBool(x: unknown): x is boolean {
+  return typeof x === 'boolean';
+}
+
+let value = 'true' as unknown
+
+if (isBool(value)) {
+  // `value` is narrowed to boolean
+}
+```
+
+---
+
+You **do not** need to write type guard functions for simple cases.
+
+> Why?
+
+TypeScript control flow analysis recognize many basic patterns and perform narrowing automatically.
+
+For example:
+
+```ts
+let value:  number |  string = 123
+
+if (typeof value === 'number') {
+	// `value` is narrowed to number
+}
+```
+
+[Playground](https://www.typescriptlang.org/play?#code/DYUwLgBAbghsCuIBcEIDt4FsBGIBOEAPqgM5h4CWaA5hALwQCMATAMwCwAUFxQGYQAKMAE8ADiAD2-WAhD06DAOQYc+RQEoIAby4BIAPT6IAAxmJjECiXQw8eCQHcQAEwhgJ6LLjxcAvlyA)
+
+---
+
+You **can** use `isType` from [type-plus] for one-off assertion functions (especially if you are already using it).
+
+> Why?
+
+In many cases, you only need to do type guard for a few specific cases.
+
+If you are already using [type-plus],
+you can use the `isType()` generic type guard so that you don't have to break your flow and add an addition function.
+
+```ts
+const { data } = useQuery(...)
+
+if (isType<YourData>(data, v => ...predicate...)) {
+	// `data` is narrowed to `YourData`
+}
+```
+
+[assertion_functions]: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#assertion-functions
+[NodeJS]: https://nodejs.org/
+[type-plus]: https://github.com/unional/type-plus

@@ -1,0 +1,38 @@
+---
+slug: package_name
+title: "Naming your package"
+authors: [unional]
+tags: [project]
+---
+
+When you create a package,
+you always have to go through the painfull process of naming your package.
+
+While it is not specific to TypeScript,
+it is still beneficial to follow certain guidelines to make your life a bit easier.
+
+---
+
+You **should** use `snake_case` for your package name.
+
+> Why?
+
+[NodeJS] is not opinionated about package names, but
+[Deno] prohibits using `kebab-case` or `PascalCase` as module name.
+
+Since [Deno] is likely to stay, you should use `snake_case` so that they are consistent.
+
+---
+
+You **should** name your package with nouns.
+
+> Why?
+
+Naming your package with verbs typically means your package is doing just one thing.
+
+Of course, if that is what you want, that's fine.
+
+But naming your package with nouns allows you to add similar features to your package, without causing confusion.
+
+[Deno]: https://deno.land/x?page=2#Q&A
+[NodeJS]: https://nodejs.org/

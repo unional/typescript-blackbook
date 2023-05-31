@@ -1,0 +1,82 @@
+---
+title: "Assertion Function"
+authors: [unional]
+tags: [typescript, type-plus]
+---
+
+[Assertion Functions][assertion_functions] are special functions that asserts certain conditions of your program.
+
+It is introduced in TypeScript 3.7.
+
+They throw an error if the condition is not met, and return nothing otherwise.
+
+Furthermore, the *assertion signature* provides additional information to the compiler,
+so that the type can be narrowed down.
+
+Here is a simple example:
+
+```ts
+function assertIsString(value: unknown): asserts value is string {
+  if (typeof value !== "string") {
+    throw new TypeError("value must be a string");
+  }
+}
+```
+
+---
+
+You **can** throw any type of error.
+i.e. you **can** throw error other than `AssertionError`.
+
+> Why?
+
+While `AssertionError` may work a little better with test runner,
+it is [NodeJS] specific.
+
+Meaning your code cannot be used in other environments without polyfills.
+
+---
+
+You **can** use `assertType` from [type-plus] for one-off assertion functions (especially if you are already using it).
+
+> Why?
+
+In many cases, you only need to do type assertion for a few specific cases.
+
+If you are already using [type-plus],
+you can use the `assertType()` generic assertion function so that you don't have to break your flow and add an addition function.
+
+```ts
+const { data } = useQuery(...)
+
+assertType<YourData>(data, v => ...predicate...)
+
+// `data` is narrowed to `YourData`
+```
+
+It also has additional assertion functions for basic types:
+
+```ts
+assertType.isUndefined(value)
+assertType.isNull(value)
+assertType.isNumber(value)
+assertType.isString(value)
+assertType.isBoolean(value)
+assertType.isTrue(value)
+assertType.isFalse(value)
+assertType.isFunction(value)
+assertType.isError(value)
+assertType.noUndefined(value)
+assertType.noNull(value)
+assertType.noNumber(value)
+assertType.noString(value)
+assertType.noBoolean(value)
+assertType.noTrue(value)
+assertType.noFalse(value)
+assertType.noFunction(value)
+assertType.noError(value)
+```
+
+[assertion_functions]: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#assertion-functions
+[NodeJS]: https://nodejs.org/
+[type-plus]: https://github.com/unional/type-plus
