@@ -11,35 +11,39 @@ You **should** add JSDoc comments to your code.
 
 > Why?
 
-For a long time, I does not do this.
+For a long time, I do not do this.
 My belief was that the code should be self-explanatory.
 
 However, having the comments in the code,
-especially when it is a public API,
+especially for public facing code,
 makes it a lot easier for consumer to use the code.
 
 Especially if you can provide examples in the comments.
 
-For example, the following is a comment for the `Equal` type in [type-plus]:
+For example, the following is a comment for the `IsEqual` type in [type-plus]:
 
 ```ts
 /**
  * Checks `A` and `B` are equal.
  *
  * ```ts
- * type R = Equal<1, 1> // true
- * type R = Equal<any, any> // true
- * type R = Equal<boolean, boolean> // true
- * type R = Equal<true, true> // true
- * type R = Equal<[1], [1]> // true
+ * type R = IsEqual<1, 1> // true
+ * type R = IsEqual<any, any> // true
+ * type R = IsEqual<boolean, boolean> // true
+ * type R = IsEqual<true, true> // true
+ * type R = IsEqual<[1], [1]> // true
  *
- * type R = Equal<boolean, true> // false
- * type R = Equal<any, 1> // false
- * type R = Equal<[any], [1]> // false
- * type R = Equal<{ a: 1 }, { a: 1; b: 2 }> // false
+ * type R = IsEqual<boolean, true> // false
+ * type R = IsEqual<any, 1> // false
+ * type R = IsEqual<[any], [1]> // false
+ * type R = IsEqual<{ a: 1 }, { a: 1; b: 2 }> // false
  * ```
+ *
+ * Note that intersection type checks only works at first level.
+ * It cannot be check recursively,
+ * or else will run into infinite recursion if the type includes recursive types.
  */
-export type Equal<A, B, Then = true, Else = false> = ...
+export type IsEqual<A, B, Then = true, Else = false> = ...
 ```
 
 ---
