@@ -76,8 +76,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0(solid-js@1.6.10)(vite@4.3.1)
       '@astrojs/tailwind':
-        specifier: ^4.0.0
-        version: 4.0.0(astro@2.3.0)(tailwindcss@3.2.6)
+        specifier: ^5.0.0
+        version: 5.0.0(astro@2.3.0)(tailwindcss@3.2.6)
       '@tanstack/react-query':
         specifier: ^4.20.4
         version: 4.24.6(react-dom@18.2.0)(react@18.2.0)
@@ -388,16 +388,16 @@ packages:
       - vite
     dev: false
 
-  /@astrojs/tailwind@4.0.0(astro@2.3.0)(tailwindcss@3.2.6):
-    resolution: {integrity: sha512-HmCAXFFes7MUBt5ihdfH1goa8QyGkHejIpz6Z4XBKK9VNYY9G2E3brCn8+pNn5zAOzcwl3FYcuH2AiOa/NGoMQ==}
+  /@astrojs/tailwind@5.0.0(astro@2.3.0)(tailwindcss@3.2.6):
+    resolution: {integrity: sha512-bMZZNNm/SW+ijUKMQDhdiuNWDdR3CubEKUHb2Ran4Arx1ikWn/kKIkFDXUV+MUnsLa7s19x9VMRlARRyKbqMkQ==}
     peerDependencies:
-      astro: ^2.6.5
+      astro: ^3.0.0
       tailwindcss: ^3.0.24
     dependencies:
       astro: 2.3.0
-      autoprefixer: 10.4.14(postcss@8.4.24)
-      postcss: 8.4.24
-      postcss-load-config: 4.0.1(postcss@8.4.24)
+      autoprefixer: 10.4.15(postcss@8.4.29)
+      postcss: 8.4.29
+      postcss-load-config: 4.0.1(postcss@8.4.29)
       tailwindcss: 3.2.6(postcss@8.4.24)
     transitivePeerDependencies:
       - ts-node
@@ -4824,8 +4824,8 @@ packages:
     peerDependencies:
       postcss: ^8.1.0
     dependencies:
-      browserslist: 4.21.5
-      caniuse-lite: 1.0.30001481
+      browserslist: 4.21.10
+      caniuse-lite: 1.0.30001524
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -4840,13 +4840,29 @@ packages:
     peerDependencies:
       postcss: ^8.1.0
     dependencies:
-      browserslist: 4.21.5
-      caniuse-lite: 1.0.30001481
+      browserslist: 4.21.10
+      caniuse-lite: 1.0.30001524
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
       postcss: 8.4.24
       postcss-value-parser: 4.2.0
+
+  /autoprefixer@10.4.15(postcss@8.4.29):
+    resolution: {integrity: sha512-KCuPB8ZCIqFdA4HwKXsvz7j6gvSDNhDP7WnUjBleRkKjPdvCmHFuQ77ocavI8FT6NdvlBnE2UFr2H4Mycn8Vew==}
+    engines: {node: ^10 || ^12 || >=14}
+    hasBin: true
+    peerDependencies:
+      postcss: ^8.1.0
+    dependencies:
+      browserslist: 4.21.10
+      caniuse-lite: 1.0.30001524
+      fraction.js: 4.2.0
+      normalize-range: 0.1.2
+      picocolors: 1.0.0
+      postcss: 8.4.29
+      postcss-value-parser: 4.2.0
+    dev: false
 
   /axios@0.25.0:
     resolution: {integrity: sha512-cD8FOb0tRH3uuEe6+evtAbgJtfxr7ly3fQjYcMcuPlgkwVS9xboaVIpcDV+cYQe+yGykgwZCs1pzjntcGa6l5g==}
@@ -5135,9 +5151,6 @@ packages:
       caniuse-lite: 1.0.30001524
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
-
-  /caniuse-lite@1.0.30001481:
-    resolution: {integrity: sha512-KCqHwRnaa1InZBtqXzP98LPg0ajCVujMKjqKDhZEthIpAsJl/YEIa3YvXjGXPVqzZVguccuu7ga9KOE1J9rKPQ==}
 
   /caniuse-lite@1.0.30001524:
     resolution: {integrity: sha512-Jj917pJtYg9HSJBF95HVX3Cdr89JUyLT4IZ8SvM5aDRni95swKgYi3TgYLH5hnGfPE/U1dg6IfZ50UsIlLkwSA==}
@@ -8844,7 +8857,7 @@ packages:
       yaml: 1.10.2
     dev: false
 
-  /postcss-load-config@4.0.1(postcss@8.4.24):
+  /postcss-load-config@4.0.1(postcss@8.4.29):
     resolution: {integrity: sha512-vEJIc8RdiBRu3oRAI0ymerOn+7rPuMvRXslTvZUKZonDHFIczxztIyJ1urxM1x9JXEikvpWWTUUqal5j/8QgvA==}
     engines: {node: '>= 14'}
     peerDependencies:
@@ -8857,7 +8870,7 @@ packages:
         optional: true
     dependencies:
       lilconfig: 2.0.6
-      postcss: 8.4.24
+      postcss: 8.4.29
       yaml: 2.2.1
     dev: false
 
@@ -9411,6 +9424,15 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
+  /postcss@8.4.29:
+    resolution: {integrity: sha512-cbI+jaqIeu/VGqXEarWkRCCffhjgXc0qjBtXpqJhTBohMUjUQnbBr0xqX3vEKudc4iviTewcJo5ajcec5+wdJw==}
+    engines: {node: ^10 || ^12 || >=14}
+    dependencies:
+      nanoid: 3.3.6
+      picocolors: 1.0.0
+      source-map-js: 1.0.2
+    dev: false
+
   /preferred-pm@3.0.3:
     resolution: {integrity: sha512-+wZgbxNES/KlJs9q40F/1sfOd/j7f1O9JaHcW5Dsn3aUUOZg3L2bjpVUcKV2jvtElYfoTuQiNeMfQJ4kwUAhCQ==}
     engines: {node: '>=10'}
@@ -9610,7 +9632,7 @@ packages:
     dependencies:
       '@babel/code-frame': 7.21.4
       address: 1.2.1
-      browserslist: 4.21.5
+      browserslist: 4.21.10
       chalk: 4.1.2
       cross-spawn: 7.0.3
       detect-port-alt: 1.1.6
