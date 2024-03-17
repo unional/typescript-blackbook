@@ -12,7 +12,7 @@
     "test": "astro check && tsc --noEmit"
   },
   "dependencies": {
-    "@astrojs/mdx": "^0.19.0",
+    "@astrojs/mdx": "^2.0.0",
     "@astrojs/react": "^3.0.0",
     "@astrojs/solid-js": "^4.0.0",
     "@astrojs/tailwind": "^5.0.0",
