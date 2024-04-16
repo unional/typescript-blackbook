@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgithub_page=self.webpackChunkgithub_page||[]).push([[379],{5881:e=>{e.exports=JSON.parse('{"permalink":"/typescript-blackbook/blog/tags/typescript-eslint","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
