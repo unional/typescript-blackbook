@@ -10,6 +10,8 @@ export default defineConfig({
     base: 'typescript-blackbook',
     integrations: [starlight({
         title: 'TypeScript Blackbook',
+        favicon: './src/assets/logo.svg',
+        logo: { src:'./src/assets/logo.svg'},
         social: {
             "x.com": 'https://x.com/unional',
             discord:'https://discord.gg/RwzcFpN5fv',
@@ -22,7 +24,7 @@ export default defineConfig({
                 label: 'Guides',
                 items: [
                     // Each item here is one entry in the navigation menu.
-                    { label: 'Example Guide', slug: 'guides/example' },
+                    { slug: 'guides/welcome' },
                 ],
             },
         ],

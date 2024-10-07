@@ -28,3 +28,20 @@ eslintrc
 
 npm
 pubDate
+Blackbook
+typescript-blackbook
+@astrojs
+sourcemap
+declarationMap
+tsc
+video-url
+jsonc
+camelCase
+PascalCase
+straw-hat-adr-file-convention
+ApiSpec
+APISpec
+apispec
+npmignore
+Deno
+JSDoc

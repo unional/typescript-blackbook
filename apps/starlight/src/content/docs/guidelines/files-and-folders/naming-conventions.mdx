@@ -1,0 +1,81 @@
+---
+title: Naming Convention
+tags: [file, folder, project, naming]
+---
+
+# Naming Convention
+
+You **should** name your file and folder in `snake_case` or `kebab-case` instead of `camelCase` or `PascalCase`.
+
+> Why?
+
+Some file systems are case-insensitive (yes, I'm looking at you, Windows).
+That means `ApiSpec == apispec == APISpec`.
+
+To avoid confusion, `camelCase` and `PascalCase` should be avoided.
+That leave us with `snake_case` or `kebab-case`.
+
+The benefits of `snake_case` over `kebab-case` is that,
+in most cases, operating system treats `snake_case` as a single word,
+and treats `kebab-case` as a composed word.
+
+For example, when you double-click on a `kebab-case` string,
+a single word will be selected (i.e. either `kebab` or `case` will be selected).
+
+On the other hand, double-click on a `snake_case` string will select the whole string.
+
+The same goes to renaming.
+
+Therefore, I would recommend `snake_case` over `kebab-case`,
+even though `_` takes an additional pinky press to type.
+
+But `kebab-case` is still a valid choice,
+especially when you are using file-based routing.
+
+---
+
+You **should** name your file in nouns. i.e. `customer_order.ts` instead of `create_customer_order.ts`.
+
+> Why?
+
+You might have heard of Single Responsibility Principle and think that you should have one function per file.
+
+That is utterly wrong and not what SRP means.
+
+SRP is about putting related code together where they have the same reason to change.
+
+Naming (and thus organizing) the file with nouns will significantly make your file and folder a lot more stable.
+
+Meaning there will be less import path changes.
+
+---
+
+You **can** use `.` to create sub-category on filenames.
+
+> Why
+
+The name of the file should describe WHAT the file is about,
+in terms of its context or business value.
+
+For example, `customer_order.ts`.
+
+However, there are situations that you want to further organize the code into addition categories,
+so that it is easy to visualize as well as controlling the exposed API.
+
+For example, you can do this:
+
+```sh
+customer_order.ts
+customer_order.ctx.ts # context code for dependency injection
+customer_order.internal.ts # code that you use internally, but exported for your tests.
+customer_order.mock.ts # helper code for mocking the data during tests
+customer_order.spec.ts # specification tests
+customer_order.unit.ts # unit tests
+customer_order.unit.electron.ts # unit tests only for electron
+```
+
+## References
+
+Another interesting take from [Straw Hat's ADRs][straw-hat-adr-file-convention].
+
+[straw-hat-adr-file-convention]: https://straw-hat-team.github.io/adr/3122196229/README.html

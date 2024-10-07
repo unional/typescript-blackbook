@@ -46,4 +46,4 @@ TypeScript 4.0 has landed on August 20th, 2020.
 
 - Tuple Types
 - Project Reference
-- uknown
+- unknown

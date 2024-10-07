@@ -1,10 +1,7 @@
 ---
-slug: comments
 title: Creating rich comments
 tags: [comment, documentation, DX]
 ---
-
-# Comments
 
 You **should** add JSDoc comments to your code.
 
