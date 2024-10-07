@@ -1,0 +1,20 @@
+{
+	"ignores": [
+		".changeset/*.md",
+		"**/CHANGELOG.md",
+		"**/docs",
+		"**/LICENSE",
+		"flow-types.md",
+		"github-page",
+		"slides/*.slides.md"
+	],
+	"config": {
+		"line-length": false,
+		"hard-tab": false,
+		"no-missing-space-atx": false,
+		"no-duplicate-heading": false,
+		"no-trailing-punctuation": false,
+		"no-inline-html": false,
+		"no-space-in-emphasis": false
+	}
+}

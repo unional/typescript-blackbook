@@ -1,5 +1,3 @@
-.DS_Store
-
 # Logs
 logs
 *.log
@@ -73,8 +71,10 @@ coverage
 out/
 build
 
-# misc
+# macOS-specific files
 .DS_Store
+
+# misc
 *.pem
 
 # debug
@@ -83,7 +83,9 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# local env files
+# environment variables
+.env
+.env.production
 .env.local
 .env.development.local
 .env.test.local
@@ -91,3 +93,5 @@ yarn-error.log*
 
 # turbo
 .turbo
+
+.astro

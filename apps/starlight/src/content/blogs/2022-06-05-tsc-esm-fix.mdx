@@ -1,0 +1,163 @@
+---
+slug: 2022-tsc-esm-fix
+title: "Fixing TypeScript code for ESM with `tsc-esm-fix`"
+pubDate: 2022-06-05
+tags: [typescript, ESM]
+---
+
+# Migrating TypeScript code for `type: module`
+
+TypeScript 4.7 is released 🎉!
+
+The wait is finally over.
+You are excited to start your migration.
+
+So you update your `package.json`,
+update your `tsconfig.json`,
+and voilà, you are greeted with a boat load of errors.
+
+What you need to do is to update your `import` statements:
+
+- add `.js` extension for files, or
+- add `/index.js` for folders.
+
+You can do that manually,
+or you can use a tool to help you on that.
+
+The tool ([`tsc-esm-fix`]) is the focus of the topic today.
+But before that,
+let me highlight a few things about the current state of the `type: module` support in TypeScript 4.7,
+so that you can decide should you take the jump right now,
+or should you wait a little bit longer.
+
+There are four issues that I'm aware of related to `type: module`.
+
+## The `.js` extension debate
+
+The first one is a debate around the `.js` extension.
+
+The takeaways are
+js is artificial, pointing to a non-existing file
+- TypeScript team do not want to rewrite JS code
+- NodeJS needs extra tricks to detect the source type
+
+You can read about the detail here:
+
+- https://github.com/microsoft/TypeScript/issues/49083
+- https://github.com/microsoft/TypeScript/issues/16577#issuecomment-754941937
+
+## broken source map
+
+The second one is that source map is currently broken.
+
+If your code will be used in the browser,
+you need to weight that in.
+
+You can read about the detail here: https://github.com/microsoft/TypeScript/issues/49335
+
+## ts-loader workaround
+
+The third one is that currently [`ts-loader`] does not support ESM module out of the box.
+
+You have to do two things.
+
+1. use the `NormalModuleReplacementPlugin`:
+
+```js
+{
+  plugins: [
+    new NormalModuleReplacementPlugin(/.js$/, (resource) => {
+      if (/node_modules/.test(resource.context)) return
+      resource.request = resource.request.replace(/.js$/, '')
+    })
+  ]
+}
+```
+
+2. Do not use `transpileOnly: true`. It does not work.
+
+If I have time, I might dig in to help [`ts-loader`] about this,
+but not sure when I'll be able to do that.
+
+You can read about the detail here: https://github.com/TypeStrong/ts-loader/issues/1463
+
+## jest ESM workaround
+
+The last one is an outstanding one,
+that [`jest`] does not have native support of ESM.
+
+Meaning when you use [`ts-jest`], you also need to use [`babel-jest`] to transpile dependencies within `node_modules`.
+
+Here is a nutshell of what you need to do:
+
+```js
+// jest.config.mjs
+export default {
+  preset: 'ts-jest/presets/default-esm',
+  globals: {
+    'ts-jest': {
+      useESM: true
+    }
+  },
+  moduleNameMapper: {
+    // remove the phantom `.js` extension
+    '^(\\.{1,2}/.*)\\.js$': '$1',
+    // If dependency doing `import ... from '#<pkg>'.
+    // e.g. `chalk` has this: `import ... form '#ansi-styles'`
+    '#(.*)': '<rootDir>/node_modules/$1'
+  },
+  transformIgnorePatterns: [
+    // Need to MANUALLY identify each ESM package, one by one
+    'node_modules/(?!(@unional\\fixture|chalk)/)'
+  ],
+  transform: {
+    '^.+\\.(js|jsx|mjs)$': 'babel-jest',
+  }
+}
+```
+
+You can find related information here: https://dev.to/steveruizok/jest-and-esm-cannot-use-import-statement-outside-a-module-4
+
+## `tsc-esm-fix`
+
+Now, if you decide to move ahead,
+then you can use [`tsc-esm-fix`] to help you.
+
+I used it to help me migrating [`type-plus`], which has 140+ files.
+I'm using it for other packages as I'm writing this blog.
+
+I have discovered a few bugs and [@antongolub] is very quick to fix them.
+Go to the repo and give it a star ⭐!
+
+The easiest way to use it is through `npx` or `yarn dlx`:
+
+```sh
+npx tsc-esm-fix --src=<src> --ext='.js'
+
+# or
+yarn dlx tsc-esm-fix --src=<src> --ext='.js'
+```
+
+For [`type-plus`], since I put the source code under the `ts` folder,
+so the command is:
+
+```sh
+npx tsc-esm-fix --src=ts --ext='.js'
+```
+
+If you put your source code under the typical `src` folder,
+then the command is:
+
+```sh
+npx tsc-esm-fix --src=src --ext='.js'
+```
+
+Happy Coding, 🧑‍💻
+
+[@antongolub]: https://github.com/antongolub
+[`babel-jest`]: https://github.com/facebook/jest#using-babel
+[`jest`]: http://facebook.github.io/jest/
+[`ts-jest`]: https://kulshekhar.github.io/ts-jest/
+[`ts-loader`]: https://github.com/TypeStrong/ts-loader
+[`tsc-esm-fix`]: https://github.com/antongolub/tsc-esm-fix
+[`type-plus`]: https://github.com/unional/type-plus

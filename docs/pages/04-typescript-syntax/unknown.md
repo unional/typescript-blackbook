@@ -1,4 +1,4 @@
-# unknown
+# `unknown`
 
 Introduced in: TypeScript 3.0
 

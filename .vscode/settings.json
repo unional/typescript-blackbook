@@ -1,4 +1,7 @@
 {
+	"[astro]": {
+		"editor.defaultFormatter": "astro-build.astro-vscode"
+	},
 	"cSpell.enableFiletypes": [
 		"mdx"
 	],
@@ -7,13 +10,19 @@
 		"apos",
 		"astro",
 		"astrojs",
+		"astrolib",
 		"clsx",
 		"codeql",
 		"Deno",
 		"dzharii",
 		"horiz",
+		"Rehype",
 		"stroustrup",
-		"svgs"
+		"svgs",
+		"tabler"
+	],
+	"css.customData": [
+		"./vscode.tailwind.json"
 	],
 	"emojisense.languages": {
 		"git-commit": true,
@@ -25,10 +34,17 @@
 		},
 		"scminput": true
 	},
+	"eslint.useFlatConfig": true,
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"astro",
+		"typescript",
+		"typescriptreact"
+	],
 	"files.associations": {
 		"*.excalidraw": "json",
 		"*.excalidrawlib": "json",
-		"*.mdx": "markdown"
 	},
 	"ltex.enabled": [
 		"bibtex",
@@ -43,8 +59,14 @@
 		"rsweave"
 	],
 	"markdownlint.ignore": ".markdownlintignore",
+	"prettier.documentSelectors": [
+		"**/*.astro"
+	],
 	"search.exclude": {
 		"**/.yarn": true
 	},
-	"typescript.tsdk": "node_modules\\typescript\\lib"
+	"typescript.tsdk": "node_modules\\typescript\\lib",
+	"yaml.schemas": {
+		"./.vscode/astrowind/config-schema.json": "apps/website/src/config.yaml"
+	}
 }

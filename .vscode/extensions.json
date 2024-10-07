@@ -3,11 +3,13 @@
 		"aaron-bond.better-comments",
 		"astro-build.astro-vscode",
 		"bierner.emojisense",
+		"bradlc.vscode-tailwindcss",
 		"davidanson.vscode-markdownlint",
 		"dbaeumer.vscode-eslint",
 		"editorconfig.editorconfig",
 		"unifiedjs.vscode-mdx",
 		"yzhang.markdown-all-in-one",
-		"bradlc.vscode-tailwindcss"
+    "astro-build.astro-vscode",
+    "esbenp.prettier-vscode",
 	]
 }

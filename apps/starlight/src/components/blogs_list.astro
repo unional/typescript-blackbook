@@ -1,0 +1,12 @@
+---
+import { getCollection } from 'astro:content'
+import BlogPostInfo from './blog_post_info.astro'
+
+const blogs = (await getCollection('blogs')).sort(
+	(a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+)
+---
+
+<div class="w-full flex flex-col gap-4">
+	{blogs.map(post => <BlogPostInfo post={post} href={`/blogs/${post.slug}`} />)}
+</div>
