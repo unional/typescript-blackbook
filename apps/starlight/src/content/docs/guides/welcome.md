@@ -5,20 +5,26 @@ description: Welcome old and new readers to TypeScript Blackbook.
 
 Welcome to TypeScript Blackbook.
 
-This book focus on *how to get the most out of TypeScript with minimal effort*.
+The goal of this book is to help you get the most out of TypeScript.
 
 To achieve that goal,
-following some coding styles is a good place to start.
+this book covers more than just style guide and best practices.
 
-However, just following *what to do* can only go so far.
 You need to know *why* should you write code in certain way,
 *what* are the *trade-offs* you are making,
 as well as the design and the limitations of the language itself,
-so that you have the right *mindset* and *approach* the problem and come to a solution effectively.
-
-Therefore, this book covers more than just style guide and best practices.
+so that you have the right *mindset* and *approach* to your problem and come to a solution effectively.
 
 It needs to cover everything related to TypeScript in order to achieve that goal.
+But learning everything about TypeScript is not easy.
+
+The language itself is pretty complex,
+and both TypeScript and JavaScript evolves at a rapid pace.
+
+
+So it can be quite overwhelming if you are just starting out.
+
+
 
 <!-- This book is organized into a few sections:
 
@@ -27,15 +33,12 @@ It needs to cover everything related to TypeScript in order to achieve that goal
 - Coding Styles and Guidelines
 - Supporting Tools -->
 
-Learning everything about TypeScript is not easy.
-
-The language itself is pretty complex,
-and both TypeScript and JavaScript evolves at a rapid pace.
-So it can be quite overwhelming if you are just starting out.
-
+<!--
 I would recommend having a quick read through of the [How to TypeScript] section,
 and then check out the [Supporting Tools] section to find out how to set up your project,
-and use the rest of the book for reference as you need them.
+and use the rest of the book for reference as you need them. -->
+
+
 
 Having that said,
 I'm in the process of updating this book.
