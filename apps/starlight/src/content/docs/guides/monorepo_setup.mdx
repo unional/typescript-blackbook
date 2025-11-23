@@ -1,0 +1,263 @@
+---
+title: Monorepo Setup
+tags: [monorepo, setup, project-references]
+---
+
+# Monorepo Setup
+
+TypeScript project references enable you to structure your codebase as a monorepo with multiple interdependent packages. This guide covers how to set up and use project references effectively, including separating configuration for IDE and build purposes.
+
+## What are Project References?
+
+Project references allow TypeScript to understand the dependency relationships between multiple TypeScript projects in a monorepo. Instead of compiling everything together, each project can be built independently, and TypeScript will automatically build dependencies in the correct order.
+
+## Enabling Project References
+
+To use project references, each project must have the `composite` option enabled in its `tsconfig.json`:
+
+```json
+{
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    // ... other options
+  }
+}
+```
+
+> **Why `composite`?**
+>
+> The `composite` option tells TypeScript that this project can be referenced by other projects. It also enables incremental builds and requires `declaration` to be `true` so that other projects can consume the types.
+
+## Setting Up Project Reference
+
+In a monorepo, you typically have a root `tsconfig.json` that references all your packages:
+
+```json
+// tsconfig.json (root)
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "moduleResolution": "node"
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./packages/core"
+    },
+    {
+      "path": "./packages/utils"
+    },
+    {
+      "path": "./apps/web"
+    }
+  ]
+}
+```
+
+Each referenced package should have its own `tsconfig.json` with `composite: true`:
+
+```json
+// packages/core/tsconfig.json
+{
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true
+    // ... other options
+  },
+  "include": ["src/**/*"]
+}
+```
+
+If a package depends on another package in the monorepo, add a reference:
+
+```json
+// packages/utils/tsconfig.json
+{
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true
+  },
+  "include": ["src/**/*"],
+  "references": [
+    {
+      "path": "../core"
+    }
+  ]
+}
+```
+
+## Separating IDE and Build Configurations
+
+A best practice in monorepos is to separate the configuration used by your IDE from the configuration used for building. This allows you to:
+
+- Include test files and other development files in IDE for better IntelliSense
+- Have fine-grained control over what gets built and distributed
+- Use different compiler options if needed
+
+### `tsconfig.json` for IDE and Tools
+
+Use `tsconfig.json` for your development environment (IDE, language servers, etc.):
+
+```json
+// packages/core/tsconfig.json
+{
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true
+    // ... other options
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "coverage",
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ],
+  "references": [
+    {
+      "path": "../utils"
+    }
+  ]
+}
+```
+
+> **Why use `exclude`?**
+>
+> Using `exclude` allows your IDE to include test files and other development files in the project, providing better autocomplete and type checking while you're developing. However, you typically don't want these files in your build output.
+
+### `tsconfig.build.json` for Build
+
+Create a separate `tsconfig.build.json` for building your package:
+
+```json
+// packages/core/tsconfig.build.json
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    // Same options as tsconfig.json
+  },
+  "files": [
+    "src/index.ts",
+    "src/lib/**/*.ts"
+  ],
+  "references": [
+    {
+      "path": "../utils"
+    }
+  ]
+}
+```
+
+> **Why use `files`?**
+>
+> Using `files` gives you fine-grained control over exactly what gets included in your build. This ensures test files, examples, and other development-only files are excluded from your package distribution.
+
+### Keeping Options in Sync
+
+Use the same `compilerOptions` in both `tsconfig.json` and `tsconfig.build.json`:
+
+> **Why?**
+>
+> While some options don't apply to IDEs, keeping them the same avoids confusion about whether something is missing or wrong when configurations differ. You can use `extends` to share the base configuration.
+
+## Building with Project References
+
+When building with project references, use the `--build` flag:
+
+```bash
+# Build all projects
+tsc --build
+
+# Build a specific project and its dependencies
+tsc --build packages/core
+
+# Build with force (rebuild everything)
+tsc --build --force
+
+# Clean build outputs
+tsc --build --clean
+```
+
+The `--build` flag ensures that:
+- Dependencies are built in the correct order
+- Only changed projects are rebuilt (incremental builds)
+- Project references are properly resolved
+
+## Root-Level Configuration
+
+The root `tsconfig.json` serves as the entry point for your IDE and development tools:
+
+```json
+// tsconfig.json (root)
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "moduleResolution": "node"
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./packages/core"
+    },
+    {
+      "path": "./packages/utils"
+    },
+    {
+      "path": "./apps/web"
+    }
+  ]
+}
+```
+
+> **Why `files: []`?**
+>
+> The root config typically doesn't contain source files itself—it only references other projects. Setting `files: []` makes this explicit and prevents TypeScript from trying to compile files at the root level.
+
+## Best Practices
+
+1. **Enable `composite`** in all packages that will be referenced
+2. **Enable `declaration` and `declarationMap`** for better IDE support and source navigation
+3. **Use `tsconfig.json` for IDE** with `exclude` to include test files
+4. **Use `tsconfig.build.json` for builds** with `files` for precise control
+5. **Keep compiler options consistent** between IDE and build configs
+6. **Use `extends`** to share common configuration
+7. **Build with `tsc --build`** to leverage incremental builds and proper dependency ordering
+
+## Example Structure
+
+```
+monorepo/
+├── tsconfig.json              # Root config for IDE
+├── tsconfig.build.json        # Root config for build (optional)
+├── packages/
+│   ├── core/
+│   │   ├── tsconfig.json      # IDE config
+│   │   ├── tsconfig.build.json # Build config
+│   │   └── src/
+│   └── utils/
+│       ├── tsconfig.json      # References core
+│       ├── tsconfig.build.json
+│       └── src/
+└── apps/
+    └── web/
+        ├── tsconfig.json      # References core and utils
+        ├── tsconfig.build.json
+        └── src/
+```
+
+This structure allows your IDE to understand the entire codebase while giving you precise control over what gets built and distributed in each package.
+
