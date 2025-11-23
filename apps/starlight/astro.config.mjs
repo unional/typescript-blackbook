@@ -12,13 +12,33 @@ export default defineConfig({
         title: 'TypeScript Blackbook',
         favicon: './src/assets/logo.svg',
         logo: { src:'./src/assets/logo.svg'},
-        social: {
-            "x.com": 'https://x.com/unional',
-            discord:'https://discord.gg/RwzcFpN5fv',
-            github: 'https://github.com/unional',
-            stackOverflow: 'https://stackoverflow.com/users/3505900/unional',
-            youtube: 'https://www.youtube.com/@cyberuni',
-        },
+        social: [
+            {
+                label: 'X',
+                icon: 'x.com',
+                href: 'https://x.com/unional',
+            },
+            {
+                label: 'Discord',
+                icon: 'discord',
+                href: 'https://discord.gg/RwzcFpN5fv',
+            },
+            {
+                label: 'GitHub',
+                icon: 'github',
+                href: 'https://github.com/unional',
+            },
+            {
+                label: 'Stack Overflow',
+                icon: 'stackOverflow',
+                href: 'https://stackoverflow.com/users/3505900/unional',
+            },
+            {
+                label: 'YouTube',
+                icon: 'youtube',
+                href: 'https://www.youtube.com/@cyberuni',
+            },
+        ],
         sidebar: [
             {
                 label: 'Guides',
