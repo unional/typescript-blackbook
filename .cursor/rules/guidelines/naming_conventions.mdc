@@ -1,0 +1,89 @@
+---
+description: Naming conventions for files, folders, and code elements in TypeScript Blackbook. Use when creating new files, organizing content, or writing code examples.
+globs: "**/*"
+alwaysApply: true
+---
+
+# 📁 Naming Conventions
+
+## File and Folder Naming
+
+### Documentation Files
+
+- **Use `snake_case`** for all documentation file names
+- Examples: `monorepo_setup.mdx`, `naming_conventions.mdx`, `type_system_basics.mdx`
+- Use descriptive nouns that represent the topic
+- Keep names concise but clear
+
+### Code Files
+
+- Follow TypeScript/JavaScript conventions (typically `camelCase` or `kebab-case` depending on project structure)
+- Use `.ts` for TypeScript files, `.tsx` for React components
+- Use `.mdx` for articles with frontmatter and components
+- Use `.md` for simpler markdown-only articles
+
+## Code Naming
+
+### Variables and Functions
+
+- Use `camelCase` for variables and functions
+- Use descriptive names that explain purpose
+- Avoid abbreviations unless widely understood
+
+### Types and Interfaces
+
+- Use `PascalCase` for types, interfaces, and classes
+- Use descriptive names: `UserProfile` not `UP`
+- Use `I` prefix for interfaces only if project convention requires it (generally avoid)
+
+### Constants
+
+- Use `UPPER_SNAKE_CASE` for constants
+- Use `camelCase` for const variables that aren't truly constant
+
+### Enums
+
+- Use `PascalCase` for enum names
+- Use `PascalCase` for enum members
+
+## Examples
+
+### ✅ Good
+
+```ts
+// File: user_profile.ts
+type UserProfile = {
+  id: string;
+  name: string;
+};
+
+function getUserProfile(id: string): UserProfile {
+  // ...
+}
+
+const MAX_RETRY_COUNT = 3;
+const defaultConfig = { timeout: 5000 };
+```
+
+### ❌ Bad
+
+```ts
+// File: up.ts
+type UP = {
+  id: string;
+  name: string;
+};
+
+function getUP(id: string): UP {
+  // ...
+}
+
+const maxRetryCount = 3; // Should be UPPER_SNAKE_CASE if constant
+```
+
+## Required Rules
+
+The AI agent should read and follow these rules along with the subject rule:
+
+- **[Syntax Conventions](mdc:.cursor/rules/guidelines/syntax_conventions.mdc)**: For file naming in documentation
+- **[Article Template](mdc:.cursor/rules/templates/article_template.mdc)**: For article file naming

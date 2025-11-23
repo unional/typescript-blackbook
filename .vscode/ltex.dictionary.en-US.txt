@@ -45,3 +45,7 @@ apispec
 npmignore
 Deno
 JSDoc
+Frontmatter
+frontmatter
+mdc
+Frontmatter

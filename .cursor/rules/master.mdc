@@ -1,0 +1,54 @@
+---
+alwaysApply: true
+---
+
+# Master Rules
+
+This file serves as the central reference for all Cursor rules in the TypeScript Blackbook repository.
+This file makes it easier for the AI agent to discover rules when they are organized in folders.
+
+## How to Use Rules
+
+### For Project Understanding
+
+- Use [project/overview.mdc](mdc:.cursor/rules/project/overview.mdc) when understanding the repository's purpose, audience, and core requirements
+- Use [project/repository_structure.mdc](mdc:.cursor/rules/project/repository_structure.mdc) when understanding or modifying the monorepo structure
+
+### For Code Quality and Standards
+
+- Use [guidelines/voice_and_tone.mdc](mdc:.cursor/rules/guidelines/voice_and_tone.mdc) when writing or editing any content
+- Use [guidelines/syntax_conventions.mdc](mdc:.cursor/rules/guidelines/syntax_conventions.mdc) when writing or editing markdown files
+- Use [guidelines/naming_conventions.mdc](mdc:.cursor/rules/guidelines/naming_conventions.mdc) when creating or updating files and folders
+- Use [guidelines/typescript_code_examples.mdc](mdc:.cursor/rules/guidelines/typescript_code_examples.mdc) when creating or editing TypeScript code examples
+- Use [guidelines/review_rubric.mdc](mdc:.cursor/rules/guidelines/review_rubric.mdc) when reviewing or validating content
+
+### For Templates
+
+- Use [templates/article_template.mdc](mdc:.cursor/rules/templates/article_template.mdc) when creating new articles
+- Use [templates/cursor_rules.mdc](mdc:.cursor/rules/templates/cursor_rules.mdc) when creating new cursor rule files
+
+## Available Rules
+
+### Project
+
+Project structure and organization:
+
+- [project/overview.mdc](mdc:.cursor/rules/project/overview.mdc) - Project overview, core principles, and fundamental requirements
+- [project/repository_structure.mdc](mdc:.cursor/rules/project/repository_structure.mdc) - Comprehensive guide to the TypeScript Blackbook repository structure
+
+### Guidelines
+
+Opinionated best practices on specific topics:
+
+- [guidelines/voice_and_tone.mdc](mdc:.cursor/rules/guidelines/voice_and_tone.mdc) - Writing persona, tense, point of view, and style guidelines.
+- [guidelines/syntax_conventions.mdc](mdc:.cursor/rules/guidelines/syntax_conventions.mdc) - Markdown formatting standards and code block conventions.
+- [guidelines/naming_conventions.mdc](mdc:.cursor/rules/guidelines/naming_conventions.mdc) - Naming conventions for files, folders, and code elements.
+- [guidelines/typescript_code_examples.mdc](mdc:.cursor/rules/guidelines/typescript_code_examples.mdc) - Guidelines for writing TypeScript code examples in documentation.
+- [guidelines/review_rubric.mdc](mdc:.cursor/rules/guidelines/review_rubric.mdc) - Quality checklist and acceptance criteria for articles.
+
+### Templates
+
+Templates for the AI agent to use:
+
+- [templates/article_template.mdc](mdc:.cursor/rules/templates/article_template.mdc) - Standard article template and structure for TypeScript Blackbook content
+- [templates/cursor_rules.mdc](mdc:.cursor/rules/templates/cursor_rules.mdc) - Template for creating new cursor rule files

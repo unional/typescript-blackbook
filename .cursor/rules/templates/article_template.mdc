@@ -1,0 +1,105 @@
+---
+description: Standard article template and structure for TypeScript Blackbook content. Use when creating new articles or reviewing existing ones for structure compliance.
+globs: "**/*.mdx","**/*.md"
+alwaysApply: false
+---
+
+# 📝 Standard Article Template
+
+## Frontmatter
+
+```yaml
+---
+title: "Article Title"
+tags: [typescript, category]
+---
+```
+
+## Article Structure
+
+### Title
+
+Use H1 (`#`) matching the frontmatter title.
+
+### Introduction
+
+Brief introduction explaining what the topic is and when it was introduced (if applicable).
+
+### Quick Example
+
+Self-contained code snippet (≤ 25 lines) demonstrating the concept:
+
+```ts
+// Practical, real-world example
+```
+
+### Recommendations
+
+For each recommendation, follow this pattern:
+
+```markdown
+You **should** [recommendation].
+
+> Why?
+
+[Explanation of benefits, trade-offs, and reasoning]
+```
+
+Use horizontal rules (`---`) to separate distinct recommendations.
+
+### Feature Introduction Pattern
+
+When introducing a TypeScript feature:
+
+1. State what it is and when it was introduced
+2. Provide a simple example
+3. Explain practical use cases
+4. Discuss recommendations and best practices
+
+### Configuration Guidelines Pattern
+
+When discussing configuration:
+
+1. State the recommendation clearly
+2. Show the configuration example
+3. Explain why this configuration is beneficial
+4. Mention alternatives or edge cases if relevant
+
+### Best Practices Section
+
+Use numbered lists for actionable best practices:
+
+```markdown
+## Best Practices
+
+1. **Practice 1** - [brief explanation]
+2. **Practice 2** - [brief explanation]
+```
+
+### References Section
+
+Link to official documentation and related resources:
+
+```markdown
+## References
+
+- [Official Documentation][link]
+- [Related Resource][link]
+
+[link]: https://example.com
+```
+
+## File Naming
+
+- Use `snake_case` for file names (e.g., `monorepo_setup.mdx`, `naming_conventions.mdx`)
+- Use descriptive nouns that represent the topic
+- Use `.mdx` for articles with frontmatter and components
+- Use `.md` for simpler markdown-only articles
+
+## Required Rules
+
+The AI agent should read and follow these rules along with the subject rule:
+
+- **[Voice and Tone](mdc:.cursor/rules/guidelines/voice_and_tone.mdc)**: For writing style
+- **[Syntax Conventions](mdc:.cursor/rules/guidelines/syntax_conventions.mdc)**: For formatting standards
+- **[Review Rubric](mdc:.cursor/rules/guidelines/review_rubric.mdc)**: For quality checklist

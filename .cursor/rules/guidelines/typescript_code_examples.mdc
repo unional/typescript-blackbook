@@ -1,0 +1,107 @@
+---
+description: Guidelines for writing TypeScript code examples in documentation. Use when creating or editing code snippets, examples, or demonstrations.
+globs: "**/*.mdx","**/*.md","**/*.ts","**/*.tsx"
+alwaysApply: true
+---
+
+# 📘 TypeScript Code Examples
+
+## Code Quality Requirements
+
+All TypeScript code examples MUST be:
+
+- **Compile-safe** - Must pass TypeScript compiler checks without errors
+- **Type-checked** - Properly typed, avoiding `any` unless demonstrating specific scenarios
+- **Production-ready** - Follow repository conventions and best practices
+- **Self-contained** - Complete and runnable (when applicable)
+- **Practical** - Demonstrate real-world usage patterns
+
+## Code Example Structure
+
+### Quick Examples (≤ 25 lines)
+
+For introductory examples, keep them concise:
+
+```ts
+// Good: Concise, clear example
+type User = {
+  id: string;
+  name: string;
+  email: string;
+};
+
+function getUserById(id: string): User | undefined {
+  // Implementation
+}
+```
+
+### Complex Examples
+
+For more complex scenarios, break them into logical sections with comments:
+
+```ts
+// Step 1: Define types
+type Config = {
+  // ...
+};
+
+// Step 2: Implementation
+function processConfig(config: Config): Result {
+  // ...
+}
+```
+
+## Type Safety
+
+- **Avoid `any`** - Use proper types or `unknown` when type is truly unknown
+- **Use type inference** - Let TypeScript infer types when appropriate
+- **Show type annotations** - Include explicit types when demonstrating type concepts
+- **Demonstrate type errors** - Show what happens when types don't match (with clear markers)
+
+## Code Comments
+
+- Include comments to explain **why**, not just **what**
+- Use comments to highlight key concepts being demonstrated
+- Keep comments concise and relevant
+
+## Good vs Bad Examples
+
+### ❌ Bad: Pseudo-code or incomplete
+
+```ts
+// Don't do this
+function process(data) {
+  // do something
+  return result;
+}
+```
+
+### ✅ Good: Complete, typed example
+
+```ts
+// Do this instead
+type ProcessResult = {
+  success: boolean;
+  data: unknown;
+};
+
+function process<T>(data: T): ProcessResult {
+  // Implementation
+  return { success: true, data };
+}
+```
+
+## Playground Links
+
+When demonstrating TypeScript features, include TypeScript Playground links when helpful:
+
+```markdown
+[Try in TypeScript Playground](https://www.typescriptlang.org/play?#code=...)
+```
+
+## Required Rules
+
+The AI agent should read and follow these rules along with the subject rule:
+
+- **[Syntax Conventions](mdc:.cursor/rules/guidelines/syntax_conventions.mdc)**: For code block formatting
+- **[Voice and Tone](mdc:.cursor/rules/guidelines/voice_and_tone.mdc)**: For explanation style

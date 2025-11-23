@@ -1,0 +1,45 @@
+---
+description: Template for creating new cursor rule files in TypeScript Blackbook
+globs:
+alwaysApply: false
+---
+
+# Rule Title
+
+Brief introduction explaining the rule's purpose and when to apply it.
+
+## Required Rules
+
+The AI agent should read and follow these rules along with the subject rule:
+
+- **[Required Rule 1](mdc:.cursor/rules/category/required_rule_1.mdc)**: Brief explanation of why this rule is required
+- **[Required Rule 2](mdc:.cursor/rules/category/required_rule_2.mdc)**: Brief explanation of why this rule is required
+
+## Quick Reference
+
+[Include a summary table or bullet points for quick lookup]
+
+## Table of Contents
+
+- [Section 1](#section-1)
+- [Section 2](#section-2)
+
+## Section 1
+
+Detailed explanation with step-by-step instructions.
+
+### ❌ Bad Examples to avoid
+
+[Include examples of what to avoid]
+
+### ✅ Good Examples to follow
+
+[Include positive examples]
+
+## Section 2
+
+Additional content organized in logical sections.
+
+## Quality Checklist
+
+[Include verification steps to ensure compliance]

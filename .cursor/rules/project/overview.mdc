@@ -1,0 +1,45 @@
+---
+description: Project overview and core principles for TypeScript Blackbook. Use when understanding the repository's purpose, audience, and fundamental requirements.
+globs: "**/*"
+alwaysApply: true
+---
+
+# 📚 Project Overview (TypeScript Blackbook)
+
+This repository documents real-world TypeScript techniques and best practices for professional developers.
+
+**Primary audience**: mid- to senior-level TypeScript developers
+
+**Desired outcome**: readers can understand TypeScript deeply and apply patterns effectively in their projects.
+
+## Core Requirements
+
+Cursor-AI MUST:
+
+- **Treat every code example as production-ready** - compile-safe, type-checked, following repository conventions
+- **Avoid pseudo-code or incomplete examples** - always use valid TypeScript that demonstrates the concept
+- **Cite internal file paths** - reference existing code patterns from the repository when relevant
+- **Explain the "why"** - not just the "what", include reasoning behind recommendations
+- **Include trade-offs and alternatives** - discuss different approaches when relevant
+- **Reference official documentation** - include TypeScript documentation links and version numbers when applicable
+
+## Design Philosophy
+
+This book focuses on *how to get the most out of TypeScript with minimal effort*.
+
+To achieve that goal, following some coding styles is a good place to start. However, just following *what to do* can only go so far. You need to know:
+
+- **Why** should you write code in a certain way
+- **What** are the **trade-offs** you are making
+- The **design** and **limitations** of the language itself
+
+This knowledge provides the right **mindset** and **approach** to solve problems effectively.
+
+## Required Rules
+
+The AI agent should read and follow these rules along with the subject rule:
+
+- **[Voice and Tone Guidelines](mdc:.cursor/rules/guidelines/voice_and_tone.mdc)**: For writing style and persona
+- **[Syntax Conventions](mdc:.cursor/rules/guidelines/syntax_conventions.mdc)**: For markdown and code formatting
+- **[Article Template](mdc:.cursor/rules/templates/article_template.mdc)**: For article structure and organization
+- **[Review Rubric](mdc:.cursor/rules/guidelines/review_rubric.mdc)**: For quality assurance checklist

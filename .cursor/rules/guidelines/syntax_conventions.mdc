@@ -1,0 +1,82 @@
+---
+description: Markdown syntax conventions and formatting standards for TypeScript Blackbook. Use when writing or editing markdown files, code blocks, and documentation.
+globs: "**/*.md","**/*.mdx","**/*.mdc"
+alwaysApply: true
+---
+
+# 🛠 Syntax Conventions
+
+## Markdown Structure
+
+- **Level-1 heading** (`#`) appears ONCE at top of file (matches frontmatter title)
+- **Level-2 headings** (`##`) separate major sections (e.g., Overview, Best Practices, References)
+- **Level-3 headings** (`###`) for subsections when needed
+- **Horizontal rules** (`---`) to separate distinct topics within the same article
+
+## Frontmatter
+
+Every article MUST start with frontmatter:
+
+```yaml
+---
+title: "Article Title"
+authors: [unional]  # Optional, include if author is known
+tags: [tag1, tag2, tag3]  # Relevant tags for categorization
+---
+```
+
+## Code Blocks
+
+- Always include a language tag: `ts`, `json`, `jsonc`, `json5`, `sh`, `bash`
+- Never use indented code blocks; always use fenced code blocks with ```
+- Include comments in code to explain key points
+- Keep examples practical and self-contained (preferably ≤ 25 lines for quick examples)
+
+## Inline Code
+
+- Use back-ticks for identifiers, types, file names, and technical terms
+- Example: `Partial<T>`, `tsconfig.json`, `snake_case` ✅
+- Avoid: `a variable that represents something` ❌
+
+## Links
+
+- Prefer reference-style links `[text][id]` with definitions at bottom
+- Embed URLs directly only when unavoidable
+- Link to official TypeScript documentation when referencing features
+- Include Playground links for interactive examples when helpful
+
+## Emphasis
+
+- **Bold** for important terms, recommendations, and key concepts
+- *Italics* for emphasis within sentences
+- `Code` formatting for technical terms, file names, and code references
+
+## Lists
+
+- Use bullet points for simple lists
+- Use numbered lists for sequential steps or best practices
+- Keep list items concise and parallel in structure
+
+## "Why?" Blocks
+
+Always follow recommendations with a "Why?" block using blockquote format:
+
+```markdown
+> Why?
+
+[Explanation of the reasoning, trade-offs, and practical benefits]
+```
+
+## Good vs Bad Examples
+
+When demonstrating antipatterns, use clear markers:
+
+- `❌ Bad` for examples to avoid
+- `✅ Good` for recommended approaches
+
+## Required Rules
+
+The AI agent should read and follow these rules along with the subject rule:
+
+- **[Voice and Tone](mdc:.cursor/rules/guidelines/voice_and_tone.mdc)**: For writing style consistency
+- **[Article Template](mdc:.cursor/rules/templates/article_template.mdc)**: For article structure

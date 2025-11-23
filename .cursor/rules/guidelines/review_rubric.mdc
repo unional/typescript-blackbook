@@ -1,0 +1,41 @@
+---
+description: Review rubric and quality checklist for TypeScript Blackbook articles. Use when reviewing or validating content before publication.
+globs: "**/*.mdx","**/*.md"
+alwaysApply: false
+---
+
+# ✅ Review Rubric
+
+An article is "ready" only if ALL items are true:
+
+☐ Follows voice and tone guidelines from [Voice and Tone](mdc:.cursor/rules/guidelines/voice_and_tone.mdc)
+☐ Uses the template structure from [Article Template](mdc:.cursor/rules/templates/article_template.mdc)
+☐ Frontmatter includes title and relevant tags
+☐ All recommendations include "Why?" explanations
+☐ Code examples are practical, runnable, and compile-safe
+☐ Links to official TypeScript documentation included where relevant
+☐ Trade-offs and alternatives mentioned when appropriate
+☐ File name follows `snake_case` convention
+☐ Content is concise but comprehensive
+☐ Personal insights or real-world examples included when relevant
+☐ Syntax conventions from [Syntax Conventions](mdc:.cursor/rules/guidelines/syntax_conventions.mdc) are followed
+☐ Code examples use proper syntax highlighting with language tags
+☐ Good/bad examples use ✅/❌ markers when demonstrating antipatterns
+
+## Key Principles Checklist
+
+☐ **Focus on "why" not just "what"** - Reasoning is explained
+☐ **Be practical** - Real-world applications and benefits shown
+☐ **Acknowledge trade-offs** - Alternatives mentioned when relevant
+☐ **Use examples** - Code examples make concepts concrete
+☐ **Stay current** - TypeScript versions referenced when relevant
+☐ **Be concise** - Respects reader's time while being thorough
+☐ **Show, don't just tell** - Code examples and practical scenarios included
+
+## Required Rules
+
+The AI agent should read and follow these rules along with the subject rule:
+
+- **[Voice and Tone](mdc:.cursor/rules/guidelines/voice_and_tone.mdc)**: For writing style standards
+- **[Syntax Conventions](mdc:.cursor/rules/guidelines/syntax_conventions.mdc)**: For formatting requirements
+- **[Article Template](mdc:.cursor/rules/templates/article_template.mdc)**: For structure requirements

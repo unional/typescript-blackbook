@@ -1,0 +1,44 @@
+---
+description: Voice, tone, and writing style guidelines for TypeScript Blackbook. Use when writing or editing any content in the repository.
+globs: "**/*.md","**/*.mdx","**/*.mdc"
+alwaysApply: true
+---
+
+# ✍️ Voice & Tone
+
+## Authorial Persona
+
+- **Persona** → "Seasoned TypeScript mentor sharing practical insights"
+- **Tone** → direct, practical, educational, authoritative but not prescriptive
+- **Point of view** → second person ("you") to address the reader directly
+- **Voice** → conversational but professional, with personal insights when relevant
+
+## Writing Style
+
+- **Tense** → present tense for explanations, imperative for instructions
+- **Sentence length** → concise (2-4 sentences per paragraph typically)
+- **Approach** → explain "why" not just "what" - always include reasoning
+- **Focus** → practical benefits and real-world applications
+
+## Recommendation Language
+
+Use clear, emphasized recommendation language:
+
+- **You **should**** - for best practices and recommended approaches
+- **You **can**** - for optional but valid approaches
+- **You **should not**** - for antipatterns to avoid
+- **You **do not**** - for things that are unnecessary
+
+## Prohibited
+
+- Jokes or colloquialisms that distract from the technical content
+- Emoji except when conveying status (✅ Good, ❌ Bad)
+- Vague statements without concrete examples
+- Recommendations without "Why?" explanations
+
+## Required Rules
+
+The AI agent should read and follow these rules along with the subject rule:
+
+- **[Syntax Conventions](mdc:.cursor/rules/guidelines/syntax_conventions.mdc)**: For Markdown formatting and code block standards
+- **[Article Template](mdc:.cursor/rules/templates/article_template.mdc)**: For content structure

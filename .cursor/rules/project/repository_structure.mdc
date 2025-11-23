@@ -1,0 +1,60 @@
+---
+description: Repository structure and organization for TypeScript Blackbook. Use when understanding or modifying the project structure, monorepo layout, or content organization.
+globs: "**/*"
+alwaysApply: false
+---
+
+# 🏗️ Repository Structure
+
+## Overview
+
+TypeScript Blackbook is organized as a monorepo containing documentation, examples, and supporting tools.
+
+## Key Directories
+
+### Documentation
+
+- `apps/starlight/` - Starlight-based documentation site
+  - `src/content/docs/` - Main documentation content
+  - `src/content/blogs/` - Blog posts
+
+### Legacy Content
+
+- `docs/` - Legacy documentation structure (being migrated)
+- `github-page/` - Previous Docusaurus-based site
+
+### Configuration
+
+- `.cursor/rules/` - Cursor AI rules and guidelines
+- Root-level config files for TypeScript, ESLint, Prettier, etc.
+
+## Content Organization
+
+### Documentation Structure
+
+Documentation follows a hierarchical structure:
+
+- **Guides** - Step-by-step tutorials and how-to guides
+- **Reference** - API references and technical details
+- **Examples** - Code examples and demonstrations
+
+### File Organization
+
+- Use `snake_case` for all documentation file names
+- Group related content in directories
+- Use descriptive directory names that reflect content categories
+
+## Monorepo Structure
+
+The repository uses a monorepo structure to manage:
+
+- Multiple documentation sites
+- Shared tooling and configuration
+- Examples and code samples
+
+## Required Rules
+
+The AI agent should read and follow these rules along with the subject rule:
+
+- **[Naming Conventions](mdc:.cursor/rules/guidelines/naming_conventions.mdc)**: For file and folder naming
+- **[Project Overview](mdc:.cursor/rules/project/overview.mdc)**: For repository purpose and goals
