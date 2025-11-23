@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgithub_page=self.webpackChunkgithub_page||[]).push([[7574],{835:e=>{e.exports=JSON.parse('{"permalink":"/typescript-blackbook/blog/tags/esm","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
