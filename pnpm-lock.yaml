@@ -24,8 +24,8 @@ importers:
         specifier: ^0.9.5
         version: 0.9.5(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.6.2)
       '@astrojs/starlight':
-        specifier: ^0.36.2
-        version: 0.36.2(astro@5.16.0(@types/node@20.14.12)(jiti@1.21.6)(lightningcss@1.25.1)(rollup@4.53.3)(terser@5.31.3)(typescript@5.6.2)(yaml@2.5.1))
+        specifier: ^0.37.0
+        version: 0.37.0(astro@5.16.0(@types/node@20.14.12)(jiti@1.21.6)(lightningcss@1.25.1)(rollup@4.53.3)(terser@5.31.3)(typescript@5.6.2)(yaml@2.5.1))
       '@astrojs/tailwind':
         specifier: ^6.0.2
         version: 6.0.2(astro@5.16.0(@types/node@20.14.12)(jiti@1.21.6)(lightningcss@1.25.1)(rollup@4.53.3)(terser@5.31.3)(typescript@5.6.2)(yaml@2.5.1))(tailwindcss@3.4.13)
@@ -299,8 +299,8 @@ packages:
       solid-devtools:
         optional: true
 
-  '@astrojs/starlight@0.36.2':
-    resolution: {integrity: sha512-QR8NfO7+7DR13kBikhQwAj3IAoptLLNs9DkyKko2M2l3PrqpcpVUnw1JBJ0msGDIwE6tBbua2UeBND48mkh03w==}
+  '@astrojs/starlight@0.37.0':
+    resolution: {integrity: sha512-1AlaEjYYRO+5o6P5maPUBQZr6Q3wtuhMQTmsDQExI07wJVwe7EC2wGhXnFo+jpCjwHv/Bdg33PQheY4UhMj01g==}
     peerDependencies:
       astro: ^5.5.0
 
@@ -4497,10 +4497,6 @@ packages:
     resolution: {integrity: sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==}
     hasBin: true
 
-  js-yaml@4.1.0:
-    resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
-    hasBin: true
-
   js-yaml@4.1.1:
     resolution: {integrity: sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==}
     hasBin: true
@@ -4577,10 +4573,6 @@ packages:
   kleur@4.1.5:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
-
-  klona@2.0.5:
-    resolution: {integrity: sha512-pJiBpiXMbt7dkzXe8Ghj/u4FfXOOa98fPW+bihOJ4SjnoijweJrNThJfd3ifXpXhREjpoF2mZVH1GfS9LV3kHQ==}
-    engines: {node: '>= 8'}
 
   klona@2.0.6:
     resolution: {integrity: sha512-dhG34DXATL5hSxJbIexCft8FChFXtmskoZYnoPWjXQuebWYCNkVeV3KkGegCK9CP1oswI/vQibS2GY7Em/sJJA==}
@@ -6021,9 +6013,6 @@ packages:
   rehype-recma@1.0.0:
     resolution: {integrity: sha512-lqA4rGUf1JmacCNWWZx0Wv1dHqMwxzsDWYMTowuplHF3xH0N/MmrZ/G3BDZnzAkRmxDadujCjaKM2hqYdCBOGw==}
 
-  rehype-stringify@10.0.0:
-    resolution: {integrity: sha512-1TX1i048LooI9QoecrXy7nGFFbFSufxVRAfc6Y9YMRAi56l+oB0zP51mLSV312uRuvVLPV1opSlJmslozR1XHQ==}
-
   rehype-stringify@10.0.1:
     resolution: {integrity: sha512-k9ecfXHmIPuFVI61B9DeLPN0qFHfawM6RsuX48hoqlaKSF61RskNjSm1lI8PhBEM0MRdLxVVm4WmTqJQccH9mA==}
 
@@ -6853,9 +6842,6 @@ packages:
   unist-util-visit-parents@3.1.1:
     resolution: {integrity: sha512-1KROIZWo6bcMrZEwiH2UrXDyalAa0uqzWCxCJj6lPOvTve2WkfgCytoDTPaMnodXh1WrXOq0haVYHj99ynJlsg==}
 
-  unist-util-visit-parents@6.0.1:
-    resolution: {integrity: sha512-L/PqWzfTP9lzzEa6CKs0k2nARxTdZduw3zyh8d2NVBnsyvHjSX4TWse388YrrQKbvI8w20fGjGlhgT96WwKykw==}
-
   unist-util-visit-parents@6.0.2:
     resolution: {integrity: sha512-goh1s1TBrqSqukSc8wrjwWhL0hiJxgA8m4kFxGlQ+8FYQ3C/m11FcTs4YYem7V664AhHVvgoQLk890Ssdsr2IQ==}
 
@@ -7673,7 +7659,7 @@ snapshots:
       hast-util-from-html: 2.0.3
       hast-util-to-text: 4.0.2
       import-meta-resolve: 4.2.0
-      js-yaml: 4.1.0
+      js-yaml: 4.1.1
       mdast-util-definitions: 6.0.0
       rehype-raw: 7.0.0
       rehype-stringify: 10.0.1
@@ -7766,7 +7752,7 @@ snapshots:
       - utf-8-validate
       - yaml
 
-  '@astrojs/starlight@0.36.2(astro@5.16.0(@types/node@20.14.12)(jiti@1.21.6)(lightningcss@1.25.1)(rollup@4.53.3)(terser@5.31.3)(typescript@5.6.2)(yaml@2.5.1))':
+  '@astrojs/starlight@0.37.0(astro@5.16.0(@types/node@20.14.12)(jiti@1.21.6)(lightningcss@1.25.1)(rollup@4.53.3)(terser@5.31.3)(typescript@5.6.2)(yaml@2.5.1))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.9
       '@astrojs/mdx': 4.3.12(astro@5.16.0(@types/node@20.14.12)(jiti@1.21.6)(lightningcss@1.25.1)(rollup@4.53.3)(terser@5.31.3)(typescript@5.6.2)(yaml@2.5.1))
@@ -7783,8 +7769,9 @@ snapshots:
       hast-util-to-string: 3.0.0
       hastscript: 9.0.0
       i18next: 23.15.1
-      js-yaml: 4.1.0
+      js-yaml: 4.1.1
       klona: 2.0.6
+      magic-string: 0.30.21
       mdast-util-directive: 3.0.0
       mdast-util-to-markdown: 2.1.0
       mdast-util-to-string: 4.0.0
@@ -10099,7 +10086,7 @@ snapshots:
       combine-promises: 1.1.0
       fs-extra: 10.1.0
       import-fresh: 3.3.0
-      js-yaml: 4.1.0
+      js-yaml: 4.1.1
       lodash: 4.17.21
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
@@ -10136,7 +10123,7 @@ snapshots:
       combine-promises: 1.1.0
       fs-extra: 10.1.0
       import-fresh: 3.3.0
-      js-yaml: 4.1.0
+      js-yaml: 4.1.1
       lodash: 4.17.21
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
@@ -10670,7 +10657,7 @@ snapshots:
       '@docusaurus/logger': 2.2.0
       '@docusaurus/utils': 2.2.0(@docusaurus/types@2.2.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))
       joi: 17.7.0
-      js-yaml: 4.1.0
+      js-yaml: 4.1.1
       tslib: 2.5.0
     transitivePeerDependencies:
       - '@docusaurus/types'
@@ -10685,7 +10672,7 @@ snapshots:
       '@docusaurus/logger': 2.4.3
       '@docusaurus/utils': 2.4.3(@docusaurus/types@2.2.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))
       joi: 17.7.0
-      js-yaml: 4.1.0
+      js-yaml: 4.1.1
       tslib: 2.5.0
     transitivePeerDependencies:
       - '@docusaurus/types'
@@ -10700,7 +10687,7 @@ snapshots:
       '@docusaurus/logger': 2.4.3
       '@docusaurus/utils': 2.4.3(@docusaurus/types@2.4.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0))
       joi: 17.7.0
-      js-yaml: 4.1.0
+      js-yaml: 4.1.1
       tslib: 2.5.0
     transitivePeerDependencies:
       - '@docusaurus/types'
@@ -10719,7 +10706,7 @@ snapshots:
       github-slugger: 1.5.0
       globby: 11.1.0
       gray-matter: 4.0.3
-      js-yaml: 4.1.0
+      js-yaml: 4.1.1
       lodash: 4.17.21
       micromatch: 4.0.8
       resolve-pathname: 3.0.0
@@ -10746,7 +10733,7 @@ snapshots:
       github-slugger: 1.5.0
       globby: 11.1.0
       gray-matter: 4.0.3
-      js-yaml: 4.1.0
+      js-yaml: 4.1.1
       lodash: 4.17.21
       micromatch: 4.0.8
       resolve-pathname: 3.0.0
@@ -10773,7 +10760,7 @@ snapshots:
       github-slugger: 1.5.0
       globby: 11.1.0
       gray-matter: 4.0.3
-      js-yaml: 4.1.0
+      js-yaml: 4.1.1
       lodash: 4.17.21
       micromatch: 4.0.8
       resolve-pathname: 3.0.0
@@ -10956,10 +10943,10 @@ snapshots:
       hast-util-to-html: 9.0.5
       hast-util-to-text: 4.0.2
       hastscript: 9.0.0
-      postcss: 8.4.47
-      postcss-nested: 6.2.0(postcss@8.4.47)
+      postcss: 8.5.6
+      postcss-nested: 6.2.0(postcss@8.5.6)
       unist-util-visit: 5.0.0
-      unist-util-visit-parents: 6.0.1
+      unist-util-visit-parents: 6.0.2
 
   '@expressive-code/plugin-frames@0.41.3':
     dependencies:
@@ -11116,13 +11103,13 @@ snapshots:
   '@jridgewell/gen-mapping@0.3.3':
     dependencies:
       '@jridgewell/set-array': 1.1.2
-      '@jridgewell/sourcemap-codec': 1.5.0
+      '@jridgewell/sourcemap-codec': 1.5.5
       '@jridgewell/trace-mapping': 0.3.18
 
   '@jridgewell/gen-mapping@0.3.5':
     dependencies:
       '@jridgewell/set-array': 1.2.1
-      '@jridgewell/sourcemap-codec': 1.5.0
+      '@jridgewell/sourcemap-codec': 1.5.5
       '@jridgewell/trace-mapping': 0.3.25
 
   '@jridgewell/remapping@2.3.5':
@@ -11157,7 +11144,7 @@ snapshots:
   '@jridgewell/trace-mapping@0.3.25':
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
-      '@jridgewell/sourcemap-codec': 1.5.0
+      '@jridgewell/sourcemap-codec': 1.5.5
 
   '@jridgewell/trace-mapping@0.3.31':
     dependencies:
@@ -13811,7 +13798,7 @@ snapshots:
       hast-util-phrasing: 3.0.1
       hast-util-whitespace: 3.0.0
       html-whitespace-sensitive-tag-names: 3.0.0
-      unist-util-visit-parents: 6.0.1
+      unist-util-visit-parents: 6.0.2
 
   hast-util-from-html@2.0.3:
     dependencies:
@@ -14417,10 +14404,6 @@ snapshots:
       argparse: 1.0.10
       esprima: 4.0.1
 
-  js-yaml@4.1.0:
-    dependencies:
-      argparse: 2.0.1
-
   js-yaml@4.1.1:
     dependencies:
       argparse: 2.0.1
@@ -14499,8 +14482,6 @@ snapshots:
   kleur@3.0.3: {}
 
   kleur@4.1.5: {}
-
-  klona@2.0.5: {}
 
   klona@2.0.6: {}
 
@@ -14671,7 +14652,7 @@ snapshots:
       mdast-util-to-markdown: 2.1.0
       parse-entities: 4.0.0
       stringify-entities: 4.0.4
-      unist-util-visit-parents: 6.0.1
+      unist-util-visit-parents: 6.0.2
     transitivePeerDependencies:
       - supports-color
 
@@ -15132,7 +15113,7 @@ snapshots:
   micromark@4.0.0:
     dependencies:
       '@types/debug': 4.1.7
-      debug: 4.3.7
+      debug: 4.4.3
       decode-named-character-reference: 1.0.2
       devlop: 1.1.0
       micromark-core-commonmark: 2.0.1
@@ -15657,7 +15638,7 @@ snapshots:
   postcss-loader@7.0.1(postcss@8.4.29)(webpack@5.75.0):
     dependencies:
       cosmiconfig: 7.1.0
-      klona: 2.0.5
+      klona: 2.0.6
       postcss: 8.4.29
       semver: 7.6.3
       webpack: 5.75.0
@@ -15665,7 +15646,7 @@ snapshots:
   postcss-loader@7.0.1(postcss@8.4.47)(webpack@5.75.0):
     dependencies:
       cosmiconfig: 7.1.0
-      klona: 2.0.5
+      klona: 2.0.6
       postcss: 8.4.47
       semver: 7.6.3
       webpack: 5.75.0
@@ -15781,6 +15762,11 @@ snapshots:
   postcss-nested@6.2.0(postcss@8.4.47):
     dependencies:
       postcss: 8.4.47
+      postcss-selector-parser: 6.1.2
+
+  postcss-nested@6.2.0(postcss@8.5.6):
+    dependencies:
+      postcss: 8.5.6
       postcss-selector-parser: 6.1.2
 
   postcss-normalize-charset@5.1.0(postcss@8.4.29):
@@ -16378,12 +16364,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  rehype-stringify@10.0.0:
-    dependencies:
-      '@types/hast': 3.0.4
-      hast-util-to-html: 9.0.5
-      unified: 11.0.5
-
   rehype-stringify@10.0.1:
     dependencies:
       '@types/hast': 3.0.4
@@ -16394,7 +16374,7 @@ snapshots:
     dependencies:
       '@types/hast': 3.0.4
       rehype-parse: 9.0.0
-      rehype-stringify: 10.0.0
+      rehype-stringify: 10.0.1
       unified: 11.0.5
 
   relateurl@0.2.7: {}
@@ -17415,11 +17395,6 @@ snapshots:
       '@types/unist': 2.0.11
       unist-util-is: 4.1.0
 
-  unist-util-visit-parents@6.0.1:
-    dependencies:
-      '@types/unist': 3.0.3
-      unist-util-is: 6.0.0
-
   unist-util-visit-parents@6.0.2:
     dependencies:
       '@types/unist': 3.0.3
@@ -17435,7 +17410,7 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
       unist-util-is: 6.0.0
-      unist-util-visit-parents: 6.0.1
+      unist-util-visit-parents: 6.0.2
 
   universalify@2.0.0: {}
 
