@@ -31,7 +31,7 @@
     "@docusaurus/types": "^2.2.0",
     "@tsconfig/docusaurus": "^2.0.0",
     "@types/node": "^18.11.9",
-    "typescript": "^5.0.0"
+    "typescript": "^6.0.0"
   },
   "browserslist": {
     "production": [
