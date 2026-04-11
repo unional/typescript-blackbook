@@ -1,0 +1,23 @@
+---
+/**
+ * Embeds a sandbox preview. Prefer SandboxLink when iframes are blocked or for full projects.
+ */
+interface Props {
+	src: string
+	title?: string
+	height?: number
+}
+const { src, title = 'Code sandbox', height = 480 } = Astro.props
+---
+
+<div class="not-prose my-6 w-full overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
+	<iframe
+		class="w-full"
+		style={`height: ${height}px`}
+		src={src}
+		title={title}
+		loading="lazy"
+		allow="accelerometer; ambient-light-sensor; camera; clipboard-write; encrypted-media; display-capture; fullscreen; geolocation; gyroscope; magnetometer; microphone; midi; payment; picture-in-picture; speaker; usb; vibrate; vr; wake-lock; web-share"
+		sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+	></iframe>
+</div>

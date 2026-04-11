@@ -1,0 +1,76 @@
+---
+title: Authoring MDX (video, sandboxes)
+description: Use shared components for YouTube, sandbox links, embeds, and optional Sandpack snippets.
+sidebar:
+  order: 10
+---
+
+import SandboxLink from '../../../components/SandboxLink.astro';
+import { SandpackSnippet } from '../../../components/SandpackSnippet';
+
+This page documents patterns for lessons and blog posts: **YouTube**, **sandbox links**, **iframe embeds**, and **in-page Sandpack** (optional, loads extra JavaScript).
+
+## YouTube
+
+Pass the video id (from the watch URL, e.g. `watch?v=**THIS_PART**`):
+
+In your own MDX:
+
+```mdx
+import YouTube from '../../../components/YouTube.astro';
+
+<YouTube id="VIDEO_ID" title="Short description" />
+```
+
+## Sandbox links (preferred for full projects)
+
+Use **SandboxLink** for StackBlitz, CodeSandbox, or any HTTPS URL. Readers get a clear escape hatch if embeds are blocked.
+
+<SandboxLink
+	href="https://stackblitz.com/github/unional/typescript-blackbook/tree/main/exercises/node-this"
+	label="Open `exercises/node-this` in StackBlitz"
+/>
+
+```mdx
+import SandboxLink from '../../../components/SandboxLink.astro';
+
+<SandboxLink href="https://stackblitz.com/..." label="Open in StackBlitz" />
+```
+
+## Iframe embed
+
+Use **SandboxEmbed** only when you trust the origin and want an inline preview. Always pair with a **SandboxLink** in real lessons.
+
+```mdx
+import SandboxEmbed from '../../../components/SandboxEmbed.astro';
+
+<SandboxEmbed src="https://stackblitz.com/edit/....?embed=1" title="Preview" height={520} />
+```
+
+## Sandpack (small TypeScript snippets)
+
+Loads on scroll (`client:visible`). Keep snippets short to limit bundle size.
+
+<SandpackSnippet
+	client:visible
+	template="vanilla-ts"
+	file="/index.ts"
+	files={{
+		'/index.ts': `const msg: string = 'Hello from Sandpack';
+console.log(msg);
+`,
+	}}
+/>
+
+```mdx
+import { SandpackSnippet } from '../../../components/SandpackSnippet';
+
+<SandpackSnippet
+  client:visible
+  template="vanilla-ts"
+  file="/index.ts"
+  files={{
+    '/index.ts': `const x: number = 1;\nconsole.log(x);`,
+  }}
+/>
+```

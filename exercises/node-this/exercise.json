@@ -1,0 +1,6 @@
+{
+	"title": "Node `this` and module scope",
+	"description": "Explore `this`, `module`, `exports`, and `global` in a CommonJS file.",
+	"stackblitzUrl": "https://stackblitz.com/github/unional/typescript-blackbook/tree/main/exercises/node-this",
+	"codesandboxUrl": null
+}

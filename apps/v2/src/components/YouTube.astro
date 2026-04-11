@@ -1,0 +1,22 @@
+---
+/**
+ * Privacy-oriented embed (youtube-nocookie). Use in MDX: <YouTube id="dQw4w9WgXcQ" title="Optional title" />
+ */
+interface Props {
+	id: string
+	title?: string
+}
+
+const { id, title = 'YouTube video' } = Astro.props
+const src = `https://www.youtube-nocookie.com/embed/${id}`
+---
+
+<div class="not-prose my-6 aspect-video w-full max-w-3xl">
+<iframe
+		class="h-full w-full rounded-lg border border-gray-200 dark:border-gray-700"
+		src={src}
+		title={title}
+		loading="lazy"
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+		allowfullscreen></iframe>
+</div>

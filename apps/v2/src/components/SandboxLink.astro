@@ -1,0 +1,17 @@
+---
+interface Props {
+	href: string
+	label?: string
+}
+const { href, label = 'Open in online sandbox' } = Astro.props
+---
+
+<p class="not-prose my-4">
+	<a
+		class="font-medium underline"
+		href={href}
+		target="_blank"
+		rel="noopener noreferrer">{label}</a
+	>
+	<span class="text-gray-500 dark:text-gray-400"> (opens StackBlitz, CodeSandbox, or similar)</span>
+</p>

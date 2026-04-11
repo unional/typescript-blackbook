@@ -1,0 +1,22 @@
+---
+import { type CollectionEntry } from 'astro:content'
+
+export interface Props {
+	href: string
+	post: CollectionEntry<'blogs'>
+}
+
+const { href, post } = Astro.props
+---
+
+<article class="flex flex-col gap-2">
+	<div class="flex flex-row items-end justify-between gap-2 w-full">
+		<h3>
+			<a href={href}>{post.data.title}</a>
+		</h3>
+		<time class="box-border" datetime={post.data.pubDate.toString()}
+			>{new Date(post.data.pubDate).toLocaleDateString()}</time
+		>
+	</div>
+	{post.data.summary && <Fragment set:html={post.data.summary} />}
+</article>

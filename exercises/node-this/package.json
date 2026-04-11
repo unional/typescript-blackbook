@@ -1,0 +1,8 @@
+{
+	"name": "exercise-node-this",
+	"private": true,
+	"type": "commonjs",
+	"scripts": {
+		"start": "node main.cjs"
+	}
+}

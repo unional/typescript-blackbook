@@ -1,0 +1,36 @@
+---
+title: Declaration Map
+tags: [typescript, tsconfig]
+---
+
+# Declaration Map
+
+[![Video][video-image]][video-url]
+
+You **should** set [`declarationMap`] to `true`.
+
+> Why?
+
+The tells `tsc` to generate sourcemap for your declaration files.
+
+This enables "Go to Source Definition" features in supporting editors like VS Code.
+
+It makes your code easier to read and understand.
+
+Remember to include your TypeScript source code into the package distribution,
+so that user of your library can navigate to the included source code.
+
+i.e. add this in your `package.json`:
+
+```jsonc
+{
+  "files": [
+    // ...
+    "src"
+  ]
+}
+```
+
+[`declarationMap`]: https://www.typescriptlang.org/tsconfig#declarationMap
+[video-image]: https://img.youtube.com/vi/IRvy_4xgPLQ/0.jpg
+[video-url]: https://www.youtube.com/watch?v=IRvy_4xgPLQ

@@ -11,7 +11,8 @@
     "lint": "turbo run lint",
     "gh": "pnpm --filter github-page",
     "page": "pnpm --filter page",
-    "web": "pnpm --filter ./apps/starlight",
+    "web": "pnpm --filter ./apps/v2",
+    "web:legacy": "pnpm --filter ./apps/starlight",
     "t": "pnpm --filter ./apps/tutorial",
     "verify": "turbo run lint build build:doc depcheck coverage size"
   },
