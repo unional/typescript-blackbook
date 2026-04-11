@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { buildBlogSidebar } from '../../utils/blog_sidebar';
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blogs');
@@ -11,11 +12,14 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+const sidebar = await buildBlogSidebar();
 ---
 
-<StarlightPage	frontmatter={{
+<StarlightPage
+	sidebar={sidebar}
+	frontmatter={{
 		...entry.data,
-		template: 'splash',
+		template: 'doc',
 		editUrl: false,
 	}}
 >

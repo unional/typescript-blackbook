@@ -1,13 +1,17 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro'
 import BlogsList from '../../components/blogs_list.astro'
+import { buildBlogSidebar } from '../../utils/blog_sidebar'
+
+const sidebar = await buildBlogSidebar()
 ---
 
 <StarlightPage
+	sidebar={sidebar}
 	frontmatter={{
 		title: 'Blog',
 		description: 'Posts about and around TypeScript',
-		template: 'splash',
+		template: 'doc',
 		editUrl: false,
 	}}
 >
