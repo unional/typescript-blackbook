@@ -5,8 +5,8 @@ sidebar:
   order: 10
 ---
 
-import SandboxLink from '../../../components/SandboxLink.astro';
-import { SandpackSnippet } from '../../../components/SandpackSnippet';
+import SandboxLink from '../../../../components/SandboxLink.astro';
+import { SandpackSnippet } from '../../../../components/SandpackSnippet';
 
 This page documents patterns for lessons and blog posts: **YouTube**, **sandbox links**, **iframe embeds**, and **in-page Sandpack** (optional, loads extra JavaScript).
 
@@ -17,7 +17,7 @@ Pass the video id (from the watch URL, e.g. `watch?v=**THIS_PART**`):
 In your own MDX:
 
 ```mdx
-import YouTube from '../../../components/YouTube.astro';
+import YouTube from '../../../../components/YouTube.astro';
 
 <YouTube id="VIDEO_ID" title="Short description" />
 ```
@@ -32,7 +32,7 @@ Use **SandboxLink** for StackBlitz, CodeSandbox, or any HTTPS URL. Readers get a
 />
 
 ```mdx
-import SandboxLink from '../../../components/SandboxLink.astro';
+import SandboxLink from '../../../../components/SandboxLink.astro';
 
 <SandboxLink href="https://stackblitz.com/..." label="Open in StackBlitz" />
 ```
@@ -42,7 +42,7 @@ import SandboxLink from '../../../components/SandboxLink.astro';
 Use **SandboxEmbed** only when you trust the origin and want an inline preview. Always pair with a **SandboxLink** in real lessons.
 
 ```mdx
-import SandboxEmbed from '../../../components/SandboxEmbed.astro';
+import SandboxEmbed from '../../../../components/SandboxEmbed.astro';
 
 <SandboxEmbed src="https://stackblitz.com/edit/....?embed=1" title="Preview" height={520} />
 ```
@@ -63,7 +63,7 @@ console.log(msg);
 />
 
 ```mdx
-import { SandpackSnippet } from '../../../components/SandpackSnippet';
+import { SandpackSnippet } from '../../../../components/SandpackSnippet';
 
 <SandpackSnippet
   client:visible

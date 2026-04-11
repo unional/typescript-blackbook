@@ -10,11 +10,21 @@ const BASE = '/typescript-blackbook';
 export default defineConfig({
 	site: 'https://unional.github.io/',
 	base: 'typescript-blackbook',
+	redirects: {
+		'/blogs/': '/blog/',
+		'/guides/welcome/': '/docs/',
+		'/guides/exercises/': '/docs/guides/exercises/',
+		'/guides/mdx_authoring/': '/docs/guides/mdx_authoring/',
+		'/guides/monorepo_setup/': '/docs/guides/monorepo_setup/',
+	},
 	integrations: [
 		starlight({
 			title: 'TypeScript Blackbook',
 			favicon: './src/assets/logo.svg',
 			logo: { src: './src/assets/logo.svg' },
+			components: {
+				Header: './src/components/Header.astro',
+			},
 			social: [
 				{
 					label: 'X',
@@ -44,24 +54,24 @@ export default defineConfig({
 			],
 			sidebar: [
 				{
-					label: 'Blog',
-					link: `${BASE}/blogs/`,
+					label: 'Welcome',
+					link: `${BASE}/docs/`,
 				},
 				{
 					label: 'Guides',
-					autogenerate: { directory: 'guides' },
+					autogenerate: { directory: 'docs/guides' },
 				},
 				{
 					label: 'Guidelines',
-					autogenerate: { directory: 'guidelines' },
+					autogenerate: { directory: 'docs/guidelines' },
 				},
 				{
 					label: 'tsconfig',
-					autogenerate: { directory: 'tsconfig' },
+					autogenerate: { directory: 'docs/tsconfig' },
 				},
 				{
 					label: 'TypeScript features',
-					autogenerate: { directory: 'typescript-features' },
+					autogenerate: { directory: 'docs/typescript-features' },
 				},
 			],
 		}),

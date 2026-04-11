@@ -13,6 +13,11 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<StarlightPage frontmatter={entry.data}>
-  <Content />
+<StarlightPage	frontmatter={{
+		...entry.data,
+		template: 'splash',
+		editUrl: false,
+	}}
+>
+	<Content />
 </StarlightPage>
