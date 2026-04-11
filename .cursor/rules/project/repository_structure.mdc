@@ -14,6 +14,7 @@ TypeScript Blackbook is organized as a monorepo containing documentation, exampl
 
 ### Documentation
 
+- `apps/v2/` - Astro-based v2 documentation site (default target for unspecified implementation work; see `AGENTS.md`)
 - `apps/starlight/` - Starlight-based documentation site
   - `src/content/docs/` - Main documentation content
   - `src/content/blogs/` - Blog posts
@@ -25,6 +26,8 @@ TypeScript Blackbook is organized as a monorepo containing documentation, exampl
 
 ### Configuration
 
+- `AGENTS.md` - Tool-agnostic agent defaults (shared across Cursor, Claude Code, and other assistants)
+- `CLAUDE.md` - Claude Code project hook; aligns with `AGENTS.md`
 - `.cursor/rules/` - Cursor AI rules and guidelines
 - Root-level config files for TypeScript, ESLint, Prettier, etc.
 

@@ -7,6 +7,10 @@ alwaysApply: true
 This file serves as the central reference for all Cursor rules in the TypeScript Blackbook repository.
 This file makes it easier for the AI agent to discover rules when they are organized in folders.
 
+## Cross-tool agent defaults
+
+Repository-wide instructions that apply in Cursor, Claude Code, and other tools are maintained in **[AGENTS.md](../../AGENTS.md)** at the repository root (Claude Code also loads **[CLAUDE.md](../../CLAUDE.md)** for the same defaults). Follow those defaults when they do not conflict with the Cursor rules linked below.
+
 ## How to Use Rules
 
 ### For Project Understanding
