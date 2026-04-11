@@ -4,8 +4,6 @@ import starlight from '@astrojs/starlight';
 import tailwind from '@astrojs/tailwind';
 import { defineConfig } from 'astro/config';
 
-const BASE = '/typescript-blackbook';
-
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://unional.github.io/',
@@ -55,7 +53,8 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Welcome',
-					link: `${BASE}/docs/`,
+					// Root-relative without repeating `base` — Starlight prepends base for manual links.
+					link: '/docs/',
 				},
 				{
 					label: 'Guides',

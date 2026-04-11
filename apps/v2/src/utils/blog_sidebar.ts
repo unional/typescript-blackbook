@@ -7,21 +7,21 @@ export type BlogSidebar = NonNullable<StarlightUserConfig['sidebar']>;
  * Left nav for `/blog/*` only. Docs keep the global Starlight sidebar from `astro.config.mjs`.
  */
 export async function buildBlogSidebar(): Promise<BlogSidebar> {
-	const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 	const posts = (await getCollection('blogs')).sort(
 		(a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf(),
 	);
 
+	// Site-root-relative paths without the `base` segment: Starlight prepends BASE_URL via pathWithBase.
 	return [
 		{
 			label: 'All posts',
-			link: `${base}/blog/`,
+			link: '/blog/',
 		},
 		{
 			label: 'Posts',
 			items: posts.map((post) => ({
 				label: post.data.title,
-				link: `${base}/blog/${post.slug}/`,
+				link: `/blog/${post.slug}/`,
 			})),
 		},
 	];
