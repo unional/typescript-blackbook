@@ -6,11 +6,12 @@
 		"node": ">=22.12.0"
 	},
 	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
+		"astro": "astro",
 		"build": "astro check && astro build",
+		"dev": "astro dev",
 		"preview": "astro preview",
-		"astro": "astro"
+		"start": "astro dev",
+		"up:mapping": "pnpm update baseline-browser-mapping"
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.9.8",
@@ -19,6 +20,7 @@
 		"@astrojs/tailwind": "^6.0.2",
 		"@codesandbox/sandpack-react": "^2.20.0",
 		"astro": "^6.1.5",
+		"baseline-browser-mapping": "^2.10.18",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
 		"sharp": "^0.34.5",
