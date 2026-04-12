@@ -1,1 +1,2 @@
-/// <reference path="../.astro/types.d.ts" />
+/// <reference types="astro/client" />
+import '../types/astro.d.ts';

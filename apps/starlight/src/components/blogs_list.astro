@@ -8,5 +8,5 @@ const blogs = (await getCollection('blogs')).sort(
 ---
 
 <div class="w-full flex flex-col gap-4">
-	{blogs.map(post => <BlogPostInfo post={post} href={`/blogs/${post.slug}`} />)}
+	{blogs.map(post => <BlogPostInfo post={post} href={`/blogs/${post.id}`} />)}
 </div>
