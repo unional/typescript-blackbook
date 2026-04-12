@@ -10,5 +10,5 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 ---
 
 <div class="flex w-full flex-col gap-4">
-	{blogs.map((post) => <BlogPostInfo post={post} href={`${base}/blog/${post.slug}/`} />)}
+	{blogs.map((post) => <BlogPostInfo post={post} href={`${base}/blog/${post.id}/`} />)}
 </div>

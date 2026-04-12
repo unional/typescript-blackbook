@@ -21,7 +21,7 @@ export async function buildBlogSidebar(): Promise<BlogSidebar> {
 			label: 'Posts',
 			items: posts.map((post) => ({
 				label: post.data.title,
-				link: `/blog/${post.slug}/`,
+				link: `/blog/${post.id}/`,
 			})),
 		},
 	];
