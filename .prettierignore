@@ -1,0 +1,10 @@
+dist
+node_modules
+.github
+.changeset
+
+*.json
+*.md
+*.mdx
+*.yml
+*.yaml

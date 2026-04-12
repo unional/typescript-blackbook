@@ -1,13 +1,21 @@
 ---
 import config from 'virtual:starlight/user-config'
+
+import LanguageSelect from '@astrojs/starlight/components/LanguageSelect.astro'
+import Search from '@astrojs/starlight/components/Search.astro'
+import SiteTitle from '@astrojs/starlight/components/SiteTitle.astro'
+import SocialIcons from '@astrojs/starlight/components/SocialIcons.astro'
+import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro'
+
 import { primaryNav } from '../site-nav'
 
-const shouldRenderSearch = config.pagefind || config.components.Search !== '@astrojs/starlight/components/Search.astro'
+const shouldRenderSearch =
+	config.pagefind || config.components.Search !== '@astrojs/starlight/components/Search.astro'
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 const navLinks = primaryNav.map(({ label, path }) => ({
 	label,
-	href: `${base}/${path}/`,
+	href: `${base}/${path}/`
 }))
 ---
 
@@ -116,14 +124,12 @@ const navLinks = primaryNav.map(({ label, path }) => ({
 							100% + var(--__sidebar-pad, 0rem) - var(--__toc-width, var(--sl-sidebar-width)) -
 								(2 * var(--__toc-width, var(--sl-nav-pad-x))) - var(--sl-content-inline-start, 0rem) -
 								var(--sl-content-width)
-						) / 2
+						) /
+						2
 				);
 				display: grid;
 				grid-template-columns:
-					minmax(
-						calc(var(--__sidebar-width) + max(0rem, var(--__main-column-fr) - var(--sl-nav-gap))),
-						auto
-					)
+					minmax(calc(var(--__sidebar-width) + max(0rem, var(--__main-column-fr) - var(--sl-nav-gap))), auto)
 					max-content
 					1fr
 					auto;

@@ -1,11 +1,12 @@
 ---
 import { getCollection, render } from 'astro:content'
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro'
 
 export async function getStaticPaths() {
 	const blogEntries = await getCollection('blogs')
-	return blogEntries.map((entry) => ({
+	return blogEntries.map(entry => ({
 		params: { slug: entry.id },
-		props: { entry },
+		props: { entry }
 	}))
 }
 
@@ -14,5 +15,5 @@ const { Content } = await render(entry)
 ---
 
 <StarlightPage frontmatter={entry.data}>
-  <Content />
+	<Content />
 </StarlightPage>

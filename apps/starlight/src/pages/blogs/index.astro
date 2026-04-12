@@ -1,12 +1,13 @@
 ---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro'
+import BlogsList from '../../components/blogs_list.astro'
 ---
 
 <StarlightPage
 	frontmatter={{
 		title: 'Blogs',
 		description: 'Blogs about and around TypeScript',
-		editUrl: false,
-
+		editUrl: false
 	}}
 >
 	<BlogsList />

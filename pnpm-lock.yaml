@@ -11443,7 +11443,7 @@ snapshots:
 
   '@docusaurus/react-loadable@5.5.2(react@19.2.0)':
     dependencies:
-      '@types/react': 18.0.28
+      '@types/react': 19.2.6
       prop-types: 15.8.1
       react: 19.2.0
 

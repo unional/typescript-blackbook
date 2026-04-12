@@ -1,4 +1,6 @@
 ---
+import Header from '../components/header.astro'
+import Footer from '../components/footer.astro'
 import '../styles/global.css'
 
 const pageTitle = 'About Me'
@@ -6,7 +8,7 @@ const identity = {
 	firstName: 'Sarah',
 	country: 'Canada',
 	occupation: 'Technical Writer',
-	hobbies: ['photography', 'birdwatching', 'baseball'],
+	hobbies: ['photography', 'birdwatching', 'baseball']
 }
 
 const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Astro', 'Writing Docs']
@@ -24,8 +26,7 @@ const skillColor = 'navy'
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
-		<style define:vars={{skillColor}}>
-
+		<style define:vars={{ skillColor }}>
 			.skill {
 				color: var(--skillColor);
 				font-weight: bold;
@@ -50,7 +51,9 @@ const skillColor = 'navy'
 		<p>Here are a few facts about me:</p>
 		<ul>
 			<li>My name is {identity.firstName}.</li>
-			<li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+			<li>
+				I live in {identity.country} and I work as a {identity.occupation}.
+			</li>
 			{
 				identity.hobbies.length >= 2 && (
 					<li>
