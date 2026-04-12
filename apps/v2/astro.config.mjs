@@ -22,6 +22,7 @@ export default defineConfig({
 			logo: { src: './src/assets/logo.svg' },
 			components: {
 				Header: './src/components/Header.astro',
+				SocialIcons: './src/components/SocialIcons.astro',
 			},
 			social: [
 				{
