@@ -8,9 +8,9 @@
 	"scripts": {
 		"build": "turbo run build",
 		"build:doc": "turbo run build:doc",
-		"biome:check": "biome check .",
-		"biome:fix": "biome check --write .",
-		"lint": "turbo run lint",
+		"check": "biome check .",
+		"check:fix": "biome check --write .",
+		"lint": "biome lint",
 		"gh": "pnpm --filter github-page",
 		"page": "pnpm --filter page",
 		"web": "pnpm --filter ./apps/v2",

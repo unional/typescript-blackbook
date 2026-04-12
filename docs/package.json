@@ -8,21 +8,5 @@
 	},
 	"workspaces": [
 		"github-page"
-	],
-	"scripts": {
-		"build": "remark . -o",
-		"lint": "ts-node ./scripts/lint.ts",
-		"verify": "tsc -b && remark . && yarn lint"
-	},
-	"remarkConfig": {
-		"plugins": [
-			"code-import"
-		],
-		"settings": {
-			"bullet": "-",
-			"listItemIndent": "1",
-			"rule": "-",
-			"ruleSpaces": false
-		}
-	}
+	]
 }
