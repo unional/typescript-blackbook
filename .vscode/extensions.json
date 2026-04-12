@@ -1,15 +1,12 @@
 {
 	"recommendations": [
 		"aaron-bond.better-comments",
+		"biomejs.biome",
 		"astro-build.astro-vscode",
 		"bierner.emojisense",
 		"bradlc.vscode-tailwindcss",
 		"davidanson.vscode-markdownlint",
-		"dbaeumer.vscode-eslint",
 		"editorconfig.editorconfig",
-		"unifiedjs.vscode-mdx",
-		"yzhang.markdown-all-in-one",
-    "astro-build.astro-vscode",
-    "esbenp.prettier-vscode",
+		"yzhang.markdown-all-in-one"
 	]
 }

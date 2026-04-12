@@ -1,1 +1,1 @@
-const arrayGeneric = new Array<string>()
+const arrayGeneric: string[] = []

@@ -1,0 +1,7 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.4.11/schema.json",
+	"extends": ["@repobuddy/biome/recommended"],
+	"files": {
+		"includes": ["!**/build", "!**/dist", "!**/examples", "!**/exercises", "!**/*.astro"]
+	}
+}

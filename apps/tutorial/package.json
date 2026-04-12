@@ -1,17 +1,17 @@
 {
-  "name": "tutorial",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^6.1.5",
-    "@astrojs/check": "^0.9.8",
-    "typescript": "^6.0.0"
-  }
+	"name": "tutorial",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"astro": "^6.1.5",
+		"@astrojs/check": "^0.9.8",
+		"typescript": "^6.0.0"
+	}
 }

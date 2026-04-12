@@ -1,1 +1,1 @@
-type RangeObj = { start: number, end: number }
+type RangeObj = { start: number; end: number }

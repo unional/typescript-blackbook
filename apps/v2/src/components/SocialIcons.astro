@@ -1,8 +1,8 @@
 ---
-import config from 'virtual:starlight/user-config';
+import config from 'virtual:starlight/user-config'
 import Icon from '../../node_modules/@astrojs/starlight/user-components/Icon.astro';
 
-const links = config.social || [];
+const links = config.social || []
 ---
 
 {
@@ -20,13 +20,13 @@ const links = config.social || [];
 
 <style>
 	@layer starlight.core {
-		a {
-			color: var(--sl-color-text-accent);
-			padding: 0.5em;
-			margin: -0.5em;
+			a {
+				color: var(--sl-color-text-accent);
+				padding: 0.5em;
+				margin: -0.5em;
+			}
+			a:hover {
+				opacity: 0.66;
+			}
 		}
-		a:hover {
-			opacity: 0.66;
-		}
-	}
 </style>

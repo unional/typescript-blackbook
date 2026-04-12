@@ -5,4 +5,4 @@
 export const primaryNav = [
 	{ label: 'Blog', path: 'blog' },
 	{ label: 'Blackbook', path: 'docs' },
-] as const;
+] as const

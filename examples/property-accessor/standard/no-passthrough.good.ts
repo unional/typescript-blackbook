@@ -1,3 +1,3 @@
 const justProperty = {
-  age: 10
+	age: 10,
 }

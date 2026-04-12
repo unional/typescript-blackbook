@@ -29,7 +29,7 @@ TypeScript Blackbook is organized as a monorepo containing documentation, exampl
 - `AGENTS.md` - Tool-agnostic agent defaults (shared across Cursor, Claude Code, and other assistants)
 - `CLAUDE.md` - Claude Code project hook; aligns with `AGENTS.md`
 - `.cursor/rules/` - Cursor AI rules and guidelines
-- Root-level config files for TypeScript, ESLint, Prettier, etc.
+- Root-level config files for TypeScript, ESLint, Biome, etc.
 
 ## Content Organization
 

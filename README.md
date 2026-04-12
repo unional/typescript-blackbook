@@ -20,7 +20,7 @@ From how to use the language, to coding style and any tool that may be useful.
     - [Atom](https://atom.io/)
     - [WebStorm](https://www.jetbrains.com/webstorm/)
   - Formatter
-    - [prettier](https://prettier.io/)
+    - [Biome](https://biomejs.dev/)
   - Linter
     - [ESLint](https://eslint.org/)
 

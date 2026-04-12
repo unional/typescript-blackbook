@@ -1,25 +1,27 @@
 {
-  "private": true,
-  "author": {
-    "name": "Homa Wong (unional)",
-    "email": "homawong@gmail.com",
-    "url": "https://github.com/unional"
-  },
-  "scripts": {
-    "build": "turbo run build",
-    "build:doc": "turbo run build:doc",
-    "lint": "turbo run lint",
-    "gh": "pnpm --filter github-page",
-    "page": "pnpm --filter page",
-    "web": "pnpm --filter ./apps/v2",
-    "web:legacy": "pnpm --filter ./apps/starlight",
-    "t": "pnpm --filter ./apps/tutorial",
-    "verify": "turbo run lint build build:doc depcheck coverage size"
-  },
-  "devDependencies": {
-    "prettier": "^3.0.0",
-    "prettier-plugin-astro": "^0.14.0",
-    "turbo": "^1.7.4"
-  },
-  "packageManager": "pnpm@10.33.0"
+	"private": true,
+	"author": {
+		"name": "Homa Wong (unional)",
+		"email": "homawong@gmail.com",
+		"url": "https://github.com/unional"
+	},
+	"scripts": {
+		"build": "turbo run build",
+		"build:doc": "turbo run build:doc",
+		"biome:check": "biome check .",
+		"biome:fix": "biome check --write .",
+		"lint": "turbo run lint",
+		"gh": "pnpm --filter github-page",
+		"page": "pnpm --filter page",
+		"web": "pnpm --filter ./apps/v2",
+		"web:legacy": "pnpm --filter ./apps/starlight",
+		"t": "pnpm --filter ./apps/tutorial",
+		"verify": "turbo run lint build build:doc depcheck coverage size"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.11",
+		"@repobuddy/biome": "^2.3.1",
+		"turbo": "^1.7.4"
+	},
+	"packageManager": "pnpm@10.33.0"
 }

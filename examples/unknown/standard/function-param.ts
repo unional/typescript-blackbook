@@ -1,5 +1,5 @@
 function castNumber(value: unknown) {
-  return typeof value === 'number' ? value : -1
+	return typeof value === 'number' ? value : -1
 }
 
 castNumber(1) // 1

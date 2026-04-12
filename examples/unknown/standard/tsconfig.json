@@ -1,10 +1,10 @@
 {
-  "compilerOptions": {
-    "composite": true,
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "outDir": "out",
-    "target": "ESNext",
-    "strict": true
-  }
+	"compilerOptions": {
+		"composite": true,
+		"esModuleInterop": true,
+		"moduleResolution": "node",
+		"outDir": "out",
+		"target": "ESNext",
+		"strict": true
+	}
 }

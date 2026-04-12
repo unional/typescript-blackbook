@@ -1,21 +1,21 @@
 {
-  "compilerOptions": {
-    "esModuleInterop": true,
-    "moduleResolution": "node"
-  },
-  "files": [],
-  "references": [
-    {
-      "path": "examples/array/standard"
-    },
-    {
-      "path": "examples/property-accessor/standard"
-    },
-    {
-      "path": "examples/unknown/standard"
-    },
-    {
-      "path": "examples/tuple/standard"
-    }
-  ]
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"moduleResolution": "node"
+	},
+	"files": [],
+	"references": [
+		{
+			"path": "examples/array/standard"
+		},
+		{
+			"path": "examples/property-accessor/standard"
+		},
+		{
+			"path": "examples/unknown/standard"
+		},
+		{
+			"path": "examples/tuple/standard"
+		}
+	]
 }

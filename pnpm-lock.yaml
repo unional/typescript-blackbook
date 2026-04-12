@@ -8,12 +8,12 @@ importers:
 
   .:
     devDependencies:
-      prettier:
-        specifier: ^3.0.0
-        version: 3.0.0
-      prettier-plugin-astro:
-        specifier: ^0.14.0
-        version: 0.14.0
+      '@biomejs/biome':
+        specifier: ^2.4.11
+        version: 2.4.11
+      '@repobuddy/biome':
+        specifier: ^2.3.1
+        version: 2.3.1(@biomejs/biome@2.4.11)
       turbo:
         specifier: ^1.7.4
         version: 1.7.4
@@ -269,9 +269,6 @@ packages:
     hasBin: true
     peerDependencies:
       typescript: ^5.0.0
-
-  '@astrojs/compiler@1.5.6':
-    resolution: {integrity: sha512-gtcpm20y4EUUQNc7evn+ffSJLTlrZRKfBS6kT7r1aB9u+AAeP2BZIiyuSdgXJUS679pCV4sqbM80u8Iek575lg==}
 
   '@astrojs/compiler@2.13.1':
     resolution: {integrity: sha512-f3FN83d2G/v32ipNClRKgYv30onQlMZX1vCeZMjPsMMPl1mDpmbl0+N5BYo4S/ofzqJyS5hvwacEo0CCVDn/Qg==}
@@ -1205,6 +1202,63 @@ packages:
   '@babel/types@7.29.0':
     resolution: {integrity: sha512-LwdZHpScM4Qz8Xw2iKSzS+cfglZzJGvofQICy7W7v4caru4EaAmyUuO6BGrbyQ2mYV11W0U8j5mBhd14dd3B0A==}
     engines: {node: '>=6.9.0'}
+
+  '@biomejs/biome@2.4.11':
+    resolution: {integrity: sha512-nWxHX8tf3Opb/qRgZpBbsTOqOodkbrkJ7S+JxJAruxOReaDPPmPuLBAGQ8vigyUgo0QBB+oQltNEAvalLcjggA==}
+    engines: {node: '>=14.21.3'}
+    hasBin: true
+
+  '@biomejs/cli-darwin-arm64@2.4.11':
+    resolution: {integrity: sha512-wOt+ed+L2dgZanWyL6i29qlXMc088N11optzpo10peayObBaAshbTcxKUchzEMp9QSY8rh5h6VfAFE3WTS1rqg==}
+    engines: {node: '>=14.21.3'}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@biomejs/cli-darwin-x64@2.4.11':
+    resolution: {integrity: sha512-gZ6zR8XmZlExfi/Pz/PffmdpWOQ8Qhy7oBztgkR8/ylSRyLwfRPSadmiVCV8WQ8PoJ2MWUy2fgID9zmtgUUJmw==}
+    engines: {node: '>=14.21.3'}
+    cpu: [x64]
+    os: [darwin]
+
+  '@biomejs/cli-linux-arm64-musl@2.4.11':
+    resolution: {integrity: sha512-+Sbo1OAmlegtdwqFE8iOxFIWLh1B3OEgsuZfBpyyN/kWuqZ8dx9ZEes6zVnDMo+zRHF2wLynRVhoQmV7ohxl2Q==}
+    engines: {node: '>=14.21.3'}
+    cpu: [arm64]
+    os: [linux]
+    libc: [musl]
+
+  '@biomejs/cli-linux-arm64@2.4.11':
+    resolution: {integrity: sha512-avdJaEElXrKceK0va9FkJ4P5ci3N01TGkc6ni3P8l3BElqbOz42Wg2IyX3gbh0ZLEd4HVKEIrmuVu/AMuSeFFA==}
+    engines: {node: '>=14.21.3'}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  '@biomejs/cli-linux-x64-musl@2.4.11':
+    resolution: {integrity: sha512-bexd2IklK7ZgPhrz6jXzpIL6dEAH9MlJU1xGTrypx+FICxrXUp4CqtwfiuoDKse+UlgAlWtzML3jrMqeEAHEhA==}
+    engines: {node: '>=14.21.3'}
+    cpu: [x64]
+    os: [linux]
+    libc: [musl]
+
+  '@biomejs/cli-linux-x64@2.4.11':
+    resolution: {integrity: sha512-TagWV0iomp5LnEnxWFg4nQO+e52Fow349vaX0Q/PIcX6Zhk4GGBgp3qqZ8PVkpC+cuehRctMf3+6+FgQ8jCEFQ==}
+    engines: {node: '>=14.21.3'}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@biomejs/cli-win32-arm64@2.4.11':
+    resolution: {integrity: sha512-RJhaTnY8byzxDt4bDVb7AFPHkPcjOPK3xBip4ZRTrN3TEfyhjLRm3r3mqknqydgVTB74XG8l4jMLwEACEeihVg==}
+    engines: {node: '>=14.21.3'}
+    cpu: [arm64]
+    os: [win32]
+
+  '@biomejs/cli-win32-x64@2.4.11':
+    resolution: {integrity: sha512-A8D3JM/00C2KQgUV3oj8Ba15EHEYwebAGCy5Sf9GAjr5Y3+kJIYOiESoqRDeuRZueuMdCsbLZIUqmPhpYXJE9A==}
+    engines: {node: '>=14.21.3'}
+    cpu: [x64]
+    os: [win32]
 
   '@capsizecss/unpack@4.0.0':
     resolution: {integrity: sha512-VERIM64vtTP1C4mxQ5thVT9fK0apjPFobqybMtA1UdUujWka24ERHbRHFGmpbbhp73MhV+KSsHQH9C6uOTdEQA==}
@@ -2255,6 +2309,11 @@ packages:
     resolution: {integrity: sha512-IwEphTD75liO8g+6taS+4oqz+nnroocNfWVHWz7j+N+ZO2vYrc6PV1q7GQhuahL0IOR7JccFTsFKQ/mb6iZWAg==}
     peerDependencies:
       react: '>=16.8'
+
+  '@repobuddy/biome@2.3.1':
+    resolution: {integrity: sha512-dFxQSl+lYZ5Wc9TVUxrSwze9vwC6IBpg4zcbxJkLiZPPnYLX95Zvp9zC+ChPRmc2QpyVzqH4eGnxKzHaVZ1A7Q==}
+    peerDependencies:
+      '@biomejs/biome': '>= 2'
 
   '@rolldown/pluginutils@1.0.0-beta.27':
     resolution: {integrity: sha512-+d0F4MKMCbeVUJwG96uQ4SgAznZNSq93I3V+9NHA4OpvqG8mRCpGdKmK8l/dl02h2CCDHwW2FqilnTyDcAnqjA==}
@@ -6308,23 +6367,9 @@ packages:
     resolution: {integrity: sha512-ravE6m9Atw9Z/jjttRUZ+clIXogdghyZAuWJ3qEzjT+jI/dL1ifAqhZeC5VHzQp1MSt1+jxKkFNemj/iO7tVUA==}
     engines: {node: '>=4'}
 
-  prettier-plugin-astro@0.14.0:
-    resolution: {integrity: sha512-7jRGJsexaRIyUzTk8uzXlP45cw6DQ5Ci4bTe0xCBCcuO1Fff8jJy9oI+kRCQKSdDFTSAArMSg8GpvzlKBtSaZA==}
-    engines: {node: ^14.15.0 || >=16.0.0}
-
   prettier-plugin-astro@0.14.1:
     resolution: {integrity: sha512-RiBETaaP9veVstE4vUwSIcdATj6dKmXljouXc/DDNwBSPTp8FRkLGDSGFClKsAFeeg+13SB0Z1JZvbD76bigJw==}
     engines: {node: ^14.15.0 || >=16.0.0}
-
-  prettier@3.0.0:
-    resolution: {integrity: sha512-zBf5eHpwHOGPC47h0zrPyNn+eAEIdEzfywMoYn2XPi0P44Zp0tSq64rq0xAREh4auw2cJZHo9QUob+NqCQky4g==}
-    engines: {node: '>=14'}
-    hasBin: true
-
-  prettier@3.3.3:
-    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
-    engines: {node: '>=14'}
-    hasBin: true
 
   prettier@3.8.2:
     resolution: {integrity: sha512-8c3mgTe0ASwWAJK+78dpviD+A8EqhndQPUBpNUIPt6+xWlIigCwfN01lWr9MAede4uqXGTEKeQWTvzb3vjia0Q==}
@@ -6788,9 +6833,6 @@ packages:
 
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
-
-  sass-formatter@0.7.6:
-    resolution: {integrity: sha512-hXdxU6PCkiV3XAiSnX+XLqz2ohHoEnVUlrd8LEVMAI80uB1+OTScIkH9n6qQwImZpTye1r1WG1rbGUteHNhoHg==}
 
   sass-formatter@0.7.9:
     resolution: {integrity: sha512-CWZ8XiSim+fJVG0cFLStwDvft1VI7uvXdCNJYXhDvowiv+DsbD1nXLiQ4zrE5UBvj5DWZJ93cwN0NX5PMsr1Pw==}
@@ -8291,8 +8333,6 @@ snapshots:
     transitivePeerDependencies:
       - prettier
       - prettier-plugin-astro
-
-  '@astrojs/compiler@1.5.6': {}
 
   '@astrojs/compiler@2.13.1': {}
 
@@ -10384,6 +10424,41 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
 
+  '@biomejs/biome@2.4.11':
+    optionalDependencies:
+      '@biomejs/cli-darwin-arm64': 2.4.11
+      '@biomejs/cli-darwin-x64': 2.4.11
+      '@biomejs/cli-linux-arm64': 2.4.11
+      '@biomejs/cli-linux-arm64-musl': 2.4.11
+      '@biomejs/cli-linux-x64': 2.4.11
+      '@biomejs/cli-linux-x64-musl': 2.4.11
+      '@biomejs/cli-win32-arm64': 2.4.11
+      '@biomejs/cli-win32-x64': 2.4.11
+
+  '@biomejs/cli-darwin-arm64@2.4.11':
+    optional: true
+
+  '@biomejs/cli-darwin-x64@2.4.11':
+    optional: true
+
+  '@biomejs/cli-linux-arm64-musl@2.4.11':
+    optional: true
+
+  '@biomejs/cli-linux-arm64@2.4.11':
+    optional: true
+
+  '@biomejs/cli-linux-x64-musl@2.4.11':
+    optional: true
+
+  '@biomejs/cli-linux-x64@2.4.11':
+    optional: true
+
+  '@biomejs/cli-win32-arm64@2.4.11':
+    optional: true
+
+  '@biomejs/cli-win32-x64@2.4.11':
+    optional: true
+
   '@capsizecss/unpack@4.0.0':
     dependencies:
       fontkitten: 1.0.3
@@ -12355,6 +12430,10 @@ snapshots:
   '@react-hook/passive-layout-effect@1.2.1(react@19.2.0)':
     dependencies:
       react: 19.2.0
+
+  '@repobuddy/biome@2.3.1(@biomejs/biome@2.4.11)':
+    dependencies:
+      '@biomejs/biome': 2.4.11
 
   '@rolldown/pluginutils@1.0.0-beta.27': {}
 
@@ -17548,22 +17627,12 @@ snapshots:
 
   prepend-http@2.0.0: {}
 
-  prettier-plugin-astro@0.14.0:
-    dependencies:
-      '@astrojs/compiler': 1.5.6
-      prettier: 3.3.3
-      sass-formatter: 0.7.6
-
   prettier-plugin-astro@0.14.1:
     dependencies:
       '@astrojs/compiler': 2.13.1
       prettier: 3.8.2
       sass-formatter: 0.7.9
     optional: true
-
-  prettier@3.0.0: {}
-
-  prettier@3.3.3: {}
 
   prettier@3.8.2: {}
 
@@ -18196,17 +18265,14 @@ snapshots:
     dependencies:
       tslib: 2.5.0
 
-  s.color@0.0.15: {}
+  s.color@0.0.15:
+    optional: true
 
   safe-buffer@5.1.2: {}
 
   safe-buffer@5.2.1: {}
 
   safer-buffer@2.1.2: {}
-
-  sass-formatter@0.7.6:
-    dependencies:
-      suf-log: 2.5.3
 
   sass-formatter@0.7.9:
     dependencies:
@@ -18630,6 +18696,7 @@ snapshots:
   suf-log@2.5.3:
     dependencies:
       s.color: 0.0.15
+    optional: true
 
   supports-color@5.5.0:
     dependencies:

@@ -1,10 +1,35 @@
 {
-	"[astro]": {
-		"editor.defaultFormatter": "astro-build.astro-vscode"
+	"[javascript]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.formatOnSave": true
 	},
-	"cSpell.enableFiletypes": [
-		"mdx"
-	],
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.formatOnSave": true
+	},
+	"[json]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.formatOnSave": true
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.formatOnSave": true
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.formatOnSave": true
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.formatOnSave": true
+	},
+	"[astro]": {
+		"editor.defaultFormatter": "astro-build.astro-vscode",
+		"editor.formatOnSave": true
+	},
+	"cSpell.enabledFileTypes": {
+		"mdx": true
+	},
 	"cSpell.words": [
 		"antongolub",
 		"apos",
@@ -17,13 +42,12 @@
 		"dzharii",
 		"horiz",
 		"Rehype",
+		"repobuddy",
 		"stroustrup",
 		"svgs",
 		"tabler"
 	],
-	"css.customData": [
-		"./vscode.tailwind.json"
-	],
+	"css.customData": ["./vscode.tailwind.json"],
 	"emojisense.languages": {
 		"git-commit": true,
 		"markdown": true,
@@ -35,16 +59,10 @@
 		"scminput": true
 	},
 	"eslint.useFlatConfig": true,
-	"eslint.validate": [
-		"javascript",
-		"javascriptreact",
-		"astro",
-		"typescript",
-		"typescriptreact"
-	],
+	"eslint.validate": ["javascript", "javascriptreact", "astro", "typescript", "typescriptreact"],
 	"files.associations": {
 		"*.excalidraw": "json",
-		"*.excalidrawlib": "json",
+		"*.excalidrawlib": "json"
 	},
 	"ltex.enabled": [
 		"bibtex",
@@ -59,9 +77,6 @@
 		"rsweave"
 	],
 	"markdownlint.ignore": ".markdownlintignore",
-	"prettier.documentSelectors": [
-		"**/*.astro"
-	],
 	"search.exclude": {
 		"**/.yarn": true
 	},

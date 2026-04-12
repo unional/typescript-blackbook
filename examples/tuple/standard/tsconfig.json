@@ -1,9 +1,9 @@
 {
-  "compilerOptions": {
-    "composite": true,
-    "esModuleInterop": true,
-    "outDir": "out",
-    "target": "ESNext",
-    "strict": true
-  }
+	"compilerOptions": {
+		"composite": true,
+		"esModuleInterop": true,
+		"outDir": "out",
+		"target": "ESNext",
+		"strict": true
+	}
 }

@@ -25,8 +25,7 @@ export function Header({ active }: { active?: 'blog' | 'blackbook' }) {
 						Blogs
 					</a>
 					<a
-						className={`rounded-sm hover:bg-slate-300 py-1 px-2 ${active === 'blackbook' ? 'underline' : ''
-							}`}
+						className={`rounded-sm hover:bg-slate-300 py-1 px-2 ${active === 'blackbook' ? 'underline' : ''}`}
 						href="/blackbook"
 					>
 						Blackbook

@@ -5,13 +5,13 @@ export function GitHubBadge() {
 		queryKey: ['repo-stats'],
 		queryFn: async ({ signal }) => {
 			const response = await fetch('https://api.github.com/repos/unional/typescript-blackbook', {
-				signal
+				signal,
 			})
 			return response.json()
-		}
+		},
 	})
 
-	if (result.data?.stargazers_count === undefined) return <></>
+	if (result.data?.stargazers_count === undefined) return null
 
 	return (
 		<>
@@ -21,6 +21,7 @@ export function GitHubBadge() {
 					aria-label="Star TypeScript Blackbook on GitHub"
 					href="https://github.com/unional/typescript-blackbook"
 					className="flex items-center"
+					rel="noopener"
 				>
 					<img src="/svgs/github-mark.svg" className="h-4 w-4 mr-1" alt="github" />
 					<span>Star</span>
@@ -31,6 +32,7 @@ export function GitHubBadge() {
 					target="_blank"
 					aria-label={`${result.data?.stargazers_count} stargazers on GitHub`}
 					href="https://github.com/unional/typescript-blackbook/stargazers"
+					rel="noopener"
 				>
 					{result.data?.stargazers_count}
 				</a>
