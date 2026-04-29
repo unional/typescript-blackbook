@@ -72,8 +72,8 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0
       prism-react-renderer:
-        specifier: ^1.3.5
-        version: 1.3.5(react@19.2.0)
+        specifier: ^2.0.0
+        version: 2.4.1(react@19.2.0)
       react:
         specifier: ^19.0.0
         version: 19.2.0
@@ -2502,6 +2502,9 @@ packages:
 
   '@types/parse5@5.0.3':
     resolution: {integrity: sha512-kUNnecmtkunAoQ3CnjmMkzNU/gtxG8guhi+Fk2U/kOpIKjIMKnXGp4IJCgQJrXSgMsWYimYG4TGjz/UzbGEBTw==}
+
+  '@types/prismjs@1.26.6':
+    resolution: {integrity: sha512-vqlvI7qlMvcCBbVe0AKAb4f97//Hy0EBTaiW8AalRnG/xAN5zOiWWyrNqNXeq8+KAuvRewjCVY1+IPxk4RdNYw==}
 
   '@types/prop-types@15.7.5':
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
@@ -6013,6 +6016,11 @@ packages:
     peerDependencies:
       react: '>=0.14.9'
 
+  prism-react-renderer@2.4.1:
+    resolution: {integrity: sha512-ey8Ls/+Di31eqzUxC46h8MksNuGx/n0AAC8uKpwFau4RPDYLuE3EXTp8N8G2vX2N7UC/+IXeNUnlWBGGcAG+Ig==}
+    peerDependencies:
+      react: '>=16.0.0'
+
   prismjs@1.29.0:
     resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
     engines: {node: '>=6'}
@@ -7280,6 +7288,7 @@ packages:
 
   uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
     hasBin: true
 
   validate-html-nesting@1.2.2:
@@ -10678,7 +10687,7 @@ snapshots:
 
   '@docusaurus/react-loadable@5.5.2(react@19.2.0)':
     dependencies:
-      '@types/react': 18.0.28
+      '@types/react': 19.2.6
       prop-types: 15.8.1
       react: 19.2.0
 
@@ -12022,6 +12031,8 @@ snapshots:
   '@types/parse-json@4.0.0': {}
 
   '@types/parse5@5.0.3': {}
+
+  '@types/prismjs@1.26.6': {}
 
   '@types/prop-types@15.7.5': {}
 
@@ -16600,6 +16611,12 @@ snapshots:
 
   prism-react-renderer@1.3.5(react@19.2.0):
     dependencies:
+      react: 19.2.0
+
+  prism-react-renderer@2.4.1(react@19.2.0):
+    dependencies:
+      '@types/prismjs': 1.26.6
+      clsx: 2.1.1
       react: 19.2.0
 
   prismjs@1.29.0: {}
