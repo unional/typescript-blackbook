@@ -16,4 +16,4 @@ jobs:
     needs: code
     secrets: inherit
     with:
-      publish_dir: ./github-page/build
+      publish-dir: ./github-page/build
