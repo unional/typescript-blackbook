@@ -24,3 +24,12 @@ minimumReleaseAgeStrict: true
 minimumReleaseAgeExclude:
   # Renovate security update: sharp@0.35.0
   - sharp@0.35.0
+
+# pnpm blocks dependency build scripts by default. sharp needs its install script to
+# fetch/build the native binary on platforms without a matching prebuilt package - the
+# macOS CI leg failed with `MissingSharp: Could not find Sharp` for exactly this reason
+# while Linux passed. esbuild and turbo are native installers in the same position.
+onlyBuiltDependencies:
+  - esbuild
+  - sharp
+  - turbo
