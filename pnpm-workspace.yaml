@@ -2,3 +2,22 @@ packages:
   - apps/*
   - github-page
   - page
+
+# Supply-chain soak: no dependency may be installed until it has been on the registry
+# for 24h. This is the control that stops a compromised release from being pulled into
+# a build within hours of publication.
+#
+# It must live here. In `.npmrc`, `minimumreleaseage` is not a valid key - it never
+# reaches pnpm's typed config and the soak is silently inert.
+#
+# `minimumReleaseAgeStrict` is required for it to mean anything. Without it pnpm runs
+# LOOSE: a too-young package is not rejected, it is appended to
+# `minimumReleaseAgeExclude` and installed anyway, so the soak excuses itself on every
+# install and the waiver list grows on its own. Strict turns that into a hard
+# ERR_PNPM_MINIMUM_RELEASE_AGE_VIOLATION.
+#
+# There is deliberately no exclusion list. If an install trips the gate, prefer waiting
+# it out or pinning an older mature version; an exclusion is a dated exception that
+# should carry its reason and the date it becomes removable.
+minimumReleaseAge: 1440 # 1 day
+minimumReleaseAgeStrict: true
