@@ -21,3 +21,6 @@ packages:
 # should carry its reason and the date it becomes removable.
 minimumReleaseAge: 1440 # 1 day
 minimumReleaseAgeStrict: true
+minimumReleaseAgeExclude:
+  # Renovate security update: sharp@0.35.0
+  - sharp@0.35.0
