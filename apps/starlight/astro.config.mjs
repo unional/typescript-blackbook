@@ -23,10 +23,9 @@ export default defineConfig({
 	// docs at the root and posts under `/blogs`, so every existing link breaks
 	// without these.
 	redirects: {
-		// Docs landing pages. There is no Guidelines index page in Starlight yet, so
-		// `/docs/guidelines` falls back to the site index.
+		// Docs landing pages.
 		'/docs': to('/'),
-		'/docs/guidelines': to('/'),
+		'/docs/guidelines': to('/guidelines'),
 		// Doc pages, one for one.
 		'/docs/guidelines/documentations/comments': to('/guidelines/documentations/comments'),
 		'/docs/guidelines/files_and_folders/naming-convention': to('/guidelines/files-and-folders/naming-conventions'),
