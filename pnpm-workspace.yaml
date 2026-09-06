@@ -21,3 +21,17 @@ packages:
 # should carry its reason and the date it becomes removable.
 minimumReleaseAge: 1440 # 1 day
 minimumReleaseAgeStrict: true
+minimumReleaseAgeExclude:
+  # Renovate security update: turbo@2.9.14
+  - turbo@2.9.14
+
+# pnpm blocks dependency build scripts by default. sharp needs its install script to
+# fetch or build the native binary on platforms with no matching prebuilt package. On
+# Linux that goes unnoticed - a prebuilt binary arrives as an optional dependency - but
+# the macOS CI leg fails at `astro build` with
+# `MissingSharp: Could not find Sharp`. esbuild and turbo are native installers in the
+# same position; pnpm reports all three as ignored.
+onlyBuiltDependencies:
+  - esbuild
+  - sharp
+  - turbo
