@@ -1,6 +1,5 @@
 packages:
   - apps/*
-  - page
 
 # Supply-chain soak: no dependency may be installed until it has been on the registry
 # for 24h. This is the control that stops a compromised release from being pulled into

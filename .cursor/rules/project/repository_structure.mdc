@@ -21,7 +21,6 @@ TypeScript Blackbook is organized as a monorepo containing documentation, exampl
 ### Legacy Content
 
 - `docs/` - Legacy documentation structure (being migrated)
-- `github-page/` - Previous Docusaurus-based site
 
 ### Configuration
 
