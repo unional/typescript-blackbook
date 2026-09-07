@@ -11,9 +11,3 @@ jobs:
     with:
       node-version: '[18]'
 
-  docs:
-    uses: unional/.github/.github/workflows/pnpm-docs.yml@main
-    needs: code
-    secrets: inherit
-    with:
-      publish-dir: ./github-page/build

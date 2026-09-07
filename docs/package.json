@@ -6,9 +6,6 @@
     "email": "homawong@gmail.com",
     "url": "https://github.com/unional"
   },
-  "workspaces": [
-    "github-page"
-  ],
   "scripts": {
     "build": "remark . -o",
     "lint": "ts-node ./scripts/lint.ts",
