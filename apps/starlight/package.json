@@ -19,6 +19,6 @@
     "typescript": "^6.0.0"
   },
   "devDependencies": {
-    "@astrojs/starlight-tailwind": "^3.0.1"
+    "@astrojs/starlight-tailwind": "^5.0.0"
   }
 }
