@@ -23,6 +23,8 @@ minimumReleaseAgeStrict: true
 minimumReleaseAgeExclude:
   # Renovate security update: turbo@2.9.14
   - turbo@2.9.14
+  # Renovate security update: astro@7.1.0
+  - astro@7.1.0
 
 # pnpm blocks dependency build scripts by default. sharp needs its install script to
 # fetch or build the native binary on platforms with no matching prebuilt package. On
