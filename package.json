@@ -19,5 +19,5 @@
     "prettier-plugin-astro": "^0.14.0",
     "turbo": "^2.0.0"
   },
-  "packageManager": "pnpm@10.34.5"
+  "packageManager": "pnpm@12.3.4"
 }
