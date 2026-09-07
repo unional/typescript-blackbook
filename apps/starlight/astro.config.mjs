@@ -90,7 +90,7 @@ export default defineConfig({
             {
                 label: 'GitHub',
                 icon: 'github',
-                href: 'https://github.com/unional',
+                href: 'https://github.com/unional/typescript-blackbook',
             },
             {
                 label: 'Stack Overflow',
