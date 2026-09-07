@@ -5,7 +5,6 @@
 		"**/docs",
 		"**/LICENSE",
 		"flow-types.md",
-		"github-page",
 		"slides/*.slides.md"
 	],
 	"config": {
