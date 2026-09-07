@@ -1,0 +1,8 @@
+/* Tailwind's base must be loaded through Starlight's customCss, not injected
+   globally by @astrojs/tailwind. Starlight ships its styles inside
+   `@layer starlight.core` / `starlight.components`, and unlayered CSS beats
+   layered CSS in the cascade whatever its specificity - so a globally injected
+   preflight silently overrides every Starlight rule. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -18,19 +18,36 @@ hero:
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## Welcome
 
-<CardGrid stagger>
- <Card title="Update content" icon="pencil">
-  Edit `src/content/docs/index.mdx` to see this page change.
+This book focus on *how to get the most out of TypeScript with minimal effort*.
+
+To achieve that goal,
+following some coding styles is a good place to start.
+
+However, just following *what to do* can only go so far.
+You need to know *why* should you write code in certain way,
+*what* are the *trade-offs* you are making,
+as well as the design and the limitations of the language itself,
+so that you have the right *mindset* and *approach* the problem and come to a solution effectively.
+
+Therefore, this book covers more than just style guide and best practices.
+
+<CardGrid>
+ <Card title="Guidelines" icon="approve-check">
+  What you should and should not do, and the reasoning behind it.
+  [Read the guidelines](/typescript-blackbook/guidelines/)
  </Card>
- <Card title="Add new content" icon="add-document">
-  Add Markdown or MDX files to `src/content/docs` to create new pages.
+ <Card title="tsconfig" icon="setting">
+  Compiler options explained, with the trade-offs each one makes.
+  [Declaration Map](/typescript-blackbook/tsconfig/declaration-map/)
  </Card>
- <Card title="Configure your site" icon="setting">
-  Edit your `sidebar` and other config in `astro.config.mjs`.
+ <Card title="TypeScript Features" icon="open-book">
+  Language features and how to get the most out of them.
+  [Assertion Function](/typescript-blackbook/typescript-features/assertion_funtion/)
  </Card>
- <Card title="Read the docs" icon="open-book">
-  Learn more in [the Starlight Docs](https://starlight.astro.build/).
+ <Card title="Blogs" icon="pencil">
+  Longer-form posts on ESM, tooling and type design.
+  [Check out the blogs](/typescript-blackbook/blogs/)
  </Card>
 </CardGrid>
