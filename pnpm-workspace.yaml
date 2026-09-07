@@ -1,6 +1,5 @@
 packages:
   - apps/*
-  - github-page
   - page
 
 # Supply-chain soak: no dependency may be installed until it has been on the registry
