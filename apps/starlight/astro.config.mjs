@@ -67,6 +67,13 @@ export default defineConfig({
     base,
     integrations: [starlight({
         title: 'TypeScript Blackbook',
+        // Tailwind's base is loaded here rather than injected globally by
+        // @astrojs/tailwind. Starlight's own styles sit in `@layer starlight.*`,
+        // and unlayered CSS wins over layered CSS regardless of specificity, so a
+        // global preflight overrode every Starlight rule - the header logo
+        // rendered at its natural 512px and the hero button drew grey text on a
+        // pale blue pill. See `applyBaseStyles: false` below.
+        customCss: ['./src/tailwind.css'],
         favicon: './src/assets/logo.svg',
         logo: { src:'./src/assets/logo.svg'},
         social: [
@@ -108,5 +115,5 @@ export default defineConfig({
             { label: 'TypeScript Features', autogenerate: { directory: 'typescript-features' } },
             { label: 'Tips', autogenerate: { directory: 'tips' } },
         ],
-		}), tailwind()]
+		}), tailwind({ applyBaseStyles: false })]
 });
