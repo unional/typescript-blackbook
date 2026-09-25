@@ -24,7 +24,9 @@ jobs:
         uses: withastro/action@v6
         with:
           path: apps/starlight # The root location of your Astro project inside the repository. (optional)
-          # node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 20. (optional)
+          # The action defaults to Node 20; Astro 7 requires >=22.12. Keep this in
+          # step with `node-version` in pull-request.yaml.
+          node-version: 24
           # Detection is by lockfile, and it looks inside `path`. This is a pnpm
           # workspace, so the lockfile is at the repo root and `apps/starlight` has
           # none - the action exited 1 with "No lockfile found." before installing

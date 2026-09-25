@@ -9,5 +9,5 @@ jobs:
     uses: unional/.github/.github/workflows/pnpm-verify.yml@main
     secrets: inherit
     with:
-      node-version: '[18]'
+      node-version: '[24]'
 
