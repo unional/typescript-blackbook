@@ -5,7 +5,7 @@ tags: [file, folder, project, naming]
 
 # Naming Convention
 
-You **should** name your file and folder in `snake_case` or `kebab-case` instead of `camelCase` or `PascalCase`.
+You **should** name your file and folder in `kebab-case` instead of `snake_case`, `camelCase`, or `PascalCase`.
 
 > Why?
 
@@ -15,26 +15,31 @@ That means `ApiSpec == apispec == APISpec`.
 To avoid confusion, `camelCase` and `PascalCase` should be avoided.
 That leave us with `snake_case` or `kebab-case`.
 
-The benefits of `snake_case` over `kebab-case` is that,
-in most cases, operating system treats `snake_case` as a single word,
-and treats `kebab-case` as a composed word.
+I used to recommend `snake_case`,
+because double-clicking a `snake_case` name selects the whole name,
+while double-clicking a `kebab-case` name selects only one word.
 
-For example, when you double-click on a `kebab-case` string,
-a single word will be selected (i.e. either `kebab` or `case` will be selected).
+That is a matter of editor settings, though.
+Most editors let you change what counts as a word separator,
+and renaming a file in the editor selects the whole name anyway.
 
-On the other hand, double-click on a `snake_case` string will select the whole string.
+The things around your files are not configurable, and they use `kebab-case`:
 
-The same goes to renaming.
+- npm package names are almost always `kebab-case`, so a folder can share its name with the package it holds.
+- URLs use `-` to separate words, and search engines treat `-` as a word break and `_` as a joiner.
+  With file-based routing, the file name *is* the URL.
+- Custom element names must contain a `-`.
+- CLI commands and flags, git branch names, and CSS class names are `kebab-case`.
 
-Therefore, I would recommend `snake_case` over `kebab-case`,
-even though `_` takes an additional pinky press to type.
+Using `kebab-case` for files and folders means one convention across all of them.
 
-But `kebab-case` is still a valid choice,
-especially when you are using file-based routing.
+The exception is a language that imports a file by its name as an identifier.
+For example, Python cannot import `customer-order.py`.
+TypeScript has no such limitation.
 
 ---
 
-You **should** name your file in nouns. i.e. `customer_order.ts` instead of `create_customer_order.ts`.
+You **should** name your file in nouns. i.e. `customer-order.ts` instead of `create_customer-order.ts`.
 
 > Why?
 
@@ -57,7 +62,7 @@ You **can** use `.` to create sub-category on filenames.
 The name of the file should describe WHAT the file is about,
 in terms of its context or business value.
 
-For example, `customer_order.ts`.
+For example, `customer-order.ts`.
 
 However, there are situations that you want to further organize the code into addition categories,
 so that it is easy to visualize as well as controlling the exposed API.
@@ -65,13 +70,13 @@ so that it is easy to visualize as well as controlling the exposed API.
 For example, you can do this:
 
 ```sh
-customer_order.ts
-customer_order.ctx.ts # context code for dependency injection
-customer_order.internal.ts # code that you use internally, but exported for your tests.
-customer_order.mock.ts # helper code for mocking the data during tests
-customer_order.spec.ts # specification tests
-customer_order.unit.ts # unit tests
-customer_order.unit.electron.ts # unit tests only for electron
+customer-order.ts
+customer-order.ctx.ts # context code for dependency injection
+customer-order.internal.ts # code that you use internally, but exported for your tests.
+customer-order.mock.ts # helper code for mocking the data during tests
+customer-order.spec.ts # specification tests
+customer-order.unit.ts # unit tests
+customer-order.unit.electron.ts # unit tests only for electron
 ```
 
 ## References

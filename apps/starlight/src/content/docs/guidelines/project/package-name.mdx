@@ -12,14 +12,17 @@ it is still beneficial to follow certain guidelines to make your life a bit easi
 
 ---
 
-You **should** use `snake_case` for your package name.
+You **should** use `kebab-case` for your package name.
 
 > Why?
 
-[Node.js] is not opinionated about package names, but
-[Deno] prohibits using `kebab-case` or `PascalCase` as module name.
+[Node.js] is not opinionated about package names,
+but almost every package on npm uses `kebab-case`.
 
-Since [Deno] is likely to stay, you should use `snake_case` so that they are consistent.
+[JSR], the registry for [Deno], allows only lowercase letters, numbers, and `-` in package names.
+
+Using `kebab-case` keeps your package name valid on both,
+and lets it match the folder that holds it (see [Naming Convention](../../files-and-folders/naming-conventions/)).
 
 ---
 
@@ -33,5 +36,6 @@ Of course, if that is what you want, that's fine.
 
 But naming your package with nouns allows you to add similar features to your package, without causing confusion.
 
-[Deno]: https://deno.land/x?page=2#Q&A
-[NodeJS]: https://nodejs.org/
+[Deno]: https://deno.com/
+[JSR]: https://jsr.io/docs/publishing-packages
+[Node.js]: https://nodejs.org/
