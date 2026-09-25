@@ -33,7 +33,7 @@ jobs:
           # anything. Stating the package manager skips detection.
           #
           # Keep this version in step with `packageManager` in the root package.json.
-          package-manager: pnpm@10.34.5
+          package-manager: pnpm@12.6.0
 
   deploy:
     needs: build
