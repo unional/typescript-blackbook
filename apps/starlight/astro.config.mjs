@@ -2,7 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 
 // Single source of truth: `base` below and every redirect target derive from this.
 // Astro applies `base` to links it generates, but NOT to `redirects` targets - a
@@ -67,12 +67,11 @@ export default defineConfig({
     base,
     integrations: [starlight({
         title: 'TypeScript Blackbook',
-        // Tailwind's base is loaded here rather than injected globally by
-        // @astrojs/tailwind. Starlight's own styles sit in `@layer starlight.*`,
-        // and unlayered CSS wins over layered CSS regardless of specificity, so a
-        // global preflight overrode every Starlight rule - the header logo
-        // rendered at its natural 512px and the hero button drew grey text on a
-        // pale blue pill. See `applyBaseStyles: false` below.
+        // Tailwind is loaded here, inside Starlight's cascade layers, rather than
+        // injected globally. Unlayered CSS wins over layered CSS regardless of
+        // specificity, so a global preflight overrode every Starlight rule - the
+        // header logo rendered at its natural 512px and the hero button drew grey
+        // text on a pale blue pill. See `src/tailwind.css`.
         customCss: ['./src/tailwind.css'],
         favicon: './src/assets/logo.svg',
         logo: { src:'./src/assets/logo.svg'},
@@ -109,11 +108,12 @@ export default defineConfig({
         // listed a single entry, `guides/welcome`, which left all fourteen real
         // doc pages routable but absent from the navigation.
         sidebar: [
-            { label: 'Guides', autogenerate: { directory: 'guides' } },
-            { label: 'Guidelines', autogenerate: { directory: 'guidelines' } },
-            { label: 'tsconfig', autogenerate: { directory: 'tsconfig' } },
-            { label: 'TypeScript Features', autogenerate: { directory: 'typescript-features' } },
-            { label: 'Tips', autogenerate: { directory: 'tips' } },
+            { label: 'Guides', items: [{ autogenerate: { directory: 'guides' } }] },
+            { label: 'Guidelines', items: [{ autogenerate: { directory: 'guidelines' } }] },
+            { label: 'tsconfig', items: [{ autogenerate: { directory: 'tsconfig' } }] },
+            { label: 'TypeScript Features', items: [{ autogenerate: { directory: 'typescript-features' } }] },
+            { label: 'Tips', items: [{ autogenerate: { directory: 'tips' } }] },
         ],
-		}), tailwind({ applyBaseStyles: false })]
+		})],
+    vite: { plugins: [tailwindcss()] },
 });
