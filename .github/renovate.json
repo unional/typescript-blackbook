@@ -1,5 +1,25 @@
 {
   "extends": [
     "github>unional/renovate-preset"
+  ],
+  "platformAutomerge": true,
+  "packageRules": [
+    {
+      "description": "Non-major updates merge themselves once CI is green: dev tooling, the toolchain (packageManager, mise, nvm, engines) and GitHub Actions.",
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": true
+    },
+    {
+      "description": "Majors are a human decision.",
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": false
+    }
   ]
 }
