@@ -5,6 +5,11 @@
   "platformAutomerge": true,
   "packageRules": [
     {
+      "description": "astro check (used by apps/starlight and apps/tutorial) does not support TypeScript 7; hold typescript below 7 until it does.",
+      "matchPackageNames": ["typescript"],
+      "allowedVersions": "<7"
+    },
+    {
       "description": "Non-major updates merge themselves once CI is green: dev tooling, the toolchain (packageManager, mise, nvm, engines) and GitHub Actions.",
       "matchUpdateTypes": [
         "minor",
