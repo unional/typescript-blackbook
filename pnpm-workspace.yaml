@@ -22,6 +22,8 @@ minimumReleaseAgeStrict: true
 minimumReleaseAgeExclude:
   # Renovate security update: turbo@2.9.14
   - turbo@2.9.14
+  # Renovate security update: sharp@0.35.5
+  - sharp@0.35.5
 
 # pnpm blocks dependency build scripts by default, and since pnpm 11 an ignored
 # build script fails the install (ERR_PNPM_IGNORED_BUILDS) instead of warning.
