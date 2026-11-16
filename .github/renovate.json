@@ -1,6 +1,6 @@
 {
   "extends": [
-    "github>unional/renovate-preset"
+    "github>repobuddy/renovate-preset"
   ],
   "platformAutomerge": true,
   "packageRules": [
@@ -18,13 +18,6 @@
         "digest"
       ],
       "automerge": true
-    },
-    {
-      "description": "Majors are a human decision.",
-      "matchUpdateTypes": [
-        "major"
-      ],
-      "automerge": false
     }
   ]
 }
